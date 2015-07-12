@@ -5,17 +5,21 @@ This repo is central Communication Testing Tools wrapped by fast configuration a
 Any Q? call Oz +972-52-5528022
 
 # Requirements
-1st you need to make sure you have ruby / rails
+1st you need to make sure you have Ruby / rails
  
  https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe
 
  To complete this install you need to download or copy 
   http://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
   
-  to
-  
-  c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
-
+from (Assuming you d/l the .pem to c:\temp)
+```
+  c:\temp\AddTrustExternalCARoot-2048.pem
+```  
+to (path may change check "which ruby" to verify path)
+```  
+  c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
+```
 if you have dont have  wget get it from: http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr Or download manualy and place in c:\temp  
 ```
 mkdir c:\temp
@@ -62,18 +66,25 @@ Create a free GitHub account or login if you already have one
 
 
 # Update & make changes
-to get latest tools run update_tools.bat
-To push your update run push.bat (1st you have to setup your SSH public key in github site https://github.com/settings/ssh contact oz for help 
+to get latest tools run
+```
+update_tools.bat
+```
+To push your update run (1st you have to setup your SSH public key in github site https://github.com/settings/ssh contact oz for help 
+```
+push.bat
+```
+
 
 
 # Tools in Repo
 
-- NirCmd    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
-- Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
-- op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
-- kml       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
-- mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
-- foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
-- fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
-- ra        Version 0.1 Run as Admin check if admin or elevate and executing in new cmd window
- 
+- NirCmd.exe    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
+- Fping.exe     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
+- op.bat        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
+- kml.bat       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
+- mon.bat       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
+- foz.bat       Version 1.2 a Fast ping wrapper (Please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
+- fix_path.bat  Version 0.1 adds the Repo tools to your path (Assumes the tools are cloned into C:\Bynet\Tools)
+- ra.bat        Version 0.1 Run as Admin check if admin or elevate and executing in new cmd window
+- which         GNU command to find which/where is the command you are using 
