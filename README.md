@@ -1,8 +1,10 @@
 # tools
 This repo is central Communication Testing Tools wrapped by fast configuration and executing scripts for Bynet employess and partners
 
+# Questions
 Any Q? call Oz +972-52-5528022
 
+# Requirements
 1st you need to make sure you have ruby / rails
  
  https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe
@@ -14,7 +16,7 @@ Any Q? call Oz +972-52-5528022
   
   c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 
-<if you have wget http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr >
+<if you have wget http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr otherwise download manualy >
 mkdir c:\temp
 cd c:\temp
 wget https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe --no-check-certificate
@@ -22,8 +24,20 @@ wget http://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_
 cmd /k railsinstaller-3.0.0.exe
 move c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 del c:\temp\railsinstaller-3.0.0.exe  
-  
-  
+
+mkdir c:\temp\logs
+mkdir c:\bynet\
+cd c:\bynet
+git clone https://github.com/BynetComm/tools.git
+cd tools
+bundle install
+<end of installation commands>
+
+# Initial Setups  
+
+please make sure to run bundle install after cloning from within c:\bynet\tools to verify gems list
+
+# Git
 Things you need before you get started
 
 Git & GitHub
@@ -38,10 +52,12 @@ To check if Git is already config-ed you can type git config --list
 Create a free GitHub account or login if you already have one
 
 
+# Update & make changes
 to get latest tools run update_tools.bat
 To push your update run push.bat (1st you have to setup your SSH public key in github site https://github.com/settings/ssh contact oz for help 
 
-Tools in Repo
+
+# Tools in Repo
 NirCmd    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
 Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
 op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 

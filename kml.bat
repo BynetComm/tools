@@ -1,1 +1,1 @@
-ruby -W0 c:\tools\to_kml_2.1.rb
+ruby -W0 c:\bynet\tools\DriveTest\to_kml_2.1.rb
