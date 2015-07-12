@@ -24,13 +24,14 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
- @options[:inputfile] = 'c:\temp\output3.csv';
+ @options[:inputfile] = 'c:\temp\output16_2.csv';
  @options[:writemode] = 'w';
- @options[:myfilename] = 'c:\temp\kml_output4.kml'; 
+ @options[:myfilename] = 'c:\temp\output16_2.kml'; 
  @options[:usetimestamp] = true; 
 
- VERSION = "2.0"
+ VERSION = "2.2"
  DEBUG = false   
+ DISPLAY_ZERO_RSS = true
  
  opts = OptionParser.new do |opts|
     opts.banner = 'To KML'
@@ -76,16 +77,16 @@ end
 @@labelsIndex = Hash.new {};
   
 
-Colors=Array['000000', '10FF00' , '00FF00', '00FF0F',	'00FF1F',	'00FF3F',	'00FF5F',	'00FF7F',	'00FF9F',	'00FFBF',
+Colors=Array['FFFFFF', '10FF00' , '00FF00', '00FF0F',	'00FF1F',	'00FF3F',	'00FF5F',	'00FF7F',	'00FF9F',	'00FFBF',
 	'00FFDF',	'00EFFF',	'00CFFF',	'00AFFF',	'008FFF',	'006FFF',	'004FFF','002FFF','000000']
 
-#@rss_styles = Array.new [20, -20, -44 ,-47, -50,-53,-56,-59,-62, -65,-68,-70,-73,-76,-79,-82,-85, -88,-90,-121] 
-@rss_styles = Array.new [ -35, -40,-45,-50,-55 ,-58,-62 ,-65,-68,-70,-73,-75,-78,-80,-81,-83 ,-85,-90,-95,-105,-121 ]   
+#@rss_styles = Array.new [20, -20, -44 ,-47, -50,-53,-56,-59,-62, -65,-76,-79,-82,-85, -88,-90,-121] 
+@rss_styles = Array.new [ -30,-40 ,-45,-50,-60,-62 ,-65,-68,-70,-73,-75,-78,-80,-81,-83 ,-85,-90,-121 ]   
 
 unless File.exists?(@options[:inputfile])
   raise 'File not found'
 end
-name, address, timestamp, lat, lng, client , rss_BH_AIR_MinRSL , state, connected_to_hbs ,ping_to_remote = nil, nil,nil,nil,nil,nil,nil,nil,nil,nil
+name, address, timestamp, lat, lng, client  ,rss_BH_AIR_MaxRSL, rss_BH_AIR_MinRSL , state, connected_to_hbs ,ping_to_remote = nil, nil,nil,nil,nil,nil,nil,nil,nil,nil,nil
 
 def file_is_valid(row)
   if ((row==nil) || (row =="")) then
@@ -99,7 +100,7 @@ def file_is_valid(row)
  # puts row.include?('lng');
  # puts row.include?('timestamp');
  puts ("valdite header")
- row.include?('name') && row.include?('address') && row.include?('lat') && row.include?('lng') && row.include?('timestamp') && row.include?('BH_AIR_MinRSL') && row.include?('state') && row.include?('Connected_to_HBS ') && row.include?('ping to remote')
+ row.include?('name') && row.include?('address') && row.include?('lat') && row.include?('lng') && row.include?('timestamp') && row.include?('BH_AIR_MinRSL') && row.include?('BH_AIR_MaxRSL') && row.include?('state') && row.include?('Connected_to_HBS ') && row.include?('ping to remote')
  
 end
 
@@ -110,7 +111,7 @@ end
  @locations = []
 
 class Location
-  attr_accessor :name, :address, :lat, :lng, :client, :timestamp ,:BH_AIR_MinRSL, :state , :connected_to_HBS , :ping_to_remote
+  attr_accessor :name, :address, :lat, :lng, :client, :timestamp ,:BH_AIR_MinRSL, :BH_AIR_MaxRSL , :state , :connected_to_HBS , :ping_to_remote
   
   
   def initialize(myoptions = {})
@@ -123,11 +124,14 @@ class Location
       @lng = myoptions[:lng]
       @client = myoptions[:client]
       @timestamp = myoptions[:timestamp]
-	    @rss_BH_AIR_MinRSL = myoptions[:BH_AIR_MinRSL]
+	  @rss_BH_AIR_MinRSL = myoptions[:BH_AIR_MinRSL]
+	  @rss_BH_AIR_MaxRSL = myoptions[:BH_AIR_MaxRSL]
       @state = myoptions[:state]||""
       @_connected_to_HBS = myoptions[:connected_to_HBS]||"None"
       @ping_to_remote = myoptions[:ping_to_remote]
-
+      if (@address == "0") && not( @ping_to_remote == "0") then
+	     @address = @rss_BH_AIR_MaxRSL
+	  end
   
     end
   
@@ -139,6 +143,10 @@ class Location
     return self.timestamp
   end  
 
+  def address
+    return  "#{@address}"
+  end  
+  
   def to_kml
 begin 
     uts = true 
@@ -156,7 +164,8 @@ begin
         out +=  "#{@name}" unless !displayname
 		if !(@timestamp==nil ) then
          out += @timestamp[11..18]||"" unless (!uts) 
-         out +=  "[#{@rss_BH_AIR_MinRSL}]" unless !displayrss
+    #     out +=  "[#{@rss_BH_AIR_MinRSL}]" unless !displayrss
+	     out +=  "[#{@address}]" unless !displayrss
 		end
     if !(@_connected_to_HBS==nil ) then
         out +="BST: #{ @_connected_to_HBS[9]=="-" ? @_connected_to_HBS[8] : @_connected_to_HBS[8..9]}"   #postion
@@ -182,10 +191,11 @@ begin
 		""
       index=0;
       style_index ='';
-	  rss_styles = Array.new [ -40,-45,-50,-55 ,-60 ,-65,-68,-70,-73,-75,-78,-79,-80,-81,-83 ,-84,-85,-90,-95,-105,-121 ]  
+	  rss_styles = Array.new [ -30,-50,-60 ,-65,-68,-70,-73,-75,-78,-79,-80,-81,-83 ,-84,-85,-90,-95,-105,-121 ]  
       rss_styles.each do |rss_level|
         #puts ("#{@address.to_i} < #{rss_styles[index].to_i} = #{(@address.to_i < rss_styles[index].to_i)}")
-        if @rss_BH_AIR_MinRSL.to_i <= rss_styles[index].to_i then 
+    #    if @rss_BH_AIR_MinRSL.to_i <= rss_styles[index].to_i then 
+	    if @address.to_i <= rss_styles[index].to_i then 
           style_index = (index==0)? '': index.to_s;
         end
 	    index+=1
@@ -210,7 +220,10 @@ begin
         end
       end
     end    
-    out += "	<description><![CDATA[RSSI=#{@rss_BH_AIR_MinRSL||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
+#    out += "	<description><![CDATA[RSSI=#{@rss_BH_AIR_MinRSL||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
+	
+    out += "	<description><![CDATA[RSSI=#{@address||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
+
          "]]></description>\n" +
     "<ExtendedData>\n" +
       '<Data name="RSS_BH_AIR_MinRSL">\n' + 
@@ -279,7 +292,10 @@ end
           when 'bh_air_minrsl'
             rss_BH_AIR_MinRSL = i  
             puts ("BH_AIR_MinRSL in col:#{i}");
-      	  when 'lng'
+      	  when 'bh_air_maxrsl'
+            rss_BH_AIR_MaxRSL = i  
+            puts ("BH_AIR_MaxRSL in col:#{i}");
+     	  when 'lng'
       	    puts ("lng in col:#{i}");
       	    lng = i
       	  when 'client'
@@ -304,7 +320,7 @@ end
   else
      # if DEBUG then puts ("parsing row:#{row}"); end
      if row[1..4]== "name" then next end;
-      @locations << Location.new(:name => "#{rows}@", :address => row[address], :lat => row[lat], :lng => row[lng],  :timestamp => row[timestamp], :BH_AIR_MinRSL=> row[rss_BH_AIR_MinRSL], :state=> row[state], :connected_to_HBS => row[connected_to_hbs], :ping_to_remote  => row[ping_to_remote])
+      @locations << Location.new(:name => "#{rows}@", :address => row[address], :lat => row[lat], :lng => row[lng],  :timestamp => row[timestamp], :BH_AIR_MinRSL=> row[rss_BH_AIR_MinRSL], :BH_AIR_MaxRSL=> row[rss_BH_AIR_MaxRSL], :state=> row[state], :connected_to_HBS => row[connected_to_hbs], :ping_to_remote  => row[ping_to_remote])
   #  puts @locations.last.to_kml
     
   end
@@ -430,6 +446,7 @@ File.open(@options[:myfilename], @options[:writemode]) do |f|
   sortedLocations.each do |location|
    # puts ( "1 #{location.connected_to_HBS}");
     if location.connected_to_HBS == "Connected_to_HBS " then index+=1; next end;
+	if (not(DISPLAY_ZERO_RSS) && (location.address == "0")) then index+=1; next end;
     if location.connected_to_HBS == last_HBS then
       f.write("#{location.to_kml}\n")
     else

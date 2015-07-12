@@ -1,7 +1,8 @@
 @echo off
-@set foz_version=1.0
+@set foz_version=1.2
 goto setup_time
 :start
+if "%1"=="log" goto display_log
 if "%1"=="help" goto help
 if "%1"=="/?" goto help
 if "%1"=="-h" goto help
@@ -9,6 +10,7 @@ if "%1"=="--help" goto help
 if "%1"=="--V"  goto version
 if "%1"=="--Version" goto version
 if "%1"=="-V" goto version
+if "%1"=="v" goto version
 if "%1"=="setup" goto setup
 if "%1"=="set" goto setup
 if "%1"=="s" goto setup
@@ -18,6 +20,9 @@ if "%1"=="nw" goto new_window
 if "%1"=="sw" goto same_window
 if "%1"=="dkw" goto dont_keep_window
 if "%1"=="dump_env" goto dump_env
+if "%1"=="dump" goto dump_env
+if "%1"=="d" goto dump_env
+
 if not "%fp_h%"=="" goto run_ping
 if "%1"=="" goto help
 
@@ -26,6 +31,24 @@ rem #run default wrap
 @echo Pinging %1 at %fp_date%  into   c:\temp\fp_%fp_date%_%2.txt
 @fping %1 -t 10 -w 300 -c %3 %4 %5 %6 %7 %8 %9 >>c:\temp\fp_%fp_date%_%2.txt
   if Errorlevel 1 goto fping_error 
+goto end
+
+
+:display_log
+if not "%fp_ts%"=="true" goto ts_false1
+:ts_true1
+  set fp_log_file=%fp_p%-%fp_date%-%fp_f%.txt
+  goto display11 
+goto end
+
+:ts_false1
+  set fp_log_file=%fp_p%%fp_f%.txt
+  goto display11 
+goto end
+
+:display11 
+start baretail %fp_log_file%
+
 goto end
 '
 :unset
@@ -78,12 +101,23 @@ goto end
   goto do_ping
 goto end
 
+:show_and_log
+   
+ rem   if "%2"=="t" goto set title="%3 %4 %5 %6 %7 %8 %9 %0"
+   echo ***************************************************************************
+   echo fping %fp_h% -t %fp_t% -w %fp_w% %fping_params% %1 %2 %3 %4 %5 %6 %7 %8 %9 -L %title%%fp_log_file% @ %fp_date%
+   echo !!!!!!!!!! OVERWRITE FILE !!!!!!!!!!!!!!!!!!!!!!!!!!!! %fp_log_file%  !!!!!!!!!!!!! 
+    fping %fp_h% -t %fp_t% -w %fp_w% %fping_params% %1 %2 %3 %4 %5 %6 %7 %8 %9 -L %title%%fp_log_file%
+goto end
+
 :do_ping
+   if "%1"=="l" goto show_and_log
    if not "%fp_l%"=="true" set fp_log_file=con
    if "%fp_l%"=="true" echo fping %fp_h% -t %fp_t% -w %fp_w% %fping_params% %1 %2 %3 %4 %5 %6 %7 %8 %9 into file %fp_log_file%
    echo *************************************************************************** >>%fp_log_file%
    echo * fping %fp_h% -t %fp_t% -w %fp_w% %fping_params% %1 %2 %3 %4 %5 %6 %7 %8 %9 @ %fp_date%  >>%fp_log_file%
    echo *************************************************************************** >>%fp_log_file%
+   rem #### Run show & Log ###
    rem #### Run in new windows ###
    if "%fp_spawn_window%"=="true" start cmd /k "fping %fp_h% -t %fp_t% -w %fp_w% %fping_params% %1 %2 %3 %4 %5 %6 %7 %8 %9 >>%fp_log_file%"
      if "%fp_spawn_window%"=="true" goto end
@@ -111,6 +145,7 @@ goto end
   @echo "run 'foz s bp <up to 6 fping paramters>' to setup fping base parameters [overides foz settings]"
   @echo "run 'foz s bp' to clean base paramters or 'foz s bp -T -j' to display jitter and timestamp for each line"
   @echo "run 'foz unset' to ignore setup configuration' 
+  @echo "run 'foz d' to SAVE setup configuration to Registery ' 
 goto no_setup_paramter
 goto end
 :version
@@ -233,7 +268,7 @@ rem echo year=%year%
 set month=%date:~4,2%
 if "%month:~0,1%" == " " set month=0%month:~1,1%
 rem echo month=%month%
-set day=%date:~3,2%
+set day=%date:~7,2%
 if "%day:~0,1%" == " " set day=0%day:~1,1%
 rem echo day=%day%
 

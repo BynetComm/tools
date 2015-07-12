@@ -9,13 +9,13 @@ puts "<host> <executions> <out_file> "
 #move to INI File
   VERSION = "2.01"
   pingHosts = Hash.new
-  pingHosts = {:WiFi => '65.15.0.14' , :BH => '65.15.0.12' , :HBS => '65.15.0.185', :remote => '65.15.1.10'};
-  #pingHosts = {:WiFi => '65.15.0.14' , :BH => '172.17.199.16' , :HBS => '65.15.0.12', :remote => '65.15.1.10'};
+  pingHosts = {:WiFi => '65.15.0.14' , :BH => '65.15.0.12' , :HBS => '65.15.0.12', :remote => '65.15.1.10'};
   hbs_IP = { :HBS_1 => '65.15.0.185', :HBS_2 => '65.15.0.167',  :HBS_3 => '65.15.0.157', :HBS_4 => '65.15.0.47', 
           :HBS_5 => '65.15.0.40', :HBS_6 => '65.15.0.21'  };
   hmus_IP = { :HMU_1 => '65.15.0.12'};        
   hbs_oids_r = ""
   hmus_oids_r = ""
+  mySNMPDATA="";
   hbs_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
   hmus_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
   myhost = ARGV[1] ||pingHosts[:BH];
@@ -109,7 +109,7 @@ def getattrib (host,oid,community,numofelemetstoreturn)
            # puts ("#{index}:"+ val.to_s.gsub(/value=/,''))
            
            if index ==1 then
-             out =  val.to_s.gsub(/value=/,'') 
+             out =  val.to_s.gsub(/value=/,'') unless (val==nil || val=="")
            else 
              if (index<=numofelemetstoreturn && index >1) then
                  out +=" "+val.to_s 
@@ -211,7 +211,7 @@ puts ("using jitter: #{jpings}")
 telnet=true
 begin
   if (debug && debuglevel>4) then puts ("login to device") end
-  tn = tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+  tn = Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
   if (debug && debuglevel>6) then 
     puts tn 
     tn.login('admin', 'netman') { |c| print c } ;
@@ -220,7 +220,7 @@ begin
   end    
   if ping(pingHosts[:HBS]) == "0.0" then
      Puts ("can't connected to host #{pingHosts[:HBS]} aborting");
-     exit unless debug;
+    # exit unless debug;
   end; 
 rescue
     puts ("can't connected to host #{pingHosts[:HBS]} aborting");
@@ -237,7 +237,7 @@ while (index < executions ) do
     line_id=0
   if (debug && debuglevel>4) then puts ("#{index}: gpslabel") end
   begin
-  tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")	
+  #tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")	
   IO.popen("#{'gpsbabel'} -i garmin,get_posn -f usb:") {
          |io| while (line = io.gets) do 
 			if (debug && debuglevel>6) then
@@ -296,25 +296,50 @@ while (index < executions ) do
   end 
   i=0
   level="unknown"
-  if (debug && debuglevel>4) then puts ("#{index}: display link ; bh => #{bh}") end
+  
+  
 begin  
 if telnet then
-    tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+	if (debug && debuglevel>2) then puts ("#{index}: display link ; bh => #{pingHosts[:BH]}") end
+	begin
+	if tn==nil then	
+	  tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+	  #tn = Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+	  if (debug && debuglevel>6) then 
+		puts tn 
+		tn.login('admin', 'netman') { |c| print c } ;
+    	else
+		Timeout.timeout(5) { tn.login('admin', 'netman') }
+	  end
+	end  
+	rescue
+	  	@error_message="#{$!}";
+		if (debug && debuglevel>1) then puts ("#{index}:"+Time.now.to_s+ "telnet login error (retry):"+@error_message) end
+		tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+		tn.login('admin', 'netman')
+	end
+	my_state="";
+	bh[:state] = "";
+	level='0';
+	bh[:address]='0';
+    Timeout.timeout(2) {
     tn.cmd('display link') do |output|
     i=0;
-    splitedoutput = output.split;
+    splitedoutput = output.split unless (output==nil);
     splitedoutput.each do |sout|
       if sout=="RSS" then
         level = splitedoutput[i+1];
+		bh[:address]=level;
       end
-	    if sout=="State" then
-		    my_state = splitedoutput[i+1];
-		    bh[:state] = "#{my_state} ".strip;	
-	    end
-     i=i+1;
-     end #sout     
-   end #output
-   if (debug && debuglevel>4) then puts ("#{index}: RSS=#{level}, State=#{my_state}") end
+	  if sout=="State" then
+		my_state = splitedoutput[i+1];
+		bh[:state] = "#{my_state} " unless (my_state==nil)
+	  end
+      i=i+1;
+    end #sout     
+   end #output 
+   if (debug && debuglevel>3) then puts ("#{index}: RSS=#{level}, State=#{my_state}") end
+   }
 end #if telnet
    li=0
   
@@ -323,8 +348,8 @@ end #if telnet
    
    keys=bh_air.keys;
  if telnet then 
-   if (debug && debuglevel>4) then puts ("#{index}: display PM AIR current") end   
-    tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+   if (debug && debuglevel>2) then puts ("#{index}: display PM AIR current") end   
+    tn=tn||Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
     tn.cmd('display PM AIR current') do |output|
       output.strip.split(/\s/).each do |line|
        line.strip.split('|').each do |line_param|
@@ -359,8 +384,8 @@ end #if telnet
     hashkey =0;
     li =0;
    if telnet then 
-    if (debug && debuglevel>5) then puts ("#{index}: display PM LAN1 current") end
-      tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+    if (debug && debuglevel>2) then puts ("#{index}: display PM LAN1 current") end
+      tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
       tn.cmd('display PM LAN1 current') do |output|
       keys=bh_lan.keys;
       li +=1;
@@ -401,12 +426,12 @@ end #if telnet
     if (debug && debuglevel>5) then
         puts bh
         puts bh_lan
-   end
-
-
+    end
 
   end # begin telnets   
-    if pings then
+################33
+
+  if pings then
        pingHosts.each_key do |key|
          if jpings then  
            results= pingj(pingHosts[key])
@@ -439,10 +464,13 @@ end #if telnet
    if snmp then 
      begin
        if (debug && debuglevel>5) then puts ("#{index}: SNMP") end
-           myHBS=""
+           myHBS="";
+		   mySNMPDATA="";
+		   hmus_oids_r = "";
            hmus_IP.each_value do |hmu|
              snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)||[nil,nil]
              myHBS = snmp_out.split(',')[1].gsub(/@value="/,'');
+			 mySNMPDATA = snmp_out.split(',')[2]||""+snmp_out.split(',')[3]||""
              # puts (myHBS) 
             end
               if (debug && debuglevel>9) then puts ("#{index}: SNMP out #{snmp_out} ") end
@@ -495,18 +523,18 @@ end #if telnet
        
        csv_line+="timestamp, "
 	     csv_line+="PC_timestamp "
-       csv_line+=", Connected_to_HBS "
+       csv_line+=", Connected_to_HBS , rest_of_snmp "
        if snmp then
          ii=0;
-          hbs_IP.each_value do |value|
-           csv_line+=",HBS_#{ii}[#{value}] # connected units"
-           ii+=1;
-         end
-         ii=0;
-          hmus_IP.each_value do |value|
-           csv_line+=",HMU_#{ii}[#{value}] connected to "
-           ii+=1;
-         end
+       #   hbs_IP.each_value do |value|
+       #    csv_line+=",HBS_#{ii}[#{value}] # connected units"
+       #    ii+=1;
+       #  end
+       #  ii=0;
+       #   hmus_IP.each_value do |value|
+       #    csv_line+=",HMU_#{ii}[#{value}] connected to "
+       #    ii+=1;
+        # end
        end   
        csv << csv_line.split(/,\s/) 
       end #open CSV
@@ -583,7 +611,7 @@ end #if telnet
          #  csv_line+=",#{value}"
          #  ii+=1;
          #end
-         csv_line+= ",#{ hmus_oids_r}"
+         csv_line+= ",#{ hmus_oids_r} , #{mySNMPDATA||''}"
        end   
 
 
