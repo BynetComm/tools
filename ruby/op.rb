@@ -1,10 +1,15 @@
-#OzPing version 0.0 date 3-7-2012
+#OzPing version 0.1 date 12-7-2012
 #Usage op -h <host>
 # before first usage
 # Install ruby
+# added bundle to install
 # "gem install net-ping"
 # "gem install win32/security"
 # "gem install logger"
+#
+# changes in 0.1
+# adding fp_h using fp_host 
+# adding fp_w adding fp_timeout
 
 require 'rubygems'
 require 'net/ping'
@@ -24,8 +29,8 @@ DISPLAY_EVERY=50
 DISPLAY_EVERY_ERROR=1
  
 #Setting up options and parsing command line
-options = {:host => nil , :retries => NUMBER_OF_PINGS, :timeout => MAXTIMEOUT, :port => '80', 
-           :mode => 'ICMP', :errorsLog => 'c:\temp\logs\op_errors_logs.txt', :errorTimeout => ERRORTIMEOUT }
+options = {:host => ENV['fp_h']||nil , :retries => NUMBER_OF_PINGS, :timeout => (ENV['fp_w']||MAXTIMEOUT).to_i, :port => '80', 
+           :mode => 'ICMP', :errorsLog => 'c:\temp\logs\op_errors_logs.txt', :errorTimeout => (ENV['fp_e']||ERRORTIMEOUT).to_i }
 
 parser = OptionParser.new do|opts|
 	opts.banner = "Usage: op [host][options]\n"
