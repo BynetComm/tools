@@ -1,6 +1,8 @@
 # tools
 This repo is central Communication Testing Tools wrapped by fast configuration and executing scripts for Bynet employess and partners
 
+Any Q? call Oz +972-52-5528022
+
 1st you need to make sure you have ruby / rails
  
  https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe
@@ -34,3 +36,17 @@ Type git config --global user.email "your-email"
 
 To check if Git is already config-ed you can type git config --list
 Create a free GitHub account or login if you already have one
+
+
+to get latest tools run update_tools.bat
+To push your update run push.bat (1st you have to setup your SSH public key in github site https://github.com/settings/ssh contact oz for help 
+
+Tools in Repo
+NirCmd    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
+Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
+op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
+kml       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
+mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
+foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry)
+fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
+ 
