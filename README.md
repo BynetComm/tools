@@ -75,4 +75,5 @@ To push your update run push.bat (1st you have to setup your SSH public key in g
 - mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
 - foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
 - fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
+- ra        Version 0.1 Run as Admin check if admin or elevate and executing in new cmd window
  
