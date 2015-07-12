@@ -16,7 +16,8 @@ Any Q? call Oz +972-52-5528022
   
   c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 
-<if you have wget http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr otherwise download manualy >
+if you have wget http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr otherwise download manualy and place in c:\temp  
+```
 mkdir c:\temp
 cd c:\temp
 wget https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe --no-check-certificate
@@ -24,14 +25,22 @@ wget http://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_
 cmd /k railsinstaller-3.0.0.exe
 move c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 del c:\temp\railsinstaller-3.0.0.exe  
-
 mkdir c:\temp\logs
 mkdir c:\bynet\
 cd c:\bynet
 git clone https://github.com/BynetComm/tools.git
 cd tools
 bundle install
-<end of installation commands>
+fix_path.bat
+```
+# Verify Setup
+```
+ruby -v
+gem -v
+BynetTools
+which foz
+```
+end of installation commands
 
 # Initial Setups  
 
@@ -63,6 +72,6 @@ Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
 op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
 kml       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
 mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
-foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry)
+foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
 fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
  
