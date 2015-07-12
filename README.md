@@ -67,11 +67,12 @@ To push your update run push.bat (1st you have to setup your SSH public key in g
 
 
 # Tools in Repo
-NirCmd    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
-Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
-op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
-kml       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
-mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
-foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
-fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
+
+- NirCmd    Version 2.75 a generic Swiss army knife  (http://www.nirsoft.net/)
+- Fping     Version 3.0  a fast ping utility (http://www.kwakkelflap.com)
+- op        Version 1.0  a fast ping ruby wrapper (Bynet Internal) -first make sure to run op_install.bat 
+- kml       Version 2.1 a custom .csv to .kml converter (Bynet Internal)
+- mon       Version 2.2 a Test Drive GPS + RADWIN snmp/telnet + Fping Collector / Monitor => customized c:\temp\output.csv    
+- foz       Version 1.2 a Fast ping wrapper (please run foz -s for initial setup and foz dump_env to write to Registry can be used to setup op regkeys)
+- fix_path  Version 0.1 adds this Repo tools to your path and (assumes the tools are cloned into C:\Bynet\Tools)
  
