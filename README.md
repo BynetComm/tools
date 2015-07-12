@@ -16,7 +16,7 @@ Any Q? call Oz +972-52-5528022
   
   c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 
-if you have wget http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr otherwise download manualy and place in c:\temp  
+if you have dont have  wget get it from: http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=garr Or download manualy and place in c:\temp  
 ```
 mkdir c:\temp
 cd c:\temp
