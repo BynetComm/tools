@@ -57,11 +57,21 @@ Git & GitHub
 
 Check if Git is installed
 In the terminal type git --version (1.8 or higher preferred)
-If not, download Git [here] (http://git-scm.com/downloads). Then, setup your local Git profile - In the terminal:
-Type git config --global user.name "your-name"
-Type git config --global user.email "your-email"
+If not, download Git [here] (http://git-scm.com/downloads). 
+Then, setup your local Git profile - In the terminal:
 
-To check if Git is already config-ed you can type git config --list
+Type 
+```
+git config --global user.name "your-name"
+```
+Type 
+```
+git config --global user.email "your-email"
+```
+To check if Git is already config-ed you can type 
+```
+git config --list
+```
 Create a free GitHub account or login if you already have one
 
 
