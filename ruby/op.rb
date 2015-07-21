@@ -252,11 +252,14 @@ if options[:mode]=='TCP' then
   index =1
   pingResponse = Net::Ping.new(options[:host],options[:port],[[timeout/1000 , 1].max,5 ].min);
   do_tcp=true;
+  last_good_time = Time.now
+  
   while (index <= options[:retries] && do_tcp )
     begin #rescue
 	  last_ping_successful = nil
       beginning_time = Time.now
-	   
+	  last_error_time =  Time.now
+	  last_good_time = Time.now
 	  begin
         pingResponse = Timeout::timeout(timeout/1000.0) {Net::Ping::TCP.new(options[:host],options[:port]||'0')} ;
 	  rescue Exception => exc
