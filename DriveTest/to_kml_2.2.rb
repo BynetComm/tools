@@ -147,6 +147,15 @@ class Location
     return  "#{@address}"
   end  
   
+  def lat
+  	return  "#{@lat}"
+  end	
+
+ def lng
+  	return  "#{@lng}"
+  end
+
+
   def to_kml
 begin 
     uts = true 
@@ -463,6 +472,25 @@ File.open(@options[:myfilename], @options[:writemode]) do |f|
 #    puts Time.now().strftime("Now is %H:%M:%S.%3N")
   end #locations
  
+#<open>1</open>
+#    <Camera>
+#      <longitude>-122.4790</longitude>
+#      <latitude>37.8110</latitude>
+#      <altitude>127</altitude>
+#      <heading>18.0</heading>
+#      <tilt>85</tilt>
+#      <altitudeMode>absolute</altitudeMode>
+#    </Camera>
+f.write("<open>1</open>\n")
+f.write("	<Camera>\n")
+f.write("	  <longitude>#{sortedLocations.last.lng}</longitude>\n")
+f.write("	  <latitude>#{sortedLocations.last.lat}</latitude>\n")
+#f.write("	  <altitude>2000</altitude>\n")
+#f.write("	  <heading>0</heading>\n")
+#f.write("	  <tilt>0</tilt>\n")
+#f.write("	  <altitudeMode>absolute</altitudeMode>\n")
+f.write("	</Camera>\n")
+
   f.write("</Folder></Document>\n</kml>")
   puts ("processed #{index} lines")
  end
