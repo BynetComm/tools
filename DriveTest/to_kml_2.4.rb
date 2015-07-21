@@ -29,7 +29,7 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options[:myfilename] = 'c:\temp\output16_2.kml'; 
  @options[:usetimestamp] = true; 
 
- VERSION = "2.2"
+ VERSION = "2.4"
  DEBUG = false   
  DISPLAY_ZERO_RSS = true
  
