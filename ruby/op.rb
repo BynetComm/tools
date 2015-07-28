@@ -25,7 +25,7 @@ ERRORTIMEOUT=100
 DISPLAY_OUTPUT=false
 DEBUG=false
 LOG_INFO=false
-DISPLAY_EVERY=50
+DISPLAY_EVERY=20
 DISPLAY_EVERY_ERROR=1
  
 #Setting up options and parsing command line

@@ -1,1 +1,0 @@
-[0/--packets{15:40:04.27}] c:\pathtest 30m -b -c --packets 172.17.50.1 -b    
