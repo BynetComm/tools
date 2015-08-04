@@ -24,9 +24,9 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
- @options[:inputfile] = 'c:\temp\output16_2.csv';
+ @options[:inputfile] = 'c:\temp\output_23.07.csv';
  @options[:writemode] = 'w';
- @options[:myfilename] = 'c:\temp\output16_2.kml'; 
+ @options[:myfilename] = 'c:\temp\output_23.07.kml'; 
  @options[:usetimestamp] = true; 
 
  VERSION = "2.4"
