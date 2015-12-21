@@ -152,7 +152,7 @@ puts ("HW version for #{pingHosts[:HBS]} is #{hwVersion(pingHosts[:HBS])}")
 
 def ping (host) 
   line_id=0;
-  IO.popen("#{'C:/tools/Fping.exe'} #{host} -t 2ms -o -w #{PINGTIMEOUT}") {
+  IO.popen("#{'C:/bynet/tools/net/Fping.exe'} #{host} -t 2ms -o -w #{PINGTIMEOUT}") {
          |io| while (line = io.gets) do 
            # puts line
             line_id+=1;
@@ -175,7 +175,7 @@ def pingj (host)
   jitter_total=0.0
   jitter_avg = 0
   avg_delay = 0
-  IO.popen("'C:/tools/Fping.exe'} #{host} -t 2ms -j -w #{PINGTIMEOUT}") {
+  IO.popen("'C:/bynet/tools/net/Fping.exe'} #{host} -t 2ms -j -w #{PINGTIMEOUT}") {
          |io| while (line = io.gets) do 
            # puts line
             line_id+=1;

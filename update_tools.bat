@@ -1,4 +1,6 @@
-cd c:\bynet\tools
-c:
+@cd c:\bynet\tools
 
-git pull origin master
+@c:
+
+
+@git pull origin master

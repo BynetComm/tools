@@ -17,7 +17,8 @@ IF NOT %ERRORLEVEL% EQU 0 goto install_rails
 goto install_ozping
 :install_rails
 wget https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.0.0.exe --no-check-certificate
-cmd /k railsinstaller-3.0.0.exe
+railsinstaller-3.0.0.exe
+rem #was# cmd /k railsinstaller-3.0.0.exe
 del c:\temp\railsinstaller-3.0.0.exe
 :install_pem
 @Echo installing CA .pem
@@ -28,4 +29,5 @@ set path=%old_path%
 rem setting requirements for op.rb
 @echo Setting requirements for op.rb
 mkdir c:\temp\logs >>nul
-gem install net-ping win32-security logger
+mkdir c:\temp\log >>nul
+gem install net-ping win32-security logger snmp
