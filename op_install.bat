@@ -14,4 +14,4 @@ del c:\temp\railsinstaller-3.0.0.exe
 :install_OzPing
 remark setting requirements for op.rb
 mkdir c:\temp\logs
-gem install net-ping win32-security logger
+gem install net-ping win32-security logger rgeo
