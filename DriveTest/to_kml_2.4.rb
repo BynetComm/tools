@@ -24,20 +24,14 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
-<<<<<<< HEAD
- @options[:inputfile] = 'C:\temp\out.csv'
- @options[:writemode] = 'w';
- @options[:myfilename] = 'c:\temp\SEG_09.09.15.kml'; 
-=======
- #please fix the line bellow to point to the input file e.g. 'c:\temp\output1.csv'  or 'c:\users\joe\desktop\output.csv'
+ # please fix the line bellow to point to the input file e.g. 'c:\temp\output1.csv'  or 'c:\users\joe\desktop\output.csv'
  @options[:inputfile] = 'c:\temp\output1.csv';
  @options[:writemode] = 'w';
  @options[:myfilename] = 'c:\temp\output1.kml'; 
->>>>>>> 387c9ea4c2ae6779807a1eb9be4569b4ece3bffc
  @options[:usetimestamp] = true; 
 
  VERSION = "2.4"
- DEBUG = true  
+ DEBUG = false   
  DISPLAY_ZERO_RSS = true
  
  opts = OptionParser.new do |opts|
@@ -91,7 +85,7 @@ Colors=Array['FFFFFF', '10FF00' , '00FF00', '00FF0F',	'00FF1F',	'00FF3F',	'00FF5
 @rss_styles = Array.new [ -30,-40 ,-45,-50,-60,-62 ,-65,-68,-70,-73,-75,-78,-81,-83 ,-85,-90,-95,-98, -121 ]   
 @@rss_styles = @rss_styles
 unless File.exists?(@options[:inputfile])
-  raise 'Input File not found- check path'
+  raise 'File not found'
 end
 name, address, timestamp, lat, lng, client  ,rss_BH_AIR_MaxRSL, rss_BH_AIR_MinRSL , state, connected_to_hbs ,ping_to_remote = nil, nil,nil,nil,nil,nil,nil,nil,nil,nil,nil
 
@@ -238,7 +232,7 @@ begin
     end    
 #    out += "	<description><![CDATA[RSSI=#{@rss_BH_AIR_MinRSL||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
 	
-    out += "	<description><![CDATA[RSSI=#{@address||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
+    out += "	<description><![CDATA[MAX=#{@rss_BH_AIR_MaxRSL||'N/A'}<br>MIN=#{@rss_BH_AIR_MinRSL||'N/A'}<br>RSSI=#{@address||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
 
          "]]></description>\n" +
     "<ExtendedData>\n" +
