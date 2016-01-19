@@ -1,6 +1,6 @@
 p= ENV["path"];
 #p=p.gsub("C:\\Bynet\Tools\\GNU;","");
-p+= "C:\\Bynet\\Tools\\Net;" unless p.include?("C:\\bynet\\Tools\\Net;");
+p+= ";C:\\Bynet\\Tools\\Net;" unless p.include?("C:\\bynet\\Tools\\Net;");
 p+= "C:\\Bynet\\Tools\\;" unless p.include?("C:\\Bynet\\Tools;");
 p += "C:\\Bynet\\Tools\\GNU\\bin;" unless p.include?("C:\\Bynet\\Tools\\GNU\\bin;") ;
 p += "C:\\Bynet\\Tools\\CLI;" unless p.include?("C:\\Bynet\\Tools\\CLI;") ;
