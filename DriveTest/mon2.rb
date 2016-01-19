@@ -10,7 +10,7 @@ puts "<host> <executions> <out_file> "
   VERSION = "2.01"
   pingHosts = Hash.new
   pingHosts = {:WiFi => '65.15.0.14' , :BH => '65.15.0.12' , :HBS => '65.15.0.12', :remote => '65.15.1.10'};
-  hbs_IP = { :HBS_1 => '65.15.0.185', :HBS_2 => '65.15.0.167',  :HBS_3 => '65.15.0.157', :HBS_4 => '65.15.0.47', 
+  hbs_IP = { :HBS_1 => '65.15.0.185', :HBS_2 => '65.15.0.67',  :HBS_3 => '65.15.0.157', :HBS_4 => '65.15.0.47', 
           :HBS_5 => '65.15.0.40', :HBS_6 => '65.15.0.21'  };
   hmus_IP = { :HMU_1 => '65.15.0.12'};        
   hbs_oids_r = ""
@@ -20,7 +20,7 @@ puts "<host> <executions> <out_file> "
   hmus_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
   myhost = ARGV[1] ||pingHosts[:BH];
   myfile = ARGV[2] ||'c:/temp/output1.csv';
-  executions =  Integer(ARGV[0] || 10000);
+  executions =  Integer(ARGV[0] || 100000000);
   pingResults = Hash.new;
   pingjResults = Hash.new;
   pingjResults_min = Hash.new;

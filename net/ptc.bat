@@ -3,7 +3,7 @@
 set /a index = 0
 set mode=time
 Rem set mode=packets
-if "%1" =="help" @echo "usage:pathtest.bat <BW> <Serverhost[fp_h]> <Serverport[D:3236]> <time> <#loops [D:100000]> <Layer4_mode[D:TCP]> <direction [D:outbound]>"
+if "%1" =="help" @echo "usage:pathtest.bat <BW> <Serverhost[fp_h]> <Serverport[D:3236]> <time>    <#loops [D:100000]> <Layer4_mode[D:TCP]> <direction [D:outbound]> ..."
 if "%1" =="help" goto end
 if "%5" == "" (if "%maxpathtest%"=="" set maxpathtest= 100000) else (set maxpathtest=%5)
 if "%fp_h%"=="" (set fp_h = 172.17.50.11) else (set fp_h= %pathtesthost%)
@@ -28,15 +28,19 @@ if "%pathtestfilepathname%" == "" (if "%pathtestfilepathname%"=="" set pathtestf
 goto %mode%
 :packets
 @echo PTC Ver 0.2 Running [%index%/%maxpathtest%{@%time%}] pathtest  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --packets %pathtestpackets% %pathtestdirecton%   %6 %7 %8 %9 
-c:\bynet\tools\net\pathtest.exe  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --packets %pathtestpackets% %pathtestpmode% %pathtestdirecton% %5 %6 %7 %8 %9 
+c:\bynet\tools\net\pathtest.exe  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --packets %pathtestpackets%  %6 %7 %8 %9 
 
 :time
 @echo PTC Ver 0.2 Running [%index%/%maxpathtest%{@%time%}] pathtest  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --time %pathtestpackets% %pathtestdirecton%   %6 %7 %8 %9 
+<<<<<<< HEAD
+c:\bynet\tools\net\pathtest.exe  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --time %pathtesttime%  %6 %7 %8 %9 
+=======
 <<<<<<< HEAD
 c:\bynet\tools\net\pathtest.exe  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --time %pathtesttime% %pathtestpmode% %pathtestdirecton%  %5 %6 %7 %8 %9 
 =======
 c:\bynet\tools\net\pathtest.exe  -c %pathtesthost%:%pathtestcontrolport% -b %pathtestbw% --time %pathtesttime% %5 %6 %7 %8 %9 
 >>>>>>> 3dc254a01d631745b263ecaebd97f73569b74b4c
+>>>>>>> 9666bfcdacc24d7f51f17c8970889e9cd82ad0d1
 
 REM  > %pathtestfilepathname%%pathtestfileindex%.txt
 set /a index=%index% +1

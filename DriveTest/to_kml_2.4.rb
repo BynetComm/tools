@@ -24,9 +24,16 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
+<<<<<<< HEAD
  @options[:inputfile] = 'C:\temp\out.csv'
  @options[:writemode] = 'w';
  @options[:myfilename] = 'c:\temp\SEG_09.09.15.kml'; 
+=======
+ #please fix the line bellow to point to the input file e.g. 'c:\temp\output1.csv'  or 'c:\users\joe\desktop\output.csv'
+ @options[:inputfile] = 'c:\temp\output1.csv';
+ @options[:writemode] = 'w';
+ @options[:myfilename] = 'c:\temp\output1.kml'; 
+>>>>>>> 387c9ea4c2ae6779807a1eb9be4569b4ece3bffc
  @options[:usetimestamp] = true; 
 
  VERSION = "2.4"
@@ -70,7 +77,7 @@ end
   else
    opts.parse!(ARGV)  
  end
- 
+  # puts @options
 @@unused_rows = Array.new [];
 @@labelColors=Array['000000', '111111' , '222222' , '333333' , '444444', '555555' , '666666' , '777777' , '888888',
                   '999999', 'AAAAAA'  , 'BBBBBB', 'CCCCCC' , 'DDDDDD' ,'EEEEEE' , 'FFFFFF']
