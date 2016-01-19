@@ -24,13 +24,13 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
- @options[:inputfile] = 'c:\temp\output_23.07.csv';
+ @options[:inputfile] = 'C:\temp\out.csv'
  @options[:writemode] = 'w';
- @options[:myfilename] = 'c:\temp\output_23.07.kml'; 
+ @options[:myfilename] = 'c:\temp\SEG_09.09.15.kml'; 
  @options[:usetimestamp] = true; 
 
  VERSION = "2.4"
- DEBUG = false   
+ DEBUG = true  
  DISPLAY_ZERO_RSS = true
  
  opts = OptionParser.new do |opts|
@@ -84,7 +84,7 @@ Colors=Array['FFFFFF', '10FF00' , '00FF00', '00FF0F',	'00FF1F',	'00FF3F',	'00FF5
 @rss_styles = Array.new [ -30,-40 ,-45,-50,-60,-62 ,-65,-68,-70,-73,-75,-78,-81,-83 ,-85,-90,-95,-98, -121 ]   
 @@rss_styles = @rss_styles
 unless File.exists?(@options[:inputfile])
-  raise 'File not found'
+  raise 'Input File not found- check path'
 end
 name, address, timestamp, lat, lng, client  ,rss_BH_AIR_MaxRSL, rss_BH_AIR_MinRSL , state, connected_to_hbs ,ping_to_remote = nil, nil,nil,nil,nil,nil,nil,nil,nil,nil,nil
 
