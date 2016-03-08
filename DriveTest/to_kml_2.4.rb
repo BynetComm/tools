@@ -24,9 +24,10 @@ DOCTYPE = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
  @options = Hash.new
 
  @options[:client_name] = 'SEGEV';
- @options[:inputfile] = 'c:\temp\output16_2.csv';
+ # please fix the line bellow to point to the input file e.g. 'c:\temp\output1.csv'  or 'c:\users\joe\desktop\output.csv'
+ @options[:inputfile] = 'c:\temp\output1.csv';
  @options[:writemode] = 'w';
- @options[:myfilename] = 'c:\temp\output16_2.kml'; 
+ @options[:myfilename] = 'c:\temp\output1.kml'; 
  @options[:usetimestamp] = true; 
 
  VERSION = "2.4"
@@ -70,7 +71,7 @@ end
   else
    opts.parse!(ARGV)  
  end
- 
+  # puts @options
 @@unused_rows = Array.new [];
 @@labelColors=Array['000000', '111111' , '222222' , '333333' , '444444', '555555' , '666666' , '777777' , '888888',
                   '999999', 'AAAAAA'  , 'BBBBBB', 'CCCCCC' , 'DDDDDD' ,'EEEEEE' , 'FFFFFF']
@@ -231,7 +232,7 @@ begin
     end    
 #    out += "	<description><![CDATA[RSSI=#{@rss_BH_AIR_MinRSL||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
 	
-    out += "	<description><![CDATA[RSSI=#{@address||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
+    out += "	<description><![CDATA[MAX=#{@rss_BH_AIR_MaxRSL||'N/A'}<br>MIN=#{@rss_BH_AIR_MinRSL||'N/A'}<br>RSSI=#{@address||'N/A'}<br>\nPing to Remote=#{@ping_to_remote||''}<br>\nState=#{@state==nil ? '' : @state.strip}<br>\nConnected_to_HBS=#{@_connected_to_HBS||''}"+
 
          "]]></description>\n" +
     "<ExtendedData>\n" +
