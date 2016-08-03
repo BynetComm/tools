@@ -26,14 +26,11 @@ wget https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl
 move c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs\AddTrustExternalCARoot-2048.pem
 set path=%old_path%
 :install_OzPing
-<<<<<<< HEAD
-remark setting requirements for op.rb
+rem setting requirements for op.rb
 mkdir c:\temp\logs
-gem install net-ping win32-security logger rgeo
-=======
+gem install net-ping win32-security logger rgeo snmp
 rem setting requirements for op.rb
 @echo Setting requirements for op.rb
 mkdir c:\temp\logs >>nul
 mkdir c:\temp\log >>nul
-gem install net-ping win32-security logger snmp
->>>>>>> 9666bfcdacc24d7f51f17c8970889e9cd82ad0d1
+
