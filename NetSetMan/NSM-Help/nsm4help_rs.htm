@@ -1,0 +1,970 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x datoteka pomoći</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Datoteka pomoći</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-rs.png" alt=""></div>
+          <div id="hf_language">srpski jezik</div>
+          <div id="hf_translator">preveo Nemanja Bračko</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Opšti podaci
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Verzija datoteke pomoći</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Podržani <br> operativni sistemi</td>
+            <td class="hf_tblinfo_right">Windows <br> XP, Vista, 7, 8, 10 <br> 32-bitni, 64-bitni</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Licenca</td>
+            <td class="hf_tblinfo_right">Nekomercijalna, besplatna <br><em>ili</em><br> Komercijalna, Pro verzija<br> Prikaži kao <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> ili <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Kontakt</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Forum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Sadržaj
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Osnove
+        </p>
+        <ul>
+          <li><a href="#hf_description">Opis</a></li>
+          <li><a href="#hf_howtouse">Osnovne informacije</a></li>
+          <li><a href="#hf_profiles">Profili</a></li>
+          <li><a href="#hf_nics">Mrežni adapteri (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Postavke operacija</a></li>
+          <li><a href="#hf_activation">Aktiviranje profila</a></li>
+          <li><a href="#hf_compactmode">Kompaktni i Puni režim</a></li>
+          <li><a href="#hf_tray">Sistemski meni i sistemske informacije</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Funkcije
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Pregled</a></li>
+          <li><a href="#hf_adapterstatus">Status adaptera</a></li>
+          <li><a href="#hf_advanced">Napredne TCP/IP postavke </a></li>
+          <li><a href="#hf_connections">Veze</a></li>
+          <li><a href="#hf_hosts">Hostovi</a></li>
+          <li><a href="#hf_netdrives">Mrežni uređaji</a></li>
+          <li><a href="#hf_scripts">Skripta i programi</a></li>
+          <li><a href="#hf_smtp">SMTP / E-pošta</a></li>
+          <li><a href="#hf_system">Sistemske postavke</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Napredno
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Obaveštenja</a></li>
+          <li><a href="#hf_nsmservice">NSM usluga / Ograničeni korisnički nalog</a></li>
+          <li><a href="#hf_prelogon">Promena korisnika pre prijave</a></li>
+          <li><a href="#hf_nsmadministration">NSM administracija</a></li>
+          <li><a href="#hf_commandline">Aktivacija komandne linije</a></li>
+          <li><a href="#hf_ncfreeware">Poruka u nekomercijalnoj, besplatnoj verziji</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Dodatne Pro funkcije
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Grupe profila</a></li>
+          <li><a href="#hf_proxy">Pregledač / Posrednik</a></li>
+          <li><a href="#hf_domain">Domen</a></li>
+          <li><a href="#hf_distribution">Distribucija u poslovnim mrežama</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Osnove
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Opis
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> je aplikacija za upravljanje mrežnim postavkama sa kojom možete da menjate 6 različitih postavki, vizuelno strukturiranih profila, što uključuje:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP adrese (IPv4 i IPv6!) </li>
+              <li> Mrežne prolaze (sadrži Metriku) </li>
+              <li> DNS servere </li>
+              <li> WINS servere </li>
+              <li> WiFi upravljanje </li>
+              <li> Ime računara </li>
+              <li> Radnu grupu </li>
+              <li> Podrazumevani štampač </li>
+              <li> Mrežnje uređaje </li>
+              <li> NIC status </li>
+              <li> Priključke (RAS/DUN/PPP/VPN) </li>
+              <li> DNS </li>
+              <li> Tabele rutiranja </li>
+              <li> SMTP server </li>
+              <li> Unosi iz Hosts datoteke </li>
+              <li> Sistemske postavke </li>
+              <li> Ma </li>
+              <li> Skripta (BAT, VS, JS, ...) </li>
+              <li> Izvršenje programa </li>
+            </ul></td>
+            <td width="51%"><strong>Dodatno samo u <u>Pro</u> verziji:</strong>
+            <ul>
+              <li> Može da se koristi na poslu </li>
+              <li> Neograničena količina profila </li>
+              <li> Mrežni domeni </li>
+              <li> Potpune postavke Posrednika i <br>  <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> vam nudi ono što je do saнуди оно што сте недостаје у оперативном систему Виндовс до сада: <br> Moćan, jednostavan interfejs za upotrebu za upravljanje svim vašim mrežnim postavkama na prvi pogled. <br> Probajte ga i nikada više nećete poželeti da opet budete bez njega.
+        </p>
+        <p>
+          Sve postavke i promene se automatski čuvaju u posebnoj datoteci (<em>settings.ini</em>) tako e kopirajte, prebacite ili nadogradite u drugu verziju.
+        </p>
+        <p>
+          <strong>Aktivirajte i sačuvajte profil sa jednim klikom ili čak potpuno automatski!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan protiv Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man prozor">
+          <br><strong>NetSetMan:</strong> Nekomercijalna, besplatna verzija
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro glavni prozor">
+          <br><strong>NetSetMan Pro:</strong> Komercijalna Pro verzija
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Osnovne informacije
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profili
+            </div> Svaki <a href="#">profil</a> predstavlja skup postavki koji je potreban za određenu lokaciju ili scenario. Upotrebom podprofila za više mrežnih adaptera moguće je konfigurisati sa jednim profilom. Preimenujte profil dvostrukim klikom na natpis u kartici.</li>
+          <li>
+            <div>
+              Ručna konfiguracija
+            </div> Potrebno je da ručno sami konfigurišete profile. Nije moguće pretpostaviti ispravne postavke za nepoznatu lokaciju. Osnovna svrha aplikacije jeste da automatizuje redovni postupak promene postavki koji obično radite ručno.</li>
+          <li>
+            <div>
+              Izbor postavki
+            </div><a href="#hf_basicoperations">Čitanje svih trenutnih postavki</a> u profilu možete da zadate početnu tačku, ali i dalje je potrebno da odlučite koje postavke se primenjuju kada aktivirate izabrani profil. Veoma se preporučuje da ograničite postavke na one koje ste možda promenili u međuvremenu. Na primer, nije neophodno da primenite ime računaru, ukoliko se ova postavka nikada ne menja.</li>
+          <li>
+            <div>
+              Konfigurisanje postavki
+            </div> Da biste konfigurisali postavke obeležite prvo poqe, a zatim ili direktno unesite željenu konfiguraciju u glavnom interfejsu ili otvorite prozor konfiguracije za izabranu postavku.</li>
+          <li>
+            <div>
+              Aktiviranje profila
+            </div> Nijedan profil podrazumevano nije automatski aktiviran, tj. nijedna postavka na vašem sistemu se ne menja bez vaše namere. Kao što smo rekli, možete da koristite <a href="#hf_autoswitch">AutoSwitch</a> funkciju kako biste automatski aktivirali određene profile na osnovu potpuno prilagodljivih uslova.</li>
+          <li>
+            <div>
+              Pristup putem sistemske ikone
+            </div> Preporučeno je da <a href="#hf_tray">zadržite NetSetMan umanjen u sistemskoj traci</a> i da pomerite ikonu tako da bude uvek vidljiva. Na taj način možete brzo da aktivirate profil klikom na ikonu i biranjem profila. Pored toka, imate i koristan pregled trenutne veze prevlačenjem pokazivača iznad ikone kod IP adrese.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profili
+      </div>
+      <div class="hf_body">
+        <p>
+          Kartice predstavljaju dostupne profile. Možete da sačuvate 6 različitih skupova postavki u tim karticama.
+        </p>
+        <p>
+          Ukoliko želite da promenite postavke dva različita mrežna adaptera, prilikom aktiviranja jednog profila, možete da upotrebite funkciju <strong>Podprofil</strong>. Kliknite na dugme „+“ pored padajuće liste i pojaviće se novi meni sa dva podprofila (trenutni i novi koji je prazan). Naslov automatski postaje ime mrežnog adaptera koji je izabran u podprofilu i nije ga moguće promeniti. Možete da napravite podprofila koliko god želite. Svaki od njih biće aktivirani jedan za drugim, prilikom aktivacije profila. Možete da promenite redosled prevlačenjem i otpuštanjem.
+        </p>
+        <p>
+          Sve promene se automatski čuvaju tako da ništa nije moguće slučajno izgubiti.
+        </p>
+        <p>
+          Možete da promenite ime profila desnim klikom na isti i biranjem opcije „Preimenuj“ ili jednostavnim dvoklikom na naslov profila koji je prikazan na jezičku.
+        </p>
+        <p>
+          Da biste još lakše upravljali svojim profilima, možete da iskoristite <strong>Upravljanje profilima</strong> koji možete da pronađete u meniju. Ono omogućava uređivanje profila, podprofila i grupa (samo u NetSetMan Pro) sa vašim mišem ili pomoću uobičajenih prečica na tastaturi (strelice na tastaturi za navigaciju, F2 za promenu imena, itd.). Prilikom upotrebe prevlačenja za promenu redosleda stavki, primetićete neizbežna ograničenja u zavisnosti od stavke, usled datih tehničkiКада користите драг-анд-дроп бисте преуредили ставке ћете приметити неке неизбежне ограничења у зависности од ставке, због датим околностима техничких: Профили се не може избрисати, МултиПрофилес не може преименовати, Профили могу бити замењени, али не и преселио. Polja za obeležavanje predstavljaju da li je profil vidljiv u sistemskoj traci poslova i u Kompaktnom režimu.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Kartice podprofila" class="screen">
+          <img src="data/rename.png" alt="Preimenuj profil" class="screen">
+          <img src="data/profilemanagement.png" alt="Upravljanje profilima" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Mrežni adapteri (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Svi dostupni mrežni adapteri su prikazani po imenu i po njihovom tipu. Izaberite NIC kojim želite da upravljate u trenutnom (pod)profilu.
+        </p>
+        <p>
+          Ukoliko određeni NIC nije dostupan u listi (npr. zbog toga što je onemogućen ili je virtuelni) možete da upravljate listom tako što ćete kliknuti na dugme <strong>Osveži</strong> ili da brzo osvežite listu biranjem <strong>Upravljanje mrežnim adapterima</strong>. Ovde ćete pronaći kompletnu listu svih dostupnih NIC-eva. Obeležite sve NIC-ove koje želite da imate u svojoj listi.
+        </p>
+        <p>
+          <strong>Napomena:</strong> Svi NIC-evi koji se nalaze u listi pojaviće se i u Info ikoni za  obaveštenja. Uklonite oznaku sa neželjenih NIC-ova kako biste ih uklonili sa liste i iz ikone za obaveštenja.
+        </p>
+        <p>
+          Ukoliko kopirate datoteku sa postavkama (settings.ini) na drugi sistem, NetSetMan će pokušati da automatski dodeli profile novim NIC-ovima. Međuti,, ovo će raditi samo ukoliko novi sistem ima NIC sa potpuno istim imenom (na prvoj slici je to „LAN“).
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Izbor mrežnog adaptera" class="screen">
+        <img src="data/adapters-management.png" alt="Izbor mrežnog adaptera" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Postavke operacije
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Preuzimanje trenutnih postavki
+        </p>
+        <p>
+          Da biste učitali trenutne postavke u profil, samo kliknite na simbol <img alt="Ikona preuzimanja postavki" src="data/icon-get.png"> pored polja za unos. <br> Da biste dobili sve trenutne postavke, desnim klikom na profil izaberite „Preuzmi sve trenutne postavke“.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Preuzmi jednu postavku" class="screen">
+        <img src="data/get-settings2.png" alt="Preuzmi sve postavke" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Poništavanje postavki</span>
+        </p>
+        <p>
+          Da biste poništili konfiguraciju određene postavke, kliknite desnim tasterom miša i izaberite „Poništi“.
+        </p>
+        <p>
+          Da biste poništili vrednost IP polja, jednostavno dva puta kliknite na odgovarajući natpis.
+        </p>
+        <p>
+          Da biste poništili sve postavke trenutnog (pod)profila, desnim klikom na karticu profila izaberite „Poništi postavke“.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Poništi jednu postavku" class="screen">
+        <img src="data/clear-settings2.png" alt="Poništi sve postavke" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Kopiranje i lepljenje postavki</span>
+        </p>
+        <p>
+          Da biste razmenili postavke među različitim profilima, možete da kopirate i nalepite čitav profil desnim tasterom miša na originalni profil i biranjem „Kopiraj postavke“, a zatim desnim klikom na novi profil i biranjem „Nalepi postavke“.
+        </p>
+        <p>
+          Da biste kopirali i nalepili samo određenu postavku, jednostavno kliknite desnim tasterom miša i izaberite „Kopiraj“ ili „Nalepi“.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Kopiraj i nalepi jednu postavku" class="screen">
+        <img src="data/copypaste2.png" alt="Kopiraj i nalepi sve postavke" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Aktiviranje profila
+      </div>
+      <div class="hf_body">
+        <p>
+          Da biste primenili sve postavke trenutnog profila, kliknite na „<strong>Aktiviraj</strong>“ ili ukoliko je program umanjen, izaberite profil iz <a href="#hf_tray">menija u ikoni obaveštenja</a> . <br> Primetićete da će se aktivirati samo obeležene postavke.
+        </p>
+        <p>
+          Prozor <strong>Aktivacija</strong> sadrži informacije o trenutnom napretku aktivacije. <br> Ovde možete da vidite koje postavke se primenjuju i da li je postupak završen uspešno ili ne. Možete da otkažete postupak aktivacije u bilo kom trenutku, jednostavnim klikom na dugme „Otkaži“.
+        </p>
+        <p>
+          Sve promene se odmah primenjuju. Međutim, u određenim slučajevima nekim postavkama treba kraće vreme dok u potpunosti stupe na snagu ili zahtevaju ponovno pokretanje (posebno važi za „Ime računara“ i „Radna grupa/Domen“).
+        </p>
+        <p>
+          Odeljak <strong>Detalji</strong> pružaju pregled svih konfigurisanih postavki za taj profil. Da biste videli više informacija i poruke o greškama u punoj dužini, otvorite odeljak <strong>Evidencija</strong>.
+        </p>
+        <p>
+          Da biste pronašli rešenja za najčešće greške i probleme, pogledajte <a href="http://www.netsetman.com/faq" target="_blank">ČPP</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Obeležite postavke za promenu" class="screen">
+        <img src="data/activation.png" alt="Prozor aktivacije profila" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Česti rezultati i njihova značenja</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">U redu</td>
+            <td class="hf_errortable_right">Sve je odrađeno kako se očekuje.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Postavke se trenutno primenjuju.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Postavke se ignorišu bez pokušaja, jer su bile nepotpune ili neispravne.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Greška</td>
+            <td class="hf_errortable_right">U većini slučajeva greške su prikazane u vidu kratkog crvenog teksta poput „Datoteka nije pronađena“. U slučaju da dobijete kôd sa greškom, pogledajte evidenciju da saznate ukoliko poruka o grešci postoji za taj kôd. Ukoliko nemate pojma šta je razlog, molimo vas da pošaljete kôd sa greškom i detaljan opis greške na <a href="https://www.netsetman.com/support/" target="_blank">forume podrške</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Neispravno</td>
+            <td class="hf_errortable_right">Ili vrednost nije ispravna, nije navedena ili nije dozvoljena (posebni znakovi, isto ime radne grupe kao i računara, itd)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Firefox je aktivan</td>
+            <td class="hf_errortable_right">Firefox je trenutno pokrenut. Da biste primenili ove postavke, potrebno je prvo da zatvorite pregledač.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Kompaktni i Puni režim
+      </div>
+      <div class="hf_body">
+        <p>
+          Pored klasičnog interfejsa „Puni režim“ gde možete da promenite sve postavke profila, postoji i dodatni interfejs „Kompaktni režim“. Možete da menjate te profile u bilo kom trenutku klikom na odgovarajuće dugme u glavnom meniju sa desne strane.
+        </p>
+        <p>
+          Čim se svi profili podese, „Kompaktni režim“ je idealan interfejs. Ovde imate kompaktan pregled svih postavki profila bez bojazni da ćete postavke slučajno izmeniti.
+        </p>
+        <p>
+          U slučaju da koristite <a href="#hf_nsmadministration">NSM administraciju</a> (kada nije obeleženo „Promeni postavke profila“) Kompaktni režim se automatski koristi kako bi se sprečilo da korisnik promeni postavke.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Kompaktni režim" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Sistemski meni i sistemske informacije
+      </div>
+      <div class="hf_body">
+        <p>
+          Kada je NetSetMan pokrenut pronaći ćete ikonu u sistemskoj traci poslova (pored ćasovnika). <br> Ovde možete da brzo aktivirate profil. Samo desnim tasterom miša kliknite na ikonu i otvorite <strong>meni sistemske ikone</strong> i izaberite profil za aktiviranje.
+        </p>
+        <p>
+          Ukoliko želite da izuzmete neke profile iz menija sistemske ikone, možete da ih pojedinačno sakrijete. Da biste to i uradili, izaberite profil u glavnom prozoru, desnim tasterom miša na karticu i kliknite na „Prikaži u režimima za ikone i u kompaktnom režimu“. Mali simbol pored teksta se prikazuje u zavisnosti da li je profil dostupan u sistemskoj ikoni, ili ne. Ova opcija imaće i uticaj na profile koji su prikazani u Kompaktnom režimu. Vidljivost profila može se konfigurisati i u <a href="#hf_profiles">Upravljanje profilima</a> .
+        </p>
+        <p>
+          Ukoliko ste ostavili vaš pokazivač iznad NetSetMan ikone u sistemskoj traci poslova, pojavljuju se <strong>Informacije sistemske trake poslova</strong>. Ono sadrži IP informacije koje se trenutno koriste na sistemu. Zbog toga što se podaci prikupljaju u realnom vremenu, može doći do kraće pauze. Kako biste smanjili pauzu, trebalo bi da razmislite o gašenju dodatnih informacija poput javnih IP i MAC adresa u odeljku „Postavke“.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Sistemska ikona" class="screen">
+        <img src="data/showintray.png" alt="Prikaži u paleti" class="screen">
+        <img src="data/trayinfo.png" alt="Informacije u sistemskoj traci poslova" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Funkcije
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Pregled
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan je dizajniran na način da imate direktan pregled svih konfigurisanih postavki unutar profila. Neke od najvažnijih funkcija su poput osnovnih IP postavki, WiFi i podrazumevani štampač mogu biti konfigurisani direktno iz glavnog interfejsa. Dalje, složenije postavke je moguće aktivirati samo ovde i biće prikazan kratak pregled iznad njihovih trenutnih postavki. Da biste ih izmenili, prvo ih aktivirajte, a zatim otvorite odgovarajući prozor klikom na dugme [...].
+        </p>
+        <p>
+          Sledeći odeljci daće vam osnovna uputstva i korisne savete o tome kako da koristite sve funkcije.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Grupa dodatnih postavki" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Status adaptera
+      </div>
+      <div class="hf_body">
+        <p>
+          Da biste aktivirali, deaktivirali ili ponovo pokrenuli izabrani mrežni adapter, upotrebite dugme Status adaptera. Podrazumevana boja će promeniti u odgovarajuću boju statusa. Dodatno možete da vidite konfigurisani status u opisu alatke.
+        </p>
+        <p>
+          Ukoliko želite da omogućite jedan adapter i onemogućite jedan ili sve ostale adaptere, potrebno je da napravite <a href="#hf_profiles">podprofile</a> za svaki od adaptera. Možete ručno da to obavite ili pomoću stavke iz menija na kraju menija Status adaptera. Ovo će automatski da napravi podprofile za svaki od mrežnih adaptera koji se nalazi u listi adaptera i postaviće odgovarajući status postavke. Zapamtite da možete da prilagodite koje adaptere želite da imate u listi pomoću <a href="#hf_nics">Upravljanja mrežnog adaptera</a>.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Status adaptera: Aktivan" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Status adaptera: Neaktivan" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Status adaptera: Ponovno pokretanje" class="screen">
+        <img src="data/adapterstatus.png" alt="Grupa dodatnih postavki" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Napredne TCP/IP postavke
+      </div>
+      <div class="hf_body">
+        <p>
+          Možete da odredite nekoliko IP adresa, mrežnih prolaza, DNS i WINS adresa po NIC-u, ukoliko je potrebno da budete povezani na nekoliko mreža u isto vreme. Da biste to uradili, kliknite na dugme „<strong>IP+</strong>“ ili da izaberete „Profil › Napredne TCP/IP postavke“ iz glavnog menija.
+        </p>
+        <p>
+          Ovde imate i mogućnost da upravljate sa više naprednih postavki poput <strong>ruter tabela, DNS sufiksa, IP konfiguracija</strong> i <strong>NetBIOS</strong>.
+        </p>
+        <ul>
+          <li> Aktivirajte grupu tako što ćete obeležiti naslov </li>
+          <li>
+            <img alt="Dodaj novu vrednost" src="data/icon-add.png"> Dodavanje nove vrednosti </li>
+          <li>
+            <img alt="Izbriši izabranu vrednost" src="data/icon-delete.png"> Brisanje izabrane vrednosti </li>
+          <li>
+            <img alt="Poništi listu" src="data/icon-deletelist.png"> Pražnjenje čitave liste </li>
+          <li>
+            <img alt="Preuzmi listu" src="data/icon-getlist.png"> Preuzimanje svih trenutnih vrednosti za ovu postavku iz sistema (bilo gde da kliknete na <img alt="Preuzmi postavke" src="data/icon-get.png"> simbol u glavnom prozoru, čita samo prvu vrednost) </li>
+          <li> Preuređivanje poretka prevlačenjem i otpuštanjem </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Prozor postavki za napredan TCP/IP pristup" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Prozor naprednih TCP/IP postavki" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Veze
+      </div>
+      <div class="hf_body">
+        <p>
+          Koristite ovu funkciju da povežete ili prekinete vezu svake od Windows veza, poput telefonskih (dial-up) mreža, mobilnih ili VPN veza. Kompatibilne veze su navedene zajedno sa vašim normalnim Windows mrežnim adapterima u prozoru Mrežne veze. Iz tehničkog ugla gledanja, podržane su sve veze koje su kompatibilne sa „RasDial“ tehnologijom.
+        </p>
+        <p>
+          Možete da izaberete ili prekid svih ostvarenih veza obeležavanjem polja za potvrdu, odnosno povezivanje/prekid pojedinačnih veza prema poretku u listi.
+        </p>
+        <p>
+          Ukoliko vaša veza iz nekog razloga nije prikazana, možete ručno da je dodate izborom „Dodaj…“ iz liste i unosom njenog imena na način kako je prikazan u Windows operativnom sistemu.
+        </p>
+        <p>
+          NetSetMan podržava i nekoliko VPN klijenata drugih kompanija, poput OpenVPN, Shrew i Cisco. Ukoliko je vaš VPN klijent kompatibilan, NetSetMan će ga smestiti u VPN profile unutar liste.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Prozor veza" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hostovi
+      </div>
+      <div class="hf_body">
+        <p>
+          U posebnim slučajevima može biti potrebno ili korisno da ručno dodelite IP adrese nazivima ili domenima. Napominjemo da će NetSetMan izmeniti samo svoje host unose, dok će postojeće ostaviti nepromenjene.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Prozor hostova" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Mrežni uređaji
+      </div>
+      <div class="hf_body">
+        <p>
+          Sa NetSetMan aplikacijom možete da mapirate i uklanjate mapiranja za neograničen broj uređaja u mreži. <br> Molimo vas da pročitate obaveštenja u dnu prozora klikom na „[Prikaži pomoć]“.
+        </p>
+        <p>
+          Kada je profil aktivan i izabrana je funkcija Net Drive, NetSetMan će uporediti listu svih trenutno mapiranih uređaja sa listom uređaja koje treba mapirati. Svi mapirani uređaji koji su u obe liste (ista slovna oznaka uređaja i iste putanje) ostaće nepromenjene. Svi ostali mrežni uređaji biće raskačeni pre nego što se novi mapiraju.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Prozor mrežnih uređaja" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Skripta
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan vam nudi ugodan način upravljanja svojim skripta datotekama. Međutim, aplikacija nema svoj skripta jezik. To znači da možete da upotrebite samo skripta jezike svog operativnog sistema koji je u stanju da ga izvrši. Uobičajeni skripta jezici su VBS, JS pa čak i jednostavne batch datoteke sa komandama iz komandne linije. Koristite vaš omiljeni pretraživač i pronađite više informacija o skriptingu i šta možete da učinite sa njim.
+        </p>
+        <p>
+          Otvorite postojeću skripta datoteku ili napravite novu kako biste mogli da uredite skripta. <br> Možete da imate dva skripta koji će se izvršiti pre i posle svih drugih promena postavki. <br> Ukoliko je potrebno da odložite međusobno pokretanje skripta i promene postavki, možete da odredite u dnu.
+        </p>
+        <div id="hf_programs">
+          <p>
+            <strong>Izvršenje programa</strong>
+          </p>
+          <p>
+            NetSetMan nudi jednostavan način pokretanja drugih programa unutar svakog profila.<br>
+            Programi mogu biti pokrenuti u smislu ograničenog korisnika (podrazumevano kada je UAC omogućen) ili sa punim administratorskim privilegijama (bez prikazivanja UAC poruke). Parametri po potrebi mogu biti dodati.<br>
+            Programi mogu biti pokretani u normalnom, uvećanom ili umanjenom režimu.
+          </p>
+          <p>
+            Već pokrenuti procesi mogu biti zaustavljeni na osnovu njihovih imena datoteka (bez obzira gde su smeštene) ili njihove tačne putanje.
+          </p>
+          <p>
+            Svaka akcija može imati pojedinačne pauze pre (negativne vrednosti) ili nakon (pozitivne vrednosti) izvršenja.
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="Programi" class="screen">
+        <img src="data/scripts.png" alt="Prozor skripta" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / E-pošta
+      </div>
+      <div class="hf_body">
+        <p>
+          U nekim slučajevima IP adresa SMTP servera za slanje e-pošte varira u zavisnostivaše mreže. Biti u istoj mreži može zahtevati da vaša lokalna IP adresa bude 10.0.0.1, dok van nje ćete možda trebati da joj pristupate kroz globalnu IP adresu.
+        </p>
+        <p>
+          Umesto da pokušavate da budete kompatibilni mnogim različitim klijentima za e-poštu i da barate sa razlličitim korisničkim profilima, NetSetMan rešava problem sa jednim jednostavnim zaobilaznim rešenjem. Špdesite „nsm.smtp“ kao SMTP adresu u svom klijentu za e-poštu i konfigurišite IP adrese odgovarajućih profila. Prilikom aktiviranja profila, obe vrednosti biće povezane pomoću hosts datoteke, tako da više ne morate da radite bilo kakve dodatne promene u svom klijentu za e-poštu.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="Prozor SMTP / e-pošta" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Sistemske postavke
+      </div>
+      <div class="hf_body">
+        <p>
+          Pored uobičajenih mrežnih postavki, nekada vam može zatrebati promena nekih sistemskih postavki u zavisnosti od vaše lokacije ili situacije. Na primer, na Univerzitetu možda želite da isključite zvuk, promenite radnu površinu i uključite balansirani plan napajanja.
+        </p>
+        <p>
+          Možete i da koristite prozor Sistemske postavke kako biste brzo promenili neke postavke za koje biste inače utrošili više vremena da ih pronađete u Windows operativnom sistemu. Jednostavno kliknite na dugme <img alt="Ikona za postavljanje postavki" src="data/set-icon.png"> da direktno aktivirate tu, konkretnu postavku.
+        </p>
+        <p>
+          Podržane postavke sadrže: režim prikaza, pozadinu, boju radne površine, čuvar ekrana, šemu dizajna, glasnoću zvuka i mikrofona, zvučnu šemu (uključujući izuzetke i obaveštenja), plan napajanja, vremensku zonu i MAC adresu.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Prozor sistemskih postavki" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan profil može se upotrebiti za povezivanje na postojeći WiFi profil. Da biste to i učinili, izaberite bežični adapter u padajućoj listi NIC adaptera, a zatim izaberite WiFi profil iz WiFi padajuće liste. Ukoliko samo želite da prekinete vašu bežičnu vezu, izaberite praznu vrednost.
+        </p>
+        <p>
+          Osim osnovnog WiFi prebacivanja, NetSetMan nudi i prošireno WiFi upravljanje. Kliknite na WiFi ikonicu ili koristite glavni meni (Alatke › NSM WiFi upravljač) da joj pristupite. Pronaći ćete listu svih trenutno dostupnih WiFi mreža. Žuta pozadina ukazuje da profil sa istim SSID nazivom već postoji. Mreža sa zelenom pozadinom je trenutno povezana. Možete da se povežete mrežu dvostrukim klikom ili upotrebom dugmeta „Poveži“. Ukoliko još uvek ne postoji profil za izabranu mrežu, možete da izaberete da je prvo napravite. Postavke (autentikacija, šifrovanje...) biće automatski konfigurisane u zavisnosti od prepoznate mreže. Međutim, možda će biti potrebno da ih prilagodite ukoliko iz nekog razloga prepoznavanje nije odrađeno ispravno.
+        </p>
+        <p>
+          NetSetMan radi pomoću izvornih Windows WiFi profila. To znači da ćete uvek imati pristup istim profilama koje ste koristili i u Windows operativnom sistemu ili u drugom WiFi softveru. Možete da napravite, izmenite ili izbrišete WiFi profile.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+            Povezivanje putem MAC adrese
+          </p>
+          <p>
+            Windows se obično povezuje na bežične mreže putem SSID oznake. Ukoliko više pristupnih tačaka imaju istu SSID oznaku, Windows ih grupiše i povezuje vas sa onom koja ima najbolji signal. Međutim, nekada vam možda zatreba da se povežete na određenu pristupnu tačku. Sa NetSetMan to možete da uradite!
+          </p>
+          <p>
+            NSM WiFi upravljač prikazuje sve dostupne mreže i pristupne tačke bez njihovog grupisanja, tako da možete da se povežete na tačno onu tačku koju želite. Postavljanjem miša preko tačake dobijate dodatne informacije poput MAC adrese za svaku mrežu. Kontekstualni meni koji je dostupan na desnom tasteru miša vam omogućava lako kopiranje MAC adrese ili SSID oznake.
+          </p>
+          <p>
+            Ukoliko želite da se povežete na određenu bežičnu mrežu prilikom aktiviranja NetSetMan profila, možete to da učinite dodavanjem njene MAC adrese u WiFi odeljku. Izaberite „Dodaj…“ i unesite MAC adresu po svom izboru. Prilikom aktiviranja profila, NetSetMan će obaviti povezivanje na odgovarajuću pristupnu tačku. Imajte na umu da je i dalje potrebno da imate odgovarajuću konfiguraciju WiFi profila na vašem sistemu.
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          Zahtevi
+        </p>
+        <p>
+          NetSetMan koristi izvorni API Windows operativnog sistema. Ovo donosi veliku prednost, jer nije potrebna instalacija novih upravljačkih programa (koji mogu da izazovu nekoliko ozbiljnih problema). Sa druge strane, WiFi funkcije NetSetMan aplikacije radiće samo na Windows sistemima koji već podržavaju WiFi. Srećom, danas ih većina verzija podržavaja. Ukoliko koristite Vista ili noviji operativni sistem, spremni ste. U XP operativnom sistemu potrebno je da imate instaliran SP2 ili SP3.
+        </p>
+        <p>
+          Uverite se da je pokrenuta usluga <em>WLAN AutoConfig (Wlansvc)</em> (Vista ili noviji) ili <em>Wireless Zero Configuration (WZCSVC)</em> (XP).
+        </p>
+        <p>
+          Ukoliko vaš WiFi adapted dolazi sa prilagođenim fabričkim softverom za upravljanje WiFi postavkama, onda će u većini slučajeva on blokirati da Windows pristupa adapteru. Moraćete da pronađete opciju u tom softveru da Windows upravlja adapterom (ukoliko ona postoji). <br> Pošto postoji mnogo različitih proizvođača sa sopstvenim softverom, ne postoji univerzalni način da se to postigne. Evo jendnog primera: Ukoliko koristite AVM FRITZ!WLAN USB uređaj, kliknite na sistemsku ikonu njegovog softvera i izaberite „Windows WLAN“.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi pregled" class="screen">
+        <img src="data/wifi.png" alt="Prozor NSM WiFi upravljanje" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Napredno
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Prilično je lako da jednim klikom aktivirate profil iz <a href="#hf_tray">menija u ikoni obaveštenja</a>. Međutim u nekim slučajevima može biti lakše i da se profili aktiviraju potpuno automatski u zavisnosti od prilagođenih uslova. Integrisana AutoSwitch funkcija upravo to radi.
+        </p>
+        <p>
+          Nakon aktiviranja AutoSwitch opcije, sledeći uslovi mogu biti konfigurisani na svim profilima pojedinačno:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img alt="Ikona zabranjenog profila" src="data/icon-wifi4.png"> Okolne WiFi mreže
+          </div>
+          <ul>
+            <li>Bežična mreža (SSID ili MAC) u/van opsega</li>
+            <li>Jačina signala bežične mreže koja je slabija/jača od određene vrednosti</li>
+          </ul>
+          <div>
+            <img alt="Ikona zabranjenog profila" src="data/icon-location.png"> Mrežne lokacije
+          </div>
+          <ul>
+            <li>Windows NLM: Automatski generisani mrežni profili od strane Windows operativnog sistema (Vista ili novji)</li>
+            <li>MAC adresa mrežnog prolaza: Jedinstveni broj automatski dodeljenog DHCP mrežnog prolaza</li>
+            <li>Ping: Dostupnost određenog servera ili sistema na mreži</li>
+          </ul>
+          <div>
+            <img alt="Ikona zabranjenog profila" src="data/icon-nic.png"> Status adaptera
+          </div>
+          <ul>
+            <li>Status veze lokalnog mrežnog adaptera (povezano/prekinuta veza)</li>
+          </ul>
+          <div>
+            <img alt="Ikona zabranjenog profila" src="data/icon-time.png"> Vremenski period
+          </div>
+          <ul>
+            <li>Određeni dani u nedelji i vremenski period (npr. sub+ned, 8:00 - 18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Iako nema tehničkih ograničenja za količinu uslova po profilu, pokušajte da ih zadržite što je jednostavnije moguće. U većini slučajeva potpuno je nepotrebno da postavite jedan ili dva uslova koji su potrebni za željeni rezultat.
+        </p>
+        <p>
+          Možete da odredite da li svi ili barem jedan od uslova mora biti ispunjen za aktiviranje tog profila.
+        </p>
+        <p>
+          <strong>Napomena:</strong> Profili sa manjim ID brojem imaju veći prioritet u slučaju da se ispune uslovi za više profila odjednom.
+        </p>
+        <p>
+          Postupak aktivacije, podrazumevano se pokreće sa porukom u donjem desnom uglu sa prilagođenim odbrojavanjem do izvršenja, pružajući vam mogućnost da prekinete postupak ukoliko je to potrebno. Alternativno, možete da iskoristite Windows obaveštenje ili da aktivirate profil bez bilo kakve poruke u pozadini. U ovom drugom slučaju, ikona u sistemskoj traci poslova biće animirana tokom postupka aktivacije i promeniće privremeno boju u skladu sa rezultatom aktivacije kako bi vas vizuelno obavestila o automatizovanom postupku.
+        </p>
+        <p>
+          Da biste sačuvali sistemske resurse, NetSetMan ne poredi vaše trenutne postavke sa postavkama profila za aktivaciju. To znači da ukoliko ručno promenite bilo koju postavku, NetSetMan neće primetiti promenu.
+        </p>
+        <p>
+          AutoSwitch ima ograničenja u XP: Windows NLM nije dostupan, promene u obližnjim WiFi mrežama mogu biti prepoznate sa znatnim kašnjenjem.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch opis alatke" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch obaveštenje" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Obaveštenja
+      </div>
+      <div class="hf_body">
+        <p>
+          Možete da napravite kratke beleške za svaki profil, ukoliko vam je potrebno da zapamtite ili označite svrhu profila. Ukoliko je beleška napravljena za profil, njegova ikona postaje obojena u meniju. Beleška je vidljiva u Punom režimu u vidu saveta kada prevučete pokazivač miša preko ikone i u Kopaktnom režimu u vrhu postavki profila.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Napomena" class="screen">
+        <img src="data/note-hint.png" alt="Smernica" class="screen">
+        <img src="data/note-compact.png" alt="Napomena u Kompaktnom režimu" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM usluga / Ograničeni korisnički nalog
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan zahteva administrativne privilegije kako bi mogao da promeni mrežne i sistemske postavke umesto vas. Nije moguće normalno pokretanje aplikacije za ograničenog korisnika. Novije verzije Windows operativnog sistema ograničavaju i administratorske naloge sa UAC (Kontrole korisničkog naloga) prikazujući poruku prilikom svakog pokretanja programa.
+        </p>
+        <p>
+          Da biste rešili ovaj problem, NetSetMan sadrži posebnu komponentu pod nazivom <strong>NSM usluga</strong> koja pruža glavnu aplikaciju sa potrebnim privilegijama. Usluga se automatski instalira, međutim može se i ručno instalirati/ukloniti u postavkama (Sistemske privilegije › Aktiviraj/Onemogući).
+        </p>
+        <p>
+          Instalirana usluga je vidljiva u prozoru Windows usluge (services.msc) i može se odatle upravljati. Dodatno je moguće instalirati/ukloniti ili pokrenuti/zaustaviti pomoću komandne linije:<br><span class="code">nsmservice.exe /install /silent<br> nsmservice.exe /uninstall /silent<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Ukoliko dobijete grešku „<em>Invalid signature</em>“, uverite se da exe program nije izmenjen i da je u Windows grupnim polisama onemogućena opcija „<em>Turn off Automatic Root Certificates Update</em>“.
+        </p>
+        <p>
+          Ukoliko pokrenete NetSetMan sa ograničenim korisničkim nalogom, gde NSM usluga nije dostupna, dobićete poruku koja objašnjava problem. Kao alternativu, možete da unesete <strong>administrativne privilegije</strong> lokalnog naloga koje će NetSetMan šifrovano sačuvati u datoteku postavki i koristiti za samostalno pokretanje sa potrebnim privilegijama. Obratite pažnju da će se u ovom slučaju aplikacija pokrenuti u ime korisnika čije privilegije su korišćene.
+        </p>
+        <p>
+          Pogledajte <a href="http://www.netsetman.com/faqnsmservice" target="_blank">ČPP</a> i pročitajte neke dodatne napomene o ovoj funkciji.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Sistemske privilegije" class="screen">
+        <img src="data/limitedaccount.png" alt="Ograničeni korisnički nalog" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Promena korisnika pre prijave
+      </div>
+      <div class="hf_body">
+        <p>
+          Potpuno jedinstvena i moćna funkcija je mogućnost aktiviranja vašeg profila na ekranu za prijavljivanje. Ovo omogućava pripremu ispravnih mrežnih postavki koje su vam potrebne za vaš nalog, aktiviranjem NetSetMan profila pre prijave.
+        </p>
+        <p>
+          Da biste koristili funkciju <a href="#hf_nsmservice">NSM usluga</a> mora biti instalirana, a opcija „<em>Promena profila iz Windows prijavnog ekrana</em>“ (Postavke › Sistemske privilegije) mora biti omogućena.
+        </p>
+        <p>
+          Obratite pažnju da ova funkcija dozvoljava samo promenu postavki koje su deljene među korisnicima. Postavke koje se odnose na same korisnike nije moguće promeniti van korisničke sesije.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Promena profila pre prijave" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM administracija
+      </div>
+      <div class="hf_body">
+        <p>
+          Ukoliko podesite NetSetMan da ga koristi neko drugi, možda ćete poželeti da navedete koje akcije druga osoba može da obavlja. Sa NSM administracijom (Postavke › Administracija) možete da uradite upravo to.
+        </p>
+        <p>
+          Kada aktivirate ovaj režim potrebno je da unesete lozinku sa 6 ili više znakova. Samo sa ovom lozinkom moći ćete da promenite NSM administrativne postavke ili da obavite akcije za koje izaberete da budu bezbedne (pokretanje NetSetMan aplikacije, aktiviranje profila, promena postavki profila, promena postavki programa).
+        </p>
+        <p>
+          Možete čak i da zaključate određene profile <img alt="Ikona zabranjenog profila" src="data/administration-profilelock.png"> tako da korisnik ne može da ih izmeni, ali ipak može da ih aktivira. Možete i da postavite ograničenje pristupa određenim postavkama <img alt="Ikona zabranjene postavke" src="data/administration-settinglock.png"> poput „Radna grupa i domen“, a da omogućite korisniku da konfiguriše i koristi sve druge postavke.
+        </p>
+        <p>
+          Kontrolni zbir vaše lozinke biće upisan u registrator. Uverite se da običan korisnik nema prava upisa u <span class="code">HKLM\Software\NetSetMan</span> (na x64: <span class="code">HKLM\Software\Wow6432Node\NetSetMan</span>). Ukoliko zaboravite lozinku, moraćete ručno da izbrišete taj ključ. Ukoliko je vaša datoteka sa postavkama šifrovana, niko neće moći bez lozinke da je prikaže ili izmeni.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM administracija" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM administracija - zabrane profila" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM administracija - zabrane postvake" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Aktivacija komandne linije
+      </div>
+      <div class="hf_body">
+        <p>
+          U nekim posebnim slučajevima možda ćete poželeti da promenite svoj profil bez upotrebe NetSetMan interfejsa: promena profila pomoću prečica, aktiviranje profila prilikom podizanja sistema, sadržati profile u složenim skriptama, itd.
+        </p>
+        <p>
+          Sledeći parametri su na raspolaganju:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Aktivira profil pod brojem #</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Aktivira profil u tihom režimu (Prozor aktivacije se automatski zatvara ukoliko se ne dogode greške)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Pokreće umanjen NetSetMan</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>Pokreće NetSetMan u Potpunom režimu (podrazumevano)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>Pokreće NetSetMan u Kompaktnom režimu</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Pokreće drugu instancu NetSetMan aplikacije. <strong>Budite oprezni:</strong> Sve aktivne instance upisuju u istu datoteku postavki!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Prečica za aktiviranje profila #0 u tihom režimu bi mogla da izgleda ovako: <br><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Prečica" class="screen">
+        </p>
+        <p>
+          U komandnoj liniji: <br>
+          <img src="data/commandline.png" alt="Komandna linija" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Poruka u nekomercijalnoj, besplatnoj verziji
+      </div>
+      <div class="hf_body">
+        <p>
+          Ova poruka se <em>u proseku</em> pojavljuje prilikom svakog 7. pokretanja za korisnike iz radne grupe i za svako 2. pokretanje za korisnike koji su u domenu.
+        </p>
+        <p>
+          Nažalost, ovo je neophodno kako bi podsetilo korisnike da je NetSetMan besplatan samo u nekomercijalne svrhe (= privatno ili volonterski). Ukratko: Možete besplatno koristiti proizvod sve dok vam ne štedi plaćeno radno vreme. Ukoliko želite da koristite proizvod, na primer, na poslu ili na službenom prenosnom računaru, potrebno je da kupite <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> licencu.  Ne postoji posebna odredba za obrazovane ili neprofitne organizacije. Profesori, nastavnici i drugi zaposleni mogu da koriste nekomercijalnu besplatnu verziju ukoliko rade počasno (= neplaćeno).
+        </p>
+        <p>
+          Molimo vas da pročitate <a href="http://www.netsetman.com/en/txt/license" target="_blank">ugovor o licenciranju</a> za dodatne informacije.
+        </p>
+        <p>
+          <strong>Naravno, ova poruka se ne prikazuje u Pro verziji.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Poruka u nekomercijalnoj, besplatnoj verziji" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Dodatne Pro funkcije
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Grupe profila
+      </div>
+      <div class="hf_body">
+        <p>
+          Sa NetSetMan Pro u stanju ste da napravite neograničen broj grupa. Svaka grupa sadrži 6 profila.
+        </p>
+        <p>
+          Dodavanje, brisanje, promenu redosleda ili promenu naziva grupe profila obavljate pomoću <a href="#hf_profiles">upravljanja profilima</a> u traci sa menijem.
+        </p>
+        <p>
+          Za navigaciju između svih dostupnih grupa izaberite bilo koju grupu iz padajućeg menija.
+        </p>
+        <p>
+          Ukoliko imate više od jedne grupe, vaši profili biće prikazani u vidu grupe u meniju ikone u sistemskoj traci poslova.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profile Management Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Ikona palete u Pro verziji" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Pregledač / Posrednik
+      </div>
+      <div class="hf_body">
+        <p>
+          Sa NetSetMan Pro možete da upravljate Windows / Internet Explorer, Firefox i Opera (&lt;= v12) posredničkim postavkama. Chrome i novije verzije Opera pregledača ne podržavaju sopstvene postavke posredničkog servera, ali umesto toga, automatski koriste postavke sistema.
+        </p>
+        <p>
+          Sve postavke imaju za cilj da liče na originalne interfejse kako bi se olakšalo korisniku i direktno uređivanje u pregledačima. Pored toga, možete da promenite i početnu stranu, a u slučaju da koristite profile za FireFox ili Opera moći ćete da izaberete i ime profila.
+        </p>
+        <p>
+          Upamtite da Firefox <em>mora</em> biti zatvoren pre promene njegovih postavki. <br> Ukoliko imate više Firefox profila ili je fascikla profila promenjena (npr. zbog novog sistema) potrebno je da ponovo izaberete profil u listi tako da se ažurira u vašoj datoteci sa postavkama.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Pregledač / Posrednik" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Domen
+      </div>
+      <div class="hf_body">
+        <p>
+          Da biste se pridružili u domen, unesite njegovo ime, svoje korisničko ime i svoju lozinku. Vaše korisničko ime i lozinka biće sačuvane u šifrovanom obliku u ini datoteci.
+        </p>
+        <p>
+          Obično je dovoljno da unesete samo korisničko ime. Međutim, ukoliko dobijete grešku, možete da pokušate da unesete jedan od dva sledeća standarda kao vaše korisničko ime:<br> a) NETBIOS: DOMEN\korisnik<br> b) UPN: korisnik@domen.local<br>
+        </p>
+        <p>
+          Kod NT domena korisnik može biti samo jedan član samo <em>jednog</em> domena u istom trenutku. To znači da ulaskom u drugi domen ili radnu grupu, vaše članstvo u prethodnom domenu se gubi dok se sistem ponovo ne prijavi.
+        </p>
+        <p>
+          NetSetMan može samo da vas pridruži u domen ukoliko vaše korisničko ime domena ima dozvolu za to.<br> Ova privilegija korisničkog naloga se zove „Dodaj radnu stanicu u domen“ i mora biti omogućena za vaš nalog. Ukoliko nemate ovu privilegiju, molimo vas da pitate svog mrežnog administratora da vam je odobri.
+        </p>
+        <p>
+          Pogledajte <a href="http://www.netsetman.com/faqdomain" target="_blank">ČPP</a> i pročitajte neke dodatne napomene o ovoj funkciji.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Pregled domena" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Distribucija u mrežama preduzeća
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro nudi nekoliko pomoćnih funkcija koje vam pomažu da još lakše u vašoj mreži preduzeća, distribuirate softver sa unapred konfigurisanim postavkama sa vašom licenom. Pronaći ćete sve što je potrebno da znate u detaljnim opisima u <a href="http://www.netsetman.com/faqcompany">ČPP</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

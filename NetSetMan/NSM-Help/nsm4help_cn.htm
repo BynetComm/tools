@@ -1,0 +1,910 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x 帮助文件</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>帮助文件</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-en.png" alt=""></div>
+          <div id="hf_language">简体中文</div>
+          <div id="hf_translator">Cye3s 翻译</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        基本信息
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">帮助文件版本</td>
+            <td class="hf_tblinfo_right">4.0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">支持 <br> 操作系统</td>
+            <td class="hf_tblinfo_right">Windows<br>XP，Vista，7，8，10<br> 32位，64位</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">授权</td>
+            <td class="hf_tblinfo_right">非商用免费软件<br><em>或</em><br> 商用专业版<br>查看<a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a>或<a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">联系</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">支持论坛</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        内容
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          基础知识
+        </p>
+        <ul>
+          <li><a href="#hf_description">描述</a></li>
+          <li><a href="#hf_howtouse">基本信息</a></li>
+          <li><a href="#hf_profiles">配置</a></li>
+          <li><a href="#hf_nics">网络适​​配器(NIC)</a> </li>
+          <li><a href="#hf_basicoperations">设置操作</a></li>
+          <li><a href="#hf_activation">配置激活</a></li>
+          <li><a href="#hf_compactmode">精简模式和完整模式</a></li>
+          <li><a href="#hf_tray">托盘菜单和托盘信息</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          功能
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">总览</a></li>
+          <li><a href="#hf_adapterstatus">适配器状态</a></li>
+          <li><a href="#hf_advanced">高级 TCP / IP 设置</a></li>
+          <li><a href="#hf_connections">连接</a></li>
+          <li><a href="#hf_hosts">Hosts文件</a></li>
+          <li><a href="#hf_netdrives">网络驱动器</a></li>
+          <li><a href="#hf_scripts">脚本</a></li>
+          <li><a href="#hf_smtp">SMTP / 电子邮件</a></li>
+          <li><a href="#hf_system">系统设置</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          高级
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">自动切换</a></li>
+          <li><a href="#hf_notes">备注</a></li>
+          <li><a href="#hf_nsmservice">NSM 服务/受限用户帐户</a></li>
+          <li><a href="#hf_prelogon">登录前配置切换</a></li>
+          <li><a href="#hf_nsmadministration">NSM 管理</a></li>
+          <li><a href="#hf_commandline">命令行激活</a></li>
+          <li><a href="#hf_ncfreeware">非商用免费软件信息</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          其他 Pro 版功能
+        </p>
+        <ul>
+          <li><a href="#hf_groups">配置群组</a></li>
+          <li><a href="#hf_proxy">浏览器 / 代理</a></li>
+          <li><a href="#hf_domain">域</a></li>
+          <li><a href="#hf_distribution">公司网络内分发</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      基础知识
+     </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        描述
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong>是一个网络设置管理器，它可以很容易在6种不同的，视觉结构化的配置之间切换，包括：</p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li>IP地址(IPv4的和IPv6！)</li>
+              <li>网关(包括跃点数 Ｍetric)</li>
+              <li>DNS 服务器</li>
+              <li>WINS 服务器</li>
+              <li>ＷiFi 管理</li>
+              <li>计算机名</li>
+              <li>工作组</li>
+              <li>默认打印机</li>
+              <li>网络驱动器</li>
+              <li>网卡状态</li>
+              <li>连接(RAS/DUN/PPP/VPN)</li>
+              <li>DNS 后缀</li>
+              <li>路由表</li>
+              <li>SMTP 服务器</li>
+              <li>Hosts 文件条目</li>
+              <li>系统设置</li>
+              <li>MAC 地址</li>
+              <li>脚本(BAT, VS, JS, ...)</li>
+            </ul></td>
+            <td width="51%"><strong>仅在<u>专业</u>版中提供：</strong>
+            <ul>
+              <li>可以在工作中使用</li>
+              <li>不限数量的配置</li>
+              <li>网域</li>
+              <li>完整的代理服务器设置与<br>浏览器主页<br>(Internet Explorer, Firefox, Opera)</li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong>为您提供到目前为止Windows中都缺少的：<br>功能强大，易于使用的界面来一目了然地管理所有网络设置。<br>试试看吧，您会离不开它的。
+        </p>
+        <p>
+          所有的设置和更改都自动保存到一个单独的文件中(<em>settings.ini</em>)，因此备份，转移或升级到另一个版本绝对没有问题。
+        </p>
+        <p>
+          <strong>一键激活已保存的配置，甚至可以完全自动化！</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs. Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan 主界面">
+          <br><strong>NetSetMan：</strong>非商用免费版</div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro 主界面">
+          <br><strong>NetSetMan Pro：</strong>商用 Pro 版</div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        基本信息
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>配置</div>每个<a href="#">配置</a>表示的一组针对特定位置或场景所必需的设置。通过使用子配置，多个网络适配器可以使用一个配置进行设置。双击标签页标题可重命名配置。</li>
+          <li>
+            <div>
+              手动配置
+            </div>您需要手动配置所需配置。程序不可能在一个未知地点猜测出正确的设置。该应用程序的主要目的是将您经常手动做的设置更改变为自动。</li>
+          <li>
+            <div>设置的选择</div><a href="#hf_basicoperations">读取当前所有设置</a>到一个配置可以给您一个起点，但您仍然需要决定激活该配置时要应用哪些设置。强烈建议将设置限制为那些实际上需要改变的部分。例如，如果计算机名从来不会改变，那么就没有必要去修改它。</li>
+          <li>
+            <div>
+              设置配置
+            </div>要配置一个设置，先选中它的复选框，然后直接在主界面中输入所需的配置或打开配置对话框进行特定设置。</li>
+          <li>
+            <div>
+              配置激活
+            </div>默认情况下不会自动激活配置，也就是说您的系统上设置在您不打算改变的情况下不会变动。虽然如此，您也可以使用<a href="#hf_autoswitch">自动切换</a>功能自动激活某些配置，基于可自由定制的条件来判断。</li>
+          <li>
+            <div>
+              托盘图标访问
+            </div>建议<a href="#hf_tray">最小化NetSetMan到系统托盘</a>并且拖动托盘图标到总是可见的区域。这样，您可以通过点击图标，并选择配置来迅速激活一个配置。此外，当您将鼠标悬停在图标上一段时间，它会显示一个很有用的当前连接 IP 信息总览。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">配置</div>
+      <div class="hf_body">
+        <p>
+          标签页表示可用的配置。您可以在这些标签页中保存6组不同的设置。
+        </p>
+        <p>
+          如果您想在激活一个配置时改变两个不同的网络适配器的设置，您可以使用<strong>子配置</strong>功能。点击网卡下拉列表旁边的“+”按钮，将出现一个新的菜单栏，包含两个子配置(当前和空白)。标题会自动变为子配置中选中网络适配器的名称，并且不能修改。您可以按您的喜好创建多个子配置。所有的子配置都会在配置被激活时一个接一个被激活。您可以通过拖放重新排列顺序。
+        </p>
+        <p>
+          所有更改会自动保存，因此不会意外丢失。
+        </p>
+        <p>
+          您可以通过右键单击配置并选择“重命名”来重命名它，或干脆双击其标签页标题。
+        </p>
+        <p>
+          为了更方便地管理您所有的配置，您可以使用菜单栏中的<strong>配置管理</strong> 。它允许您编辑配置，子配置和群组(仅限 NetSetMan Pro)，可用鼠标或一些常用的快捷键(方向键进行导航，F2重命名等)。当使用拖放重新排列项目时，您会发现一些不可避免的限制，这取决于项目，由于现有的技术条件：配置不能删除，多个配置不能被重命名，配置可以交换位置，但不能移动。复选框代表配置是否在托盘和精简模式中显示。
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="子配置选项卡" class="screen">
+          <img src="data/rename.png" alt="重命名配置" class="screen">
+          <img src="data/profilemanagement.png" alt="配置管理" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        网络适​​配器(NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          所有可用的网络适配器都会显示它们的名称和类型。 选择在当前(子)配置下您想管理的网卡。
+        </p>
+        <p>
+          如果某个网卡在列表中不显示(例如，因为它是无效的或虚拟的)，您可以通过点击<strong>刷新</strong>按钮，选择快速刷新列表或者选择<strong>管理网络适配器</strong>来管理列表。在那里，您会发现所有可用网卡的完整列表。勾选您想在列表中显示的所有网卡。
+        </p>
+        <p>
+          <strong>注意：</strong>该列表中的所有网卡也将出现在托盘信息中。取消选中不需要的网卡，就可以从列表和托盘信息删除它们。</p>
+        <p>
+          如果您把设置文件(settings.ini)复制到另一个系统，NetSetMan将会尝试自动重新分配配置中的网卡。然而，只有当新系统有完全同名的网卡时才能起作用(第一张截图中是“LAN”)。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="网卡选择" class="screen">
+        <img src="data/adapters-management.png" alt="网络适​​配器管理" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        设置操作
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          获取当前设置
+        </p>
+        <p>要加载当前设置到配置只需点击输入框旁边<img src="data/icon-get.png" alt="获取设置图标">符号的。<br>要获取所有当前设置右键单击配置，然​​后选择“获取当前设置”。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="获取一个设置" class="screen">
+        <img src="data/get-settings2.png" alt="获取所有设置" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">清除设置</span>
+        </p>
+        <p>          要清除某个设定的配置右击它并选择“清除”。
+        </p>
+        <p>          要清除的IP字段的值只需双击其相应的标题。
+        </p>
+        <p>          要清除当前(子)配置的所有设置，右键单击配置标签页，选择“清除设置”。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="清除一个设置" class="screen">
+        <img src="data/clear-settings2.png" alt="清除所有设置" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">复制＆粘贴设置</span>
+        </p>
+        <p>          要在不同的配置之间传输设置，您可以复制并粘贴整个配置，通过右键点击原始配置并选择“复制设置”，然后右键点击击新的配置并选择“粘贴设置”。
+        </p>
+        <p>          要复制和粘贴特定的设置只需右键点击它并选择“复制”或“粘贴”。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="复制并粘贴一个设置" class="screen">
+        <img src="data/copypaste2.png" alt="复制并粘贴所有设置" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        配置激活
+      </div>
+      <div class="hf_body">
+        <p>
+          要应用的当前配置的所有设置，单击“ <strong>激活</strong> ”，如果程序最小化到系统托盘，则从<a href="#hf_tray">托盘菜单</a>中选择配置 。 <br>请注意，仅选中复选框的设置将被激活。
+        </p>
+        <p>
+          <strong>激活</strong>对话框包含当前激活的进度信息。 <br>在对话框中，您可以看到哪些设置将要应用以及该过程是否成功。您可以通过点击“取消”按钮随时取消激活过程。
+        </p>
+        <p>
+          所有的改变都立即生效。然而，在某些情况下，某些设置需要一点时间才能完全生效，或者需要重新启动(尤其是“计算机名”和“工作组/域”)。
+        </p>
+        <p>
+          <strong>细节</strong>部分提供了该配置的所有已配置设置的概述。 要查看详细信息和全部错误信息可打开<strong>日志</strong>部分。
+        </p>
+        <p>
+          要找到最常见的错误和问题的解决方案请查看<a href="http://www.netsetman.com/faq" target="_blank">常见问题解答</a> 。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="选择要改变的设置" class="screen">
+        <img src="data/activation.png" alt="配置激活窗口" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>常见的结果及其意义</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">一切正常。</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">设置目前正在应用。</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">设置被忽略而且不尝试，因为它们不完整或错误。</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">错误</td>
+            <td class="hf_errortable_right">在大多数情况下，错误显示为红色短文字，如“找不到文件”。如果您收到一个错误代码，查看日志，找出该代码是否有一个错误信息。如果您不知道是什么原因，请把错误代码和详细的错误描述发到<a href="https://www.netsetman.com/support/" target="_blank">支持论坛</a> 。</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">无效</td>
+            <td class="hf_errortable_right">可能是一个值无效，未指定或不允许(特殊的字符，相同的工作组与计算机名等)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF正在运行</td>
+            <td class="hf_errortable_right">Firefox正在运行。要应用这些设置必须先关闭浏览器。</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        精简模式和完整模式
+      </div>
+      <div class="hf_body">
+        <p>
+          除了经典的“完整模式”界面，在那里您可以改变配置的所有设置，还有附加的界面“精简模式”。您可以在任何时候通过点击右侧主菜单右边的按钮在这些模式之间切换。
+        </p>
+        <p>
+          一旦所有的配置都设置完成，精简模式是最理想的界面。 在这里，配置的所有设置显示在一个紧凑的概述中，不必担心设置被意外修改。
+        </p>
+        <p>
+          如果您使用<a href="#hf_nsmadministration">NSM管理</a>(并且“更改配置设置”未选中)，精简模式将被自动启用，防止用户能更改设置。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="精简模式" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        托盘菜单与托盘信息
+      </div>
+      <div class="hf_body">
+        <p>
+          当NetSetMan正在运行时，您会发现它在系统托盘中的图标(时间旁边)。<br>在那里，您可以快速激活配置。只需右键点击图标打开<strong>托盘菜单</strong> ，并选择配置来激活。
+        </p>
+        <p>
+          如果您不希望某些配置显示在托盘中，您可以单独隐藏它们。在主窗口中选择配置，在选项卡上单击鼠标右键，点击“在托盘和精简模式中显示”。文字旁边的小符号显示该配置是否会在托盘中显示。该选项也影响配置是否在精简模式中显示。配置是否显示也可以在<a href="#hf_profiles">配置管理</a>中设置 。
+        </p>
+        <p>
+          如果您将光标悬停在 NNetSetMan 托盘图标上，<strong>托盘信息</strong>将会出现。它包含系统中的当前IP信息。由于该数据是实时收集的，您可能会遇到短暂的延迟。为了减少延迟，您应该考虑关闭附加信息，比如公共IP地址和MAC地址。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="托盘图标" class="screen">
+        <img src="data/showintray.png" alt="显示在托盘" class="screen">
+        <img src="data/trayinfo.png" alt="托盘信息" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      功能
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        总览
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan 的设计理念是让您对一个配置内所有设置有一个直观的总览。一些最重要的功能，比如IP设置，WiFi和默认打印机可以直接在主界面上进行配置。其它更复杂的设置在此处只能被启用，并且将显示在它们当前配置的简要概述。要修改它们，先激活它们，然后通过单击[...]打开对话框根据。
+        </p>
+        <p>
+          以下各章节会给您的基本说明，以及如何使用所有功能有用的提示。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="其他设置组" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        适配器状态
+      </div>
+      <div class="hf_body">
+        <p>
+          要启用，禁用或重​启所选网络适配器请使用适配器状态按钮。默认颜色将变为与状态相关的颜色。此外，您可以在提示里看到已配置的状态。
+        </p>
+        <p>
+          如果您要启用一个适配器并且禁用一个或所有其他适配器，您需要为每个适配器创建<a href="#hf_profiles">子配置</a>。您可以手动操作或使用适配器状态菜单底部的菜单项做到这一点。它会自动为网络适配器列表中的每一个适配器创建一个子配置，并分别设置其状态。请记住，您可以使用<a href="#hf_nics">网络适配器管理</a> 来自定义哪些适配器应包含在该列表中。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="适配器状态：启用" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="适配器状态：禁用" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="适配器状态：重启" class="screen">
+        <img src="data/adapterstatus.png" alt="适配器状态菜单" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        高级 TCP/IP 设置
+      </div>
+      <div class="hf_body">
+        <p>
+          如果您需要同时在多个网络中，您可以为每个网卡指定多个IP，网关，DNS和WINS地址。要做到这一点，在主菜单中点击<strong>“IP+”</strong>按钮，或者选择“配置 &gt; 高级 TCP/IP 设置”。
+        </p>
+        <p>
+          在这里，您还可以管理一些高级设置，例如<strong>路由表</strong>，<strong>DNS后缀</strong>，<strong>ipconfig</strong>和<strong>NetBIOS的</strong>。
+        </p>
+        <ul>
+          <li>选中它的标题复选框激活一个组</li>
+          <li>
+            <img src="data/icon-add.png" alt="添加新值">添加一个新值</li>
+          <li>
+            <img src="data/icon-delete.png" alt="删除选定值">删除选定的值</li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="清除列表">清除整个列表</li>
+          <li>
+            <img src="data/icon-getlist.png" alt="获取列表">从系统获取所有的当前值(尽管点击主窗口中的<img src="data/icon-get.png" alt="获取设置">符号只读取第一个值)</li>
+          <li>通过拖放重新排列顺序</li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="进入高级 TCP / IP 设置窗口" class="screen">
+        <img src="data/additionaladdresses1.png" alt="高级 TCP / IP 设置窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        连接
+      </div>
+      <div class="hf_body">
+        <p>
+          使用此功能可以连接或断开任何一种 Windows 连接，例如拨号网络，移动宽带或VPN。兼容的连接会在网络连接对话框中与正常的网络适配器一起列出。从技术层面上讲，就是与“RasDial”兼容所有连接都支持。
+        </p>
+        <p>
+          您可以选择勾选复选框断开所有当前建立的连接，或者按列表的顺序单独连接/断开一些连接。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="连接窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hosts文件
+      </div>
+      <div class="hf_body">
+        <p>
+          在非常特殊的情况下，有可能需要手动分配IP地址到名称或域名。 请注意，NetSetMan 将只修改自己的Hosts文件条目，而不修改已有条目。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="主机窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        网络驱动器
+      </div>
+      <div class="hf_body">
+        <p>
+          使用 NetSetMan 您可以映射和取消映射不限数量的网络驱动器。<br> 点击窗口底部的“[显示帮助]”阅读使用注意事项。
+        </p>
+        <p>
+          当一个配置被激活，并且选中了网络驱动器功能，NetSetMan 将把所有已映射的驱动器列表与要映射驱动器映射列表进行比较。 所有在两个列表中的已映射驱动器(相同的盘符和相同的位置路径)将保持不变。所有其它网络驱动器将被取消映射，再应用新映射。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="网络驱动器窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        脚本
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan 给您提供了一个舒适的方式来管理您的脚本文件。 然而，它不具有自己的脚本语言。这意味着您只能使用操作系统能够执行的脚本语言。常见的脚本语言有VBS，JS甚至是简单的命令行批处理文件。用您喜欢的搜索引擎来查找更多关于脚本是什么以及可以用它做什么等信息。
+        </p>
+        <p>
+          打开已有的脚本文件或创建一个新的来编辑脚本。<br> 您一共可设置两个脚本被执行，在所有其他的设置更改之前和之后。 <br>如果您需要在运行脚本和更改网络设置之间加上延迟，您可以在底部进行设定。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="脚本窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP/电子邮件
+      </div>
+      <div class="hf_body">
+        <p>
+          在某些情况下，用于发送电子邮件的SMTP服务器IP地址取决于您所在的网络。在一个在同一个网络中，您可能需要像10.0.0.1这样的本地IP地址，而在此网络之外的您可能需要通过公网IP地址来访问它。
+        </p>
+        <p>
+          NetSetMan 并没有尝试去兼容各种不同的电子邮件客户端以及处理不同的用户配置，而是用一个简单的方法解决了这个问题。 在您的电子邮件客户端中设置 SMTP 地址为“nsm.smtp”，并在相应的配置中设置IP地址。当激活配置时，这两个值将在hosts文件中联系起来，这样您就不需要对电子邮件客户端的设置做任何更改。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP/电子邮件窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        系统设置
+      </div>
+      <div class="hf_body">
+        <p>
+          除了常见的网络设置外，有时您可能想根据您的位置或所处状态来改变一些系统设置。例如，而在大学课堂，您可能想要设置静音，更换壁纸以及激活平衡电源计划。
+        </p>
+        <p>
+          您还可以使用系统设置对话框，来快速改变一些设置，平时这些设置可能需要更多的时间在 Windows 的设置项中寻找它们的位置。 只需点击<img src="data/set-icon.png" alt="设置设置图标">按钮就可以直接激活特定设置。
+        </p>
+        <p>
+          支持设置包括：显示模式，壁纸，桌面颜色，屏幕保护程序，主题，扬声器及麦克风音量，声音方案，防火墙(包括例外和通知)，电源计划，时区和MAC地址。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="系统设置窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan 配置可以用来连接到已有 WiFi 配置。要做到这一点，请在网卡下拉列表中选择一个 WiFi 适配器，然后从 WiFi 下拉列表中选择一个 WiFi 配置。如果您只想断开您的WiFi连接，选择空白项目。
+        </p>
+        <p>
+          除了基本的 WiFi 开关，NetSetMan 还提供了一个简单的 WiFi 管理。点击WiFi图标或使用主菜单(工具 &gt; NSM WiFi 管理)来访问它。您会发现一个所有目前可用 WiFi 网络的列表。黄色背景表示具有相同 SSID 的配置已存在。绿色背景的网络是当前连接。您可以通过双击它，或者使用“连接”按钮连接到网络。如果不存在该连接的配置，您可以选择先创建它。而设置(认证，加密，...)将根据所识别的网络自动预配置。但是，您可能需要调整它们，因为某些原因识别会无法正常工作。
+        </p>
+        <p>
+          NetSetMan 可调用原生的 Windows WiFi 配置。 这意味着您可以获取在 Windows 或其它 WiFi 软件中已经在使用的相同配置。您可以创建，修改或删除 WiFi 配置。
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>必要条件</strong>
+        </p>
+        <p>NetSetMan 使用 Windows 的原生 WiFi API。这带来一大优势，不需要安装新的驱动程序(这可能会导致一些冲突)。缺点就是 NetSetMan 的 WiFi 功能只能用在已支持 WiFi 的Windows系统上。幸运的是大多数较新版本是支持的。如果您使用Vista或更高版本，完全没问题。在XP中，您需要安装SP2或SP3。
+        </p>
+        <p>
+          确保 <em>WLAN AutoConfig (Wlansvc)</em> 服务 (Vista 和更新版本) 或 <em>Wireless Zero Configuration (WZCSVC)</em> 服务 (XP) 正在运行。
+        </p>
+        <p>
+          如果您的 WiFi 适配器使用厂商自带的软件来管理 WiFi 设置，在多数情况下它会阻断 Windows 的访问。 您需要找到该软件(如果可用)的切换到 Windows 管理的选项。<br>因为有许多不同的厂商自己的软件，没有一个通用的方式来启用该选项。这里有一个例子：如果您正在使用AVM FRITZ!WLAN USB设备，单击软件的托盘图标，并选择“Windows WLAN”。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi 概述" class="screen">
+        <img src="data/wifi.png" alt="NSM的WiFi管理窗口" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      高级
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        自动切换
+      </div>
+      <div class="hf_body">
+        <p>
+          从<a href="#hf_tray">托盘菜单</a>中可以很容易地一键激活配置 。但在某些情况下，根据定制条件完全自动激活的配置可能更容易。集成的自动切换功能正是为此而设的。
+        </p>
+        <p>
+          激活自动切换后就可以单独为所有配置文件配置下列条件：
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="周围的WiFi网络图标">周围的 WiFi 网络</div>
+          <ul>
+            <li>无线网络在/不在范围内(SSID或MAC)</li>
+            <li>无线网络的信号强度低于/高于一定值</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="网络位置图标">网络位置</div>
+          <ul>
+            <li>Windows NLM：自动由Windows(Vista和更高版本)生成的网络配置</li>
+            <li>网关MAC：自动分配的DHCP网关的指纹</li>
+            <li>Ping：网络中的一个特定的服务器或系统可以访问</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="适配器状态图标">适配器状态</div>
+          <ul>
+            <li>本地网络适配器的连接状态(连接/断开)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="时间区间图标">时间区间</div>
+          <ul>
+            <li>一周中的某一天与时间区间(例如 周六+周天，8：00  -  18:00)</li>
+          </ul>
+        </div>
+        <p>
+          虽然每个配置条件的数量并无技术限制，但请尽量精简。 在大多数情况下，包含一个或两个条件绝对足够用于达到预期的效果。
+        </p>
+        <p>
+          您可以指定的全部条件或至少有一个条件满足才能激活该配置。
+        </p>
+        <p>
+          <strong>注意：</strong>如果多个配置的条件同时满足，那么具有较小ID值的配置具有更高的优先级。
+        </p>
+        <p>
+          默认情况下激活过程中会在右下角显示一个消息与一个可定制的延迟倒计时，让您有选择地中止激活过程。另外可使用 Windows 原生通知或让配置在后台静默激活。在后一种情况下，系统托盘图标将在激活过程中显示动画，并根据结果暂时改变其颜色，以直观地告知您自动化的过程。
+        </p>
+        <p>
+          为了节省系统资源，NetSetMan 不会将当前设置与要激活配置中设置进行对比。 这意味着，如果您手动更改了任何设置，NetSetMan 将会不会注意到有变化。
+        </p>
+        <p>
+         自动切换在XP中一些限制：Windows NLM无法使用；识别周围的 WiFi 网络变化有较明显的延迟。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="自动切换" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="自动切换提示" class="screen">
+        <img src="data/autoswitch-notification.png" alt="自动切换通知" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        备注
+      </div>
+      <div class="hf_body">
+        <p>
+          如果您需要记住或指明配置的目的，您可以为每个配置文件创建简短的备注。如果为配置创建了备注，它将在菜单栏显示一个彩色图标。该说明是可见的，它在完整模式下显示为图标的提示，在精简模式则显示在模式设置的顶部。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="备注" class="screen">
+        <img src="data/note-hint.png" alt="备注提示" class="screen">
+        <img src="data/note-compact.png" alt="精简模式的备注" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM 服务/受限用户帐户
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan 需要管理员权限才能为您更改网络和系统设置。 通常此类程序不可能运行在受限用户下。较新的 Windows 版本甚至用UAC(用户帐户控制)限制管理员账户，在每个程序启动前显示一个消息。
+        </p>
+        <p>
+          为了解决这个问题，NetSetMan 引入一个名为<strong>NSM 服务</strong>的特殊组件，它为主应用程序提供了所需权限。 该服务会自动安装，但也可以在选项中手动安装/卸载(系统权限 &gt; 启用/禁用)。
+        </p>
+        <p>安装的服务显示在 Windows 服务对话框(services.msc)中，并可对它进行控制。此外，使用命令行也可以安装/卸载或启动/停止它：<br><span class="code">nsmservice.exe /install /silent<br> nsmservice.exe /uninstall /silent<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          如果您遇到错误“<em>无效的签名</em>”，请确保程序exe文件没有被修改并且 Windows 组策略中“<em>关闭自动根证书更新</em>”是禁用的。
+        </p>
+        <p>
+          如果您使用一个受限用户帐户运行 NetSetMan 并且 NSM 服务不可用时，您会看到一个消息，解释该问题。作为一种替代方法，您可以为本地账户输入<strong>管理员凭据</strong>，NetSetMan将会加密存储在设置文件中，并用它来启动自己以取得需要的权限。请注意，在这种情况下，应用程序将在所用凭据的用户环境中运行。
+        </p>
+        <p>查看<a href="http://www.netsetman.com/faqnsmservice" target="_blank">常见问题解答</a> ，了解此功能的一些附加说明。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="系统权限" class="screen">
+        <img src="data/limitedaccount.png" alt="受限用户帐户" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        登陆前配置切换
+      </div>
+      <div class="hf_body">
+        <p>
+          有一个非常独特而强大的功能就是您可以在登录屏幕上激活您的配置。 通过登录前激活 NetSetMan 配置，就可以在登录前就准备好用户所需要的正确网络设置。
+        </p>
+        <p>要使用此功能<a href="#hf_nsmservice">NSM 服务</a>必须安装并且“<em>在 Windows 登录界面启用配置切换</em>”选项(选项 &gt; 系统权限)必须启用。
+        </p>
+        <p>
+          请注意，此功能只允许更改所有用户之间共享的设置。 用户特定的设置不能在用户会话之外被改变。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="登录前配置文件切换" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM 管理
+      </div>
+      <div class="hf_body">
+        <p>
+          如果您设置 NetSetMan 给别人使用时，您可能想允许其他人执行哪些操作。 使用 NSM 管理(首选项 &gt; 管理员)，您就可以做到。
+        </p>
+        <p>
+          当您激活此模式，您必须输入6个或更多字符的密码。 只有设置了密码，您才能更改 NSM 管理设置或执行那些你指定为安全的操作(运行NetSetMan，激活配置，更改配置设置，更改程序设置)。
+        </p>
+        <p>
+          您甚至可以锁定某些定制好的配置<img src="data/administration-profilelock.png" alt="受限配置图标">，这样用户就不能修改它们，但仍然能够激活它们。 或者您也可以只限制访问某些设置<img src="data/administration-settinglock.png" alt="受限设置图标">，比如“工作组和域”，并允许用户配置和使用其他所有设置。
+        </p>
+        <p>
+          您的密码校验值将写入注册表。 确保普通用户没有<span class="code">HKLM\Software\NetSetMan</span> (x64 系统: <span class="code">HKLM\Software\Wow6432Node\NetSetMan</span>)的写入权限。如果您忘记密码，您将需要手动删除该键值。如果您的设置文件是加密的，没有密码就无法查看或编辑它。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM管理" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM管理 - 配置的限制" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM管理 - 设置的限制" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        命令行激活
+      </div>
+      <div class="hf_body">
+        <p>
+          在某些特殊情况下，您可能想不用 NetSetMan 的界面就能改变您的配置：使用快捷方式更改配置，在启动时激活一个配置，包含在一个复杂的脚本中，等等。
+        </p>
+        <p>
+          以下参数可用：
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a＃</strong></td>
+            <td>激活编号＃的配置</td>
+          </tr>
+          <tr>
+            <td><strong>-as＃</strong></td>
+            <td>静默激活配置(如果没有发生错误,激活窗口会自动关闭)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>最小化运行 NetSetMan</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>以完整模式运行 NetSetMan(默认)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>以精简模式运行 NetSetMan</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>运行 NetSetMan 的第二个实例。<strong>注意：</strong>所有活动实例将写入同一设置文件！</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          一个以静默方式激活配置＃0的快捷方式可能看起来像这样： <br><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="快捷方式" class="screen">
+        </p>
+        <p>
+          在命令行： <br>
+          <img src="data/commandline.png" alt="命令行" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        非商业免费软件信息
+      </div>
+      <div class="hf_body">
+        <p>
+          该消息在主窗口出现的次数<em>平均</em>为：工作组中的用户的每第7次启动，域用户的每第2次启动。
+        </p>
+        <p>
+          不幸的是，提醒用户 NetSetMan 只是针对非商业目(=私人或公益)的免费软件是非常有必要的。总之：只要是在不取得报酬的工作时间内您就可以免费使用本产品。如果您想在工作中或商业使用的笔记本电脑上使用该产品，您就需要购买一个 <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> 许可证。用于教育或非营利机构没有特别的规定。如果只是用于义务工作(=无报酬)，教授，教师和其它员工只能使用非商业免费版本。
+        </p>
+        <p>
+          请阅读<a href="http://www.netsetman.com/en/txt/license" target="_blank">许可协议</a>以获取更多信息。
+        </p>
+        <p>
+          <strong>当然，Pro 版本中不会包含该消息。</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="非商业免费软件信息" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      其他 Pro 版功能
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        配置群组
+      </div>
+      <div class="hf_body">
+        <p>
+          在 NetSetMan Pro  上您可以创建不限数量的配置群组。 每个群组都包含6个配置文件。
+        </p>
+        <p>
+          要添加，删除，重新排列或重命名配置群组请使用菜单栏上的<a href="#hf_profiles">配置管理</a>。
+        </p>
+        <p>
+          要在所有可用的配置群组之间进行切换，可在菜单拉的下拉列表中选择任意群组。
+        </p>
+        <p>
+          如果您有多个群组，您的配置文件将在系统托盘菜单中分组显示。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Pro 版配置管理" class="screen">
+        <img src="data/tray-pro.png" alt="Pro 版本的托盘图标" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        浏览器/代理
+      </div>
+      <div class="hf_body">
+        <p>
+          在 NetSetMan Pro 中您可以管理 Windows / Internet Explorer，Firefox和Opera（&lt;= V12）的代理设置。Chrome和更高版本的Opera不支持自己的代理服务器设置，而是自动使用系统设置。
+        </p>
+        <p>
+        所有的设置是为了模仿原接口，来做到原本浏览器直接也可以完成的相同设置。如果您想在激活一个配置文件时移除代理服务器设置，请务必选中代理复选框，​​并移除相应组中的所有设置。</p>
+        <p>此外，您可以更改主页；如果您在Firefox或Opera使用了配置文件，您也可以选择配置文件名称。</p>
+        <p>
+          请注意 Firefox 在更改其设置之前<em>必须</em>关闭。 <br>如果您有多个Firefox配置文件并且它们的配置文件夹改变了(例如重装系统)，您需要在列表中重新选择配置文件，它就会更新到您的设置文件中。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="浏览器/代理" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        域
+      </div>
+      <div class="hf_body">
+        <p>
+          要加入域，请输入域名，用户名和密码。 您的用户名和密码将被加密保存在ini文件中。
+        </p>
+        <p>
+          通常只输入用户名就足够了。但是，如果您遇到错误，您可以尝试输入以下两个标准作为您的用户名之一：<br> a) NETBIOS: DOMAIN\user<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          在NT域，用户同一时间内只能是<em>一个</em>域的成员。这意味着，加入其他域或工作组，以前的域成员身份将丢失，直到您的系统重新加入。
+        </p>
+        <p>NetSetMan 只能将您加入到一个域，如果您的域用户帐户有这样的权限的话。<br>此用户帐户权限被称为“将工作站添加到域”，您的帐户必须启用它。如果您没有此权限，请让您的网络管理员授予您。
+        </p>
+        <p>
+          查看<a href="http://www.netsetman.com/faqdomain" target="_blank">常见问题解答</a> ，了解此功能的一些附加说明。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="域窗口" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        在公司网络分发
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro 提供了几个辅助功能来帮助您更轻松地在公司网络分发软件，预配置的设置以及许可证。  您可以在<a href="http://www.netsetman.com/faqcompany">常见问题解答</a>中找到所有您需要的细节描述。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

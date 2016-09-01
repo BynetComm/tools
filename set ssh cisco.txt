@@ -1,0 +1,15 @@
+enable
+conf t
+   hostname <hostname>
+   username <username> privilege 15 password <clear_text_passwod>
+crypto key generate rsa usage-keys label myrsakey modulus 768
+ip ssh authentication-retries 5
+ip ssh rsa keypair-name myrsakey
+
+line vty 0 4
+  transport input all
+end
+write
+
+copy running-config boot-config
+

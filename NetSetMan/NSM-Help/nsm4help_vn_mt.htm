@@ -1,0 +1,934 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>4.x NetSetMan Help File</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="NSM Logo" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Help File</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-vn.png" alt="Language Cờ"></div>
+          <div id="hf_language">Tiếng Việt</div>
+          <div id="hf_translator">MACHINE TRANSLATION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Thông tin chung
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Help File Version</td>
+            <td class="hf_tblinfo_right">4.0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Hỗ trợ <br> Hệ điều hành</td>
+            <td class="hf_tblinfo_right">Cửa sổ <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Giấy phép</td>
+            <td class="hf_tblinfo_right">Non-Commercial miễn phí <br><em>hoặc</em><br> Pro Version thương mại<br> Xem như <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">HTML</a> hoặc <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Tiếp xúc</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="http://www.netsetman.com/support/index.php" target="_blank">Hỗ trợ Forum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Nội dung
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Khái niệm cơ bản
+        </p>
+        <ul>
+          <li><a href="#hf_description">Miêu tả</a></li>
+          <li><a href="#hf_howtouse">Thông tin cơ bản</a></li>
+          <li><a href="#hf_profiles">Profiles</a></li>
+          <li><a href="#hf_nics">Bộ tiếp hợp mạng (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Hoạt động Cài đặt</a></li>
+          <li><a href="#hf_activation">Hồ sơ Activation</a></li>
+          <li><a href="#hf_compactmode">Nhỏ gọn Mode &amp; Full Mode</a></li>
+          <li><a href="#hf_tray">Tray đơn &amp; Tray Info</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Tính năng
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Tổng quan</a></li>
+          <li><a href="#hf_advanced">Advanced TCP / IP Settings </a></li>
+          <li><a href="#hf_connections">Connections</a></li>
+          <li><a href="#hf_hosts">Hosts</a></li>
+          <li><a href="#hf_netdrives">Ổ đĩa mạng</a></li>
+          <li><a href="#hf_scripts">Scripts</a></li>
+          <li><a href="#hf_smtp">SMTP / Email</a></li>
+          <li><a href="#hf_system">Cài đặt hệ thống</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Nâng cao
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Ghi chú</a></li>
+          <li><a href="#hf_nsmservice">NSM Dịch vụ / TNHH User Account</a></li>
+          <li><a href="#hf_prelogon">Pre-Logon sơ Switching</a></li>
+          <li><a href="#hf_nsmadministration">Quản trị NSM</a></li>
+          <li><a href="#hf_commandline">Command Line Activation</a></li>
+          <li><a href="#hf_ncfreeware">Non-Commercial tin nhắn miễn phí</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Tính năng bổ sung Pro
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Nhóm hồ sơ</a></li>
+          <li><a href="#hf_proxy">Trình duyệt / Proxy</a></li>
+          <li><a href="#hf_domain">Miền</a></li>
+          <li><a href="#hf_distribution">Phân phối tại Công ty Networks</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Khái niệm cơ bản
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Miêu tả
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> là một người quản lý các thiết lập mạng mà có thể dễ dàng chuyển đổi giữa 6 khác nhau, cấu hình bao gồm:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> Địa chỉ IP (IPv4 &amp; IPv6!) </li>
+              <li> Gateways (incl. Metric) </li>
+              <li> Máy chủ DNS </li>
+              <li> WINS Servers </li>
+              <li> Quản lý WiFi </li>
+              <li> Tên máy tính </li>
+              <li> Workgroup </li>
+              <li> Máy in mặc định </li>
+              <li> Ổ đĩa mạng </li>
+              <li> NIC Status </li>
+              <li> Connections (RAS / DUN / PPP / VPN) </li>
+              <li> DNS Suffix </li>
+              <li> Route Table </li>
+              <li> SMTP Server </li>
+              <li> Hosts File Entries </li>
+              <li> Cài đặt hệ thống </li>
+              <li> Địa chỉ MAC </li>
+              <li> Scripts (BAT, VS, JS, ...) </li>
+            </ul></td>
+            <td width="51%"><strong>Ngoài ra chỉ có trong phiên bản <u>Pro:</u></strong>
+            <ul>
+              <li> Có thể được sử dụng tại nơi làm việc </li>
+              <li> Số lượng không giới hạn các hồ sơ </li>
+              <li> Mạng-Domain </li>
+              <li> Toàn bộ Proxy Settings &amp; <br> Bowser Home Page <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> cung cấp cho bạn những gì bạn đã bị mất tích trong Windows cho đến bây giờ: <br> Một mạnh mẽ, dễ sử dụng giao diện để quản lý tất cả các thiết lập mạng của bạn trong nháy mắt. <br> Cung cấp cho nó một thử và bạn sẽ không bao giờ muốn được mà không có nó một lần nữa.
+        </p>
+        <p>
+          Tất cả các thiết lập và thay đổi được lưu tự động trong một file riêng biệt <em>(settings.ini)</em> để sao lưu, chuyển nhượng hoặc nâng cấp lên phiên bản khác là hoàn toàn không có vấn đề.
+        </p>
+        <p>
+          <strong>Kích hoạt một hồ sơ lưu trữ với một cú nhấp chuột hoặc thậm chí hoàn toàn tự động!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan so với Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Window">
+          <br><strong>NetSetMan:</strong> Non-Commercial Freeware Version
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Window Main">
+          <br>Pro Version thương <strong>mại: NetSetMan Pro</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Thông tin cơ bản
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profiles
+            </div> Mỗi <a href="#">hồ sơ</a> đại diện cho một tập hợp các cài đặt cần thiết cho một địa điểm hoặc kịch bản nhất định. Bằng cách sử dụng subprofiles nhiều adapter mạng có thể được cấu hình với một profile. Đổi tên một hồ sơ bằng cách nhấp đúp vào tab caption của nó.</li>
+          <li>
+            <div>
+              Cấu hình bằng tay
+            </div> Bạn cần phải cấu hình các cấu hình cần thiết bằng tay mình. Nó không thể để đoán các thiết lập chính xác cho một địa điểm không rõ. Mục đích chính của ứng dụng là để tự động thay đổi thiết lập thông thường mà bạn thường muốn làm bằng tay.</li>
+          <li>
+            <div>
+              Lựa chọn các thiết lập
+            </div><a href="#hf_basicoperations">Đọc tất cả các thiết lập hiện tại</a> thành một hồ sơ có thể cung cấp cho bạn một điểm khởi đầu, nhưng bạn vẫn cần phải quyết định áp dụng cài đặt khi kích hoạt cho hồ sơ. Nó là rất khuyến khích để hạn chế các thiết lập cho những người có thể đã thực sự được thay đổi trong khi chờ đợi. Ví dụ như nó không phải là cần thiết để áp dụng một tên máy tính nếu thiết lập này là không bao giờ thay đổi.</li>
+          <li>
+            <div>
+              Cấu hình các thiết lập
+            </div> Để cấu hình một thiết lập kiểm tra hộp kiểm của nó đầu tiên, sau đó hoặc nhập cấu hình mong muốn trực tiếp trong giao diện chính hoặc mở hộp thoại cấu hình cho rằng thiết lập cụ thể.</li>
+          <li>
+            <div>
+              Kích hoạt hồ sơ
+            </div> Theo mặc định không có cấu hình được kích hoạt tự động, tức là không có cài đặt trên hệ thống của bạn mà không cần thay đổi ý định của bạn. Có nói rằng, bạn có thể sử dụng các <a href="#hf_autoswitch">AutoSwitch</a> tính năng để kích hoạt profile nhất định tự động dựa trên điều kiện tự do tùy biến.</li>
+          <li>
+            <div>
+              Truy cập biểu tượng Tray
+            </div> Đó là khuyến cáo để <a href="#hf_tray">giữ NetSetMan giảm thiểu trong khay</a> và di chuyển các biểu tượng trên khay vào khu vực luôn được nhìn thấy. Bằng cách đó bạn có thể nhanh chóng kích hoạt một hồ sơ bằng cách nhấn vào biểu tượng và chọn một cấu hình. Ngoài ra bạn sẽ có một cái nhìn tổng quan hữu ích qua IP kết nối hiện tại của bạn bằng cách lơ lửng trên các biểu tượng với con trỏ chuột của bạn.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profiles
+      </div>
+      <div class="hf_body">
+        <p>
+          Các tab đại diện cho các cấu hình có sẵn. Bạn có thể tiết kiệm được 6 bộ khác nhau của các thiết lập trong các tab.
+        </p>
+        <p>
+          Nếu bạn muốn thay đổi các thiết lập của hai adapter mạng khác nhau khi kích hoạt một hồ sơ duy nhất, bạn có thể sử dụng tính năng <strong>Subprofile.</strong> Nhấp vào "+" - nút bên cạnh danh sách thả xuống và một thanh menu mới sẽ xuất hiện bao gồm hai subprofiles (một hiện tại và một trống mới). Các chú thích sẽ được tự động tên của adapter mạng đã được chọn trong subprofile đó và không thể thay đổi. Bạn có thể tạo bao nhiêu subprofiles như bạn muốn. Tất cả trong số họ sẽ được kích hoạt sau khi một khi cấu hình được kích hoạt. Bạn có thể sắp xếp lại thứ tự bằng cách kéo-và-thả.
+        </p>
+        <p>
+          Mọi thay đổi sẽ được lưu tự động nên không có gì bị mất vô tình.
+        </p>
+        <p>
+          Bạn có thể đổi tên một hồ sơ bằng cách nhấp chuột phải và chọn "Đổi tên" hay chỉ đơn giản là nhấn đúp chuột lên tab caption của nó.
+        </p>
+        <p>
+          Để quản lý tất cả hồ sơ của bạn dễ dàng hơn, bạn có thể sử dụng <strong>Quản lý hồ sơ</strong> mà bạn sẽ tìm thấy trong thanh menu. Nó cho phép chỉnh sửa hồ sơ, subprofile và nhóm (chỉ trong NetSetMan Pro) với con chuột của bạn hoặc một số phím tắt thông dụng (các phím mũi tên để di chuyển, phím F2 để đổi tên, vv). Khi sử dụng chức năng kéo-và-thả để sắp xếp lại các mục mà bạn sẽ nhận thấy một số hạn chế không thể tránh khỏi phụ thuộc vào các mục, do hoàn cảnh đưa kỹ thuật: Cấu hình không thể xóa được, MultiProfiles không thể đổi tên, Profiles có thể được hoán đổi nhưng không phải di chuyển. Các hộp kiểm tra đại diện cho dù hồ sơ theo sẽ hiển thị trong khay hệ thống và trong Compact Mode.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Tab Subprofile" class="screen">
+          <img src="data/rename.png" alt="Đổi tên một hồ sơ cá nhân" class="screen">
+          <img src="data/profilemanagement.png" alt="Quản lý hồ sơ" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Bộ tiếp hợp mạng (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Tất cả các adapter mạng có sẵn được hiển thị bởi tên và kiểu của họ. Chọn NIC mà bạn muốn quản lý trong hiện tại (sub) profile.
+        </p>
+        <p>
+          Nếu một NIC nhất định là không có sẵn trong danh sách (ví dụ vì nó ngừng hoạt động hoặc ảo), bạn có thể quản lý danh sách bằng cách nhấn vào nút <strong>Refresh</strong> và hoặc là nhanh chóng cập nhật danh sách hoặc chọn <strong>Manage adapter mạng.</strong> Ở đó bạn sẽ tìm thấy một danh sách đầy đủ của tất cả các NIC sẵn. Kiểm tra tất cả các NIC mà bạn muốn có trong danh sách của bạn.
+        </p>
+        <p>
+          <strong>Lưu ý:</strong> Tất cả các NIC được bao gồm trong danh sách đó cũng sẽ xuất hiện trong Info Tray. NIC không mong muốn Bỏ chọn để loại bỏ chúng khỏi danh sách và thông tin Tray.
+        </p>
+        <p>
+          Nếu bạn sao chép các tập tin cài đặt (settings.ini) đến một hệ thống khác, NetSetMan sẽ cố gắng để gán lại NIC trong các cấu hình tự động. Tuy nhiên điều này sẽ chỉ làm việc nếu hệ thống mới có một NIC với chính xác cùng tên (trong ảnh chụp màn hình đầu tiên đó là "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Lựa chọn bộ điều hợp mạng" class="screen">
+        <img src="data/adapters-management.png" alt="Lựa chọn bộ điều hợp mạng" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Hoạt động Cài đặt
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Bắt Cài đặt hiện tại
+        </p>
+        <p>
+          Để tải một khung cảnh hiện tại vào hồ sơ cá nhân chỉ cần nhấp vào <img src="data/icon-get.png" alt="Nhận cài đặt biểu tượng"> biểu tượng bên cạnh các lĩnh vực nhập cảnh. <br> Để có được tất cả các thiết lập hiện tại phải bấm hồ sơ và chọn "Get Cài đặt hiện tại".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Nhận một thiết lập" class="screen">
+        <img src="data/get-settings2.png" alt="Nhận tất cả các thiết lập" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Cài đặt thanh toán bù trừ</span>
+        </p>
+        <p>
+          Để xóa cấu hình của một thiết lập nào đó kích chuột phải vào nó và chọn "Xóa".
+        </p>
+        <p>
+          Để xóa các giá trị của một trường IP chỉ đơn giản là double-click vào chú thích tương ứng của nó.
+        </p>
+        <p>
+          Để xóa tất cả các thiết lập của hiện tại (sub) hồ sơ kích chuột phải vào tab profile và chọn "Clear Settings".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Rõ ràng một thiết lập" class="screen">
+        <img src="data/clear-settings2.png" alt="Xóa tất cả các thiết lập" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Sao chép và dán Cài đặt</span>
+        </p>
+        <p>
+          Để chuyển các thiết lập giữa các cấu hình khác nhau, bạn có thể sao chép và dán một hồ sơ toàn bộ bằng cách nhấn phải hồ sơ gốc, chọn "Copy Settings", sau đó kích chuột phải vào hồ sơ mới và chọn "Dán Settings".
+        </p>
+        <p>
+          Để sao chép và dán chỉ có một thiết lập cụ thể chỉ đơn giản là kích chuột phải vào nó và chọn "Copy" hoặc "Dán".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Sao chép và dán một thiết lập" class="screen">
+        <img src="data/copypaste2.png" alt="Sao chép và dán tất cả các thiết lập" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Hồ sơ Activation
+      </div>
+      <div class="hf_body">
+        <p>
+          Để áp dụng tất cả các thiết lập của cấu hình hiện tại nhấp chuột vào <strong>"Kích hoạt"</strong> hoặc nếu chương trình được chạy tối thiểu chọn cấu hình từ <a href="#hf_tray">trình đơn khay</a> . <br> Chú ý rằng chỉ có các thiết lập với một hộp kiểm tra sẽ được kích hoạt.
+        </p>
+        <p>
+          Hộp thoại <strong>Activation</strong> chứa thông tin về các tiến bộ kích hoạt hiện tại. <br> Ở đó bạn có thể xem các thiết lập sẽ được áp dụng và cho dù quá trình này là thành công hay không. Bạn có thể hủy bỏ quá trình kích hoạt bằng cách nhấn vào "Cancel" -Button bất cứ lúc nào.
+        </p>
+        <p>
+          Tất cả các thay đổi được áp dụng ngay lập tức. Tuy nhiên, trong một số trường hợp một số cài đặt mất một thời gian ngắn để có hiệu lực đầy đủ hoặc cần khởi động lại (đặc biệt là "PC Name" và "Workgroup / Domain").
+        </p>
+        <p>
+          Phần <strong>chi tiết</strong> cung cấp một cái nhìn tổng quan của tất cả các thiết lập cấu hình cho cấu hình đó. Để xem thêm thông tin và các thông báo lỗi trong toàn bộ chiều dài mở ra các phần <strong>Log.</strong>
+        </p>
+        <p>
+          Để tìm giải pháp cho những lỗi phổ biến nhất và các vấn đề có một cái nhìn tại <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Kiểm tra cài đặt được thay đổi" class="screen">
+        <img src="data/activation.png" alt="Hồ sơ sổ Activation" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Kết quả phổ biến và ý nghĩa của chúng</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Tốt</td>
+            <td class="hf_errortable_right">Tất cả mọi thứ đã làm việc như mong đợi.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Cài đặt hiện đang được áp dụng.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Cài đặt được bỏ qua mà không cố gắng, bởi vì họ đã không đầy đủ hoặc sai sót.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Lỗi</td>
+            <td class="hf_errortable_right">Trong hầu hết các trường hợp lỗi được hiển thị như là một văn bản ngắn màu đỏ như "File không tìm thấy". Trong trường hợp bạn nhận được mã lỗi có một cái nhìn tại các log để tìm hiểu xem một thông báo lỗi nào cho mã số đó. Nếu bạn không có ý tưởng những gì các lý do là, xin vui lòng gửi mã lỗi và mô tả lỗi chi tiết trong các <a href="http://www.netsetman.com/support/index.php" target="_blank">diễn đàn hỗ trợ</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Vô hiệu</td>
+            <td class="hf_errortable_right">Hoặc là một giá trị không hợp lệ, không quy định hoặc không được phép (ký tự đặc biệt, cùng một nhóm làm việc như tên máy tính, vv)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF đang hoạt động</td>
+            <td class="hf_errortable_right">Firefox hiện đang chạy. Để áp dụng những cài đặt bạn phải đóng trình duyệt đầu tiên.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Nhỏ gọn Mode &amp; Full Mode
+      </div>
+      <div class="hf_body">
+        <p>
+          Bên cạnh những "Full Mode" giao diện cổ điển, nơi bạn có thể thay đổi tất cả các thiết lập của một hồ sơ, một giao diện bổ sung "Compact Mode" sẵn. Bạn có thể chuyển đổi giữa các chế độ bất cứ lúc nào bằng cách nhấn các nút theo trong menu chính ở bên phải.
+        </p>
+        <p>
+          Một khi tất cả các cấu hình được thiết lập các chế độ nhỏ gọn là giao diện lý tưởng. Ở đây bạn có một cái nhìn tổng quan của tất cả các cài đặt nhỏ gọn của một hồ sơ mà không cần lo lắng về các thiết lập đã được thay đổi vô tình.
+        </p>
+        <p>
+          Trong trường hợp bạn sử dụng <a href="#hf_nsmadministration">Administration NSM</a> (với "Thay đổi thiết lập hồ sơ cá nhân" được đánh dấu) các Compact Mode sẽ tự động được sử dụng để ngăn chặn người dùng từ việc có thể thay đổi cài đặt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Compact Mode" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Tray đơn &amp; Tray Info
+      </div>
+      <div class="hf_body">
+        <p>
+          Khi NetSetMan đang chạy bạn sẽ thấy biểu tượng của nó trong khay hệ thống (bên cạnh đồng hồ). <br> Ở đó bạn có thể nhanh chóng kích hoạt một profile. Chỉ cần kích chuột phải vào biểu tượng để mở <strong>Menu Tray</strong> và chọn profile để kích hoạt.
+        </p>
+        <p>
+          Nếu bạn muốn loại trừ một số hồ sơ từ xuất hiện trong khay hệ thống, bạn có thể ẩn chúng riêng rẽ. Để làm điều này chọn cấu hình trong cửa sổ chính, nhấn chuột phải vào tab và nhấp vào "Active trong Tray và Compact Mode". Các biểu tượng nhỏ bên cạnh văn bản cho thấy cho dù hồ sơ này sẽ có sẵn trong khay. Tùy chọn này cũng sẽ có hiệu lực vào các cấu hình ở chế độ nhỏ gọn. Hồ sơ năng hiển thị cũng có thể được cấu hình trong <a href="#hf_profiles">quản lý hồ sơ</a> .
+        </p>
+        <p>
+          Nếu bạn còn lại con trỏ chuột trên biểu tượng NetSetMan trong khay <strong>Info Tray</strong> sẽ xuất hiện. Nó chứa các thông tin IP hiện tại được sử dụng bởi hệ thống. Bởi vì dữ liệu được thu thập trong thời gian thực, bạn có thể gặp một sự chậm trễ ngắn. Để giảm thiểu sự chậm trễ đó bạn nên xem xét tắt thông tin bổ sung như IP công cộng và địa chỉ MAC trong Preferences.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tray Icon" class="screen">
+        <img src="data/showintray.png" alt="Hiện tại khay" class="screen">
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Tính năng
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Tổng quan
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan được thiết kế theo một cách mà cho phép bạn để có một cái nhìn tổng quan trực tiếp tất cả các thiết lập cấu hình trong một profile. Một số tính năng quan trọng nhất như các thiết lập IP cơ bản, WiFi và máy in mặc định có thể được cấu hình trực tiếp trên giao diện chính. Khác, các thiết lập phức tạp hơn chỉ có thể được kích hoạt ở đây và sẽ hiển thị một cái nhìn tổng quan ngắn gọn về cấu hình hiện tại của họ. Để thay đổi chúng kích hoạt chúng đầu tiên, sau đó mở hộp thoại theo bằng cách nhấn vào [...] - nút.
+        </p>
+        <p>
+          Các phần dưới đây sẽ cung cấp cho bạn các hướng dẫn cơ bản và lời khuyên hữu ích về cách sử dụng tất cả các tính năng.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Nhóm Cài đặt bổ sung" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview2">
+      <div class="hf_head">
+        Adapter Status
+      </div>
+      <div class="hf_body">
+        <p>
+          Để kích hoạt, tắt hoặc khởi động lại adapter mạng được lựa chọn sử dụng các nút adapter Status. Màu mặc định sẽ thay đổi sang một màu tình trạng liên quan đến. Ngoài ra bạn có thể xem trạng thái cấu hình trong tooltip.
+        </p>
+        <p>
+          Nếu bạn muốn kích hoạt một bộ chuyển đổi và vô hiệu hóa một hoặc tất cả các bộ điều hợp khác, bạn cần phải tạo ra <a href="#hf_profiles">subprofiles</a> cho mỗi adapter. Bạn có thể làm điều này bằng tay hoặc bằng cách sử dụng các mục menu ở dưới cùng của menu adapter Status. Nó sẽ tự động tạo ra một subprofile cho mỗi card mạng được đưa vào danh sách chuyển đổi và thiết lập cho phù hợp tình trạng của nó. Hãy nhớ rằng bạn có thể tùy chỉnh các bộ điều hợp được bao gồm trong danh sách đó bằng cách sử dụng các <a href="#hf_nics">adapter quản lý mạng</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Status Adapter: Kích hoạt" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Status Adapter: Tắt" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Status Adapter: Khởi động lại" class="screen">
+        <img src="data/adapterstatus.png" alt="Nhóm Cài đặt bổ sung" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Advanced TCP / IP Settings
+      </div>
+      <div class="hf_body">
+        <p>
+          Bạn có thể chỉ định nhiều IP, Gateway, DNS và WINS địa chỉ mỗi NIC nếu bạn cần để được trong vài mạng cùng một lúc. Để làm như vậy nhấp vào nút <strong>"IP +"</strong> hay chọn "Profile&gt; Advanced Settings / IP TCP" từ menu chính.
+        </p>
+        <p>
+          Ở đây bạn cũng có khả năng quản lý các thiết lập nâng cao hơn như các <strong>Route Table, DNS Suffix, ipconfig</strong> và <strong>NetBIOS.</strong>
+        </p>
+        <ul>
+          <li> Kích hoạt một nhóm bằng cách chọn nó là hộp chú thích </li>
+          <li>
+            <img src="data/icon-add.png" alt="Thêm giá trị mới"> Thêm một giá trị mới </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Xóa giá trị đã chọn"> Xóa các giá trị được chọn </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Xóa danh sách"> Xóa toàn bộ danh sách </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Lấy danh sách"> Nhận tất cả các giá trị hiện tại cho thiết lập này từ hệ thống (Trong khi nhấn vào <img src="data/icon-get.png" alt="Nhận cài đặt"> biểu tượng trong cửa sổ chính lần đọc giá trị đầu) </li>
+          <li> Sắp xếp lại thứ tự bằng cách kéo-và-thả </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Cửa sổ truy cập Advanced TCP / IP Settings" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Cửa sổ Advanced TCP / IP Settings" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Connections
+      </div>
+      <div class="hf_body">
+        <p>
+          Sử dụng tính năng này để kết nối hoặc ngắt kết nối bất kỳ loại kết nối Windows như mạng dial-up, băng thông rộng di động hoặc VPN. Kết nối tương thích được liệt kê trong Windows cùng với các adapter mạng bình thường của bạn trong hộp thoại Network Connections. Từ quan điểm kỹ thuật của xem tất cả các kết nối tương thích với "RasDial" được hỗ trợ.
+        </p>
+        <p>
+          Bạn có thể chọn hoặc ngắt kết nối tất cả các kết nối hiện đã thành lập bằng cách kiểm tra hộp kiểm, hoặc để kết nối / ngắt kết nối một số các kết nối riêng để của danh sách.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Cửa sổ kết nối" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hosts
+      </div>
+      <div class="hf_body">
+        <p>
+          Trong trường hợp rất cụ thể nó có thể là cần thiết hoặc hữu ích để tự gán IP cho tên hoặc tên miền. Chú ý rằng NetSetMan sẽ chỉ sửa đổi host riêng mục của nó để lại các mục đã tồn tại nguyên vẹn.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Cửa sổ máy chủ" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Ổ đĩa mạng
+      </div>
+      <div class="hf_body">
+        <p>
+          Với NetSetMan bạn có thể vẽ bản đồ và unmap một số lượng không giới hạn của ổ đĩa mạng. <br> Hãy đọc hướng dẫn ở dưới cùng của cửa sổ bằng cách nhấn vào "[Show Help]".
+        </p>
+        <p>
+          Khi một hồ sơ được kích hoạt và các tính năng Net Lái xe được lựa chọn NetSetMan sẽ so sánh danh sách của tất cả các ổ đĩa hiện đang được ánh xạ với danh sách các ổ đĩa được ánh xạ. Tất cả các ổ đĩa ánh xạ mà là trong cả hai danh sách (cùng một ký tự ổ đĩa và cùng location path) sẽ vẫn được giữ nguyên. Tất cả các ổ đĩa mạng khác sẽ được unmapped trước khi những người mới được ánh xạ.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Cửa sổ Drives mạng" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Scripts
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan cung cấp cho bạn một cách thoải mái để quản lý các file kịch bản của bạn. Tuy nhiên, nó không có ngôn ngữ chữ viết riêng. Điều này có nghĩa là bạn chỉ có thể sử dụng ngôn ngữ kịch bản hệ điều hành của bạn có thể thực hiện. Ngôn ngữ kịch bản phổ biến là VBS, JS và các tập tin batch dòng lệnh thậm chí đơn giản. Sử dụng công cụ tìm kiếm ưa thích của bạn để tìm thêm thông tin về kịch bản và những gì bạn có thể làm gì với nó.
+        </p>
+        <p>
+          Mở một tập tin kịch bản có sẵn hoặc tạo một cái mới để có thể chỉnh sửa kịch bản. <br> Bạn có thể có hai kịch bản đó sẽ được thực hiện trước và sau khi tất cả các thiết lập khác được thay đổi. <br> Nếu bạn cần một sự chậm trễ giữa việc thực thi kịch bản và thay đổi các thiết lập mạng, bạn có thể xác định nó ở phía dưới.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="Cửa sổ script" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / Email
+      </div>
+      <div class="hf_body">
+        <p>
+          Trong một số trường hợp các địa chỉ IP của máy chủ SMTP để gửi email khác nhau tùy thuộc vào mạng của bạn. Đang trong cùng một mạng, bạn có thể cần một địa chỉ IP địa phương như 10.0.0.1, trong khi được bên ngoài của mạng mà bạn có thể cần phải truy cập nó bằng một địa chỉ IP toàn cầu.
+        </p>
+        <p>
+          Thay vì cố gắng để tương thích với rất nhiều khách hàng email khác nhau và xử lý hồ sơ người dùng khác nhau NetSetMan giải quyết vấn đề này với một cách giải quyết đơn giản. Set "nsm.smtp" như địa chỉ SMTP trong ứng dụng email của bạn và cấu hình các địa chỉ IP trong các cấu theo. Khi kích hoạt cấu hình cả hai giá trị này sẽ được liên kết bằng cách sử dụng tập tin host do đó bạn không cần phải làm bất kỳ thay đổi bổ sung trong ứng dụng email của bạn nữa.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / cửa sổ Email" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Cài đặt hệ thống
+      </div>
+      <div class="hf_body">
+        <p>
+          Ngoài ra các thiết lập mạng thông thường đôi khi bạn có thể muốn thay đổi một số thiết lập hệ thống phụ thuộc vào vị trí hoặc tình huống của bạn. Ví dụ, trong khi tại trường đại học bạn có thể muốn tắt âm lượng âm thanh, thay đổi hình nền và kích hoạt các kế hoạch năng lượng cân bằng.
+        </p>
+        <p>
+          Bạn cũng có thể sử dụng cửa sổ System Settings để nhanh chóng thay đổi một số thiết lập mà nếu không sẽ mất nhiều thời gian tìm kiếm các vị trí đó thiết lập trong Windows. Đơn giản chỉ cần nhấp vào <img src="data/set-icon.png" alt="Đặt biểu tượng cài đặt"> nút để kích hoạt trực tiếp rằng thiết lập cụ thể.
+        </p>
+        <p>
+          Thiết lập được hỗ trợ bao gồm: chế độ hiển thị, hình nền, màu sắc máy tính để bàn, màn hình, thiết kế sơ đồ, loa &amp; âm lượng microphone, chương trình âm thanh, tường lửa (bao gồm cả trường hợp ngoại lệ và các thông báo.), Kế hoạch năng lượng, múi giờ và địa chỉ MAC.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Cửa sổ System Settings" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          Một hồ sơ NetSetMan thể được sử dụng để kết nối với một hồ sơ hiện có WiFi. Để làm điều này, chọn một adapter WiFi trong danh sách thả xuống NIC, sau đó chọn một cấu hình WiFi từ danh sách thả xuống WiFi. Nếu bạn chỉ muốn ngắt kết nối kết nối WiFi của bạn, chọn mục rỗng.
+        </p>
+        <p>
+          Bên cạnh chuyển đổi cơ bản WiFi này NetSetMan cung cấp một quản lý WiFi rộng. Nhấp vào biểu tượng WiFi hoặc sử dụng trình đơn chính (Công cụ&gt; Quản lý NSM WiFi) để truy cập nó. Bạn sẽ tìm thấy một danh sách của tất cả các mạng WiFi hiện nay. Một nền màu vàng cho biết một profile với SSID đã tồn tại. Một mạng lưới với một nền màu xanh lá cây hiện đang kết nối. Bạn có thể kết nối với mạng bằng cách nhấp đúp vào nó hoặc sử dụng các "Connect" -Button. Nếu không có hồ sơ hiện tại cho kết nối này bạn có thể chọn để tạo ra nó đầu tiên. Các thiết lập (xác thực, mã hóa, ...) sẽ được cấu hình sẵn sẽ tự động tùy thuộc vào mạng được công nhận. Tuy nhiên, bạn có thể cần phải điều chỉnh chúng trong trường hợp công nhận đã không làm việc một cách chính xác đối với một số lý do.
+        </p>
+        <p>
+          NetSetMan làm việc với các profile Windows WiFi bản địa. Điều này có nghĩa rằng bạn luôn có quyền truy cập vào các cấu hình tương tự mà bạn đã sử dụng trong Windows hoặc một số phần mềm WiFi khác. Bạn có thể tạo, chỉnh sửa hoặc xóa các cấu hình WiFi.
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>Yêu cầu</strong>
+        </p>
+        <p>
+          NetSetMan sử dụng WiFi API bản của Windows. Điều đó mang lại những lợi thế lớn mà không có trình điều khiển mới cần phải được cài đặt (mà có thể gây ra một vài mâu thuẫn). Mặt khác các tính năng WiFi của NetSetMan sẽ chỉ làm việc trên các hệ thống Windows đã hỗ trợ WiFi. May mắn thay hầu hết các phiên bản sử dụng ngày nay làm như vậy. Nếu bạn sử dụng Vista hay muộn bạn tốt để đi. Trong XP, bạn cần phải có SP2 hoặc SP3 cài đặt.
+        </p>
+        <p>
+          Hãy chắc chắn rằng các dịch vụ <em>WLAN AutoConfig (Wlansvc)</em> (Vista và sau này) hoặc <em>Wireless Zero Configuration (WZCSVC)</em> (XP) đang chạy.
+        </p>
+        <p>
+          Nếu adapter WiFi của bạn đi kèm với một phần mềm sản xuất tùy chỉnh để quản lý cài đặt WiFi, sau đó nó sẽ chặn truy cập của Windows trong nhiều trường hợp. Bạn sẽ cần phải tìm các tùy chọn để chuyển sang quản lý Windows trong đó phần mềm (nếu có). <br> Bởi vì có rất nhiều nhà sản xuất khác nhau với các phần mềm của riêng mình, không có cách nào để đạt được điều này phổ quát. Dưới đây là một ví dụ: Nếu bạn đang sử dụng một AVM FRITZ!Thiết bị USB WLAN, nhấp vào biểu tượng trên khay của phần mềm của nó và chọn "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="Tổng quan về WiFi" class="screen">
+        <img src="data/wifi.png" alt="Quản lý cửa sổ NSM WiFi" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Nâng cao
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Nó khá dễ dàng để kích hoạt một profile với một cú nhấp chuột từ <a href="#hf_tray">menu Tray</a> . Nhưng trong một số trường hợp, nó có thể được dễ dàng hơn để kích hoạt profile hoàn toàn tự động tùy thuộc vào điều kiện tùy chỉnh. Các tính năng tích hợp AutoSwitch hiện chính xác đó.
+        </p>
+        <p>
+          Sau khi kích hoạt AutoSwitch các điều kiện sau đây có thể được cấu hình cho tất cả các hồ sơ cá nhân:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Hạn chế biểu tượng hồ sơ"> Mạng WiFi xung quanh
+          </div>
+          <ul>
+            <li>Mạng không dây (SSID hoặc MAC) trong / ra khỏi phạm vi</li>
+            <li>Cường độ tín hiệu của một mạng không dây thấp / cao hơn một giá trị nhất định</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Hạn chế biểu tượng hồ sơ"> Địa điểm mạng
+          </div>
+          <ul>
+            <li>Cửa sổ NLM: Tự động tạo ra các cấu hình mạng của Windows (Vista và sau)</li>
+            <li>Cổng MAC: Vân tay của DHCP cổng tự động gán</li>
+            <li>Ping: sẵn có của một máy chủ nào đó hoặc hệ thống mạng</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Hạn chế biểu tượng hồ sơ"> Adapter Status
+          </div>
+          <ul>
+            <li>Tình trạng kết nối của một bộ điều hợp mạng cục bộ (kết nối / ngắt kết nối)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Hạn chế biểu tượng hồ sơ"> Khung thời gian
+          </div>
+          <ul>
+            <li>Một số ngày trong tuần và trong khung thời gian (ví dụ như Sa + Su, 8:00-18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Mặc dù không có giới hạn kỹ thuật cho số lượng điều kiện cho mỗi cấu hình cố gắng giữ cho nó càng đơn giản càng tốt. Trong hầu hết các trường hợp, nó là hoàn toàn đủ để bao gồm một hoặc hai điều kiện để đạt được kết quả mong muốn.
+        </p>
+        <p>
+          Bạn có thể chỉ định rằng hoặc là tất cả hoặc ít nhất là một trong những điều kiện phải được đáp ứng để kích hoạt profile.
+        </p>
+        <p>
+          <strong>Lưu ý:</strong> Profiles với ID thấp hơn có một ưu tiên cao hơn trong điều kiện trường hợp cho nhiều cấu hình được gặp nhau tại cùng một thời điểm.
+        </p>
+        <p>
+          Theo mặc định kích hoạt quá trình được bắt đầu với một tin nhắn ở góc phải dưới cùng với một sự chậm trễ đếm ngược tùy biến, cho phép bạn tùy chọn hủy bỏ quá trình kích hoạt. Ngoài ra một thông báo Windows bản địa có thể được sử dụng hoặc các hồ sơ có thể được kích hoạt mà không có tin nhắn trong nền. Trong trường hợp thứ hai biểu tượng trên khay sẽ rất sôi động trong suốt quá trình kích hoạt và thay đổi màu sắc của nó tạm thời theo kết quả hoạt để trực quan thông báo cho bạn về các quá trình tự động.
+        </p>
+        <p>
+          Để tiết kiệm tài nguyên hệ thống NetSetMan không so sánh với các thiết lập hiện tại của bạn để các thiết lập của các hồ sơ phải được kích hoạt. Điều này có nghĩa rằng nếu bạn thay đổi bất kỳ cài đặt của bạn bằng tay, NetSetMan sẽ không nhận thấy sự thay đổi.
+        </p>
+        <p>
+          AutoSwitch có một số hạn chế trong XP: Windows NLM không có sẵn, thay đổi trong các mạng WiFi xung quanh có thể được công nhận với một sự chậm trễ đáng kể.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch tooltip" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch thông báo" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Ghi chú
+      </div>
+      <div class="hf_body">
+        <p>
+          Bạn có thể tạo các ghi chú ngắn cho mỗi hồ sơ nếu bạn cần phải nhớ hoặc chỉ ra mục đích của một hồ sơ. Nếu một ghi chú được tạo ra cho một hồ sơ biểu tượng của nó sẽ xuất hiện màu trên thanh menu. Những lưu ý là sau đó được nhìn thấy trong chế độ toàn như một gợi ý của các biểu tượng và Compact Mode ở trên cùng của các cài đặt cấu hình.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Chú ý" class="screen">
+        <img src="data/note-hint.png" alt="Lưu ý gợi ý" class="screen">
+        <img src="data/note-compact.png" alt="Lưu ý trong Compact Mode" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM Dịch vụ / TNHH User Account
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan đòi hỏi quyền quản trị để có thể thay đổi các thiết lập mạng và hệ thống cho bạn. Thông thường chạy như một ứng dụng không phải là có thể cho một tài khoản người dùng hạn chế. Các phiên bản Windows mới hơn thậm chí hạn chế khoản Quản trị viên với UAC (User Account Control) hiển thị một thông báo ở mỗi bắt đầu chương trình.
+        </p>
+        <p>
+          Để giải quyết vấn đề này NetSetMan bao gồm một thành phần đặc biệt gọi là <strong>NSM Dịch vụ</strong> cung cấp các ứng dụng chính với các đặc quyền cần thiết. Dịch vụ này được cài đặt tự động nhưng cũng có thể được cài đặt bằng tay / gỡ bỏ cài đặt trong các ưu đãi (System Privileges&gt; Activate / Deactivate).
+        </p>
+        <p>
+          Các dịch vụ được cài đặt là có thể nhìn thấy trong các dịch vụ thoại Windows (services.msc) và có thể được kiểm soát ở đó là tốt. Ngoài ra nó có thể được cài đặt / gỡ bỏ cài đặt hoặc bắt đầu / ngừng sử dụng dòng lệnh:<br><span class="code">nsmservice.exe / cài đặt / im lặng<br> nsmservice.exe / gỡ bỏ / im lặng<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Nếu bạn nhận được lỗi <em>"chữ ký không hợp lệ",</em> chắc chắn các exe chương trình chưa được sửa đổi và các nhóm chính sách Windows <em>"Turn off Automatic Update gốc Giấy chứng nhận"</em> là vô hiệu hoá.
+        </p>
+        <p>
+          Nếu bạn chạy NetSetMan với một tài khoản người dùng hạn chế nơi có dịch vụ NSM là không có sẵn, bạn sẽ nhận được một thông báo giải thích vấn đề. Là một thay thế, bạn có thể <strong>quản trị thông tin</strong> đầu vào từ một tài khoản địa phương mà NetSetMan sẽ lưu trữ được mã hóa trong tập tin cài đặt và sử dụng để khởi động chính nó với các đặc quyền cần thiết. Chú ý rằng trong trường hợp này, ứng dụng sẽ chạy trong ngữ cảnh của người dùng có chứng chỉ đã được sử dụng.
+        </p>
+        <p>
+          Kiểm tra các <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> để đọc một số ghi chú thêm về tính năng này.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="System Privileges" class="screen">
+        <img src="data/limitedaccount.png" alt="Hạn chế User Account" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system2">
+      <div class="hf_head">
+        Pre-Logon sơ Switching
+      </div>
+      <div class="hf_body">
+        <p>
+          Một tính năng rất độc đáo và mạnh mẽ là khả năng để kích hoạt profile của bạn trên màn hình đăng nhập. Điều này cho phép chuẩn bị thiết lập mạng lưới chính xác mà bạn cần cho tài khoản của bạn bằng cách kích hoạt một hồ sơ NetSetMan thậm chí trước khi đăng nhập.
+        </p>
+        <p>
+          Để sử dụng tính năng này <a href="#hf_nsmservice">NSM Dịch vụ</a> phải được cài đặt và các tùy chọn <em>"Hồ sơ chuyển từ Windows sang màn hình đăng nhập"</em> (Preferences&gt; System Privileges) phải được kích hoạt.
+        </p>
+        <p>
+          Chú ý rằng tính năng này chỉ cho phép thay đổi các cài đặt được chia sẻ giữa tất cả người dùng. Thiết lập người dùng cụ thể không thể được thay đổi bên ngoài của một phiên người dùng.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Pre-Logon chuyển hồ sơ" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        Quản trị NSM
+      </div>
+      <div class="hf_body">
+        <p>
+          Nếu bạn thiết lập NetSetMan cho được sử dụng bởi người khác, bạn có thể muốn xác định những hành động của người khác được phép thực hiện. Với Cục Quản lý NSM (Preferences&gt; Administration), bạn có thể làm chính xác điều đó.
+        </p>
+        <p>
+          Khi bạn kích hoạt chế độ này, bạn sẽ phải nhập một mật khẩu với 6 hoặc nhiều ký tự. Chỉ với mật khẩu này, bạn sẽ có thể thay đổi các thiết lập NSM chính hoặc thực hiện các hành động mà bạn đã chọn để được bảo vệ (chạy NetSetMan, kích hoạt cấu hình, thiết lập hồ sơ thay đổi, thiết lập chương trình thay đổi).
+        </p>
+        <p>
+          Bạn thậm chí có thể khóa một số hồ sơ <img src="data/administration-profilelock.png" alt="Hạn chế biểu tượng hồ sơ"> vì vậy người dùng không thể thay đổi nhưng vẫn có thể kích hoạt chúng. Hoặc bạn thường có thể hạn chế truy cập vào các thiết lập nhất định <img src="data/administration-settinglock.png" alt="Biểu tượng Setting hạn chế"> như "Workgroup &amp; Domain" trong khi cho phép người sử dụng để cấu hình và sử dụng tất cả các thiết lập khác.
+        </p>
+        <p>
+          Một checksum mật khẩu của bạn sẽ được ghi vào sổ đăng ký. Hãy chắc chắn rằng một người dùng bình thường không có đặc quyền để ghi <span class="code">HKLM \ Software \ NetSetMan</span> (trên x64: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan).</span> Nếu bạn quên mật khẩu, bạn sẽ cần phải xóa khóa đó bằng tay. Nếu tập tin cài đặt của bạn được mã hóa không ai mà không có mật khẩu sẽ có thể xem hoặc chỉnh sửa nó.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="Quản trị NSM" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Quản trị - Thông tin hạn chế" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Administration - Cài đặt hạn chế" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Command Line Activation
+      </div>
+      <div class="hf_body">
+        <p>
+          Trong một số trường hợp đặc biệt, bạn có thể muốn thay đổi thông tin cá nhân mà không sử dụng giao diện của NetSetMan: cấu hình thay đổi với các phím tắt, kích hoạt một profile trên khởi động, bao gồm nó trong một kịch bản phức tạp, vv
+        </p>
+        <p>
+          Các thông số sau:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Kích hoạt profile với số #</td>
+          </tr>
+          <tr>
+            <td><strong>-Như #</strong></td>
+            <td>Kích hoạt các cấu hình trong chế độ im lặng (cửa sổ kích hoạt sẽ tự động đóng nếu không có lỗi xảy ra)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Chạy NetSetMan giảm thiểu</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -Toàn</strong></td>
+            <td>NetSetMan chạy ở chế độ toàn (mặc định)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>Chạy NetSetMan trong Compact Mode</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Chạy một trường hợp thứ hai của NetSetMan. <strong>Hãy cẩn thận:</strong> Tất cả các trường hợp hoạt động ghi vào cùng một tập tin cài đặt!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Một phím tắt để kích hoạt hồ sơ # 0 ở chế độ im lặng có thể trông như thế này: <br><strong>"C: \ Program Files (x86) \ NetSetMan \ netsetman.exe" -Như 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Shortcut" class="screen">
+        </p>
+        <p>
+          Trong dòng lệnh: <br>
+          <img src="data/commandline.png" alt="Command-Line" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Non-Commercial tin nhắn miễn phí
+      </div>
+      <div class="hf_body">
+        <p>
+          Tin trong cửa sổ chính này sẽ xuất hiện ở mỗi đầu 7 cho người sử dụng trong một nhóm làm việc và ở mỗi đầu 2 cho người sử dụng trong một miền, <em>trên trung bình.</em>
+        </p>
+        <p>
+          Thật không may này là cần thiết để nhắc nhở người dùng rằng NetSetMan là chỉ miễn phí cho mục đích phi thương mại (= tư nhân hoặc tự nguyện). Tóm lại: Bạn có thể sử dụng các sản phẩm miễn phí miễn là bạn không lưu thanh toán thời gian làm việc. Nếu bạn muốn sử dụng các sản phẩm ví dụ như tại nơi làm việc hoặc trên một máy tính xách tay thương mại được sử dụng, bạn phải mua một <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> giấy phép.  Không có quy định đặc biệt cho các tổ chức giáo dục phi lợi nhuận. Các giáo sư, giáo viên và nhân viên khác chỉ có thể sử dụng phiên bản miễn phí phi thương mại nếu họ đang làm việc trong một công suất danh dự (= chưa thanh toán).
+        </p>
+        <p>
+          Xin vui lòng đọc các <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">thỏa thuận cấp phép</a> để biết thêm thông tin.
+        </p>
+        <p>
+          <strong>Thông báo này không được bao gồm trong phiên bản Pro, tất nhiên.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Nhắn tin miễn phí không-Thương mại" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Tính năng bổ sung Pro
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Nhóm hồ sơ
+      </div>
+      <div class="hf_body">
+        <p>
+          Với NetSetMan Pro bạn có thể tạo ra một số lượng không giới hạn của các nhóm hồ sơ. Mỗi nhóm có 6 hồ sơ.
+        </p>
+        <p>
+          Để thêm, xóa, sắp xếp lại hoặc đổi tên một nhóm hồ sơ sử dụng <a href="#hf_profiles">quản lý hồ sơ</a> trong thanh menu.
+        </p>
+        <p>
+          Để chuyển giữa các nhóm hồ sơ có sẵn lựa chọn bất kỳ nhóm từ trường thả xuống trong thanh menu.
+        </p>
+        <p>
+          Nếu bạn có nhiều hơn một nhóm, hồ sơ của bạn sẽ được hiển thị nhóm lại trong trình đơn khay.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Quản lý hồ sơ Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Tray Icon trong phiên bản Pro" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Trình duyệt / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          Với NetSetMan Pro bạn có thể quản lý các cài đặt proxy của Windows / Internet Explorer, Firefox và Opera (&lt;= v12). Chrome và phiên bản sau của Opera không hỗ trợ cài đặt proxy của riêng nhưng thay vì tự động sử dụng các thiết lập hệ thống.
+        </p>
+        <p>
+          Tất cả các thiết lập được dùng để bắt chước giao diện ban đầu để cho phép cấu hình tương tự cũng có thể có trong các trình duyệt trực tiếp. Ngoài ra bạn có thể thay đổi trang chủ và trong trường hợp bạn đang sử dụng cấu hình trong Firefox hay Opera, bạn cũng sẽ có thể chọn tên profile.
+        </p>
+        <p>
+          Xin hãy lưu ý rằng Firefox <em>phải</em> được đóng trước khi thay đổi các thiết lập của nó. <br> Nếu bạn có nhiều hồ sơ Firefox và hồ sơ của họ thay đổi thư mục (ví dụ như vì một hệ thống mới), bạn sẽ cần phải chọn lại hồ sơ trong danh sách để nó được cập nhật trong tập tin cài đặt của bạn.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Trình duyệt / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Miền
+      </div>
+      <div class="hf_body">
+        <p>
+          Để tham gia vào một miền nhập tên của mình, tên người dùng và mật khẩu của bạn. Tên người dùng và mật khẩu của bạn sẽ được lưu trữ được mã hóa trong các tập tin-ini.
+        </p>
+        <p>
+          Thông thường nó là đủ để nhập tên người dùng tinh khiết. Tuy nhiên, nếu bạn nhận được một lỗi, bạn có thể thử nhập một trong hai tiêu chuẩn sau đây là tên người dùng của bạn:<br> a) NETBIOS: DOMAIN \ user<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          Trong NT domains một người dùng chỉ có thể là thành viên của <em>một</em> miền chính xác cùng một lúc. Điều này có nghĩa rằng bằng cách tham gia vào một miền hoặc một nhóm làm việc thành viên của bạn trong lĩnh vực trước đây bị mất cho đến khi hệ thống của bạn được nối lại.
+        </p>
+        <p>
+          NetSetMan chỉ có thể tham gia bạn để một tên miền nếu tài khoản người dùng trong miền của bạn có sự cho phép làm như vậy.<br> Đặc quyền tài khoản người dùng này được gọi là "Add Workstation to Domain" và phải được kích hoạt trên tài khoản của bạn. Nếu bạn không có đặc quyền này, xin vui lòng yêu cầu quản trị mạng của bạn để cấp cho bạn đó.
+        </p>
+        <p>
+          Kiểm tra các <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> để đọc một số ghi chú thêm về tính năng này.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Tổng quan miền" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Phân phối tại Công ty Networks
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro cung cấp một số hỗ trợ các chức năng giúp bạn chia sẻ phần mềm, cài đặt cấu hình sẵn và giấy phép của bạn dễ dàng hơn trong mạng công ty của bạn. Bạn sẽ tìm thấy tất cả mọi thứ bạn cần biết trong một mô tả chi tiết trong các <a href="http://www.netsetman.com/faqcompany">câu hỏi thường gặp</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

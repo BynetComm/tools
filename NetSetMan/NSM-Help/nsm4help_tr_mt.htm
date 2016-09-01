@@ -1,0 +1,934 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x Yardım Dosyası</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="NSM Logo" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Yardım Dosyası</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-tr.png" alt="Dil Bayrağı"></div>
+          <div id="hf_language">Türkçe</div>
+          <div id="hf_translator">MACHINE TRANSLATION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Genel Bilgi
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Yardım Dosyası Sürümü</td>
+            <td class="hf_tblinfo_right">4,0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Desteklenen <br> İşletim Sistemleri</td>
+            <td class="hf_tblinfo_right">Windows <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Lisans</td>
+            <td class="hf_tblinfo_right">Ticari Olmayan Ücretsiz <br><em>veya</em><br> Ticari Pro Sürüm<br> <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">HTML</a> veya <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a> Olarak görüntüle </td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">İletişim</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="http://www.netsetman.com/support/index.php" target="_blank">Destek Forumu</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        İçerik
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Temel Bilgiler
+        </p>
+        <ul>
+          <li><a href="#hf_description">Açıklama</a></li>
+          <li><a href="#hf_howtouse">Temel  Bilgi</a></li>
+          <li><a href="#hf_profiles">Profiller</a></li>
+          <li><a href="#hf_nics">Ağ Adaptörleri (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Ayar İşlemleri</a></li>
+          <li><a href="#hf_activation">Profil Aktivasyonu</a></li>
+          <li><a href="#hf_compactmode">Kompakt Mod &amp; Tam Mod</a></li>
+          <li><a href="#hf_tray">Sistem Tepsisi Menü ve Bilgisi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Özellikler
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Genel Bakış</a></li>
+          <li><a href="#hf_advanced">Gelişmiş TCP / IP Ayarları </a></li>
+          <li><a href="#hf_connections">Bağlantılar</a></li>
+          <li><a href="#hf_hosts">Sunucular</a></li>
+          <li><a href="#hf_netdrives">Ağ Sürücüler</a></li>
+          <li><a href="#hf_scripts">Scripts</a></li>
+          <li><a href="#hf_smtp">SMTP / E-posta</a></li>
+          <li><a href="#hf_system">Sistem Ayarları</a></li>
+          <li><a href="#hf_wifi">Kablosuz Ağ(WiFi)</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Gelişmiş
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Notlar</a></li>
+          <li><a href="#hf_nsmservice">NSM Servisi / Sınırlı Kullanıcı Hesabı</a></li>
+          <li><a href="#hf_prelogon">Oturum Öncesi Profil Anahtarlama</a></li>
+          <li><a href="#hf_nsmadministration">NSM İdaresi</a></li>
+          <li><a href="#hf_commandline">Komut Satırı Aktivasyon</a></li>
+          <li><a href="#hf_ncfreeware">Ticari Olmayan Ücretsiz Sürüm Mesajı</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Ek Pro Özellikleri
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Profil Grupları</a></li>
+          <li><a href="#hf_proxy">Tarayıcı / proxy</a></li>
+          <li><a href="#hf_domain">Etki Alanı</a></li>
+          <li><a href="#hf_distribution">Şirket Ağlarında Dağıtım</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Temel Bilgiler
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Açıklama
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> 6 farklı profil görünümünde geçiş yapabileceğiniz bir network ayar yöneticisidir:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP Adresleri (IPv4 &amp; IPv6!) </li>
+              <li> Ağ geçitleri (dahil. Metrik) </li>
+              <li> DNS Sunucuları </li>
+              <li> WINS Sunucuları </li>
+              <li> WiFi Yönetimi </li>
+              <li> Bilgisayar Adı </li>
+              <li> Çalışma Grubum </li>
+              <li> Varsayılan Yazıcı </li>
+              <li> Ağ Sürücüler </li>
+              <li> NIC Durum </li>
+              <li> Bağlantılar (RAS / DUN / PPP / VPN) </li>
+              <li> DNS Soneki </li>
+              <li> Yol Tablo </li>
+              <li> SMTP Sunucusu </li>
+              <li> Hosts Dosyası Girişleri </li>
+              <li> Sistem Ayarları </li>
+              <li> MAC Adresi </li>
+              <li> Scripts (BAT, VS, JS, ...) </li>
+            </ul></td>
+            <td width="51%"><strong>Ayrıca sadece <u>Pro</u> sürümü:</strong>
+            <ul>
+              <li> Iş yerinde kullanılabilir </li>
+              <li> Profilleri sınırsız miktarda </li>
+              <li> Ağ-Domain </li>
+              <li> Komple Proxy Ayarları &amp; <br> Bowser Ana Sayfa <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> Şimdiye dek Windows'ta şu ana kadar eksik olan bir şeyi sunuyor: <br> Güçlü, kolay kullanımlı arayüzü bir bakışta tüm ağ ayarlarını yönetmek için. <br> Mutlaka deneyin, bir daha vaz geçemeyeceksiniz.
+        </p>
+        <p>
+          Tüm ayarlar ve değişiklikler ayrı bir dosyada <em>(settings.ini)</em> yani bir yedekleme, transferi veya başka bir sürümüne yükseltmek otomatik olarak kaydedilir kesinlikle sorun değildir.
+        </p>
+        <p>
+          <strong>Tek bir tıklama ya da tamamen otomatik bir saklı profili etkinleştirmek!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Windows">
+          <br><strong>NetSetMan:</strong> Non-Commercial Freeware Sürüm
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Ana Pencere">
+          <br><strong>NetSetMan Pro:</strong> Ticari Pro Sürüm
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Temel  Bilgi
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profilleri
+            </div> Her <a href="#">profil</a> belirli bir konuma veya senaryo için gereken ayarlarla bir kümesini temsil eder. Birden çok ağ bağdaştırıcısı subprofiles kullanarak bir profil ile yapılandırılabilir. Sekmesinden yazısını çift tıklatarak bir profil adlandırın.</li>
+          <li>
+            <div>
+              El ile yapılandırma
+            </div> Kendiniz manüel gerekli profillerini yapılandırmak gerekir. Bu bilinmeyen bir konum için doğru ayarları tahmin etmek mümkün değildir. Uygulamanın temel amacı, genellikle elle yapmak istiyorum düzenli ayar değişiklikleri otomatik hale getirmektir.</li>
+          <li>
+            <div>
+              Ayarların seçilmesi
+            </div><a href="#hf_basicoperations">Mevcut tüm ayarlarını okuma</a> bir profil içine bir başlangıç ​​noktası vermek, ama yine de o profili aktive olduğunda uygulamak için hangi ayarların karar vermeniz gerekir olabilir. Oldukça aslında arada değişti oldum olabilir olanlar için ayarları sınırlamak için tavsiye edilir. Örneğin bu ayar hiç değişmedi eğer bir bilgisayar adı uygulamak gerekli değildir.</li>
+          <li>
+            <div>
+              Ayarların konfigürasyonu
+            </div> Bir ayar sonra, ilk olarak onay kutusunu işaretleyin ya ana arayüzünde doğrudan istenen yapılandırmayı girmek veya belirli bir ayar için yapılandırma iletişim kutusunu açmak yapılandırmak için.</li>
+          <li>
+            <div>
+              Profil aktivasyon
+            </div> Sisteminizde herhangi bir ayar niyeti olmadan değiştirilemez yani varsayılan profil otomatik olarak devreye girer. Eğer kullanabilirsiniz söyledikten <a href="#hf_autoswitch">AutoSwitch</a> otomatik serbestçe özelleştirilebilir koşullarını dayalı belirli profilleri etkinleştirmek için özellik.</li>
+          <li>
+            <div>
+              Tepsi simgesi erişim
+            </div> Bu önerilir <a href="#hf_tray">tepsisinde minimize NetSetMan tutmak</a> ve her zaman görünür alana tepsi simgesini taşımak. Bu şekilde hızlı simgesine tıklayarak ve bir profil seçerek profili etkinleştirebilirsiniz. Ayrıca sizin fare imleci ile simgesinin üzerine gelerek mevcut bağlantı IP'ler üzerinde yararlı bir bakış olacak.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profilleri
+      </div>
+      <div class="hf_body">
+        <p>
+          Sekmeler mevcut profilleri temsil eder. Siz bu sekmelerin ayarlarında 6 farklı setleri kaydedebilirsiniz.
+        </p>
+        <p>
+          Tek bir profil aktive olduğunda iki farklı ağ adaptörleri ayarlarını değiştirmek isterseniz, size <strong>Subprofile</strong> özelliğini kullanabilirsiniz. İki subprofiles (güncel bir ve yeni bir boş bir) içeren görünür açılır listesi ve yeni bir menü çubuğunun yanındaki düğmeye - "+" tıklayın. Yazısı otomatik olarak o subprofile seçilir ve değiştirilemez ağ adaptörünün adı olacaktır. İstediğiniz gibi birçok subprofiles oluşturabilirsiniz. Profil aktive edildiğinde hepsini birbiri ardına aktif olacaktır. Sürükle ve bırak sırasını yeniden düzenleyebilirsiniz.
+        </p>
+        <p>
+          Hiçbir şey yanlışlıkla kaybolur böylece tüm değişiklikler otomatik olarak kaydedilir.
+        </p>
+        <p>
+          Sen sağ tıklayarak ve "Rename" seçerek veya basitçe sekme başlığı çift tıklayarak bir tercihi yeniden adlandırabilirsiniz.
+        </p>
+        <p>
+          Daha kolayca tüm profillerini yönetmek için size menü çubuğunda bulabilirsiniz <strong>Profil Yönetimi'ni</strong> kullanabilirsiniz. Bu sizin fare veya bazı ortak klavye kısayolları (navigasyon için ok tuşları, yeniden adlandırma için F2, vb) ile düzenleme profilleri, (sadece Pro NetSetMan olarak) subprofile ve grupları sağlar. Öğeleri yeniden düzenlemek için sürükle-bırak kullanırken nedeniyle verilen teknik şartlar, öğeye bağlı olarak bazı kaçınılmaz kısıtlamalar farkedeceğiniz: Profiller silinemez, taşınmış MultiProfiles, yeniden adlandırılamaz Profiller takas edilebilir değil. Onay kutularını göre profil tepsiye ve Compact Mode görünür olup olmayacağını temsil eder.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Subprofile sekmeleri" class="screen">
+          <img src="data/rename.png" alt="Bir profili yeniden adlandır" class="screen">
+          <img src="data/profilemanagement.png" alt="Profil Yönetimi" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Ağ Adaptörleri (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Mevcut tüm ağ adaptörleri kendi adı ve kendi türüne göre görüntülenir. NIC seçin geçerli (alt) profilinizde yönetmek istiyorum.
+        </p>
+        <p>
+          (Bu devre dışı ya da sanal çünkü örneğin) belirli bir NIC listesinde kullanılabilir değilse <strong>Yenile</strong> butonuna tıklayarak ve ya hızla listesini güncellemek veya <strong>ağ bağdaştırıcısı Yönet</strong> seçerek listesini yönetebilirsiniz. Orada tüm NIC'lerin tam bir listesini bulacaksınız. Eğer listenizde olmasını istediğiniz tüm NICleri edin.
+        </p>
+        <p>
+          <strong>Not:</strong> Ayrıca Kaset Bilgi görünecektir bu listeye dahil tüm NIC. Işaretini kaldırın istenmeyen NIC listesi ve Kaset Bilgileri bunları kaldırmak için.
+        </p>
+        <p>
+          Başka bir sisteme ayarları dosyası (settings.ini) kopyalayın, NetSetMan otomatik profillerinde NICleri yeniden atamak için çalışacağız. Yeni sistem (bu "LAN" var ilk ekran) aynı isimde bir NIC varsa Ancak bu sadece çalışır.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Ağ adaptörü seçimi" class="screen">
+        <img src="data/adapters-management.png" alt="Ağ adaptörü seçimi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Ayarlar İşlemleri
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Geçerli Ayarlar Başlarken
+        </p>
+        <p>
+          Profile bir akım ayarı yüklemek için sadece tıklayın <img src="data/icon-get.png" alt="Ayarlar simgesine alın"> giriş alanının yanında sembolü. <br> Tüm ayarları profilini sağ tıklatın almak ve seçmek için "Geçerli Ayarları al".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Bir ayarı alın" class="screen">
+        <img src="data/get-settings2.png" alt="Tüm ayarları alın" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Takas Ayarlar</span>
+        </p>
+        <p>
+          Belirli bir ayar yapılandırmasını silmek için sağ tıklayın ve "Clear" i seçin.
+        </p>
+        <p>
+          IP alanın değerleri silmek için sadece kendi ilgili yazısı üzerine çift tıklayın.
+        </p>
+        <p>
+          Akım (alt) tüm ayarları temizlemek profile "Clear Settings" profil sekmesini sağ tıklatın ve seçin.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Bir ayarı temizle" class="screen">
+        <img src="data/clear-settings2.png" alt="Tüm ayarları temizle" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Kopyalama ve yapıştırma Ayarlar</span>
+        </p>
+        <p>
+          Daha sonra, "Copy Settings" seçerek yeni profili sağ tıklayıp "Settings Yapıştır" seçerek, kopyalayabilir, farklı profiller arasında ayarları aktarmak ve orijinal profil sağ tıklayarak bir bütün profili yapıştırmak için.
+        </p>
+        <p>
+          Kopyalamak ve sadece belirli bir ayarı yapıştırmak için sadece sağ tıklayın ve "Yapıştır" "Kopyala" ya da seçin.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Bir ayarı kopyala/yapıştır" class="screen">
+        <img src="data/copypaste2.png" alt="Tüm ayarları kopyala/yapıştır" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Profil Aktivasyon
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>"Etkinleştir"</strong> mevcut profil tıklama tüm ayarlarını uygulamak veya program minimize çalışan ise gelen profili seçmek için <a href="#hf_tray">tepsi menüsü</a> . <br> Bir kontrol onay kutusu ile sadece ayarları aktif olacak dikkat edin.
+        </p>
+        <p>
+          <strong>Aktivasyon</strong> iletişim mevcut aktivasyon ilerleme hakkında bilgi içerir. <br> Orada ayarlarının uygulandığını olacak ve işlemi başarılı olup olmadığını hangi görebilirsiniz. İstediğiniz zaman "İptal" bütonuna tıklayarak aktivasyon işlemini iptal edebilirsiniz.
+        </p>
+        <p>
+          Tüm değişiklikler hemen uygulanır. Ancak, bazı durumlarda bazı ayarları tam etkili olması için veya bir yeniden başlatma (özellikle "PC Adı" ve "Çalışma Grubu / Etki Alanı") gerektiren kısa bir süre alabilir.
+        </p>
+        <p>
+          <strong>Detaylar</strong> bölümü bu profil için tüm yapılandırılmış ayarlarla bir bakış sağlar. Daha fazla bilgi ve hata mesajları görüntülemek için tam uzunlukta <strong>Giriş</strong> bölümüne kadar açın.
+        </p>
+        <p>
+          En sık karşılaşılan hatalar ve sorunlar bir göz çözüm bulmak için <a href="http://www.netsetman.com/faq" target="_blank">SSS</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Değişen ayarları kontrol et" class="screen">
+        <img src="data/activation.png" alt="Profil Aktivasyon penceresi" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Ortak sonuçları ve anlamları</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Tamam</td>
+            <td class="hf_errortable_right">Her şey beklendiği gibi çalıştı.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Ayarlar halen uygulanmaktadır.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Onlar eksik veya hatalı olması nedeniyle Ayarlar, çalışıyorum olmadan göz ardı edildi.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Hata</td>
+            <td class="hf_errortable_right">Çoğu durumda hataları "Dosya bulunamadı" gibi bir kısa kırmızı metin olarak gösterilir. Eğer bir hata kodu bir hata mesajı kodu varsa öğrenmek için günlüğüne bir göz alırsınız. Eğer sebebi nedir hiçbir fikrim varsa, hata kodu ve ayrıntılı bir hata açıklama göndermeden lütfen <a href="http://www.netsetman.com/support/index.php" target="_blank">destek forumlarına</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Geçersiz</td>
+            <td class="hf_errortable_right">Ya bir değer kabul, geçerli belirtilmemiş veya değil (özel karakterler, vb bilgisayar adı, aynı çalışma grubu)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF aktiftir</td>
+            <td class="hf_errortable_right">Firefox şu anda çalışıyor. Ilk tarayıcıyı kapatmak zorunda bu ayarları uygulamak için.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Kompakt Modu &amp; Tam Modu
+      </div>
+      <div class="hf_body">
+        <p>
+          Eğer bir profil tüm ayarlarını değiştirebilirsiniz klasik "Tam Mod" arayüzü, yanı sıra, ek bir arayüz "Compact Mode" mevcuttur. Sen sağda ana menüdeki göre butonuna tıklayarak istediğiniz zaman bu modlar arasında geçiş yapabilirsiniz.
+        </p>
+        <p>
+          Tüm profiller kurmak kez Compact Mod ideal bir arayüz. Burada yanlışlıkla değiştirilmiş ayarları endişesi olmadan tüm profil ayarları kompakt bir bakış var.
+        </p>
+        <p>
+          Eğer kullanmak <a href="#hf_nsmadministration">NSM İdaresi</a> Kompakt Modu ayarlarını değiştirmek edememek kullanıcı önlemek için otomatik olarak kullanılır ("Değiştir profil ayarları" kontrolsüz olmak).
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Kompakt Mod" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Tepsi Menüsü ve Kaset Bilgisi
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Eğer (saatin yanında) çubuğuna simgesini göreceksiniz çalışırken. <br> Orada hızlı bir profili etkinleştirebilirsiniz. Sadece <strong>Tepsi Menüsü</strong> açmak ve etkinleştirmek için profili seçmek için simgesini sağ tıklatın.
+        </p>
+        <p>
+          Eğer tepsiye görünmesini bazı profilleri dışlamak istiyorsanız, hepsini ayrı ayrı gizleyebilirsiniz. Bu ana pencerede profili seçmek yapmak için, sekmesi üzerine sağ tıklayın ve "Tepsi ve Compact Modu Aktif" seçeneğini tıklayın. Metnin yanında küçük simge, bu profili tepsiye sunulacak olmadığını gösterir. Bu seçenek ayrıca Kompakt modunda gösterilen profilleri üzerinde etkisi olacaktır. Profil görünürlüğü de yapılandırılabilir <a href="#hf_profiles">Profil Yönetimi</a> .
+        </p>
+        <p>
+          Eğer tepsiye NetSetMan simgesinin üzerine imleci dinlenme durumunda <strong>Tepsi Bilgi</strong> görünecektir. Bu sistem tarafından kullanılan mevcut IP bilgileri içerir. Bu veri gerçek zamanlı olarak toplanan olduğundan, kısa bir gecikme yaşayabilirsiniz. Bu gecikmeyi azaltmak için size Tercihler kamu IP ve MAC adresleri gibi ek bilgiler kapatarak düşünmelisiniz.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Görev Çubuğu Simgesi" class="screen">
+        <img src="data/showintray.png" alt="Görev Çubuğunda göster" class="screen">
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Özellikler
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Genel Bakış
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan bir profil dahilinde tüm yapılandırılmış ayarları doğrudan bir bakış sağlayan bir şekilde dizayn edilmiştir. Temel IP ayarları, WiFi ve varsayılan yazıcı gibi en önemli özelliklerinden bazıları ana arayüzünde doğrudan yapılandırılabilir. Diğer, daha karmaşık ayarlar yalnızca burada devreye sokulabilir ve mevcut yapılandırma üzerinde kısa bir özetini gösterir. - Düğmesine onları ilk bunları etkinleştirmek değiştirmek için, ardından [...] tıklayarak göre iletişim kutusunu açın.
+        </p>
+        <p>
+          Aşağıdaki bölümlerde, temel talimat ve tüm özelliklerini kullanmak için nasıl yararlı ipuçları verecektir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Ek ayarlar grubu" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview2">
+      <div class="hf_head">
+        Adaptör Durumu
+      </div>
+      <div class="hf_body">
+        <p>
+          Etkinleştirmek için, devre dışı bırakmak veya seçili ağ bağdaştırıcısı Adaptör Durumu düğmesini kullanarak yeniden başlatın. Varsayılan renk bir durum ilgili rengi değişecektir. Ayrıca size araç ipucu yapılandırılmış durumunu görebilirsiniz.
+        </p>
+        <p>
+          Eğer bir adaptör etkinleştirmek ve bir veya tüm diğer adaptörleri devre dışı bırakmak istiyorsanız, size oluşturmak için gereken <a href="#hf_profiles">subprofiles</a> adaptörlerin her biri için. Elle veya Adaptör Durumu menüsünün altındaki menü öğesini kullanarak bunu yapabilirsiniz. Otomatik adaptör listesinde yer alan ve buna göre ayar durumunu ayarlanır her ağ bağdaştırıcısı için bir subprofile yaratacağız. Eğer kullanarak bu listeye dahil hangi adaptörleri özelleştirebilirsiniz unutmayın <a href="#hf_nics">Ağ Adaptörü Yönetimi</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adaptör Durumu: etkinleştirin" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adaptör Durumu: kapatılsın" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adaptör Durumu: Yeniden başlat" class="screen">
+        <img src="data/adapterstatus.png" alt="Ek ayarlar grubu" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Gelişmiş TCP / IP Ayarları
+      </div>
+      <div class="hf_body">
+        <p>
+          Birden fazla IP, Ağ Geçidi, DNS belirleyebilir ve aynı anda birçok ağlarında olmak gerekirse NIC başına WINS adresleri ayarlayabilirsiniz. Böylece ana menüden "Profil&gt; Gelişmiş TCP / IP Ayarları", <strong>"IP +"</strong> düğmesini tıklayın ya seçerim için.
+        </p>
+        <p>
+          Burada da <strong>Rota Tablo, DNS soneki, IPConfig</strong> ve <strong>NetBIOS</strong> gibi daha gelişmiş ayarları yönetmek için imkanınız var.
+        </p>
+        <ul>
+          <li> Kontrol ederek bir grup etkinleştirin, yazısı onay kutusu bulunuyor </li>
+          <li>
+            <img alt="Yeni değer ekle" src="data/icon-add.png"> Yeni bir değer ekle </li>
+          <li>
+            <img alt="Seçilen değerini silin" src="data/icon-delete.png"> Seçilen değeri sil </li>
+          <li>
+            <img alt="Listeyi temizle" src="data/icon-deletelist.png"> Tüm listeyi sil </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Listeyi al"> Tıklayarak Oysa (sistemden bu ayar için mevcut tüm değerler alın <img src="data/icon-get.png" alt="Ayarları Al"> ana pencerede sembolü) Sadece ilk değerini okur </li>
+          <li> Sürükle ve bırak sırasını yeniden düzenlemek </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Gelişmiş TCP / IP Ayarları penceresine erişim" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Gelişmiş TCP / IP Ayarları penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Bağlantılar
+      </div>
+      <div class="hf_body">
+        <p>
+          Bağlamayın veya çevirmeli ağlar, mobil geniş bant veya VPN gibi, Windows bağlantılarının her türlü kesmek için bu özelliği kullanın. Uyumlu bağlantıları Ağ Bağlantıları iletişim normal ağ adaptörleri ile birlikte Windows listelenmiştir. Görüş teknik açıdan "RasDial" ile uyumlu olan bütün bağlantıları desteklenir.
+        </p>
+        <p>
+          Tercih ya da onay kutusunu işaretleyerek kurulmuş bağlantıları kesip bağlayabilir veya / tek liste sırasına bazı bağlantılarını kesebilirsiniz
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Bağlantı penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Sunucular
+      </div>
+      <div class="hf_body">
+        <p>
+          Çok özel durumlarda manuel adları veya etki IP'leri atamak için gerekli veya yararlı olabilir. Bilgi olarak, NetSetMan sadece kendi host girişlerini değiştirecek ve diğer girişleri değiştirmeyecektir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Sunucular penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Ağ Sürücüleri
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan ile harita ve ağ sürücüleri sınırsız miktarda eşleşmesini edebilirsiniz. <br> "[Show Yardım]" tıklayarak pencerenin altındaki yönerge notları okuyunuz.
+        </p>
+        <p>
+          Bir profil etkinleştirildiğinde ve Net Drive özelliği seçildiğinde NetSetMan eşlenecek sürücülerin listesi ile tüm şu anda eşlenen sürücülerin listesini karşılaştırır. Her iki listenin (aynı sürücü harfi ve aynı konum yol), tüm eşlenen sürücüler bakir kalır. Yeni olanlar eşleştirilir önce tüm diğer ağ sürücüleri bağlanılmayan olacaktır.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Ağ Sürücüleri penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Scripts
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan size komut dosyalarını yönetmek için rahat bir yol sunar. Ancak, hiç kendi betik dili vardır. Bu sadece işletim sistemi yürütmek mümkün script dillerini kullanmak anlamına gelir. Ortak betik dilleri VBS, JS ve hatta basit bir komut satırı toplu iş dosyaları vardır. Scripting ve ne onunla yapabileceğiniz hakkında daha fazla bilgi bulmak için favori arama motoru kullanın.
+        </p>
+        <p>
+          Varolan bir komut dosyasını açın veya komut dosyasını düzenlemek edebilmek için yeni bir tane oluşturun. <br> Sen önce ve diğer tüm ayarlar değiştirildikten sonra idam edilecek iki komut olabilir. <br> Eğer komut dosyasını çalıştıran ve ağ ayarlarını değiştirme arasında bir gecikme gerekiyorsa, alt kısmına belirtebilirsiniz.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="Script penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / E-posta
+      </div>
+      <div class="hf_body">
+        <p>
+          Bazı durumlarda e-postalar göndermek için SMTP sunucusunun IP adresini ağınızdaki bağlı olarak değişir. Eğer küresel bir IP adresi erişmek gerekebilir bu ağın dışında olurken aynı ağda olman, 10.0.0.1 gibi bir yerel IP adresini gerekebilir.
+        </p>
+        <p>
+          Bunun yerine farklı e-posta istemcileri bir sürü uyumlu olmaya çalışıyorum ve farklı kullanıcı profilleri ile uğraşan NetSetMan basit bir çözüm ile bu sorunu çözer. E-posta istemcisi SMTP adresi olarak "nsm.smtp" Set ve uygun profilleri IP adreslerini yapılandırmak. Profil aktive ettiğinizde hem değerleri artık e-posta istemcisi herhangi bir ek değişiklikler yapmak gerekmez böylece hosts dosyasını kullanarak bağlantılı olacaktır.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / E-posta penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Sistem Ayarları
+      </div>
+      <div class="hf_body">
+        <p>
+          Ayrıca olağan ağ ayarlarında bazen bulunduğunuz yere veya duruma bağlı olarak bazı sistem ayarlarını değiştirmek isteyebilirsiniz. Örneğin üniversitede sen, ses düzeyini kapatmak duvar kağıdını değiştirebilir ve Dengeli güç planını aktif etmek isteyebilirsiniz ederken.
+        </p>
+        <p>
+          Ayrıca hızlı aksi Windows ayardan yerini bulmakta fazla zaman alacağını, bazı ayarını değiştirmek için Sistem Ayarları penceresini kullanabilirsiniz. Basitçe tıklayın <img src="data/set-icon.png" alt="Ayarlar simgesi belirleyin"> düğmesi doğrudan belirli ayarını etkinleştirmek için.
+        </p>
+        <p>
+          Desteklenen ayarları şunlardır: görüntüleme modu, duvar kağıdı, masaüstü renk, ekran koruyucu, tasarım düzeni, hoparlör ve mikrofon ses seviyesini, ses düzeni, güvenlik duvarı (KDV istisnaları ve bildirimler.), Güç planı, zaman dilimini ve MAC adresi.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Sistem Ayarları penceresi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        Kablosuz Ağ(WiFi)
+      </div>
+      <div class="hf_body">
+        <p>
+          Bir NetSetMan profil varolan WiFi profiline bağlanmak için kullanılabilir. Bunu yapmak için, NIC açılır listesinde bir WiFi adaptörü seçin, ardından WiFi açılır listeden bir WiFi profili seçin. Sadece WiFi bağlantısını kesmek istiyorsanız, boş girişi seçin.
+        </p>
+        <p>
+          Bu temel WiFi anahtarı yanında NetSetMan geniş bir WiFi yönetimi sunar. WiFi simgesini tıklatın veya erişmek için ana menü (Araçlar&gt; NSM WiFi Yönetimi) kullanın. Tüm mevcut WiFi ağları bir listesini bulacaksınız. Sarı arka plan aynı SSID ile bir profili zaten var olduğunu gösterir. Yeşil arka plan ile bir ağ şu anda bağlı. Sen çift tıklayarak ya da "geç" -Butonuna kullanarak bir ağa bağlanabilirsiniz. Bu bağlantı için varolan hiçbir profil varsa önce onu oluşturmak için seçebilirsiniz. Ayarları (kimlik doğrulama, şifreleme, ...) kabul şebekeye bağlı olarak otomatik olarak önceden yapılandırılmış olacaktır. Tanıma nedense düzgün işe yaramadı durumda Ancak, bunları ayarlamanız gerekebilir.
+        </p>
+        <p>
+          NetSetMan doğal Windows WiFi profilleri ile çalışır. Bu, her zaman zaten Windows veya diğer bazı WiFi yazılımında kullanılan aynı profillerine erişimi olduğu anlamına gelir. Oluşturmak, değiştirmek veya WiFi profillerini silebilirsiniz.
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>Gereksinimler</strong>
+        </p>
+        <p>
+          NetSetMan Windows yerel WiFi API kullanır. Bu yeni sürücüler (birkaç çatışmalara neden olabilir) yüklü olması gerekir büyük bir avantaj getiriyor. Olumsuz NetSetMan WiFi özellikleri yalnızca zaten WiFi destekleyen Windows sistemleri üzerinde çalışacak. Neyse ki günümüzde kullanılan sürümlerinin çoğu bunu. Daha sonra Vista kullanıyorsanız veya gitmek için iyi bir konum. XP SP2 veya SP3 yüklü olması gerekir.
+        </p>
+        <p>
+          Hizmet <em>WLAN Otomatik (WLANSVC)</em> (Vista ve üstü) veya <em>Kablosuz Sıfır Yapılandırma (WZCSVC)</em> (XP) çalıştığından emin olun.
+        </p>
+        <p>
+          WiFi adaptörü WiFi ayarlarını yönetmek için özel bir üretici yazılımı ile gelirse, o zaman çoğu Windows erişimi engellemek olacak. Sen bu yazılımı (varsa) Windows yönetime geçmek için seçeneği bulmak gerekir. <br> Kendi yazılımı ile birçok farklı üreticileri olduğundan, bunu başarmak için hiçbir genel bir yolu yoktur. İşte bir örnek: Bir AVM FRITZ kullanıyorsanız!WLAN USB aygıtı, yazılımının tepsi simgesini tıklatın ve "Windows WLAN" ı seçin.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi genel bakış" class="screen">
+        <img src="data/wifi.png" alt="NSM WiFi Yönetim penceresi" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Gelişmiş
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Bu tek bir tıklama ile bir profili etkinleştirmek için oldukça kolay <a href="#hf_tray">Tepsi Menüsü</a> . Ancak bazı durumlarda özel koşullara bağlı olarak tamamen otomatik olarak profilleri etkinleştirmek için daha kolay olabilir. Entegre AutoSwitch özelliği tam olarak bunu yapıyor.
+        </p>
+        <p>
+          Tek tek tüm profiller için yapılandırılabilir aşağıdaki koşulları AutoSwitch aktive ettikten sonra:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Kısıtlı Profil simgesi"> Ortam Kablosuz Ağlar
+          </div>
+          <ul>
+            <li>Kablosuz ağ içinde / menzil dışında (SSID veya MAC)</li>
+            <li>Bir kablosuz ağ daha düşük sinyal gücü / belirli bir değerden daha yüksek</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Kısıtlı Profil simgesi"> Ağ yerler
+          </div>
+          <ul>
+            <li>, Windows NLM: Otomatik (Vista ve sonrası) Windows tarafından oluşturulan ağ profillerini</li>
+            <li>Geçidi MAC: otomatik atanmış DHCP geçidi Parmak İzi</li>
+            <li>Ping: Ağda belirli bir sunucu veya sistem üzerinde kullanılabilir</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Kısıtlı Profil simgesi"> Adaptör Durumu
+          </div>
+          <ul>
+            <li>Bir yerel ağ bağdaştırıcısı'nın bağlantı durumu (bağlandı / kesildi)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Kısıtlı Profil simgesi"> Zaman aralığı
+          </div>
+          <ul>
+            <li>Hafta ve zaman çerçevesi belli günleri (örneğin Cmt + Paz, 8:00 - 18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Profilinin başına koşullarının miktarı için teknik bir kısıtlama olmamasına rağmen mümkün olduğunca basit tutmaya çalışın. Bir çok durumda, arzu edilen sonucu elde etmek için, bir ya da iki koşulu dahil edilmesi kesinlikle yeterli var.
+        </p>
+        <p>
+          Tüm koşulları ya da en az bir o profili etkinleştirmek için karşılanması gerektiğini belirtebilirsiniz.
+        </p>
+        <p>
+          <strong>Not:</strong> Birden fazla profil aynı anda karşılandığı için daha düşük kimlikleri ile Profiller durum koşullarında daha yüksek bir önceliğe sahiptir.
+        </p>
+        <p>
+          Varsayılan olarak aktivasyon işlemi etkinleştirme işlemini iptal isteğe izin, özelleştirilebilir gecikme geri sayım ile sağ alt köşesinde bir mesaj ile başlatılır. Alternatif bir doğal Windows bildirim kullanılabilir ya da profil arka planda herhangi bir mesaj vermeden devreye sokulabilir. Ikinci durumda tepsi simgesi görsel otomatik süreç hakkında sizi bilgilendirmek için geçici aktivasyon sonucuna göre aktivasyon işlemi sırasında animasyonlu ve rengini değiştirmek olacaktır.
+        </p>
+        <p>
+          Aktive edilecek profil ayarlarına geçerli ayarlarınızı karşılaştırmak değildir NetSetMan sistem kaynaklarını kurtarmak için. Bu elle ayarlardan herhangi birini değiştirirseniz, NetSetMan değişiklik fark anlamına gelir.
+        </p>
+        <p>
+          AutoSwitch XP'de bazı sınırlamaları vardır: Windows NLM'dir mevcut değildir, çevredeki WiFi ağları değişiklikler belli bir gecikmeyle ile tanınan olabilir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch ipucu" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch bildirim" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Notlar
+      </div>
+      <div class="hf_body">
+        <p>
+          Hatırlamanız gereken ya da bir profil amacını işaret varsa, her profil için kısa notlar oluşturabilirsiniz. Bir not, bir profil için ise onun simgesi menü çubuğunda renkli görünecektir. Not profil ayarları üstündeki simgesi bir ipucu olarak ve Kompakt Modu Tam Modu sonra görülebilir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Not" class="screen">
+        <img src="data/note-hint.png" alt="Not ipucu" class="screen">
+        <img src="data/note-compact.png" alt="Kompakt Modu Not" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM Servisi / Sınırlı Kullanıcı Hesabı
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan sizin için ağ ve sistem ayarlarını değiştirmek için muktedir yönetici ayrıcalıkları gerektirir. Normalde böyle bir uygulamayı çalıştıran sınırlı bir kullanıcı hesabı için mümkün değildir. Yeni Windows sürümleri bile Yönetici UAC (Kullanıcı Hesabı Denetimi) her program başında bir mesajı gösteren hesapları sınırlamak.
+        </p>
+        <p>
+          Bu sorunu çözmek için NetSetMan gerekli ayrıcalıkları ile ana uygulama sağlar <strong>NSM Hizmet</strong> denilen özel bir bileşen içerir. Hizmeti otomatik olarak yüklenir ama aynı zamanda manuel tercihlerinde / monte kaldırılabilir (Sistem Ayrıcalıklar&gt; Açma / Kapama).
+        </p>
+        <p>
+          Yüklenen hizmet, Windows Hizmetleri iletişim kutusunda (services.msc) görünür ve orada da kontrol edilebilir. Ayrıca o / yüklü kaldırılabilir veya başlatılabilir / komut satırını kullanarak durdurdu:<br><span class="code">nsmservice.exe / / sessiz yükleme<br> nsmservice.exe / kaldırma / sessiz<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Eğer <em>"Geçersiz imza"</em> hatası alırsanız, program exe'sinin değiştirilmemiş olduğuna emin olun ve Windows grup ilkesi <em>"Otomatik Kök Sertifikaları Güncelleştirmesi kapatın".</em>
+        </p>
+        <p>
+          NSM Servis mevcut olmadığı durumlarda sınırlı bir kullanıcı hesabı ile NetSetMan çalıştırırsanız sorunu açıklayan bir ileti alırsınız. Bir alternatif olarak yapabilirsiniz NetSetMan kendi ayarları dosyası şifrelenir ve gerekli ayrıcalıkları ile kendini başlatmak için kullanmak depolayan bir yerel hesap girdi <strong>yönetici kimlik bilgileri.</strong> Bu durumda uygulama kimlik kullanılan kullanıcı bağlamında çalışır dikkat edin.
+        </p>
+        <p>
+          Giriş <a href="http://www.netsetman.com/faqnsmservice" target="_blank">bölümü</a> bu özellik hakkında bazı ek notları okuyun.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Sistem Ayrıcalıklar" class="screen">
+        <img src="data/limitedaccount.png" alt="Sınırlı Kullanıcı Hesabı" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Oturum Öncesi Profil Anahtarlama
+      </div>
+      <div class="hf_body">
+        <p>
+          Bir çok benzersiz ve güçlü özellik oturum açma ekranında profilleri etkinleştirmek için olasılığıdır. Bu bile açmadan önce bir NetSetMan profil etkinleştirerek hesabınız için gereken doğru ağ ayarlarını hazırlanıyor sağlar.
+        </p>
+        <p>
+          Bu özelliği kullanmak için <a href="#hf_nsmservice">NSM Servis</a> yüklü olmalıdır ve (Tercihler&gt; Sistem Ayrıcalıklar) seçeneği <em>"Windows oturum açma ekranından geçiş Profili"</em> etkin olmalıdır.
+        </p>
+        <p>
+          Bu özellik sadece tüm kullanıcılar arasında paylaşılan ayarlarını değiştirmenize izin verir dikkat edin. Kullanıcı özel ayarlar kullanıcı oturumu dışında değiştirilemez.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Oturum Öncesi profil değiştirme" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM İdaresi
+      </div>
+      <div class="hf_body">
+        <p>
+          Eğer bir başkası tarafından kullanılan için NetSetMan kurarsanız, eylemleri, diğer kişinin yapmasına izin verilir ne olduğunu belirtmek isteyebilirsiniz. NSM İdaresi (Tercihler&gt; Yönetim) ile tam olarak bunu yapabilirsiniz.
+        </p>
+        <p>
+          Bu modu aktive ettiğinizde 6 veya daha fazla karakterden oluşan bir parola girmeniz gerekecek. Sadece bu şifre ile size (NetSetMan çalıştırmak, profilleri, değişim profil ayarlarını değiştirmek program ayarlarını etkinleştirmek) NSM Yönetim ayarlarını değiştirmek veya güvenli olması için seçtim eylemleri gerçekleştirmek mümkün olacak.
+        </p>
+        <p>
+          Hatta belirli profilleri kilitleyebilirsiniz <img src="data/administration-profilelock.png" alt="Kısıtlı Profil simgesi"> böylece kullanıcı değiştiremezsiniz ama yine de onları aktive edebilir. Yoksa genel olarak belli ayarlarına erişimi kısıtlayabilir <img src="data/administration-settinglock.png" alt="Kısıtlı Ayarı simgesi"> gibi "Çalışma Grubu ve Domain" yapılandırmak ve diğer tüm ayarlarını kullanmak için kullanıcı izin verirken.
+        </p>
+        <p>
+          Şifrenizin bir sağlama kayıt defterine yazılır. Normal bir kullanıcı (: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan</span> x64) <span class="code">HKLM \ Software \ NetSetMan</span> hiçbir yazma ayrıcalığına sahip olduğundan emin olun. Eğer şifrenizi unutursanız, elle bu anahtarı silmeniz gerekecektir. Senin ayarları dosyası şifreli ise şifre olmadan kimse görüntülemek veya düzenlemek mümkün olacak.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM İdaresi" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Yönetim - Profil Kısıtlamalar" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Yönetim - Ayarlar Kısıtlamalar" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Komut Satırı Aktivasyon
+      </div>
+      <div class="hf_body">
+        <p>
+          Bazı özel durumlarda NetSetMan bir GUI kullanmadan profilini değiştirmek isteyebilirsiniz: karmaşık bir senaryoya dahil, başlangıçta bir tercihi etkinleştirmek kısayolları ile değişim profilleri, vb
+        </p>
+        <p>
+          Aşağıdaki parametreler mevcuttur:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Numara # ile tercihi etkinleştirir</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Sessiz modda profil (hiçbir hata oluştu eğer pencerenin etkinleştirilmesi otomatik olarak kapanacaktır) etkinleştirir</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -Hide</strong></td>
+            <td>NetSetMan küçültülmüş olarak çalışır</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>Tam Modu NetSetMan (varsayılan) çalıştırır</td>
+          </tr>
+          <tr>
+            <td><strong>c / -Kompakt</strong></td>
+            <td>Kompakt Modu NetSetMan çalıştırır</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -çok</strong></td>
+            <td>NetSetMan ikinci bir örneğini çalıştırır. <strong>Dikkatli olun:</strong> Tüm etkin örneklerin aynı ayarlar dosyasına yazmak!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Profil # 0 ı aktive etmek için kısayol sessiz modda bu şekilde görünür: <br><strong>-as 0: "C \ Program Files (x86) \ NetSetMan \ netsetman.exe" <br> </strong>
+          <img src="data/shortcut.png" alt="Kısayol" class="screen">
+        </p>
+        <p>
+          Komut satırında: <br>
+          <img src="data/commandline.png" alt="Komut Satırı" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Ticari Olmayan Sürüm Mesajı
+      </div>
+      <div class="hf_body">
+        <p>
+          Ana penceresinde Bu mesaji bir çalışma ve <em>ortalama</em> bir etki alanındaki kullanıcılar, her 2 başında kullanıcılar için her 7. başında görünecektir.
+        </p>
+        <p>
+          Ne yazık ki bu NetSetMan ticari olmayan amaçlar için sadece Freeware kullanıcıları hatırlatmak için gerekli olan (= özel ya da gönüllü). Özetle: Bu sürece çalışma süresini ödenen kaydetmek yok gibi ücretsiz ürünü kullanabilirsiniz. İşyerinde veya bir ticari kullanılan dizüstü örneğin ürünü kullanmak istiyorsanız, size bir satın almak için gerekli olan <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> lisansı.  Eğitim ya da kar amacı gütmeyen kurumlar için özel bir düzenleme bulunmamaktadır. Onlar fahri (= ödenmemiş) çalışıyorsanız profesörler, öğretmenler ve diğer çalışanlar sadece Ticari Olmayan Sürümü kullanabilirsiniz.
+        </p>
+        <p>
+          Lütfen <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">lisans anlaşmasını</a> okuyun ve daha fazla bilgi için.
+        </p>
+        <p>
+          <strong>Bu mesaj elbette Pro sürümünde yer almıyor.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Ticari Olmayan Ücretsiz mesajı" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Ek Pro Özellikleri
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Profil Gruplar
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro ile profil gruplarının sınırsız miktarda oluşturmak edebiliyoruz. Her grup 6 profillerini içerir.
+        </p>
+        <p>
+          Ekleme, silme, yeniden düzenlemek veya bir profil grubu kullanmak yeniden adlandırmak için <a href="#hf_profiles">profil yönetimi</a> menü çubuğunda.
+        </p>
+        <p>
+          Tüm mevcut profil gruplar arasında gezinmek için menü çubuğunda açılır alanında herhangi bir grubu seçin.
+        </p>
+        <p>
+          Birden fazla grup varsa, profilleri tepsisi menüsünde gruplandırılmış gösterilir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profil Yönetimi Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Pro sürümü Görev Çubuğu Simgesi" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Tarayıcı / proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro ile, Windows / Internet Explorer, Firefox ve Opera (&lt;= V12) proxy ayarlarını yönetebilirsiniz. Krom ve Opera sonraki sürümleri kendi proxy ayarlarını desteklemez ama bunun yerine otomatik olarak sistem ayarlarını kullanmayın.
+        </p>
+        <p>
+          Tüm ayarlar doğrudan tarayıcılarda da mümkün aynı yapılandırmayı sağlamak için orijinal arayüzleri taklit amaçlanmıştır. Ayrıca ana sayfayı değiştirebilirsiniz ve Firefox veya Opera profilleri kullanıyorsanız durumda da profil adı seçmek mümkün olacak.
+        </p>
+        <p>
+          Firefox ayarlarını değiştirmeden önce kapatılması <em>gerektiğini</em> unutmayın. <br> Eğer (çünkü yeni bir sistem gibi) birden fazla Firefox profilleri ve onların profil klasör değişiklikleri varsa bunu ayarlarınız dosyasında güncellenir böylece listesinde profilini yeniden seçmeniz gerekir.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Tarayıcı / proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Etki Alanı
+      </div>
+      <div class="hf_body">
+        <p>
+          Bir etki alanı adını, kullanıcı adınızı ve şifrenizi girin katılmak için. Sizin kullanıcı adı ve şifre ini dosyasında şifreli saklanır.
+        </p>
+        <p>
+          Genellikle saf kullanıcı adı girmek için yeterli. Eğer bir hata alırsanız Ancak, kullanıcı adı olarak aşağıdaki iki standartlardan biri girmeyi deneyebilirsiniz:<br> a) NETBIOS: DOMAIN \ kullanıcı<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          NT'de bir kullanıcı yalnızca aynı anda tam <em>bir domain</em> üyesi olabilir etki alanları. Bu, başka bir etki alanı veya sistem rejoined kadar önceki etki üyelik kaybolur bir çalışma grubuna katılarak anlamına gelir.
+        </p>
+        <p>
+          Etki alanı kullanıcı hesabı bunu izni varsa NetSetMan yalnızca bir etki sizi katılabilirsiniz.<br> Bu kullanıcı hesabı ayrıcalık "Domain Workstation Ekle" denir ve hesabınızda etkin olmalıdır. Eğer bu ayrıcalığı yoksa, size bu izni için ağ yöneticinize danışın.
+        </p>
+        <p>
+          Giriş <a href="http://www.netsetman.com/faqdomain" target="_blank">bölümü</a> bu özellik hakkında bazı ek notları okuyun.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Domain Durumu" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Şirket Ağlarında Dağıtım
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro şirket ağınıza daha kolay yazılımı, önceden konfigüre edilmiş ayarlar ve lisans dağıtma yardımcı özellikler yardımcı çeşitli sunuyor. Sen ayrıntılı bir açıklama bilmeniz gereken her şeyi bulacaksınız <a href="http://www.netsetman.com/faqcompany">SSS</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

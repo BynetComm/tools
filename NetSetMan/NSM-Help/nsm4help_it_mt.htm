@@ -1,0 +1,934 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>4.x NetSetMan Help File</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="NSM Logo" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>File della Guida</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-it.png" alt="Flag Lingua"></div>
+          <div id="hf_language">Italiano</div>
+          <div id="hf_translator">MACHINE TRANSLATION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Info generali
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Versione File della Guida</td>
+            <td class="hf_tblinfo_right">4.0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Supportato <br> Sistemi Operativi</td>
+            <td class="hf_tblinfo_right">Finestre <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Licenza</td>
+            <td class="hf_tblinfo_right">Non-Commercial Gratuito <br><em>oppure</em><br> Commercial Pro Version<br> Visualizza come <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">HTML</a> o <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Contatto</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="http://www.netsetman.com/support/index.php" target="_blank">Forum di Supporto</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Contenuto
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Nozioni di base
+        </p>
+        <ul>
+          <li><a href="#hf_description">Descrizione</a></li>
+          <li><a href="#hf_howtouse">Informazioni di Base</a></li>
+          <li><a href="#hf_profiles">Profili</a></li>
+          <li><a href="#hf_nics">Schede di rete (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Impostazioni Operazioni</a></li>
+          <li><a href="#hf_activation">Attivazione Profilo</a></li>
+          <li><a href="#hf_compactmode">Modo &amp; Modo Compatto completa</a></li>
+          <li><a href="#hf_tray">Menu Vassoi &amp; Info Tray</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Caratteristiche
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Panoramica</a></li>
+          <li><a href="#hf_advanced">Impostazioni avanzate TCP / IP </a></li>
+          <li><a href="#hf_connections">Collegamenti</a></li>
+          <li><a href="#hf_hosts">Host</a></li>
+          <li><a href="#hf_netdrives">Unità di rete</a></li>
+          <li><a href="#hf_scripts">Script</a></li>
+          <li><a href="#hf_smtp">SMTP / Email</a></li>
+          <li><a href="#hf_system">Impostazioni di sistema</a></li>
+          <li><a href="#hf_wifi">Wifi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Avanzate
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Note</a></li>
+          <li><a href="#hf_nsmservice">NSM Servizio / account utente con limitazioni</a></li>
+          <li><a href="#hf_prelogon">Di pre-accesso Profile Switching</a></li>
+          <li><a href="#hf_nsmadministration">Amministrazione NSM</a></li>
+          <li><a href="#hf_commandline">Attivazione della riga di comando</a></li>
+          <li><a href="#hf_ncfreeware">Non-Commercial Messaggio Gratuito</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Ulteriori Pro Caratteristiche
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Gruppi Profilo</a></li>
+          <li><a href="#hf_proxy">Browser / Proxy</a></li>
+          <li><a href="#hf_domain">Dominio</a></li>
+          <li><a href="#hf_distribution">La distribuzione in reti aziendali</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Nozioni di base
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Descrizione
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> è un gestore di impostazioni di rete che può passare facilmente tra 6 diversi profili visivamente strutturati, tra cui:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> Indirizzi IP (IPv4 e IPv6!) </li>
+              <li> Gateway (incl. Metric) </li>
+              <li> Server DNS </li>
+              <li> Server WINS </li>
+              <li> Gestione WiFi </li>
+              <li> Nome computer </li>
+              <li> Gruppo di lavoro </li>
+              <li> Stampante predefinita </li>
+              <li> Unità di rete </li>
+              <li> NIC Stato </li>
+              <li> Connessioni (RAS / DUN / PPP / VPN) </li>
+              <li> Suffisso DNS </li>
+              <li> Tabella Percorso </li>
+              <li> Server SMTP </li>
+              <li> Hosts File Entries </li>
+              <li> Impostazioni di sistema </li>
+              <li> MAC Address </li>
+              <li> Script (BAT, VS, JS, ...) </li>
+            </ul></td>
+            <td width="51%"><strong>Inoltre, solo nella versione <u>Pro:</u></strong>
+            <ul>
+              <li> Può essere usato durante il lavoro </li>
+              <li> Quantità illimitata di profili </li>
+              <li> Network-Dominio </li>
+              <li> Completa Impostazioni Proxy &amp; <br> Bowser Pagina <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> offre ciò che vi siete persi in Windows fino ad ora: <br> Una potente interfaccia, facile da usare per gestire tutte le impostazioni di rete a colpo d'occhio. <br> Fate una prova e non vorrete mai essere senza di nuovo.
+        </p>
+        <p>
+          Tutte le impostazioni e le modifiche vengono salvate automaticamente in un file separato <em>(settings.ini)</em> così una copia di backup, il trasferimento o l'aggiornamento a un'altra versione è assolutamente un problema.
+        </p>
+        <p>
+          <strong>Attivare un profilo memorizzato con un solo clic o addirittura completamente automatico!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Window">
+          <br><strong>NetSetMan:</strong> Non-Commercial Shareware Version
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Finestra principale">
+          <br><strong>NetSetMan Pro:</strong> Commercial Pro Version
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Informazioni di Base
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profili
+            </div> Ogni <a href="#">profilo</a> rappresenta un insieme di impostazioni necessarie per una determinata località o scenario. Utilizzando sottoprofili più schede di rete può essere configurato con un profilo. Rinominare un profilo facendo doppio clic sulla relativa scheda didascalia.</li>
+          <li>
+            <div>
+              Configurazione manuale
+            </div> È necessario configurare i profili richiesti manualmente voi stessi. Non è possibile indovinare le impostazioni corrette per una località sconosciuta. Lo scopo principale dell'applicazione è quello di automatizzare le modifiche delle impostazioni regolari che ti sentiresti di solito fare manualmente.</li>
+          <li>
+            <div>
+              Selezione delle impostazioni
+            </div><a href="#hf_basicoperations">Leggere tutte le impostazioni correnti</a> in un profilo in grado di dare un punto di partenza, ma è ancora necessario decidere quali impostazioni da applicare quando si attiva tale profilo. Si raccomanda di limitare le impostazioni a quelle che potrebbe essere stato effettivamente cambiato nel frattempo. Ad esempio, non è necessario applicare un nome computer se questa impostazione non viene mai modificata.</li>
+          <li>
+            <div>
+              Configurazione di impostazioni
+            </div> Per configurare verificare l'impostazione relativa casella di controllo prima, allora o immettere la configurazione desiderata direttamente nell'interfaccia principale o aprire la finestra di configurazione per quella particolare impostazione.</li>
+          <li>
+            <div>
+              Attivazione Profilo
+            </div> Per impostazione predefinita, nessun profilo viene attivato automaticamente, vale a dire nessuna impostazione sul vostro sistema è cambiato, senza la vostra intenzione. Detto questo, è possibile utilizzare la <a href="#hf_autoswitch">AutoSwitch</a> funzione per attivare determinati profili automaticamente in base alle condizioni di liberamente personalizzabili.</li>
+          <li>
+            <div>
+              Vassoio accesso icona
+            </div> Si consiglia di <a href="#hf_tray">tenere NetSetMan minimizzato nel vassoio</a> e spostare l'icona del vassoio nella zona sempre visibile. In questo modo è possibile attivare rapidamente un profilo facendo clic sull'icona e selezionando un profilo. Inoltre avrete una panoramica utile sopra le vostre IP di connessione attuali posizionando il mouse sopra l'icona con il cursore del mouse.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profili
+      </div>
+      <div class="hf_body">
+        <p>
+          Le schede rappresentano i profili disponibili. È possibile salvare 6 diversi gruppi di impostazioni in quelle schede.
+        </p>
+        <p>
+          Se vuoi modificare le impostazioni di due schede di rete differenti quando si attiva un singolo profilo, è possibile utilizzare la funzione <strong>SUB.</strong> Fare clic su "+" - pulsante accanto al menu a discesa e una nuova barra di menu apparirà contenente due sottoprofili (quello attuale e uno nuovo vuoto). La voce sarà automaticamente il nome della scheda di rete selezionata in quel sottoprofilo e non può essere modificato. È possibile creare il numero di sottoprofili che vuoi. Tutti loro saranno attivati ​​uno dopo l'altro quando si attiva il profilo. È possibile modificare l'ordine con il drag-and-drop.
+        </p>
+        <p>
+          Tutte le modifiche vengono salvate automaticamente in modo niente si perde accidentalmente.
+        </p>
+        <p>
+          È possibile rinominare un profilo facendo clic destro su di esso e scegliere "Rinomina" o semplicemente facendo doppio clic sulla relativa scheda didascalia.
+        </p>
+        <p>
+          Per gestire tutti i tuoi profili più facilmente si può utilizzare il <strong>Gestione profilo</strong> che troverete nella barra dei menu. Esso permette di modifica dei profili, sottoprofilo e gruppi (solo in NetSetMan Pro) con il mouse o alcune scorciatoie da tastiera comune (tasti freccia per la navigazione, F2 per la ridenominazione, ecc). Quando si usa il drag-and-drop per riorganizzare gli elementi noterete alcune restrizioni inevitabili seconda della voce, a causa di determinate circostanze tecniche: i profili non possono essere cancellati, MultiProfiles non possono essere rinominati, profili possono essere scambiati, ma non spostati. Le caselle di controllo rappresentano se il profilo base sarà visibile in vassoio e in modalità compatta.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Tabs SUB" class="screen">
+          <img src="data/rename.png" alt="Rinominare un profilo" class="screen">
+          <img src="data/profilemanagement.png" alt="Gestione dei profili" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Schede di rete (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Tutte le schede di rete disponibili sono visualizzate con il loro nome e il loro tipo. Selezionare la scheda NIC vuoi gestire nel (sotto) del profilo attuale.
+        </p>
+        <p>
+          Se una determinata scheda di rete non è disponibile nell'elenco (ad esempio, perché è disattivato o virtuale) è possibile gestire l'elenco facendo clic sul pulsante <strong>Aggiorna</strong> e sia rapidamente aggiornare l'elenco o scegliere <strong>Gestisci schede di rete.</strong> Vi troverete un elenco completo di tutte le schede di rete disponibili. Controllare tutte le schede di rete che si desidera avere nella vostra lista.
+        </p>
+        <p>
+          <strong>Nota:</strong> Tutte le schede di rete che sono inclusi in tale elenco apparirà anche nel Info vassoio. NIC indesiderati deselezionare per rimuoverli dalla lista e l'Info vassoio.
+        </p>
+        <p>
+          Se si copia il file di impostazioni (settings.ini) ad un altro sistema, NetSetMan proverà a riassegnare automaticamente le schede di rete nei profili. Tuttavia, questo funziona solo se il nuovo sistema ha una scheda di rete con esattamente lo stesso nome (nel primo screenshot è "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Selezione adattatore di rete" class="screen">
+        <img src="data/adapters-management.png" alt="Selezione adattatore di rete" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Impostazioni Operazioni
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Ottenere Impostazioni correnti
+        </p>
+        <p>
+          Per caricare una impostazione corrente nel profilo basta cliccare sul <img src="data/icon-get.png" alt="Get icona delle impostazioni"> simbolo accanto al campo di immissione. <br> Per ottenere tutte le impostazioni correnti fare clic destro sul profilo e scegliere "Visualizza impostazioni correnti".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Prendi uno impostazione" class="screen">
+        <img src="data/get-settings2.png" alt="Ricevi tutte le impostazioni" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Impostazioni Clearing</span>
+        </p>
+        <p>
+          Per cancellare la configurazione di un certo ambiente destro del mouse e scegliere "Cancella".
+        </p>
+        <p>
+          Per cancellare i valori di un campo IP sufficiente fare doppio clic sul suo didascalia corrispondente.
+        </p>
+        <p>
+          Per cancellare tutte le impostazioni della corrente (sub) profilo destro del mouse sulla scheda profilo e scegliere "Impostazioni Cancella".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Cancella una impostazione" class="screen">
+        <img src="data/clear-settings2.png" alt="Cancellare tutte le impostazioni" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Copia &amp; Incolla Impostazioni</span>
+        </p>
+        <p>
+          Per trasferire le impostazioni tra i diversi profili è possibile copiare e incollare un profilo intero facendo clic con il profilo originale, scegliere "Impostazioni copia", poi clic destro sul nuovo profilo e scegliendo "Incolla Impostazioni".
+        </p>
+        <p>
+          Per copiare e incollare solo una specifica impostazione semplicemente fare clic destro e scegliere "Copia" o "Incolla".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Copia e incolla un&#39;impostazione" class="screen">
+        <img src="data/copypaste2.png" alt="Copia e incolla tutte le impostazioni" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Attivazione Profilo
+      </div>
+      <div class="hf_body">
+        <p>
+          Per applicare tutte le impostazioni del profilo corrente cliccare su <strong>"Attiva",</strong> o se il programma è in esecuzione minimizzato selezionare il profilo dal <a href="#hf_tray">menu della barra</a> . <br> Si noti che saranno attivate solo le impostazioni con una casella di controllo selezionata.
+        </p>
+        <p>
+          La finestra di dialogo <strong>di attivazione</strong> contiene le informazioni sullo stato di avanzamento di attivazione corrente. <br> Ci si può vedere quali impostazioni stanno per essere applicate e se il processo va a buon fine o meno. È possibile annullare il processo di attivazione, fare clic sul pulsante "Annulla" in qualsiasi momento.
+        </p>
+        <p>
+          Tutte le modifiche vengono applicate immediatamente. Tuttavia, in alcuni casi, alcune impostazioni prendere un po 'di tempo per prendere pieno effetto o richiedere un riavvio (in particolare "PC Nome" e "Gruppo di lavoro / Dominio").
+        </p>
+        <p>
+          La sezione <strong>Dettagli</strong> fornisce una panoramica di tutte le impostazioni configurate per tale profilo. Per maggiori informazioni e messaggi di errore in tutta la lunghezza aprire la sezione <strong>Registro.</strong>
+        </p>
+        <p>
+          Per trovare soluzioni per gli errori ei problemi più comuni hanno un'occhiata al <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Controllare le impostazioni da modificare" class="screen">
+        <img src="data/activation.png" alt="Finestra Attivazione Profilo" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Risultati comuni e il loro significato</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Bene</td>
+            <td class="hf_errortable_right">Tutto ha funzionato come previsto.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Sono attualmente in fase di applicazione Impostazioni.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Impostazioni sono state ignorate senza cercare, perché erano incompleti o errati.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Errore</td>
+            <td class="hf_errortable_right">Nella maggior parte dei casi gli errori sono mostrati come un breve testo rosso come "File non trovato". Nel caso in cui viene visualizzato un codice di errore dare un'occhiata al registro di scoprire se esiste un messaggio di errore per tale codice. Se non avete idea di quale sia la ragione è, si prega di inviare il codice di errore e una descrizione dettagliata dell'errore nei <a href="http://www.netsetman.com/support/index.php" target="_blank">forum di supporto</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Non valido</td>
+            <td class="hf_errortable_right">O un valore non è valido, non nominati né non permesso (caratteri speciali, stesso gruppo di lavoro come nome del computer, ecc)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF è attivo</td>
+            <td class="hf_errortable_right">Firefox è attualmente in esecuzione. Per applicare queste impostazioni dovete chiudere il browser prima.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Modo &amp; Modo Compatto completa
+      </div>
+      <div class="hf_body">
+        <p>
+          Oltre alla classica interfaccia "Full Mode", in cui è possibile modificare tutte le impostazioni di un profilo, un'interfaccia aggiuntiva "Modalità Compact" è disponibile. È possibile passare tra queste modalità in qualsiasi momento facendo clic sul pulsante funzione nel menu principale sulla destra.
+        </p>
+        <p>
+          Una volta che tutti i profili sono impostati la modalità Compact è l'interfaccia ideale. Qui si ha una panoramica compatta di tutte le impostazioni di un profilo senza doversi preoccupare delle impostazioni vengano modificati accidentalmente.
+        </p>
+        <p>
+          Nel caso in cui si utilizza l' <a href="#hf_nsmadministration">Amministrazione NSM</a> (con "Modificare le impostazioni del profilo" sia deselezionata) la modalità Compact sarà usato automaticamente per impedire all'utente di essere in grado di modificare le impostazioni.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Modalità Compact" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Menu Vassoi &amp; Info Tray
+      </div>
+      <div class="hf_body">
+        <p>
+          Quando NetSetMan è in esecuzione troverete la sua icona nella barra di sistema (accanto all'orologio). <br> Non è possibile attivare rapidamente un profilo. Basta fare clic destro sull'icona per aprire il <strong>menu Vassoi</strong> e scegliere il profilo da attivare.
+        </p>
+        <p>
+          Se vuoi escludere alcuni profili di apparire nel vassoio, è possibile nascondere singolarmente. Per fare questo selezionare il profilo nella finestra principale, fare clic destro sulla scheda e fare clic su "Attivo in modalità vassoio e Compact". Il piccolo simbolo a fianco il testo indica se questo profilo sarà disponibile nel vassoio. Questa opzione avrà anche effetto sui profili indicati nella modalità compatta. Profilo visibilità può essere configurata anche in <a href="#hf_profiles">Gestione profilo</a> .
+        </p>
+        <p>
+          Se si posiziona il cursore sull'icona NetSetMan nella barra apparirà <strong>Info vassoio.</strong> Esso contiene le informazioni IP corrente che viene utilizzato dal sistema. Dato che i dati vengono raccolti in tempo reale, si potrebbe verificare un breve ritardo. Per ridurre il ritardo che si dovrebbe considerare disattivare informazioni aggiuntive come IP pubblico e gli indirizzi MAC in Preferenze.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tray Icon" class="screen">
+        <img src="data/showintray.png" alt="Mostra nel vassoio" class="screen">
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Caratteristiche
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Panoramica
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan è stato progettato in un modo che permette di avere una visione diretta di tutte le impostazioni configurate all'interno di un profilo. Alcune delle caratteristiche più importanti come le impostazioni IP di base, WiFi e la stampante predefinita possono essere configurati direttamente sull'interfaccia principale. Altre impostazioni, più complesse possono essere attivati ​​solo qui e mostrerà una breve panoramica sulla loro configurazione attuale. Per modificare le loro attivano prima, quindi aprire la finestra di dialogo in base cliccando il [...] - pulsante.
+        </p>
+        <p>
+          Le sezioni seguenti vi daranno le istruzioni di base e consigli utili su come utilizzare tutte le funzionalità.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Gruppo Impostazioni aggiuntive" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview2">
+      <div class="hf_head">
+        Adattatore di stato
+      </div>
+      <div class="hf_body">
+        <p>
+          Per attivare, disattivare o riavviare la scheda di rete selezionata utilizzare il tasto adattatore di stato. Il colore predefinito cambierà in un colore di stato connessi. Inoltre, è possibile visualizzare lo stato configurato nel tooltip.
+        </p>
+        <p>
+          Se si desidera attivare un adattatore e disabilitare uno o tutti gli altri adattatori, è necessario creare <a href="#hf_profiles">sottoprofili</a> per ciascuna delle schede. È possibile eseguire questa operazione manualmente o utilizzando la voce di menu nella parte inferiore del menu Adapter Stato. Si creerà automaticamente un sottoprofilo per ogni scheda di rete che è incluso nella lista adattatore e impostare l'impostazione di conseguenza il suo status. Ricorda che è possibile personalizzare quali adattatori sono inclusi in tale elenco utilizzando la <a href="#hf_nics">scheda di gestione della rete</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adattatore Stato: Attiva" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adattatore Stato: Disattiva" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adattatore Stato: Restart" class="screen">
+        <img src="data/adapterstatus.png" alt="Gruppo Impostazioni aggiuntive" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Impostazioni avanzate TCP / IP
+      </div>
+      <div class="hf_body">
+        <p>
+          È possibile specificare più IP, Gateway, DNS e WINS indirizzi per ogni scheda di rete, se avete bisogno di essere in diverse reti allo stesso tempo. Per farlo clicca sul pulsante <strong>"IP +"</strong> o scegliere "Profilo&gt; Impostazioni avanzate TCP / IP" dal menu principale.
+        </p>
+        <p>
+          Qui avete anche la possibilità di gestire le impostazioni più avanzate come la <strong>tabella di routing, suffisso DNS, IPConfig</strong> e <strong>NetBIOS.</strong>
+        </p>
+        <ul>
+          <li> Attivare un gruppo verificando è casella di didascalia </li>
+          <li>
+            <img src="data/icon-add.png" alt="Aggiungi nuovo valore"> Aggiungere un nuovo valore </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Eliminare il valore selezionato"> Eliminare il valore selezionato </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Cancella elenco"> Cancellare l'intera lista </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Get lista"> Ottenere tutti i valori di corrente per questa impostazione del sistema (considerando che cliccando sul <img src="data/icon-get.png" alt="Ottenere le impostazioni"> simbolo nella finestra principale legge il primo valore solo) </li>
+          <li> Riorganizzare l'ordine con il drag-and-drop </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Finestra Impostazioni accesso avanzate TCP / IP" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Finestra Impostazioni avanzate TCP / IP" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Collegamenti
+      </div>
+      <div class="hf_body">
+        <p>
+          Utilizzare questa funzione per collegare o scollegare qualsiasi tipo di connessioni Windows come reti dial-up, banda larga mobile o VPN. Connessioni compatibili sono elencati in Windows insieme con i vostri normali schede di rete nella finestra di dialogo Connessioni di rete. Da un punto di vista tecnico tutte le connessioni che sono compatibili con "RasDial" sono supportati.
+        </p>
+        <p>
+          È possibile scegliere di disconnettere tutte le connessioni attualmente stabilite selezionando la casella di controllo, o per collegare / scollegare alcuni collegamenti singolarmente in ordine di lista.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Finestra Connessioni" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Host
+      </div>
+      <div class="hf_body">
+        <p>
+          In casi molto specifici potrebbe essere necessario o utile per assegnare manualmente indirizzi IP ai nomi o domini. Si noti che NetSetMan solo modificare le voci propri ospiti lasciando le voci già esistenti intatta.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Finestra Host" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Unità di rete
+      </div>
+      <div class="hf_body">
+        <p>
+          Con NetSetMan è possibile mappare ed eliminare la mappatura di un numero illimitato di unità di rete. <br> Si prega di leggere le note di istruzioni nella parte inferiore della finestra cliccando su "[Show Aiuto]".
+        </p>
+        <p>
+          Quando viene attivato un profilo e la funzione Net unità è selezionata NetSetMan confronterà l'elenco di tutte le unità attualmente mappate con l'elenco delle unità da mappare. Tutte le unità mappate che sono in entrambe le liste (stessa lettera di unità e lo stesso percorso di posizione) rimarranno intatti. Tutte le altre unità di rete saranno mappata prima che quelli nuovi sono mappati.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Finestra Unità di rete" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Script
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan offre un modo comodo per gestire i file di script. Tuttavia, non ha proprio linguaggio di script. Questo significa che è possibile utilizzare solo i linguaggi di script il sistema operativo è in grado di eseguire. Linguaggi di script comuni sono VBS, JS e file batch da riga di comando anche semplici. Usa il motore di ricerca preferito per trovare ulteriori informazioni sugli script e cosa si può fare con esso.
+        </p>
+        <p>
+          Aprire un file di script esistente o crearne uno nuovo per essere in grado di modificare lo script. <br> È possibile avere due script che verranno eseguiti prima e dopo tutte le altre impostazioni vengono modificate. <br> Se avete bisogno di un ritardo tra l'esecuzione dello script e la modifica delle impostazioni di rete, è possibile specificare in fondo.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="Finestra Script" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / Email
+      </div>
+      <div class="hf_body">
+        <p>
+          In alcuni casi l'indirizzo IP del server SMTP per l'invio di messaggi di posta elettronica varia a seconda della rete. Essere nella stessa rete potrebbe essere necessario un indirizzo IP locale come 10.0.0.1, pur essendo al di fuori di tale rete potrebbe essere necessario accedervi da un indirizzo IP globale.
+        </p>
+        <p>
+          Invece di cercare di essere compatibile con un sacco di diversi client di posta elettronica e si occupano di diversi profili utente NetSetMan risolve questo problema con una soluzione semplice. Impostare "nsm.smtp" come indirizzo SMTP nel tuo client di posta elettronica e configurare gli indirizzi IP nei profili secondo. Quando si attiva il profilo di entrambi i valori saranno collegati utilizzando il file hosts in modo che non c'è bisogno di fare ulteriori modifiche nel vostro client di posta elettronica più.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP finestra / Email" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Impostazioni di sistema
+      </div>
+      <div class="hf_body">
+        <p>
+          In aggiunta alle impostazioni di rete soliti a volte si potrebbe voler modificare alcune impostazioni di sistema a seconda della vostra posizione o situazione. Ad esempio, mentre all'università si potrebbe desiderare di disattivare il volume, cambiare lo sfondo e attivare il piano di alimentazione equilibrata.
+        </p>
+        <p>
+          È inoltre possibile utilizzare la finestra Impostazioni di sistema per cambiare rapidamente alcune impostazioni che altrimenti richiedere più tempo per trovare la posizione di tale impostazione in Windows. Basta fare clic sul <img src="data/set-icon.png" alt="Icona Set impostazioni"> pulsante per attivare direttamente tale impostazione particolare.
+        </p>
+        <p>
+          Impostazioni supportati comprendono: modalità di visualizzazione, carta da parati, il colore del desktop, screensaver, schema di disegno, altoparlanti e volume del microfono, combinazione di suoni, firewall (inclusa eccezioni e notifiche.), Il risparmio di energia, il fuso orario e l'indirizzo MAC.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Finestra Impostazioni di sistema" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        Wifi
+      </div>
+      <div class="hf_body">
+        <p>
+          Un profilo NetSetMan può essere utilizzato per connettersi a un profilo Wi-Fi esistente. Per fare questo, selezionare un adattatore WiFi nella lista NIC a discesa, quindi selezionare un profilo Wi-Fi dall'elenco a discesa WiFi. Se si desidera solo per disconnettere la connessione WiFi, scegliere la voce vuota.
+        </p>
+        <p>
+          Oltre a questo interruttore WiFi di base NetSetMan offre una gestione estensiva WiFi. Fare clic sull'icona WiFi o utilizzare il menu principale (Strumenti&gt; Gestione WiFi NSM) per accedervi. Troverete un elenco di tutte le reti WiFi attualmente disponibili. Uno sfondo giallo indica che un profilo con lo stesso SSID esiste già. Una rete con uno sfondo verde è attualmente collegato. È possibile connettersi a una rete facendo doppio clic su di esso o con il "Connect" -Button. Se non c'è alcun profilo esistente per questa connessione è possibile scegliere di creare in primo luogo. Le impostazioni (autenticazione, crittografia, ...) saranno pre-configurati automaticamente a seconda della rete riconosciuta. Tuttavia, potrebbe essere necessario regolarli nel caso in cui il riconoscimento non ha funzionato correttamente per qualche motivo.
+        </p>
+        <p>
+          NetSetMan funziona con i profili di Windows WiFi nativo. Ciò significa che si ha sempre accesso agli stessi profili che hai già utilizzato in Windows o qualche altro software WiFi. È possibile creare, modificare o eliminare i profili Wi-Fi.
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>Requisiti</strong>
+        </p>
+        <p>
+          NetSetMan utilizza l'API WiFi nativo di Windows. Che porta il grande vantaggio che nessun nuovo driver devono essere installati (che potrebbe tradursi in diversi conflitti). Il lato negativo le caratteristiche WiFi di NetSetMan funzioneranno solo su sistemi Windows che già supportano WiFi. Fortunatamente la maggior parte delle versioni utilizzate al giorno d'oggi lo fanno. Se si utilizza Vista o poi si sta bene ad andare. In XP è necessario disporre di SP2 o SP3 installato.
+        </p>
+        <p>
+          Assicurarsi che il servizio <em>Configurazione automatica WLAN (Wlansvc)</em> (Vista e versioni successive) o <em>Configurazione Wireless Zero (WZCSVC)</em> (XP) è in esecuzione.
+        </p>
+        <p>
+          Se la scheda WiFi viene fornito con un software costruttore personalizzato per gestire le impostazioni WiFi, allora sarà bloccare l'accesso di Windows, nella maggior parte dei casi. Avrete bisogno di trovare la possibilità di passare alla gestione di Windows in quanto il software (se disponibile). <br> Perché ci sono molti produttori diversi con il proprio software, non c'è modo universale per raggiungere questo obiettivo. Ecco un esempio: Se si utilizza un AVM FRITZ!Dispositivo USB WLAN, fare clic sull'icona del vassoio del suo software e scegliere "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="Panoramica WiFi" class="screen">
+        <img src="data/wifi.png" alt="Finestra NSM WiFi Gestione" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Avanzate
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          E 'abbastanza facile da attivare un profilo con un solo clic dal <a href="#hf_tray">menu Vassoi</a> . Ma in alcuni casi potrebbe essere ancora più facile attivare i profili in modo completamente automatico a seconda delle condizioni personalizzate. La funzione integrata AutoSwitch fa esattamente questo.
+        </p>
+        <p>
+          Dopo aver attivato AutoSwitch possono essere configurati per tutti i profili individualmente le seguenti condizioni:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Restricted icona Profilo"> Reti wireless circostanti
+          </div>
+          <ul>
+            <li>Rete wireless (SSID o MAC) in / fuori range</li>
+            <li>La potenza del segnale di una rete wireless inferiori / superiori a un certo valore</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Restricted icona Profilo"> Percorsi di rete
+          </div>
+          <ul>
+            <li>Finestre NLM: generato automaticamente profili di rete da Windows (Vista e versioni successive)</li>
+            <li>Gateway MAC: impronte digitali del gateway DHCP assegnato automaticamente</li>
+            <li>Ping: Disponibilità di un determinato server o un sistema in rete</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Restricted icona Profilo"> Adattatore di stato
+          </div>
+          <ul>
+            <li>Stato della connessione di una scheda di rete locale (connessa / disconnessa)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Restricted icona Profilo"> Lasso di tempo
+          </div>
+          <ul>
+            <li>Alcuni giorni della settimana e il telaio di tempo (ad esempio, Sa + Do, 8:00-18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Anche se non c'è alcuna limitazione tecnica per la quantità di condizioni per profilo cercare di mantenere il più semplice possibile. Nella maggior parte dei casi è assolutamente sufficiente includere uno o due condizioni per ottenere il risultato desiderato.
+        </p>
+        <p>
+          È possibile specificare che tutti o almeno una delle condizioni devono essere soddisfatte per attivare quel profilo.
+        </p>
+        <p>
+          <strong>Nota:</strong> I profili con ID più basse hanno una priorità più alta in condizioni caso per più profili sono soddisfatte contemporaneamente.
+        </p>
+        <p>
+          Per impostazione predefinita, il processo di attivazione è iniziato con un messaggio in basso a destra con un ritardo conto alla rovescia personalizzabile, che consente di opzionalmente interrompere il processo di attivazione. In alternativa, una notifica di Windows nativo può essere utilizzato o il profilo può essere attivato senza alcun messaggio in background. In quest'ultimo caso l'icona del vassoio sarà animato durante il processo di attivazione e cambia colore temporaneamente secondo il risultato di attivazione ti informa visivamente sul processo automatizzato.
+        </p>
+        <p>
+          Per risparmiare risorse di sistema NetSetMan non confronta le impostazioni correnti per le impostazioni del profilo da attivare. Questo significa che se si modifica qualsiasi impostazione manualmente, NetSetMan non noterà il cambiamento.
+        </p>
+        <p>
+          AutoSwitch ha alcune limitazioni in XP: Windows NLM non è disponibile, Cambiamenti nelle reti WiFi circostanti potrebbe essere riconosciuta con un ritardo notevole.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch tooltip" class="screen">
+        <img src="data/autoswitch-notification.png" alt="Notifica AutoSwitch" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Note
+      </div>
+      <div class="hf_body">
+        <p>
+          È possibile creare brevi note per ogni profilo se avete bisogno di ricordare o indicare lo scopo di un profilo. Se una nota è stato creato un profilo di sua icona apparirà di colore nella barra dei menu. La nota è quindi visibile in modalità completa come un suggerimento dell'icona e in modo compatto in cima le impostazioni del profilo.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Nota" class="screen">
+        <img src="data/note-hint.png" alt="Nota suggerimento" class="screen">
+        <img src="data/note-compact.png" alt="Nota: in modalità compatta" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM Servizio / account utente con limitazioni
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan richiede privilegi di amministratore per poter modificare le impostazioni di rete e di sistema per voi. Normalmente l'esecuzione di un tale applicazione non è possibile per un account utente limitato. Le versioni più recenti di Windows anche limitare gli account amministratore con UAC (User Account Control), che mostra un messaggio ad ogni avvio del programma.
+        </p>
+        <p>
+          Per risolvere questo problema NetSetMan include un componente speciale chiamato <strong>NSM servizio</strong> che fornisce l'applicazione principale con i privilegi necessari. Il servizio viene installato automaticamente, ma può anche essere installato manualmente / disinstallato nelle preferenze (privilegi di sistema&gt; Attiva / Disattiva).
+        </p>
+        <p>
+          Il servizio installato è visibile nella finestra di dialogo Servizi di Windows (services.msc) e può essere controllato anche lì. Inoltre, può essere installato / disinstallato o avviato / arrestato con riga di comando:<br><span class="code">nsmservice.exe / install / silent<br> nsmservice.exe / uninstall / silent<br> nsmService net start<br> arresto nsmService net</span>
+        </p>
+        <p>
+          Se si ottiene l'errore <em>"Firma non valida",</em> assicurarsi che il programma exe non è stato modificato e il criterio di gruppo Windows <em>"Disattiva aggiornamento automatico certificati principali"</em> è disattivata.
+        </p>
+        <p>
+          Se si esegue NetSetMan con un account utente limitato in cui il servizio NSM non è disponibile riceverai un messaggio che spiega il problema. In alternativa è possibile <strong>credenziali di amministratore</strong> di ingresso da un account locale che NetSetMan memorizzerà crittografato nel suo file di impostazioni e utilizzare per lanciarsi con i privilegi necessari. Si noti che in questo caso l'applicazione verrà eseguita nel contesto dell'utente le cui credenziali sono stati utilizzati.
+        </p>
+        <p>
+          Controllare la <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> di leggere alcune note aggiuntive su questa funzione.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Privilegi di sistema" class="screen">
+        <img src="data/limitedaccount.png" alt="Account utente con limitazioni" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Di pre-accesso Profile Switching
+      </div>
+      <div class="hf_body">
+        <p>
+          Una caratteristica molto unica e potente è la possibilità di attivare i profili nella schermata di accesso. Questo permette la preparazione di corretti parametri di rete di cui avete bisogno per il vostro account, attivando un profilo NetSetMan prima ancora l'accesso.
+        </p>
+        <p>
+          Per utilizzare questa funzione <a href="#hf_nsmservice">NSM servizio</a> deve essere installato e l'opzione <em>"Profilo passaggio dalla schermata di accesso a Windows"</em> (Preferenze&gt; privilegi di sistema) deve essere abilitata.
+        </p>
+        <p>
+          Si noti che questa funzione consente solo di modificare le impostazioni che vengono condivise tra tutti gli utenti. Impostazioni specifiche dell'utente non possono essere modificati al di fuori di una sessione utente.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Di pre-accesso profilo commutazione" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        Amministrazione NSM
+      </div>
+      <div class="hf_body">
+        <p>
+          Se si imposta NetSetMan per essere utilizzato da qualcun altro, si potrebbe desiderare di specificare le azioni che l'altra persona è autorizzato a svolgere. Con l'Amministrazione NSM (Preferenze&gt; Amministrazione) si può fare esattamente questo.
+        </p>
+        <p>
+          Quando si attiva questa modalità, dovrete inserire una password di 6 o più caratteri. Solo con questa password sarete in grado di modificare le impostazioni NSM Amministrazione o eseguire le azioni che si è scelto di essere assicurato (eseguito NetSetMan, attivare profili, modificare le impostazioni del profilo, le impostazioni del programma cambia).
+        </p>
+        <p>
+          È anche possibile bloccare alcuni profili <img src="data/administration-profilelock.png" alt="Restricted icona Profilo"> quindi l'utente non può modificare, ma è ancora in grado di attivarli. Oppure si può generalmente limitare l'accesso a determinate impostazioni <img src="data/administration-settinglock.png" alt="Icona Impostazione ristretta"> come "gruppo di lavoro e del dominio", consentendo all'utente di configurare e utilizzare tutte le altre impostazioni.
+        </p>
+        <p>
+          Un checksum della password sarà scritta nel Registro di sistema. Assicurarsi che un utente normale non ha privilegi di scrittura a <span class="code">HKLM \ Software \ NetSetMan</span> (su x64: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan).</span> Se si dimentica la password, è necessario eliminare manualmente quella chiave. Se il file di impostazioni è crittografato nessuno senza la password sarà in grado di visualizzare o modificarlo.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="Amministrazione NSM" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Amministrazione - Profilo Restrizioni" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="Amministrazione NSM - Impostazioni Restrizioni" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Attivazione della riga di comando
+      </div>
+      <div class="hf_body">
+        <p>
+          In alcuni casi particolari si potrebbe desiderare di cambiare il vostro profilo senza utilizzare la GUI di NetSetMan: modificare i profili con le scorciatoie, attivare un profilo all'avvio, includerlo in uno script complesso, ecc
+        </p>
+        <p>
+          Sono disponibili i seguenti parametri:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Attiva il profilo con il numero #</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Attiva il profilo in modalità silenziosa (finestra di attivazione si chiuderà automaticamente se non si sono verificati errori)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Runs NetSetMan minimizzato</td>
+          </tr>
+          <tr>
+            <td><strong>f / -full</strong></td>
+            <td>Esegue NetSetMan in modalità completa (impostazione predefinita)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -Compact</strong></td>
+            <td>Esegue NetSetMan in modalità compatta</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Esegue una seconda istanza di NetSetMan. <strong>Attenzione:</strong> Tutte le istanze attive scrivono sullo stesso file di impostazioni!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Una scorciatoia per l'attivazione del profilo # 0 in modalità silenziosa potrebbe assomigliare a questo: <br><strong>"C: \ Program Files (x86) \ NetSetMan \ netsetman.exe" -come 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Shortcut" class="screen">
+        </p>
+        <p>
+          Nella riga di comando: <br>
+          <img src="data/commandline.png" alt="Riga di comando" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Non-Commercial Messaggio Gratuito
+      </div>
+      <div class="hf_body">
+        <p>
+          Questo messaggio nella finestra principale apparirà in ogni 7 partenza per gli utenti in un gruppo di lavoro e ad ogni secondo di partenza per gli utenti di un dominio, <em>in media.</em>
+        </p>
+        <p>
+          Purtroppo questo è necessario ricordare agli utenti che NetSetMan è solo Freeware per scopi non commerciali (= privato o volontario). In sintesi: È possibile utilizzare il prodotto per libero finchè non pagato salvare i tempi di lavoro. Se vuoi utilizzare il prodotto per esempio sul lavoro o su un computer portatile utilizzato in commercio, si sono tenuti ad acquistare una <a href="http://www.netsetman.com/nsmpro">Pro NetSetMan</a> licenza.  Non vi è alcuna regolamentazione speciale per le istituzioni educative o senza scopo di lucro. Professori, insegnanti e altri dipendenti possono utilizzare solo la versione freeware non commerciale se stanno lavorando a titolo onorifico (= non retribuito).
+        </p>
+        <p>
+          Si prega di leggere il <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">contratto di licenza</a> per ulteriori informazioni.
+        </p>
+        <p>
+          <strong>Questo messaggio non è incluso nella versione Pro, naturalmente.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Messaggio Gratuito Non-Commercial" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Ulteriori Pro Caratteristiche
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Gruppi Profilo
+      </div>
+      <div class="hf_body">
+        <p>
+          Con NetSetMan Pro si è in grado di creare un numero illimitato di gruppi di profilo. Ogni gruppo contiene 6 profili.
+        </p>
+        <p>
+          Per aggiungere, eliminare, ridisporre o rinominare un gruppo di profili utilizzare la <a href="#hf_profiles">gestione dei profili</a> nella barra dei menu.
+        </p>
+        <p>
+          Per navigare tra tutti i gruppi di profili disponibili scegliere qualsiasi gruppo dal campo a discesa nella barra dei menu.
+        </p>
+        <p>
+          Se si dispone di più di un gruppo, i profili verranno visualizzati raggruppati nel menu della barra.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Gestione dei profili Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Tray Icon in versione Pro" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Browser / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          Con NetSetMan Pro è possibile gestire le impostazioni proxy di Windows / Internet Explorer, Firefox e Opera (&lt;= v12). Chrome e versioni successive di Opera non supportano le proprie impostazioni proxy ma invece utilizzano automaticamente le impostazioni di sistema.
+        </p>
+        <p>
+          Tutte le impostazioni sono destinati a imitare le interfacce originali per consentire la stessa configurazione che è possibile anche nei browser direttamente. Inoltre è possibile modificare la home page e nel caso in cui si sta utilizzando profili in Firefox o Opera sarete anche in grado di selezionare il nome del profilo.
+        </p>
+        <p>
+          Si prega di notare che Firefox <em>deve</em> essere chiuso prima di modificare le impostazioni. <br> Se si dispone di più profili di Firefox e il loro profilo modifiche alle cartelle (ad esempio a causa di un nuovo sistema) avrete bisogno di ri-selezionare il profilo nella lista in modo che viene aggiornato nel file delle impostazioni.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Browser / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Dominio
+      </div>
+      <div class="hf_body">
+        <p>
+          Per unirsi a un dominio immettere il suo nome, il nome utente e la tua password. Il tuo nome utente e la password verranno memorizzati criptati nel file INI.
+        </p>
+        <p>
+          Di solito è sufficiente inserire il nome utente pura. Tuttavia, se si ottiene un errore si può provare a inserire uno dei due seguenti standard come il tuo nome utente:<br> a) NETBIOS: DOMINIO \ utente<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          In NT domini un utente può essere unico membro di esattamente <em>un</em> dominio allo stesso tempo. Ciò significa che, unendo un altro dominio o di un gruppo di lavoro la tua iscrizione nel dominio precedente viene persa fino a quando il sistema è rientrata.
+        </p>
+        <p>
+          NetSetMan si può partecipare solo a un dominio se l'account utente di dominio ha il permesso di farlo.<br> Questo privilegio account utente è chiamato "Aggiungi workstation al dominio" e deve essere abilitato nel tuo account. Se non si dispone di questo privilegio, rivolgersi al proprio amministratore di rete per garantire che.
+        </p>
+        <p>
+          Controllare la <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> di leggere alcune note aggiuntive su questa funzione.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Panoramica di dominio" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        La distribuzione in reti aziendali
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro offre diversi assistere caratteristiche che consentono di distribuire il software, impostazioni pre-configurate e la licenza più facilmente nella rete aziendale. Troverete tutto quello che dovete sapere in una descrizione dettagliata nel <a href="http://www.netsetman.com/faqcompany">FAQ</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

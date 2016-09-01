@@ -1,0 +1,934 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>4.x NetSetMan Fail Bantuan</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="NSM Logo" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Fail Bantuan</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-ms.png" alt="Bahasa Bendera"></div>
+          <div id="hf_language">Bahasa Melayu</div>
+          <div id="hf_translator">MACHINE TRANSLATION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Maklumat Umum
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Versi Fail Bantuan</td>
+            <td class="hf_tblinfo_right">4.0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left"> <br> Sistem Operasi Disokong</td>
+            <td class="hf_tblinfo_right">Windows <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Lesen</td>
+            <td class="hf_tblinfo_right">Freeware Bukan Komersil <br><em>atau</em><br> Versi Pro Komersil<br> Papar sebagai <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">HTML</a> atau <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Hubungi</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="http://www.netsetman.com/support/index.php" target="_blank">Forum Sokongan</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Kandungan
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Asas
+        </p>
+        <ul>
+          <li><a href="#hf_description">Penerangan</a></li>
+          <li><a href="#hf_howtouse">Maklumat Asas</a></li>
+          <li><a href="#hf_profiles">Profil</a></li>
+          <li><a href="#hf_nics">Penyesuai rangkaian (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Operasi Tetapan</a></li>
+          <li><a href="#hf_activation">Pengaktifan profil</a></li>
+          <li><a href="#hf_compactmode">Mod Kompak &amp; Mod Penuh</a></li>
+          <li><a href="#hf_tray">Tray Menu  &amp; Tray Maklumat</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Ciri-ciri
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Gambaran Keseluruhan</a></li>
+          <li><a href="#hf_advanced">Tetapan lanjutan TCP / IP  </a></li>
+          <li><a href="#hf_connections">Sambungan</a></li>
+          <li><a href="#hf_hosts">Hosts</a></li>
+          <li><a href="#hf_netdrives">Pemacu Rangkaian</a></li>
+          <li><a href="#hf_scripts">Skrip</a></li>
+          <li><a href="#hf_smtp">SMTP / E-mel</a></li>
+          <li><a href="#hf_system">Tetapan Sistem</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Advanced
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Nota</a></li>
+          <li><a href="#hf_nsmservice">Perkhidmatan NSM / Akaun pengguna terhad</a></li>
+          <li><a href="#hf_prelogon">Pra-Logon Profile Switching</a></li>
+          <li><a href="#hf_nsmadministration">Pentadbiran NSM</a></li>
+          <li><a href="#hf_commandline">Pengaktifan Command Line</a></li>
+          <li><a href="#hf_ncfreeware">Mesej Freeware Bukan Komersial</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Ciri-ciri tambahan Pro
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Kumpulan profil</a></li>
+          <li><a href="#hf_proxy">Pelayar / Perantara</a></li>
+          <li><a href="#hf_domain">Domain</a></li>
+          <li><a href="#hf_distribution">Pengedaran di Syarikat Rangkaian</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Asas
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Penerangan
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> adalah pengurus tetapan rangkaian yang mudahakan pertukaran antara 6 profil berstruktur yang berlainan termasuklah:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> Alamat IP (IPv4 &amp; IPv6!) </li>
+              <li> Gateways (termasuk. Metrik) </li>
+              <li> DNS Server </li>
+              <li> WINS Server </li>
+              <li> Pengurusan WiFi </li>
+              <li> Nama Komputer </li>
+              <li> Kumpulan kerja </li>
+              <li> Pencetak Default </li>
+              <li> Pemacu Rangkaian </li>
+              <li> Status NIC </li>
+              <li> Sambungan (RAS / DUN / PPP / VPN) </li>
+              <li> Imbuhan DNS </li>
+              <li> Jadual laluan </li>
+              <li> SMTP Server </li>
+              <li> Entri Fail Hosts </li>
+              <li> Tetapan Sistem </li>
+              <li> Alamat MAC </li>
+              <li> Skrip (BAT, VS, JS, ...) </li>
+            </ul></td>
+            <td width="51%"><strong>Tambahan hanya dalam versi <u>Pro:</u></strong>
+            <ul>
+              <li> Boleh digunakan di tempat kerja </li>
+              <li> Bilangan profil tanpa had  </li>
+              <li> Domain-Rangkaian </li>
+              <li> Tetapan Proksi Lengkap &amp; <br> Bowser Laman Utama <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> menawarkan anda sesuatu yang tidak disediakan Windows hingga kini: <br> Perantara yang berkuasa dan mudah digunakan untuk menguruskan semua tetapan rangkaian dengan sekali imbas. <br> Cubalah dan anda tidak akan mahu menjadi tanpa lagi.
+        </p>
+        <p>
+          Semua tetapan dan perubahan disimpan secara automatik dalam fail berasingan <em>(settings.ini)</em>.Oleh it, pemindahan atau naik taraf ke versi lain tidak akan menjadi masalah.
+        </p>
+        <p>
+          <strong>Aktifkan profil yang disimpan dengan satu klik atau secara automatik!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Window">
+          <br><strong>NetSetMan:</strong> Versi Bukan Komersil Freeware 
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Tetingkap Utama">
+          <br><strong>NetSetMan Pro:</strong> Versi Pro Komersil
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Maklumat Asas
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profil
+            </div> Setiap <a href="#">profil</a> mewakili satu set tetapan yang diperlukan untuk lokasi tertentu atau senario. Dengan menggunakan sub-profile pelbagai adapter rangkaian boleh dikonfigurasikan dengan satu profil. Namakan semula profil dengan mengklik dua kali kapsyen tab tersebut.</li>
+          <li>
+            <div>
+              Konfigurasi manual
+            </div> Anda perlu mengkonfigurasi profil yang dikehendaki secara manual. Ianya mustahil untuk meneka tetapan yang betul untuk lokasi yang tidak diketahui. Tujuan utama aplikasi ini adalah untuk mengautomasikan tetapan yang anda biasanya akan melakukan secara manual.</li>
+          <li>
+            <div>
+              Pemilihan tetapan
+            </div><a href="#hf_basicoperations">Membaca semua tetapan semasa</a> ke profil boleh memberikan anda titik permulaan, tetapi anda masih perlu membuat keputusan tetapan yang ingin dipasang semasa mengaktifkan profil itu. Ianya disyorkan untuk menghadkan tetapan kepada yang akan diubah. Sebagai contoh, ia tidak perlu untuk megubah nama komputer sekiranya ia tidak pernah ditukar.</li>
+          <li>
+            <div>
+              Konfigurasi tetapan
+            </div> Untuk menatarajah tetapan semak kotak yang pertama, maka sama ada memasukkan konfigurasi yang dikehendaki secara langsung dalam antara muka utama atau membuka dialog konfigurasi untuk tetapan tersebut.</li>
+          <li>
+            <div>
+              Pengaktifan profil
+            </div> Secara lalai tiada profil diaktifkan secara automatik, iaitu tiada setting pada sistem anda ditukar tanpa niat anda. Setelah berkata, anda boleh menggunakan <a href="#hf_autoswitch">AutoSwitch</a> ciri untuk mengaktifkan profil tertentu secara automatik berdasarkan keadaan bebas disesuaikan.</li>
+          <li>
+            <div>
+              Akses ikon dulang
+            </div> Ia disyorkan untuk <a href="#hf_tray">menyimpan NetSetMan dikurangkan dalam dulang</a> dan bergerak ikon dulang ke dalam kawasan itu sentiasa kelihatan. Dengan cara itu anda boleh dengan cepat mengaktifkan profil dengan mengklik pada ikon dan memilih profil. Selain itu anda akan mempunyai gambaran yang lebih berguna IP sambungan semasa anda dengan melihat ikon dengan kursor tetikus anda.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profil
+      </div>
+      <div class="hf_body">
+        <p>
+          Tab mewakili profil yang ada. Anda boleh menyimpan 6 set tetapan yang berbeza di tab tersebut.
+        </p>
+        <p>
+          Jika anda ingin menukar tetapan dua adaptor rangkaian yang berbeza semasa mengaktifkan satu profil, anda boleh menggunakan ciri <strong>Subprofile.</strong> Klik "+" - butang di sebelah senarai pilihan dan sebuah bar menu dipaparkan mengandungi dua subprofiles (yang semasa dan baru yang kosong). Kapsyen akan secara automatik nama penyesuai rangkaian yang dipilih dalam subprofile itu dan tidak boleh diubah. Anda boleh membuat sebagai banyak subprofiles yang anda suka. Kesemua mereka akan diaktifkan satu demi satu semasa profil diaktifkan. Anda boleh menyusun semula susunan dengan drag-dan-drop.
+        </p>
+        <p>
+          Semua perubahan disimpan secara automatik supaya apa-apa hilang secara tidak sengaja.
+        </p>
+        <p>
+          Anda boleh menamakan semula profil dengan klik kanan padanya dan pilih "Namakan Semula" atau double klik kapsyen tab itu.
+        </p>
+        <p>
+          Menguruskan semua profil anda dengan lebih mudah anda boleh menggunakan <strong>Pengurusan Profil</strong> yang anda akan dapati di bar menu. Ia membolehkan profil editing, subprofile dan kumpulan (hanya dalam NetSetMan Pro) dengan tetikus anda atau beberapa pintasan papan kekunci biasa (kekunci anak panah untuk navigasi, F2 untuk penamaan semula dan lain-lain). Apabila menggunakan drag-and-drop untuk menyusun semula barang-barang anda akan perasan beberapa sekatan yang tidak dapat dielakkan bergantung kepada item, kerana keadaan teknikal diberikan: Profil tidak boleh dihapuskan, MultiProfiles tidak boleh dinamakan semula, Profil boleh ditukar tetapi tidak bergerak. Kotak semak mewakili sama ada profil yang mengikut akan dapat dilihat dalam dulang dan dalam Mod Compact.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Tab Subprofile" class="screen">
+          <img src="data/rename.png" alt="Nama semula profil" class="screen">
+          <img src="data/profilemanagement.png" alt="Pengurusan Profil" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Penyesuai rangkaian (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Semua adaptor rangkaian yang didapati dipaparkan dengan nama mereka dan jenis mereka. Pilih NIC anda ingin menguruskan dalam (sub) profil semasa.
+        </p>
+        <p>
+          Jika NIC tertentu tidak terdapat dalam senarai itu (contohnya kerana ia diaktifkan atau maya) anda boleh mengurus senarai dengan mengklik butang <strong>Muat semula</strong> dan sama ada dengan cepat mengemaskini senarai atau memilih <strong>Manage penyesuai rangkaian.</strong> Di sana anda akan menemui senarai lengkap semua NIC yang ada. Periksa semua NICs yang anda mahu dalam senarai anda.
+        </p>
+        <p>
+          <strong>Nota:</strong> Semua NIC yang termasuk dalam senarai itu juga akan muncul dalam Maklumat Tray. NIC yang tidak diingini Nyahsemak untuk mengeluarkan mereka daripada senarai dan Maklumat Tray.
+        </p>
+        <p>
+          Jika anda menyalin fail tetapan (settings.ini) ke sistem yang lain, NetSetMan akan cuba untuk menyerahhakkan semula NIC dalam profil secara automatik. Walau bagaimanapun ini hanya akan berfungsi jika sistem baru tersebut mempunyai NIC dengan nama yang sama (dalam gambar yang pertama itu "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Pilihan rangkaian penyesuai" class="screen">
+        <img src="data/adapters-management.png" alt="Pilihan rangkaian penyesuai" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Operasi Tetapan
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Mendapatkan Tetapan Semasa
+        </p>
+        <p>
+          Untuk memuatkan persekitaran semasa ke profil klik pada <img src="data/icon-get.png" alt="Dapatkan icon tetapan"> simbol di sebelah ruangan entri. <br> Untuk mendapatkan semua tetapan semasa klik kanan profil dan pilih "Dapatkan Tetapan Semasa".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Dapatkan satu penetapan" class="screen">
+        <img src="data/get-settings2.png" alt="Dapatkan semua tetapan" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Tetapan penjelasan</span>
+        </p>
+        <p>
+          Untuk mengosongkan konfigurasi penetapan tertentu klik kanan dan pilih "Clear".
+        </p>
+        <p>
+          Untuk mengosongkan nilai-nilai medan IP hanya klik dua kali pada kapsyen sepadan.
+        </p>
+        <p>
+          Untuk mengosongkan semua tetapan semasa (sub) profil klik kanan tab profil dan pilih "Tetapan Clear".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Satu penetapan yang jelas" class="screen">
+        <img src="data/clear-settings2.png" alt="Kosongkan semua tetapan" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Menyalin &amp; Menampal Tetapan</span>
+        </p>
+        <p>
+          Untuk memindahkan tetapan antara profil yang berbeza anda boleh copy dan paste profil keseluruhan dengan klik kanan profil asal, memilih "Salin Tetapan", kemudian klik kanan pada profil baru dan pilih "Tampal Tetapan".
+        </p>
+        <p>
+          Untuk menyalin dan tampal hanya penetapan tertentu hanya klik kanan dan pilih "Copy" atau "Paste".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Copy dan paste satu penetapan" class="screen">
+        <img src="data/copypaste2.png" alt="Salin dan tampal semua tetapan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Pengaktifan profil
+      </div>
+      <div class="hf_body">
+        <p>
+          Untuk memohon semua tetapan profil klik semasa di <strong>"Aktifkan"</strong> atau jika program ini berjalan dikurangkan memilih profil dari <a href="#hf_tray">menu tray</a> . <br> Perhatikan bahawa tetapan dengan kotak yang ditanda akan diaktifkan.
+        </p>
+        <p>
+          Dialog <strong>Pengaktifan</strong> mengandungi maklumat mengenai kemajuan pengaktifan semasa. <br> Di sana anda boleh melihat tetapan mana yang akan digunakan dan sama ada proses itu berjaya atau tidak. Anda boleh membatalkan proses pengaktifan dengan klik "Batal" -button pada bila-bila masa.
+        </p>
+        <p>
+          Semua caj yang dikenakan serta-merta. Walau bagaimanapun, dalam kes-kes tertentu beberapa tetapan mengambil masa yang singkat untuk berkuat kuasa penuh atau memerlukan reboot (terutama "PC Nama" dan "Workgroup / Domain").
+        </p>
+        <p>
+          <strong>Butiran</strong> seksyen memberikan gambaran keseluruhan semua tetapan dikonfigurasikan untuk profil itu. Untuk melihat maklumat dan kesilapan lebih banyak pesanan panjang penuh membuka seksyen <strong>Log</strong> ini.
+        </p>
+        <p>
+          Untuk mencari penyelesaian bagi kesilapan-kesilapan yang paling biasa dan masalah kita lihat di <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Periksa tetapan diubah" class="screen">
+        <img src="data/activation.png" alt="Pengaktifan tetingkap profil" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Keputusan yang sama dan makna mereka</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">Semua bekerja seperti yang diharapkan.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Tetapan sedang digunakan.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Tetapan telah diabaikan tanpa mencuba, kerana mereka tidak lengkap atau salah.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Ralat</td>
+            <td class="hf_errortable_right">Dalam kebanyakan kes ralat ditunjukkan teks merah yang singkat seperti "Fail tidak dijumpai". Dalam kes anda menerima kod ralat kita lihat log untuk mengetahui jika mesej ralat wujud kod itu. Jika anda tidak tahu apa sebabnya, sila pos kod ralat dan penerangan terperinci ralat dalam <a href="http://www.netsetman.com/support/index.php" target="_blank">forum sokongan</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Tidak sah</td>
+            <td class="hf_errortable_right">Sama ada nilai tidak sah, tidak ditentukan atau tidak dibenarkan (aksara khas, workgroup sama dengan nama komputer, dan lain-lain)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF aktif</td>
+            <td class="hf_errortable_right">Firefox sedang berjalan. Untuk memohon mereka tetapan yang anda perlu menutup pelayar pertama.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Mod Compact &amp; Mod Penuh
+      </div>
+      <div class="hf_body">
+        <p>
+          Selain daripada "Mod Penuh" antara muka klasik, di mana anda boleh menukar tetapan profil, sebuah perantara muka tambahan "Mod Compact" juga disediakan. Anda boleh menukar antara kedua-dua mod pada bila-bila masa dengan mengklik butang mengikut dalam menu utama di sebelah kanan.
+        </p>
+        <p>
+          Setelah semua profil menubuhkan Mod Compact adalah antara muka yang ideal. Di sini anda mempunyai gambaran keseluruhan semua tetapan sebuah profil tanpa bimbang akan tetapan diubah secara tidak sengaja.
+        </p>
+        <p>
+          Dalam kes anda menggunakan <a href="#hf_nsmadministration">Pentadbiran NSM</a> (dengan "Tukar tetapan profil" tidak dipilih) Mod Kompak akan digunakan untuk menghalang pengguna daripada menukar tetapan.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Mod padat" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Tray Menu Maklumat &amp; Dulang
+      </div>
+      <div class="hf_body">
+        <p>
+          Apabila NetSetMan berjalan anda akan menemui ikon pada bar dulang (sebelah jam). <br> Di sana anda dengan cepat boleh mengaktifkan profil. Hanya klik kanan ikon untuk membuka <strong>Menu Dulang</strong> dan pilih profil untuk mengaktifkan.
+        </p>
+        <p>
+          Jika anda ingin mengecualikan sesuatu profil daripada muncul di tray, anda boleh menyembunyikannya secara individu. Untuk melakukan ini memilih profil dalam tetingkap utama, klik kanan pada tab dan klik "aktif dalam Tray dan Padat Mode". Simbol kecil sebelah teks menunjukkan sama ada profil ini boleh didapati dalam dulang. Pilihan ini juga akan mempunyai kesan ke atas profil ditunjukkan dalam Mod Compact. Profil penglihatan juga boleh dikonfigurasikan dalam <a href="#hf_profiles">Pengurusan Profil</a> .
+        </p>
+        <p>
+          Jika anda berehat kursor anda ke ikon NetSetMan dalam dulang <strong>Info Tray</strong> akan muncul. Ia mengandungi maklumat IP semasa yang digunakan oleh sistem. Oleh kerana data yang dikumpul pada masa sebenar, anda mungkin mengalami kelewatan yang singkat. Untuk mengurangkan kelewatan yang perlu anda pertimbangkan mematikan maklumat tambahan seperti IP awam dan alamat MAC dalam Keutamaan.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tray Icon" class="screen">
+        <img src="data/showintray.png" alt="Tunjuk dalam dulang" class="screen">
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Ciri-ciri
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Gambaran Keseluruhan
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan direka dalam cara yang membolehkan anda untuk mempunyai gambaran langsung semua tetapan dikonfigurasikan dalam profil. Ciri-ciri yang paling penting seperti tetapan IP asas, WiFi dan pencetak lalai boleh dikonfigurasikan secara langsung di antara muka utama. Lain-lain, tetapan yang lebih kompleks hanya boleh diaktifkan di sini dan akan menunjukkan gambaran ringkas ke atas konfigurasi semasa mereka. Untuk mengubah suai mereka mengaktifkannya, kemudian membuka dialog mengikut dengan mengklik [...] - butang.
+        </p>
+        <p>
+          Bahagian berikut akan memberi arahan asas dan tips berguna mengenai cara untuk menggunakan semua ciri-ciri.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Kumpulan tetapan tambahan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview2">
+      <div class="hf_head">
+        Adapter Status
+      </div>
+      <div class="hf_body">
+        <p>
+          Untuk mengaktifkan, menyahaktifkan atau memulakan semula penyesuai rangkaian yang dipilih menggunakan butang Adapter Status. Warna lalai akan bertukar kepada warna status berkaitan. Selain itu anda boleh melihat status dikonfigurasikan dalam tooltip.
+        </p>
+        <p>
+          Jika anda ingin membolehkan satu penyesuai dan melumpuhkan satu atau semua adaptor jenama lain, anda perlu membuat <a href="#hf_profiles">subprofiles</a> bagi setiap adapter. Anda boleh melakukan ini secara manual atau dengan menggunakan item menu di bahagian bawah menu Adapter Status. Ia secara automatik akan mewujudkan subprofile bagi setiap adapter rangkaian yang termasuk dalam senarai penyesuai dan menetapkan menetapkan sewajarnya statusnya. Ingatlah bahawa anda boleh menyesuaikan yang adapter dimasukkan ke dalam senarai itu dengan menggunakan <a href="#hf_nics">Network Adapter Pengurusan</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adapter Status: Aktifkan" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adapter Status: Nyahaktifkan" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adapter Status: Mulakan semula" class="screen">
+        <img src="data/adapterstatus.png" alt="Kumpulan tetapan tambahan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Advanced TCP / IP Tetapan
+      </div>
+      <div class="hf_body">
+        <p>
+          Anda boleh menentukan pelbagai IP, Gateway, DNS dan MENANG alamat setiap NIC jika anda perlu berada dalam beberapa rangkaian pada masa yang sama. Untuk berbuat demikian klik butang <strong>"IP +"</strong> atau memilih "Profil&gt; Advanced TCP Tetapan / IP" daripada menu utama.
+        </p>
+        <p>
+          Di sini anda juga mempunyai kemungkinan untuk mengurus tetapan yang lebih maju seperti <strong>Jadual Route, DNS Akhiran, ipconfig</strong> dan <strong>NetBIOS.</strong>
+        </p>
+        <ul>
+          <li> Aktifkan kumpulan dengan memeriksa ia kapsyen kotak semak </li>
+          <li>
+            <img src="data/icon-add.png" alt="Tambah nilai baru"> Tambah nilai baru </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Padam nilai dipilih"> Padam nilai yang dipilih </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Kosongkan senarai"> Kosongkan seluruh senarai </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Dapatkan senarai"> Dapatkan semua nilai semasa untuk tetapan ini dari sistem (Manakala mengklik <img src="data/icon-get.png" alt="Mendapatkan tetapan"> simbol di tetingkap utama membaca nilai pertama sahaja) </li>
+          <li> Menyusun semula susunan dengan drag-dan-drop </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Akses tetingkap Advanced TCP / IP Tetapan" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Tetingkap Advanced TCP / IP Tetapan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Sambungan
+      </div>
+      <div class="hf_body">
+        <p>
+          Menggunakan ciri ini untuk menyambung atau memutuskan sambungan apa-apa jenis sambungan Windows seperti rangkaian dailan, jalur lebar mudah alih atau VPN. Sambungan serasi disenaraikan dalam Windows bersama-sama dengan penyesuai rangkaian biasa anda dalam dialog Sambungan Rangkaian. Dari sudut pandangan teknikal semua sambungan yang serasi dengan "RasDial" disokong.
+        </p>
+        <p>
+          Anda boleh memilih untuk sama ada cabut semua sambungan pada masa ini ditubuhkan dengan memeriksa kotak, atau untuk menyambung / cabut beberapa sambungan secara individu bagi penyenaraian.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Tetingkap Sambungan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Alam Semesta
+      </div>
+      <div class="hf_body">
+        <p>
+          Dalam kes-kes yang sangat khusus mungkin perlu atau berguna untuk memberikan IP secara manual kepada nama atau domain. Perhatikan bahawa NetSetMan hanya akan mengubah penyertaan tuan rumah sendiri meninggalkan penyertaan yang telah sedia ada yang tidak disentuh.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Tingkap tuan rumah" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Pemacu Rangkaian
+      </div>
+      <div class="hf_body">
+        <p>
+          Dengan NetSetMan anda boleh memeta tanpa had pemacu rangkaian. <br> Sila baca arahan di bawah tetingkap dengan mengklik "[Show Help]".
+        </p>
+        <p>
+          Apabila profil diaktifkan dan ciri Pemacu dipilih NetSetMan akan membandingkan senarai semua pemacu rangkaian yang dipetakan dengan senarai pemacu yang akan dipetakan. Semua pemacu yang dipetakan dalam kedua-dua senarai (huruf drive yang sama dan laluan lokasi) akan kekal seperti biasa. Semua pemacu rangkaian yang lain akan akan diputuskan sebelum yang baru dipetakan.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Tetingkap Pemacu Rangkaian" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Skrip
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan menawarkan anda cara yang selesa untuk menguruskan fail skrip anda. Walau bagaimanapun, ia tidak mempunyai bahasa skrip sendiri. Ini bermakna anda hanya boleh menggunakan bahasa skrip sistem operasi anda boleh laksanakan. Bahasa skrip biasa ialah VBS, JS dan fail batch baris arahan yang mudah. Gunakan enjin carian kegemaran anda untuk mencari lebih banyak maklumat mengenai skrip dan apa yang anda boleh lakukan dengan ia.
+        </p>
+        <p>
+          Membuka fail skrip yang sedia ada atau membuat yang baru untuk dapat mengedit skrip. <br> Anda boleh mempunyai dua skrip yang akan dilaksana sebelum dan selepas semua tetapan yang lain berubah. <br> Jika anda memerlukan jarak masa antara melasanakan skrip dan menukar tetapan rangkaian, anda boleh menyatakannya di bahagian bawah.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="Tetingkap skrip" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / E-mel
+      </div>
+      <div class="hf_body">
+        <p>
+          Dalam beberapa kes alamat IP pelayan SMTP untuk menghantar e-mel berbeza bergantung kepada rangkaian anda. Berada dalam rangkaian yang sama anda mungkin perlu alamat IP tempatan seperti 10.0.0.1, manakala yang bukan sebahagian daripada rangkaian yang anda mungkin perlu mengaksesnya dengan alamat IP global.
+        </p>
+        <p>
+          Daripada cuba untuk menjadi serasi untuk banyak pelanggan e-mel yang berbeza dan berurusan dengan profil pengguna yang berbeza NetSetMan menyelesaikan isu ini dengan workaround yang mudah. Tetapkan "nsm.smtp" sebagai alamat SMTP dalam klien e-mel anda dan mengkonfigurasi alamat IP dalam profil mengikut. Apabila mengaktifkan profil kedua-dua nilai akan dihubungkan menggunakan fail tuan rumah supaya anda tidak perlu melakukan apa-apa perubahan tambahan dalam klien e-mel anda lagi.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP tetingkap / E-mel" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Tetapan Sistem
+      </div>
+      <div class="hf_body">
+        <p>
+          Selain itu untuk tetapan rangkaian biasa kadang-kadang anda mungkin mahu menukar beberapa tetapan sistem bergantung kepada lokasi atau keadaan anda. Umpamanya ketika di universiti anda mungkin mahu untuk membisukan kelantangan bunyi, menukar kertas dinding dan mengaktifkan pelan kuasa Seimbang.
+        </p>
+        <p>
+          Anda juga boleh menggunakan tetingkap Sistem Tetapan untuk menukar dengan cepat beberapa suasana yang sebaliknya akan mengambil lebih banyak masa mencari lokasi tetapan yang dalam Windows. Hanya klik <img src="data/set-icon.png" alt="Icon tetapan Set"> butang untuk terus mengaktifkan tetapan yang tertentu.
+        </p>
+        <p>
+          Tetapan yang disokong termasuk: mod paparan, kertas dinding, warna desktop, screensaver, skim reka bentuk, penceramah &amp; kelantangan mikrofon, skim bunyi, firewall (termasuk pengecualian &amp; pemberitahuan.), Pelan kuasa, zon masa dan alamat MAC.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Tetingkap Tetapan Sistem" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          Profil NetSetMan boleh digunakan untuk menyambung kepada profil WiFi yang sedia ada. Untuk melakukan ini, pilih adaptor WiFi pada senarai NIC, kemudian pilih profil WiFi dari senarai WiFi. Jika anda mahu memutuskan sambungan WiFi, pilih entri yang kosong.
+        </p>
+        <p>
+          Di samping itu asas WiFi, NetSetMan menawarkan pengurusan WiFi yang luas. Klik ikon WiFi atau menggunakan menu utama (Tools&gt; NSM Pengurusan WiFi) untuk mengaksesnya. Anda akan dapati senarai semua rangkaian WiFi pada masa ini. Latar belakang berwarna menunjukkan bahawa profil dengan SSID yang sama telah wujud. Rangkaian dengan latar belakang hijau kini telah bersambung. Anda boleh bersambung kepada sebuah rangkaian dengan double klik padanya atau menggunakan butang "Sambung". Jika tiada profil yang sedia ada untuk sambungan ini anda boleh memilih untuk menciptakannya pertama. Tetapan seperti (pengesahan, enkripsi, ...) akan dikonfigurasikan secara automatik bergantung pada rangkaian yang diiktiraf. Walau bagaimanapun, anda mungkin perlu melaraskan tetapan jika pengenal pastian tidak berfungsi kerana sebab-sebab tertentu.
+        </p>
+        <p>
+          NetSetMan bekerja dengan Windows ibunda profil WiFi. Ini bermakna bahawa anda sentiasa mempunyai akses kepada profil yang digunakan dalam Windows atau software WiFi yang lain. Anda boleh mencipta, mengubah atau memadam profil WiFi.
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>Keperluan</strong>
+        </p>
+        <p>
+          NetSetMan menggunakan WiFi API Windows. Ini memberikan kelebihan besar kerana pemacu tidak perlu dipasang (yang mungkin mengakibatkan konflik). Akibatnya, ciri WiFi NetSetMan akan berfungsi hanya pada sistem Windows yang menyokong WiFi. Mujurlah kebanyakan versi yang digunakan kini menyokong WiFi. Jika anda menggunakan Vista atau kemudian anda baik untuk pergi. Dalam XP anda memerlukan SP2 atau SP3 dipasang.
+        </p>
+        <p>
+          Memastikan perkhidmatan yang <em>WLAN AutoConfig (Wlansvc)</em> (Vista dan kemudian) atau <em>Konfigurasi Wireless Zero (WZCSVC)</em> (XP) sedang berjalan.
+        </p>
+        <p>
+          Jika penyesuai WiFi anda datang dengan perisian pengilang untuk mengurus tetapan WiFi, maka ia akan menghalang akses Windows dalam kebanyakan kes. Anda akan perlu mencari pilihan untuk menukar kepada pengurusan Windows dalam perisian itu (jika ada). <br> Oleh kerana terdapat banyak pengeluar yang berbeza dengan perisian mereka sendiri, tidak ada cara untuk menangani hal ini. Berikut adalah satu contoh: Jika anda menggunakan AVM FRITZ!WLAN peranti USB, klik ikon dulang perisian dan pilih "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="Gambaran WiFi" class="screen">
+        <img src="data/wifi.png" alt="Tetingkap NSM Pengurusan WiFi" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Advanced
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Ia agak mudah untuk mengaktifkan profil dengan satu klik dari <a href="#hf_tray">Menu Tray</a> . Tetapi dalam beberapa kes ia mungkin lebih mudah untuk mengaktifkan profil sepenuhnya secara automatik bergantung kepada keadaan adat. Ciri-ciri yang bersepadu AutoSwitch tidak tepat itu.
+        </p>
+        <p>
+          Selepas mengaktifkan AutoSwitch syarat-syarat berikut boleh dikonfigurasikan untuk semua profil individu:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Profil icon Terhad"> Rangkaian WiFi sekitarnya
+          </div>
+          <ul>
+            <li>Rangkaian wayarles (SSID atau MAC) dalam / daripada pelbagai</li>
+            <li>Kekuatan isyarat rangkaian tanpa wayar yang lebih rendah / lebih tinggi daripada nilai tertentu</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Profil icon Terhad"> Lokasi Rangkaian
+          </div>
+          <ul>
+            <li>Windows NLM: Secara automatik dihasilkan profil rangkaian dengan Windows (Vista dan kemudian)</li>
+            <li>Gateway MAC: Cap jari daripada pintu masuk DHCP secara automatik ditugaskan</li>
+            <li>Ping: Adanya pelayan tertentu atau sistem dalam rangkaian</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Profil icon Terhad"> Adapter Status
+          </div>
+          <ul>
+            <li>Status sambungan penyesuai rangkaian tempatan (disambungkan / terputus)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Profil icon Terhad"> Tempoh Masa
+          </div>
+          <ul>
+            <li>Hari-hari tertentu dalam seminggu dan masa bingkai (contohnya Sa + Su, 8:00 - 18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Walaupun tidak ada had teknikal untuk jumlah keadaan setiap profil cuba untuk mengekalkannya semudah yang mungkin. Dalam kebanyakan kes ia benar-benar mencukupi untuk memasukkan satu atau dua syarat untuk mencapai hasil yang dikehendaki.
+        </p>
+        <p>
+          Anda boleh menentukan bahawa sama ada semua atau sekurang-kurangnya salah satu syarat yang mesti dipenuhi untuk mengaktifkan profil yang.
+        </p>
+        <p>
+          <strong>Nota:</strong> Profil dengan ID yang lebih rendah mempunyai keutamaan yang lebih tinggi dalam keadaan kes bagi pelbagai profil dipenuhi pada masa yang sama.
+        </p>
+        <p>
+          Secara lalai proses pengaktifan dimulakan dengan mesej di sudut kanan bawah dengan kelewatan undur disesuaikan, membolehkan anda untuk secara pilihan membatalkan proses pengaktifan. Atau Windows pemberitahuan ibunda boleh digunakan atau profil yang boleh diaktifkan tanpa apa-apa mesej di latar belakang. Dalam kes kedua ikon dulang akan animasi semasa proses pengaktifan dan menukar warna sementara menurut hasil pengaktifan visual memaklumkan kepada anda tentang proses automatik.
+        </p>
+        <p>
+          Untuk menjimatkan sumber sistem NetSetMan tidak membandingkan tetapan semasa anda kepada tetapan profil untuk diaktifkan. Ini bermakna bahawa jika anda menukar tetapan anda secara manual, NetSetMan tidak akan melihat perubahan itu.
+        </p>
+        <p>
+          AutoSwitch mempunyai beberapa batasan dalam XP: Windows NLM tidak boleh didapati, Perubahan dalam rangkaian WiFi sekitar mungkin diiktiraf dengan kelewatan ketara.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch petua alat" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch pemberitahuan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Nota
+      </div>
+      <div class="hf_body">
+        <p>
+          Anda boleh membuat nota ringkas bagi setiap profil jika anda perlu ingat atau menunjukkan tujuan profil. Jika nota yang telah dicipta untuk profil ikon akan kelihatan berwarna dalam bar menu. Nota itu kemudian dilihat dalam Mod Full sebagai petunjuk ikon dan dalam Mod padat di bahagian atas tetapan profil.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Nota" class="screen">
+        <img src="data/note-hint.png" alt="Nota petunjuk" class="screen">
+        <img src="data/note-compact.png" alt="Nota dalam Mod Compact" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        Perkhidmatan NSM / Akaun pengguna Limited
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan memerlukan hak pentadbir untuk dapat menukar tetapan rangkaian dan sistem untuk anda. Biasanya berjalan permohonan sedemikian tidak mungkin untuk akaun pengguna yang terhad. Baru versi Windows walaupun mengehadkan Pentadbir akaun-akaun dengan UAC (Kawalan Akaun Pengguna) menunjukkan mesej pada setiap permulaan program.
+        </p>
+        <p>
+          Untuk menyelesaikan isu ini NetSetMan termasuk komponen khas yang dipanggil <strong>Perkhidmatan NSM</strong> yang menyediakan aplikasi utama dengan keistimewaan yang diperlukan. Perkhidmatan ini dipasang secara automatik, tetapi juga boleh dipasang secara manual / dipasang dalam keutamaan (Keistimewaan Sistem&gt; Aktifkan / Nyahaktifkan).
+        </p>
+        <p>
+          Perkhidmatan dipasang boleh dilihat dalam Windows Perkhidmatan dialog (services.msc) dan boleh dikawal di sana. Selain itu ia boleh dipasang / dipasang atau mula / berhenti menggunakan baris arahan:<br><span class="code">nsmservice.exe / memasang / senyap<br> nsmservice.exe / pemasangan / senyap<br> permulaan nsmService bersih<br> stop nsmService bersih</span>
+        </p>
+        <p>
+          Jika anda mendapat ralat <em>"tandatangan tidak sah",</em> pastikan exe program itu belum diubahsuai dan dasar kumpulan Windows <em>"Matikan Automatik Sijil Akar Update"</em> dinyahaktifkan.
+        </p>
+        <p>
+          Jika anda menjalankan NetSetMan dengan akaun pengguna yang terhad di mana Perkhidmatan NSM tidak tersedia anda akan menerima mesej yang menerangkan masalah itu. Sebagai alternatif anda boleh <strong>kelayakan pentadbir</strong> input daripada akaun tempatan yang NetSetMan akan menyimpan disulitkan dalam fail tetapan dan gunakan untuk melancarkan dirinya dengan keistimewaan yang diperlukan. Perhatikan bahawa dalam kes ini permohonan itu akan berjalan dalam konteks pengguna yang kelayakan digunakan.
+        </p>
+        <p>
+          Periksa <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> untuk membaca nota tambahan mengenai ciri ini.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Keistimewaan Sistem" class="screen">
+        <img src="data/limitedaccount.png" alt="Akaun pengguna Limited" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Pra-Logon Profile Switching
+      </div>
+      <div class="hf_body">
+        <p>
+          Satu ciri yang unik dan berkuasa kemungkinan untuk mengaktifkan profil anda pada skrin log masuk yang. Ini membolehkan penyediaan tetapan rangkaian yang betul yang anda perlukan untuk akaun anda dengan mengaktifkan profil NetSetMan bahkan sebelum melayari.
+        </p>
+        <p>
+          Untuk menggunakan ciri ini <a href="#hf_nsmservice">Perkhidmatan NSM</a> mesti dipasang dan pilihan <em>"Profil beralih dari Windows skrin logon"</em> (Preferences&gt; Keistimewaan Sistem) mesti aktif.
+        </p>
+        <p>
+          Perhatikan bahawa ciri ini hanya membenarkan untuk menukar tetapan-tetapan yang dikongsi antara semua pengguna. Tetapan tertentu pengguna tidak boleh diubah di luar sesi pengguna.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Pra-Logon profil pensuisan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        Pentadbiran NSM
+      </div>
+      <div class="hf_body">
+        <p>
+          Jika anda menyediakan NetSetMan untuk kegunaan orang lain, anda mungkin mahu untuk menentukan apa tindakan orang lain dibenarkan untuk melaksanakan. Dengan Pentadbiran NSM (Preferences&gt; Administration) anda boleh melakukan perkara tersebut.
+        </p>
+        <p>
+          Apabila anda mengaktifkan mod ini anda akan perlu memasukkan kata laluan dengan 6 atau lebih aksara. Hanya dengan kata laluan ini anda akan dapat untuk menukar tetapan NSM Pentadbiran atau melaksanakan tindakan yang telah anda memilih untuk bercagar (menjalankan NetSetMan, mengaktifkan profil, tetapan profil perubahan, tetapan program).
+        </p>
+        <p>
+          Anda juga boleh mengunci profil tertentu <img src="data/administration-profilelock.png" alt="Profil icon Terhad"> sehingga pengguna tidak boleh mengubah suai tetapi masih mampu mengaktifkannya. Atau anda secara amnya boleh menyekat akses kepada tetapan tertentu <img src="data/administration-settinglock.png" alt="Icon Penetapan Terhad"> seperti "Workgroup &amp; Domain" sementara membolehkan pengguna untuk mengkonfigurasi dan menggunakan semua setting yang lain.
+        </p>
+        <p>
+          A checksum kata laluan anda akan ditulis Registry. Pastikan pengguna biasa tidak mempunyai keistimewaan masuk kira ke <span class="code">HKLM \ Software \ NetSetMan</span> (atas x64: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan).</span> Jika anda terlupa kata laluan anda, anda perlu membuang kunci tersebut secara manual. Jika fail tetapan anda disulitkan tidak ada yang tanpa kata laluan akan dapat melihat atau mengeditnya.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="Pentadbiran NSM" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Pentadbiran - Profile Sekatan" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="Pentadbiran NSM - Tetapan Sekatan" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Command Line Pengaktifan
+      </div>
+      <div class="hf_body">
+        <p>
+          Dalam beberapa kes-kes khas yang anda ingin menukar profil anda tanpa menggunakan GUI NetSetMan: profil perubahan dengan jalan pintas, mengaktifkan profil pada startup, memasukkannya ke dalam skrip kompleks, dan lain-lain
+        </p>
+        <p>
+          Parameter-parameter yang boleh digunakan:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Aktifkan profil dengan nombor #</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Mengaktifkan profil dalam mod senyap (Mengaktifkan tetingkap akan menutup secara automatik jika tiada masalah berlaku)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Jalan NetSetMan dikurangkan</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>Jalan NetSetMan dalam Mod Penuh (lalai)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>Jalan NetSetMan dalam Mod Compact</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Berjalan contoh kedua NetSetMan. <strong>Berhati-hati:</strong> Kesemua NetSetMan ke fail tetapan yang sama!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Satu jalan pintas untuk mengaktifkan profil # 0 dalam mod senyap boleh kelihatan seperti ini: <br><strong>"C: \ Program Files (x86) \ NetSetMan \ netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Jalan pintas" class="screen">
+        </p>
+        <p>
+          Dalam baris arahan: <br>
+          <img src="data/commandline.png" alt="Command-Line" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Freeware Bukan Komersial Mesej
+      </div>
+      <div class="hf_body">
+        <p>
+          Ini mesej dalam tetingkap utama akan muncul di setiap permulaan 7 untuk pengguna dalam kumpulan kerja dan pada setiap permulaan 2 untuk pengguna dalam domain, <em>secara purata.</em>
+        </p>
+        <p>
+          Malangnya ini diperlukan untuk mengingatkan pengguna bahawa NetSetMan adalah Freeware untuk kegunaan bukan komersial (= swasta atau sukarela). Kesimpulannya: Anda boleh menggunakan produk secara percuma selagi anda tidak dibayar save masa kerja. Jika anda lebih suka menggunakan produk sebagai contoh di tempat kerja atau pada komputer riba yang digunakan secara komersial, anda dikehendaki untuk membeli <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> lesen.  Tidak ada peraturan khas untuk institusi pendidikan atau bukan keuntungan. Profesor, guru dan pekerja lain hanya boleh menggunakan versi Freeware Bukan Komersial jika mereka bekerja dalam kapasiti kehormat (= tanpa gaji).
+        </p>
+        <p>
+          Sila baca <a href="http://www.netsetman.com/txt.php?f=license&amp;l=en" target="_blank">perjanjian lesen</a> untuk maklumat lanjut.
+        </p>
+        <p>
+          <strong>Mesej ini tidak termasuk dalam versi Pro, sudah tentu.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Non-Commercial Freeware mesej" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Ciri-ciri tambahan Pro
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Kumpulan profil
+      </div>
+      <div class="hf_body">
+        <p>
+          Dengan NetSetMan Pro anda mampu mencipta tanpa had kumpulan profil. Setiap kumpulan mengandungi 6 profil.
+        </p>
+        <p>
+          Untuk menambah, memadam, menyusun semula atau menamakan semula kumpulan profil menggunakan <a href="#hf_profiles">pengurusan profil</a> di bar menu.
+        </p>
+        <p>
+          Untuk menavigasi antara semua kumpulan profil yang ada pilih mana-mana kumpulan dari bidang drop-down di bar menu.
+        </p>
+        <p>
+          Jika anda mempunyai lebih daripada satu kumpulan, profil anda akan ditunjukkan dikumpulkan di menu tray.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profil Pengurusan Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Tray Icon dalam versi Pro" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Pelayar / Perantara
+      </div>
+      <div class="hf_body">
+        <p>
+          Dengan NetSetMan Pro anda boleh mengurus tetapan proksi Windows / Internet Explorer, Firefox dan Opera (&lt;= v12). Chrome dan versi kemudian Opera tidak menyokong tetapan proksi sendiri tetapi sebaliknya secara automatik menggunakan tetapan sistem.
+        </p>
+        <p>
+          Semua tetapan adalah bertujuan untuk meniru antara muka asal untuk membolehkan konfigurasi yang sama itu juga mungkin dalam pelayar secara langsung. Selain itu anda boleh menukar halaman rumah dan dalam hal anda menggunakan profil dalam Firefox atau Opera anda juga akan dapat untuk memilih nama profil.
+        </p>
+        <p>
+          Sila notis bahawa Firefox <em>mesti</em> ditutup sebelum menukar tetapannya. <br> Jika anda mempunyai berbilang profil Firefox dan perubahan folder profil mereka (contohnya kerana sistem baru) anda perlu memilih semula profil dalam senarai supaya ia dikemaskini dalam fail tetapan anda.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Pelayar / Perantara" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Domain
+      </div>
+      <div class="hf_body">
+        <p>
+          Untuk menyertai domain masukkan nama, nama pengguna dan kata laluan anda. Nama pengguna dan kata laluan anda akan disimpan disulitkan dalam fail .ini.
+        </p>
+        <p>
+          Selalunya, sudah mencukupi untuk memasukkan nama pengguna tulen. Walau bagaimanapun, jika anda menghadapi masalah anda boleh cuba memasukkan salah satu daripada dua piawaian berikut sebagai nama pengguna:<br> a) NETBIOS: DOMAIN \ pengguna<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          Dalam NT domain pengguna hanya boleh menjadi ahli hanya <em>satu</em> domain pada masa yang sama. Ini bermakna bahawa dengan menyertai domain lain atau kumpulan kerja keahlian anda dalam domain sebelum ini hilang sehingga sistem anda menyertai semula.
+        </p>
+        <p>
+          NetSetMan hanya boleh menyertai anda untuk domain domain jika akaun pengguna anda mempunyai kebenaran untuk berbuat demikian.<br> Ini keistimewaan akaun pengguna dipanggil "Tambah Stesen Kerja untuk Domain" dan mesti diaktifkan pada akaun anda. Jika anda tidak mempunyai keistimewaan ini, sila minta pentadbir rangkaian anda untuk memberikan anda bahawa.
+        </p>
+        <p>
+          Periksa <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> untuk membaca nota tambahan mengenai ciri ini.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Gambaran Domain" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Pengedaran di Syarikat Rangkaian
+      </div>
+      <div class="hf_body">
+        <p>
+          Pro NetSetMan menawarkan beberapa ciri-ciri yang membantu membantu anda mengedarkan perisian, tetapan pra-konfigurasi dan lesen anda dengan lebih mudah dalam rangkaian syarikat anda. Anda akan mendapati segala-galanya yang anda perlu tahu dalam penerangan terperinci di <a href="http://www.netsetman.com/faqcompany">FAQ</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

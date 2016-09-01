@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x Help File</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body>
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left" />
+      <div>
+        <h1>NetSetMan</h1><h2>Файл допомоги</h2>
+        <div id="hf_lang">
+          <div id="hf_flag">
+            <img src="data/flag-ua.png" alt="" />
+          </div>
+          <div id="hf_language">
+            Українська
+          </div>
+          <div id="hf_translator">
+            Переклад: Володимир Дудак
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Загальна інформація
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Версія файлу допомоги</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Підтримує операційні системи</td>
+            <td class="hf_tblinfo_right">Windows<br> 2000, XP, 2003, Vista, 2008, 7, 8, 10<br> 32, 64 розрядна</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Ліцензійна угода</td>
+            <td class="hf_tblinfo_right">Безкоштовна для некомерційного використання<br><em>або</em><br> Pro версія для комерційного використання<br><a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> / <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Контакти</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Форум підтримки</a><br></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Зміст
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Основні
+        </p>
+        <ul>
+          <li><a href="#hf_description">Короткий опис</a></li>
+          <li><a href="#hf_howtouse">Основна інформація</a></li>
+          <li><a href="#hf_profiles">Профілі</a></li>
+          <li><a href="#hf_nics">Мережевий&nbsp;адаптер (NIC)</a></li>
+          <li><a href="#hf_basicoperations">Налаштування операцій</a></li>
+          <li><a href="#hf_activation">Застосування профілю</a></li>
+          <li><a href="#hf_compactmode">Компактний і повний режим</a></li>
+          <li><a href="#hf_tray">NetSetMan в треї. Повідомлення</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Особливості
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Швидкий огляд</a></li>
+          <li><a href="#hf_adapterstatus">Стан Адаптеру</a></li>
+          <li><a href="#hf_advanced">Розширені TCP/IP параметри </a></li>
+          <li><a href="#hf_connections">Підключення</a></li>
+          <li><a href="#hf_hosts">Файл Hosts</a></li>
+          <li><a href="#hf_netdrives">Мережевий диск</a></li>
+          <li><a href="#hf_scripts">Скрипти і програми</a></li>
+          <li><a href="#hf_smtp">SMTP / Елнектронна пошта</a></li>
+          <li><a href="#hf_system">Системні параметри</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Додатково
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">Автоперемикання</a></li>
+          <li><a href="#hf_notes">Нотатки</a></li>
+          <li><a href="#hf_nsmservice">Служба NSM / Обмежений обліковий запис</a></li>
+          <li><a href="#hf_prelogon">Перемикання профілю до входу в Windows</a></li>
+          <li><a href="#hf_nsmadministration">Адміністрування NSM</a></li>
+          <li><a href="#hf_commandline">Запуск із командного рядка</a></li>
+          <li><a href="#hf_ncfreeware">Повідомлення &quot;Безкоштовна для некомерційного використання</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Додактово в NetSetMan pro
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Категорії профілів</a></li>
+          <li><a href="#hf_proxy">Браузер / проксі</a></li>
+          <li><a href="#hf_domain">Домен</a></li>
+          <li><a href="#hf_distribution">Поширення в корпоративній мережі</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Основні
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Короткий опис
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>Netsetman</strong> - це програма, що керує мережевими налаштуванням. Підтримує 6 профілів налаштування та швидке перемикання між ними. Налаштування включають:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> Ip-Адресу</li>
+              <li>Шлюзи (включаючи метрику)</li>
+              <li>DNS сервери</li>
+              <li>WINS сервери</li>
+              <li>Ipv4 і Ipv6!</li>
+              <li>Розширене керування WiFi</li>
+              <li>Ім'я комп'ютера</li>
+              <li>Робоча група</li>
+              <li>DNS домен</li>
+              <li>Принтер по замовчуванню</li>
+              <li>Мережеві диски</li>
+              <li>Статус адаптера</li>
+              <li>MAC адресу</li>
+              <li>SMTP сервер</li>
+              <li>Записи Hosts файлу</li>
+              <li>Скрипти (BAT, VS, JS, ...)</li>
+              <li>Виконання програми</li>
+            </ul></td>
+            <td width="51%">
+            <p>
+              <strong>Додатково в <u>Pro</u> версії:</strong>
+            </p>
+            <ul>
+              <li>Може бути використана на роботі</li>
+              <li>Необмежена кількість профілів</li>
+              <li>Мережевий домен</li>
+              <li>Повні налаштування проксі-сервера<br> (Internet Explorer і Firefox)</li>
+              <li>Домашня сторінка браузера<br> (Internet Explorer і Firefox)</li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>Netsetman</strong> пропонує вам те, що було нереалізовано у Windows раніше:<br> Потужний, легкий у використанні інтерфейс для керування налаштуваннями мережі<br> Спробуйте! І ви не захочете з ним розлучатися.
+        </p>
+        <p>
+          Усі налаштування зберігаються автоматично і зберігаються в окремому файлі (<em>settings.ini</em>), тому переміщення або оновлення програми не становить проблем.
+        </p>
+        <p>
+          <strong>Одним клацанням мишки ви можете застосувати збережений профіль!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs. Windows" class="screen" />
+      </div>
+      <div class="hf_image">
+        <div style="margin-top:20px; margin-right:0px; margin-bottom:20px; margin-left:0px;">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Window" />
+          <br /><strong>NetSetMan:</strong> Некомерційна Безкоштовна Версія
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Main Window" />
+          <br /><strong>NetSetMan Pro:</strong> Комерційна Pro Версія
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Основна інформація
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Профілі
+            </div> Кожен <a href="#"> профіль </a> являє собою набір налаштувань, необхідних для певного місця або ситуації. При використанні підпрофілів для кількох мережевих адаптерів може бути налаштований однин профіль. Перейменувати профіль, двічі клацнувши її вкладку заголовок. </li>
+          <li>
+            <div>
+              Ручне налаштування
+            </div> Ви повинні конфігурувати необхідні профілі самостійно вручну.Не можливо вгадати правильні налаштування для невідомого напрямку. Основна мета програми - це автоматизація регулярної зміни налаштувань, яку ви зазвичай робите вручну. </li>
+          <li>
+            <div>
+              Вибір налаштувань
+            </div><a href="#hf_basicoperations"> Зчитування всіх поточних налаштувань </a> в профіль може дати вам відправну точку, але вам все ще потрібно визначити, які налаштування застосовувати при активації цього профілю. Рекомендується залишити ці параметри в тому вигляді як вони є, а змінити їх може в будь-який час. Наприклад, не варто застосовувати ім'я комп'ютера, якщо цей параметр не змінюється ніколи. </li>
+          <li>
+            <div>
+              Конфігурування
+            </div> Щоб налаштувати параметр перевірте його прапорець, а потім або введіть необхідну конфігурацію безпосередньо в головному інтерфейсі або відкрийте діалогове вікно налаштувань для цьго конкретного параметру. </li>
+          <li>
+            <div>
+              Активація профілю ;
+            </div> За замовчуванням жоден профіль автоматично не активований, тобто налаштування на вашій системі нічого не змінять без вашого наміру. Ви можете використовувати <a href="#hf_autoswitch"> автоперемикання </a> - функція використовується для увімкнення певних профілів автоматично на основі вільно налаштовуваних умов. </li>
+          <li>
+            <div>
+              Значок в треї
+            </div> Рекомендується <a href="#hf_tray"> тримати NetSetMan мінімізованним в </a> треї і тримати іконку в треї у завжди видимій області. Таким чином, ви можете швидко активувати профіль, натиснувши на іконку і вибравши профіль. Крім того, ви будете бачити корисну інформацію, просто підвівши курсор до іконки з курсором миші. </Li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Профілі
+      </div>
+      <div class="hf_body">
+        <p>
+          Вкладки позначають доступні профілі налаштувань. Ви можете зберегти 6 різних наборів налаштувань у цих вкладках.
+        </p>
+        <p>
+          Якщо ви прагнете змінити налаштування двох адаптерів при включенні одного профілю, то використовуйте можливість <strong>Мультипрофіль</strong>. Натисніть кнопку &quot;+&quot; розташовану ліворуч від списку мережевих адаптерів. З'явитися нова панель із двома Мультипрофілями (поточний і новий порожній). Назвою буде ім'я мережевого адаптера обраного в Мультипрофілі і не може бути змінено. Ви можете створити стільки Мультипрофілів скільки захочете. Кожний з Мультипрофілів буде застосований по черзі при активації профілю. Ви можете змінити порядок Мультипрофілів, перетягуючи їх мишкою.
+        </p>
+        <p>
+          Усі зміни зберігаються автоматично, тому нічого не втратиться.
+        </p>
+        <p>
+          Ви можете перейменувати профіль, клацнувши правою кнопкою миші на потрібній вкладці і вибравши у контекстному меню &quot;Перейменувати&quot; або просто двічі клацнути на вкладці.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Subprofile tabs" class="screen" />
+          <img src="data/rename.png" alt="Rename a profile" class="screen" />
+          <img src="data/profilemanagement.png" alt="Profile Management" class="screen" />
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Мережеві адаптери (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Для доступних мережевих адаптерів виводиться ім'я і тип.
+        </p>
+        <p>
+          Для керування мережевим адаптером ви повинні завантажити список доступних адаптерів, натиснувши кнопку &quot;<strong>Оновити</strong>&quot;. Потім вибрати необхідний адаптер зі спадаючого списку.
+        </p>
+        <p>
+          Якщо ви копіюєте файл налаштувань (settings.ini) на інший комп'ютер, то NSM спробує автоматично перепризначити мережеві адаптери профілів. Однак, ця функція спрацює тільки при повному збігу нової назви адаптера зі старою (на знімку екрану це &quot;LAN&quot;).
+        </p>
+        <p>
+          Якщо адаптер з таким іменем не виявлено, то назва буде відображатися як &quot;[?]&quot;. Спробуйте заново оновити список адаптерів.
+        </p>
+        <p>
+          Якщо потрібного адаптера немає в списку (тому що він вимкнений, віртуальний, і т. ін.), то ви можете використовувати можливість &quot;Поліпшене оновлення&quot; (натисніть на стрілочку поруч із кнопкою &quot;Оновити&quot;). Там ви знайдете повний список усіх доступних адаптерів. Відзначте адаптери для включення в список.
+        </p>
+        <p>
+          Примітка: Усі адаптери, включені в список, будуть відображатися в треї Windows.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Network adapter selection" class="screen" />
+        <img src="data/adapters-management.png" alt="Network adapter selection" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Налаштування Операцій
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Одержання поточних налаштувань
+        </p>
+        <p>
+          Для одержання поточного значення одного з параметрів, натисніть на значок
+          <img src="data/icon-get.png"  alt="Отримати поточне значення">
+          &quot;Отримати поточне значення&quot; поруч із потрібним полем профілю<br> Для отримання всіх поточних налаштувань (що мають згаданий раніше значок) клацніть правою кнопкою миші і у контекстному меню виберіть пункт &quot;Отримати всі поточні налаштування&quot;.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Get one setting" class="screen" />
+        <img src="data/get-settings2.png" alt="Get all settings" class="screen" />
+      </div>
+      <div class="hf_body">
+        <p>
+          <span style="font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px; text-align:left; margin-top:15px; margin-bottom:0px;">Очищення налашувань</span>
+        </p>
+        <p>
+          Якщо ви прагнете очистити конкретне поле, то просто двічі клацніть по його назві<br> Для очищення всіх налаштувань поточної вкладки клацніть правою кнопкою миші по вкладці і в контекстному меню виберіть &quot;Очистити всі поля&quot;
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Clear one setting" class="screen" />
+        <img src="data/clear-settings2.png" alt="Clear all settings" class="screen" />
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Копіювання і вставка налашувань</span>
+        </p>
+        <p>
+          Якщо ви прагнете перенести налаштування з одного профілю в інший, то клацніть правою кнопкою миші по вкладці обраного профілю і в контекстному меню виберіть &quot;Копіювати налаштування&quot;, потім також клацніть по вкладці цільового профілю і у контекстному меню виберіть &quot;Вставити налаштування&quot;.
+        </p>
+        <p>
+          Спеціальна вставка доступна для груп адрес IP, DNS і WINS. Клацнувши на іконку із зірочкою, ви вставите тільки цю групу налаштувань.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Copy and paste one setting" class="screen" />
+        <img src="data/copypaste2.png" alt="Copy and paste all settings" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Застосування профілю
+      </div>
+      <div class="hf_body">
+        <p>
+          Для застосування налаштувань поточного профілю натисніть &quot;<strong>Застосувати</strong>&quot;.<br> Тільки відзначені прапорцями налаштування будуть застосовані.
+        </p>
+        <p>
+          Відкриється нове вікно, що містить інформацію про поточний стан процесу встановлення налаштувань<br> У ньому ви побачите, які налаштування встановлюються і результат виконання дії<br> Ви можете скасувати встановлення налаштувань, натиснувши кнопку &quot;Відмова&quot;. Налаштування нижче поточної позиції не будуть застосовані.
+        </p>
+        <p>
+          Навіть якщо результат дії &quot;OK&quot;, слід трохи почекати, поки зміни будуть застосовані (особливо &quot;Ім'я комп'ютера&quot; і &quot;Робоча група/Домен&quot;). У деяких випадках необхідно перезавантажити систему.
+        </p>
+        <p>
+          Якщо всі результати зеленого кольору - значить усе добре :)<br> Якщо ні, то подивіться повідомлення про помилки й спробуйте вирішити проблему<br> Клацніть кнопку &quot;+&quot; внизу вікна для одержання докладної інформації.
+        </p>
+        <p>
+          Для усунення більшості помилок і вирішення проблем подивиться <a href="http://www.netsetman.com/faq"  target="_blank">ЧаПи (FAQ)</a>.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Check settings to be changed" class="screen" />
+        <img src="data/activation.png" alt="Profile Activation window" class="screen" />
+        <br />
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Загальні результати та їх значення</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">добре :-)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Налаштування застосовуються</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Налаштування неповні або невірні, тому були пропущені</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Помилка</td>
+            <td class="hf_errortable_right">У більшості випадків виводяться червоним кольором у вигляді короткого повідомлення, наприклад &quot;Невірний пароль&quot;</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Невірно</td>
+            <td class="hf_errortable_right">Значення невірне, не вказане або неприпустиме (спеціальні символи, однакове ім'я комп'ютера і робочої групи, і т. ін.)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Запущений Firefox</td>
+            <td class="hf_errortable_right">Firefox уже запущений. Для застосування FF налаштувань закрийте Firefox</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Компактний і повний режими
+      </div>
+      <div class="hf_body">
+        <p>
+          Крім звичайного &quot;Повного режиму&quot; інтерфейсу, ви можете змінювати налаштування за допомогою &quot;Компактного режиму&quot;. Для перемикання режиму використовуйте кнопку головного меню розташовану із правої сторони.
+        </p>
+        <p>
+          Компактний режим ідеальний для використання після налаштування всіх профілів. У цьому режимі налаштування не можна змінити. Налаштування відображаються як компактний список.
+        </p>
+        <p>
+          Якщо ви використовуєте <a href="../NSM-Help/nsm3help_ua.htm#hf_nsmadministration">Адміністрування NSM</a> (з відключеним &quot;Змінити налаштування профілю&quot;), то компактний режим буде використаний автоматично, щоб користувач не міг змінити налаштування.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Compact Mode" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        NetSetMan в треї. Повідомлення
+      </div>
+      <div class="hf_body">
+        <p>
+          Коли Netsetman запущений, ви можете бачити його значок в треї		(поруч із годинником).<br> Звідси ви можете швидко застосувати потрібний вам профіль. Клацніть правою кнопкою миші по іконці й виберіть потрібний профіль в меню.
+        </p>
+        <p>
+          Якщо ви не хочетевідображати деякі профілі в треї, то приховайте їх окремо. Клацніть правою кнопкою миші по вкладці профілю і у контекстному меню виберіть &quot;Показувати в списку доступних&quot;. Маленький значок поруч з текстом, показує стан відображення профілю. Також це налаштування застосовується до профілів у компактному режимі.
+        </p>
+        <p>
+          При наведенні курсору на значок Netsetman в треї з'явиться <strong>вікно повідомлення</strong>. Воно містить поточні IP налаштування, що використовуються системою. Тому що ця інформація зчитується при наведенні курсору, то її збір може зайняти деякий час. Для зменшення часу очікування відключіть додаткову інформацію (публічний IP, MAC і т.д.) у налаштуваннях.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tray Icon" class="screen" />
+        <img src="data/showintray.png" alt="Show in tray" class="screen" />
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Особливості
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Швидкий огляд
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan зробленний таким чином, що дозволяє мати прямий огляд всіх налаштованих параметрів в профілі. Деякі з найбільш важливих функцій, таких як основні налаштування IP, WiFi і принтер за замовчуванням може бути налаштовано безпосередньо на головному інтерфейсі. Інші, більш складні параметри можуть бути активовані тільки тут і може показати короткий огляд за їх поточною конфігурацією. Щоб змінити їх, увімкніть їх, а потім відкрийте відповідне вікно, натиснувши кнопку [...] - кнопку.
+        </p>
+        <p>
+          У наступних розділах дам вам основні інструкції та корисні поради про те, як використовувати всі можливості.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Additional settings group" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Стан Адаптеру
+      </div>
+      <div class="hf_body">
+        <p>
+          Для увімкнення, вимкнення або перезавантаження обраного мережевого адаптеру користуйтнесь кнопкою стан адаптера. Колір за умовчанням буде змінюватися в кольори, пов'язані зі станом. Крім того, ви можете побачити, встановлений стан в підказці.
+        </p>
+        <p>
+          Якщо ви хочете, щоб був один адаптер і вимкнути одного або всі інші адаптери, необхідно створити <a href="#hf_profiles"> підпрофілі </a> для кожного з адаптерів. Ви можете зробити це вручну або за допомогою пункту меню в нижній частині меню Стан адаптеру. Це автоматично створить підпрофіль для кожного мережевого адаптера, який входить до списку адаптера і встановить відповідним чином параметр його стану. Пам'ятайте, що ви можете налаштувати, які адаптери включені в цей список за допомогою Керування мережевими адаптерами <a href="#hf_nics"></a>.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adapter Status: Activate" class="screen" />
+        <img src="data/adapterstatus-deactivate.png" alt="Adapter Status: Deactivate" class="screen" />
+        <img src="data/adapterstatus-restart.png" alt="Adapter Status: Restart" class="screen" />
+        <img src="data/adapterstatus.png" alt="Additional settings group" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Розширені параметри TCP/IP
+      </div>
+      <div class="hf_body">
+        Ви можете вказати декілька IP, шлюз, DNS і WINS-адреси в NIC, якщо вам потрібно бути в декількох мережах одночасно. Для цього натисніть кнопку &quot;<STRONG> IP+</STRONG>&quot; або виберіть &quot;Профіль&gt; Розширені налаштування TCP/IP&quot; з головного меню. </p>
+        <p>
+          Тут ви також маєте можливість керувати більш просунутими налаштуваннями, як то <STRONG> Таблиця маршрутизації </STRONG><STRONG> DNS-суфікс </STRONG><STRONG> IPConfig </STRONG> і <STRONG> NetBIOS </STRONG> ,
+        </p>
+        <ul>
+          <li> Включити групу в перевірку, цей заголовок прапорець </li>
+          <li>
+            <img SRC="data/icon-add.png" Alt="Додати нове значення" />
+            Додати нове значення </li>
+          <li>
+            <img SRC="data/icon-delete.png" Alt ="Видалити вибране значення" />
+            Видалити вибране значення </li>
+          <li>
+            <img SRC="data/icon-deletelist.png" Alt ="Очистити список" />
+            Очистити весь список </li>
+          <li>
+            <img SRC="data/icon-getlist.png" Alt ="Отримати список" />
+            Отримати всі поточні значення для цього параметра з системи (у той час, клацнувши
+            <img SRC="data/icon-get.png" Alt="Отримати налаштування" />
+            символ в головному вікні для зчитування тільки першого значення) </li>
+          <li> Зміна порядку шляхом перетягування</li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Access Advanced TCP/IP Settings window" class="screen" />
+        <img src="data/additionaladdresses1.png" alt="Advanced TCP/IP Settings window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Підключення
+      </div>
+      <div class="hf_body">
+        <p>
+          Використовуйте цю функцію для підключення або відключення якого-небудь з'єднання, як то комутовані мережі, мобільний широкосмуговий зв'язок або VPN. Сумісні з'єднання наведені у вікні разом зі своїми звичайним мережевим адаптером в діалоговому вікні мережевих підключень. З технічної точки зору всі з'єднання, які сумісні з &quot;RasDial &quot; підтримуються.
+        </p>
+        <p>
+          Ви можете вибрати або відключити всі поточні встановлені з'єднання, встановивши прапорець, або підключити/відключити деякі підключення індивідуально в порядку перерахування.
+        </p>
+        <p>
+        Якщо сигнал мережі чомусь пропадає зі списку, ви можете додати її вручну, вибравши "Додати..." у списку вибору і ввести її ім'я.
+        </p>
+        <p>
+        NetSetMan також підтримує кілька сторонніх VPN клієнтів як OpenVPN, Shrew і Cisco. Якщо ваш клієнт VPN сумісний, то NetSetMan перечитає свої VPN профілі у списку.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Connections window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Файл Hosts
+      </div>
+      <div class="hf_body">
+        <p>
+          У конкретних випадках це може бути необхідним або корисним, щоб вручну призначити IP-адреси з іменами або доменами. Зверніть увагу, що NetSetMan буде змінювати тільки свої власні хост-записи, а існуючі записи будуть недоторканими.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Hosts window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Мережеві диски
+      </div>
+      <div class="hf_body">
+        <p>
+          З NetSetMan ви можете підключити чи відключити необмежену кількість мережевих дисків. <br/> Будь ласка, ознайомтеся з підсказкамия в нижній частині вікна, натиснувши &quot;[ Показати Допомогe]&quot;.
+        </p>
+        <p>
+          Коли профіль активований і обрана функція Мережевий диск, NetSetMan порівняє список всіх існуючих мережевих дисків зі списком дисків які повинні бути підключені. Всі підключені диски, які знаходяться в обох списках (та сама буква диска і той же шлях розташування) залишаться недоторканими. Всі інші мережеві диски будуть відключені перед підключенням нових.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Network Drives window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Скрипти і програми
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan пропонує вам зручний спосіб керувати своїми файлами сценаріїв. Але він не має власної мови сценаріїв. Це означає, що ви можете використовувати тільки ті скриптові мови, які операційна система здатна виконати. Підтримувані скриптові мови - це VBS, JS і навіть прості командні файли командного рядка. Використовуйте пошук, щоб знайти більш детальну інформацію про сценарії і те, що ви можете робити з ними.
+        </p>
+        <p>
+          Відкрийте існуючий файл сценарію або створіть новий, щоб мати можливість редагувати скрипт. <br/> Ви можете мати два сценарії, які будуть виконуватися до і після, всі інші налаштування не будуть змінені. <br/> Якщо вам потрібна затримка між запуском скрипта і зміна мережевих налаштувань, ви можете вказати її знизу.
+        </p>
+        <div id="hf_programs">
+          <p class="hf_section_caption">
+          Виконання програми
+          </p>
+          <p>
+          NetSetMan пропонує вам зручний спосіб керувати своїми файлами сценаріїв..<br>
+          Програми можуть бути запущені в обмеженому обліковому записі користувача (за умовчанням з увімкненим UAC ) або з підвищеними правами адміністратора (без запуску контролю облікових записів). Параметри можуть бути додані в разі потреби.<br>
+          Програми можуть бути запущені, як правило, в розгорнутому чи згорнутому вигляді.
+          </p>
+          <p>
+          Уже запущені процеси можна зупинити на основі імені файлу (незалежно від того, де вони знаходяться) або знаючи їх точний шлях до файлу.
+          </p>
+          <p>
+          Кожна дія може мати індивідуальну затримку перед (від'ємне значення) або після (плюсове значення) виконання.
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="Програми" class="screen">
+        <img src="data/scripts.png" alt="Scripts window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / Електронна пошта
+      </div>
+      <div class="hf_body">
+        <p>
+          У деяких випадках IP-адреса SMTP-сервера для відправки електронної пошти змінюється в залежності від вашої мережі. Перебуваючи в тій же мережі, вам може знадобитися локальна адреса, як то 10.0.0.1, будучи за межами цієї мережі, вам доведеться відкрити доступ до глобальної IP-адреси.
+        </p>
+        <p>
+          Замість того, щоб бути сумісним з великою кількістю різних поштових клієнтів і роботи з різними профілями користувачів NetSetMan вирішує цю проблему за допомогою простого обхідного шляху. Встановіть &quot;nsm.smtp&quot; як адресу SMTP в поштовому клієнті і налаштуйте IP-адреси відповідних профілів. При активації профілю обидва значення будуть пов'язані з використанням hosts-файлу, тому вам не потрібно робити будь-яких додаткових змін у вашому поштовому клієнті.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / Email window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Системні налаштування
+      </div>
+      <div class="hf_body">
+        <p>
+          На додаток до звичайних мережевих налаштувань іноді ви можете змінити деякі системні параметри залежно від вашого місця розташування або ситуації. Наприклад в той час як в університеті Ви можете відключити гучність звуку, міняти шпалери і активувати збалансований режим живлення.
+        </p>
+        <p>
+          Ви також можете використовувати вікно системних налаштувань, щоб швидко змінити деякі налаштування, які могли б зайняти більше часу, якщо б ви шукали де знаходиться даний параметр в Windows. Просто натисніть
+          <img SRC="data/set-icon.png" Alt ="Іконкак Налаштувань" />
+          цю кнопку і активуйте цей конкретний параметр.
+        </p>
+        <p>
+          Підтримувані налаштування включають в себе: режим відображення, шпалери, кольори робочого столу, заставки, схему, гучність колонок і мікрофона, звукову схему, Брандмауер (в т.ч. виключення і повідомлення), режим живлення, часовий пояс і MAC-адресу.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="System Settings window" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          Профіль Netsetman може використовуватися для підключення до існуючого WiFi профілю. Для цього виберіть WiFi адаптер у списку мережевих адаптерів, потім виберіть профіль WiFi зі списку WiFi профілів. Якщо ви хочете тільки вимкнути WiFi підключення, то виберіть порожній рядок.
+        </p>
+        <p>
+          Крім простого перемикання WiFi профілів Netsetman дає можливість розширеного керування WiFi. Клацніть на іконку WiFi або використовуйте меню Інструменти &gt; NSM Керування WiFi. Ви побачите список доступних на даний момент WiFi мереж. Жовтий фон вказує, що профіль с таким же SSID вже існує. Зелений фон вказує на підключену зараз мережу. Ви можете підключитися до мережі, двічі клацнувши по її назві або натиснувши кнопку &quot;Підключити&quot;. Якщо для цього з'єднання ще немає профілю, то ви можете спочатку створити його. Налаштування (аутентифікація, шифрування і т.д.) будуть налаштовані автоматично залежно від знайденої мережі. Однак може знадобитися ручне налаштування, якщо налаштування не визначилися автоматично з якої-небудь причини.
+        </p>
+        <p>
+          Netsetman працює з рідними Windows WiFi профілями. Це значить, що ви можете використовувати ті ж профілі, які ви раніше використовували в Windows або в іншому WiFi програмному забезпеченні. Ви можете створювати, змінювати або видаляти WiFi профілі.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+          Csatlakozás MAC-cím alapján
+          </p>
+          <p>
+          A Windows általában SSID alapján csatlakozik a vezeték nélküli hálózatokhoz. Ha több access point-nak ugyanaz az SSID-je, a Windows egy csoportban kezeli őket, és mindig a legjobb jelerősségűhöz csatlakoztat. Azonban néha szükség lehet arra, hogy csak egy bizonyos access point-hoz csatlakozz. A NetSetMan lehetőséget ad erre is!
+          </p>
+          <p>
+          A NSM WiFi kezelés csoportosítás nélkül mutatja az összes lehetséges hálózatot és access point-ot, így mindig pontosan ki lehet választani a megfelelőt. Az egérmutatót egy adott hálózat fölé tartva a buboréksúgóban megjelennek a hálózathoz tartozó további információk, pl. a MAC-cím. A jobbgombos helyi menüből könnyen ki lehet másolni a hálózathoz tartozó MAC-címet vagy SSID-t.
+          </p>
+          <p>
+          Ha egy bizonyos vezeték nélküli hálózathoz szeretnél csatlakozni egy NetSetMan profil aktiválásakor, akkor a WiFi listából válaszd ki a "Csatlakozás MAC-cím alapján..." opciót, majd add meg a kívánt MAC-címet. Profil aktiválásakor a NetSetMan ennek megfelelően fogja kiválasztani a megfelelő access point-ot.
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          Вимоги
+        </p>
+        <p>
+          Netsetman використовує рідний Windows WiFi API. Це дає велику перевагу, тому що немає необхідності у встановленні нових драйверів. Netsetman може працювати з WiFi тільки у версіях Windows, у які вже включена підтримка WiFi. Більшість сучасних версій Windows містять у собі цю підтримку. Якщо ви використовуєте Windows версії Vista або більш пізню, то робота не викличе у вас проблем. Для Windows XP необхідно встановити пакет оновлення SP2 або SP3. Windows 2000 не підтримується.
+        </p>
+        <p>
+          У Windows версії Vista або більш пізніх повинна бути запущена <em>&quot;Служба автоналаштування WLAN&quot; (Wlansvc)</em>. В Windows XP - <em>&quot;Служба бездротового налаштування&quot; (WZCSVC)</em>.
+        </p>
+        <p>
+          Якщо WiFi адаптер поставляється із програмним забезпеченням виробника, то у більшості випадків Windows керування блокується. Вам необхідно спробувати знайти налаштування, щоб використовувати керування Windows у цьому ПО (якщо це можливо).<br> Немає універсального способу керувати WiFi по-іншому, тому що кожний виробник має своє власне ПО. Наприклад, якщо ви використовуєте обладнання AVM FRITZ!WLAN USB, клацніть на його значок в треї і виберіть &quot;Windows WLAN&quot;.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi overview" class="screen" />
+        <img src="data/wifi.png" alt="NSM WiFi Management window" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Додатково
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        Автоперемикання
+      </div>
+      <div class="hf_body">
+        <p>
+          Досить легко активувати профіль одним клацанням миші з <a href="#hf_tray"> Меню в треї </a>. Але в деяких випадках це може бути навіть простіше, ви можете активувати профілі повністю автоматично залежно від користувцьких умов. Вбудована функція автоперемикання робить це сама.
+        </p>
+        <p>
+          Після активації автоперемикання, можуть бути налаштовані для всіх профілів індивідуально наступні умови:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Restricted Profile icon" />
+            Навколишні WiFi мережі
+          </div>
+          <ul>
+            <li> Бездротова мережа (SSID або MAC) з діапазону </li>
+            <li> Сила сигналу бездротової мережі вище/нижче певного значення </li>
+          </ul>
+          <div>
+            <img SRC="data/icon-location.png" Alt ="Значок профілю" />
+            Мережеве оточення
+          </div>
+          <ul>
+            <li> Вікна NLM: Автоматично згенерований мережевий профіль у Windows (Vista і вище) </li>
+            <li> Шлюз MAC: відбитки пальців автоматично призначені для DHCP шлюзу </li>
+            <li> Пінг: Наявність певного сервера або системи в мережі </li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Restricted Profile icon" />
+            Стан Адаптеру
+          </div>
+          <ul>
+            <li> Стан Підключення локального мережевого адаптера (підключений/відключений) </li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Restricted Profile icon" />
+            Період Часу
+          </div>
+          <ul>
+            <li> в певні дні тижня і часу (наприклад, Сб+Нд, 8:00 - 18:00) </li>
+          </ul>
+        </div>
+        <p>
+          Хоча немає ніяких технічних обмежень на кількість умов в профілі намагайтеся встановлювати його якомога простішим. У більшості випадків це абсолютно достатньо, щоб включати в себе одну або дві умови, щоб досягти бажаного результату.
+        </p>
+        <p>
+          Можна вказати, що всі або, принаймні одна з умов повинні бути виконані, щоб активувати цей профіль.
+        </p>
+        <p>
+          <STRONG> Примітка: </STRONG> Профілі з низьким ідентифікатором мають більш високий пріоритет у випадку, якщо умови для декількох профілів застосовані в один і той же час.
+        </p>
+        <p>
+          За замовчуванням процес активації запускається з повідомленням в правому нижньому кутку з налаштованим відліком часу, що дозволяє перервати процес активації. Крім того можна використовувати повідомлення Windows або профіль може бути активований без будь-яких повідомлень у фоновому режимі. В останньому випадку на іконці в треї з'являється зображення під час процесу активації і змінює свій колір тимчасово відповідно до результату активації візуально інформуючи вас про автоматизацію процесу.
+        </p>
+        <p>
+          Щоб зберегти системні ресурси NetSetMan не порівнює поточні параметри з налаштуваннями профілю, який буде активований. Це означає, що якщо ви зміните які-небудь налаштування вручну, NetSetMan не помітить змін.
+        </p>
+        <p>
+          Автоперемикання має деякі обмеження в XP: Windows NLM недоступна, зміни в навколишніх Wi-Fi мереж може бути визначені з помітною затримкою.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen" />
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch tooltip" class="screen" />
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch notification" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Нотатки
+      </div>
+      <div class="hf_body">
+        <p>
+          Можна створити короткі нотаткидля кожного профілю, якщо Ви хочете запам'ятати або вказати опис профілю. Якщо нотатка створювалася для профілю, його значок буде пофарбованим у рядку меню. Нотатка буде показана в Повному режимі як підказка на значку профілю і у Компактному режимі вгорі в налаштуваннях профілю.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Note" class="screen" />
+        <img src="data/note-hint.png" alt="Note hint" class="screen" />
+        <img src="data/note-compact.png" alt="Note in Compact Mode" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        Служба NSM Service / Обмежений обліковий запис
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan потрібні права адміністратора, щоб мати можливість змінити мережі і системні налаштування. Зазвичай робота такого додатку не можлива у обмеженному обліковому зиписі кристувача. В нових версіях Windows, навіть обмежили обліковий запис адміністраторів за допомогою UAC (User Account Control), яка показує повідомлення при кожному запуску програми.
+        </p>
+        <p>
+          Щоб вирішити цю проблему NetSetMan включає в себе спеціальний компонент, що називається <strong> Служба NSM </STRONG>, яка забезпечує роботу програми з необхідними привілеями. Служба встановлюється автоматично, але також може бутивручну встановлена/видалена в налаштуваннях (Системні привілеї &gt; Увімкнення/вимкнення).
+        </p>
+        <p>
+          Встановлену службу видно у вікні Служби Windows (services.msc) і нею можна керувати там же. Крім того її можна встановити/видалити або запустити/зупинити за допомогою командного рядка: <br><SPAN class="code"> nsmservice.exe /install /silent<br> nsmservice.exe /uninstall /silent, <br> NET START nsmService <br>net stop nsmService </span>
+        </p>
+        <p>
+          Якщо ви отримуєте повідомлення про помилку &quot; <EM> Невірний підпис </EM> &quot;, переконайтеся, що програма EXE не була змінена в групувій політиці Windows &quot; <EM> Turn off Automatic Root Certificates Update </em> &quot; ; вимкнена.
+        </p>
+        <p>
+          Якщо ви запустите NetSetMan з обмеженим обліковим записом користувача, де Служба NSM не доступна, то ви будете отримувати повідомлення з описом проблеми. В якості альтернативи ви можете ввести облікові дані <STRONG> Адміністратора </STRONG> з локального облікового запису, які NetSetMan буде зберігати зашифрованими у файлі налаштувань і використовувати для запуску себе з необхідними привілеями. Зверніть увагу, що в цьому випадку додаток буде працювати в контексті користувача, чиї облікові дані були використані.
+        </p>
+        <p>
+          Зайдіть на <a href="http://www.netsetman.com/faqnsmservice" target="_blank"> FAQ </a> і прочитати деякі додаткові зауваження про цю можливість.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="System Privileges" class="screen" />
+        <img src="data/limitedaccount.png" alt="Limited User Account" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Перемикання профілю до входу в Windows
+      </div>
+      <div class="hf_body">
+        <p>
+          Дуже унікальний і потужний засіб, який дає можливість активувати свої профілі на екрані входу в систему. Це дає можливість формувати правильні і потрібні вам налаштування мережі для вашого облікового запису шляхом активації NetSetMan профілю ще до входу в систему.
+        </p>
+        <p>
+          Щоб скористатися цією функцією <a href="#hf_nsmservice"> NSM-сервіс </a> повинен бути встановлений і увімкнена можливість &quot;<EM>Перемикання з екрану входу в систему Windows </em>(Налаштування &gt; Системні привілеї).
+        </p>
+        <p>
+          Зверніть увагу, що ця функція дозволяє змінити тільки параметри, які діляться між всіма користувачами. Конкретні налаштування користувача не можуть бути змінені за межами сесії користувача.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Pre-Logon profile switching" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        Адміністрування NSM
+      </div>
+      <div class="hf_body">
+        <p>
+          Якщо ви встановлюєте Netsetman для використання іншим користувачем, то ви можете вказати дозволені користувачу дії, відкривши меню Налаштування -&gt; Адміністрування. (Не плутати з &quot;Режимом адміністратора&quot;.)
+        </p>
+        <p>
+          При увімкненні цього режиму ви повинні ввести пароль довшим 6 символів. Тільки із цим паролем ви зможете змінити налаштування Адміністрування або налаштувати дозволені користувачу дії (Запуск Netsetman, Застосування профілю, зміна налаштувань профілю і програми).
+        </p>
+        <p>
+          Контрольна сума пароля буде записана до реєстру. Упевніться, що звичайний користувач не має прав на запис ключа <span class="code">HKLM\Software\Netsetman</span>. Якщо ви забули пароль і хочете скинути його, то видаліть цей ключ реєстру.
+        </p>
+        <p>
+          Для поліпшення захисту ви можете увімкнути шифрування файлу налаштувань. Налаштування можуть бути змінені вручну, якщо файл не зашифрований<br> Однак пам’ятайте: не буває 100% захисту. Шифрування - лише доповнення до захисту.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM Administration" class="screen" />
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Administration - Profile Restrictions" class="screen" />
+        <img src="data/administration-restrictedsettings.png" alt="NSM Administration - Settings Restrictions" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Запуск із командного рядка
+      </div>
+      <div class="hf_image">
+        <div class="hf_body">
+          <p align="left">
+            Іноді вам необхідно змінювати налаштування без використання візуального інтерфейсу Netsetman. (Якщо ви хочете включити NSM до складу завантажувального диску, додати в Автозапуск диску, змінювати профілі через ярлики і т.ін.)
+          </p>
+          <p align="left">
+            Можуть бути використані наступні параметри:
+          </p>
+          <p align="left">
+            <strong>-a </strong>#: Застосувати профіль номер №<br><strong>-as </strong>#: Застосовує профіль у тихому режимі (якщо не було помилок, то інформаційне вікно закриється автоматично)<br><strong>-h / -hide</strong> : запускає Netsetman згорнутим у системну панель<br><strong>-f / -full</strong> : Запускає Netsetman у повному режимі (по замовчуванню)<br><strong>-c / -compact</strong> : Запускає Netsetman у компактному режимі<br><strong>-m / -multi</strong> : Запускає ще один екземпляр Netsetman. <strong>Будьте обережні:</strong> усі екземпляри ведуть запис у той самий файл налаштувань!
+          </p>
+        </div>
+        <div class="hf_image">
+          <p align="center">
+            Ярлик для застосування профілю №0 у тихому режимі виглядає так:<br><strong>C:\Netsetman\netsetman.exe -as 0<br></strong>
+          </p>
+        </div>
+        <p>
+          <img src="data/shortcut.png" alt="Shortcut" class="screen" />
+        </p>
+        <p>
+          In command-line: <br />
+          <img src="data/commandline.png" alt="Command-Line" class="screen" />
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Повідомлення &quot;Безкоштовна для некомерційного використання&quot;
+      </div>
+      <div class="hf_body">
+        <p>
+          Це повідомлення буде з'являтися при кожному сьомому запуску програми. Раз у тиждень при щоденному використанні.
+        </p>
+        <p>
+          Нажаль, необхідно нагадувати користувачам, що програма безкоштовна тільки для некомерційного використання. Економія робочого часу - це завжди комерційне використання, що вимагає одержання ліцензії <a href=  "http://www.netsetman.com/nsmpro"  target="_blank">Netsetman Pro</a>. Будь ласка, прочитайте <a href="http://www.netsetman.com/en/txt/license"  target="_blank">ліцензійну угоду</a> для одержання додаткової інформації.
+        </p>
+        <p>
+          <strong>Це повідомлення не відображається в Pro версії</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Non-Commercial Freeware message" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Додатково в Netsetman Pro
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Категорії профілів
+      </div>
+      <div class="hf_body">
+        <p>
+          З Netsetman Pro ви можете створювати необмежену кількість категорій профілів. 					Кожна категорія може містити 6 профілів.
+        </p>
+        <p>
+          У панелі Категорій профілів вгорі головного вікна ви можете вибирати/переглядати категорії і змінювати їх (додавати, видаляти та перейменовувати).
+        </p>
+        <p>
+          Значок списку, праворуч на панелі, відкриває редактор категорій профілів<br> Ви можете впорядкувати категорії перетягуванням.
+        </p>
+        <p>
+          Якщо у вас більше однієї категорії профілів, то в контекстному меню в треї вони будуть згруповані.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profile Management Pro" class="screen" />
+        <img src="data/tray-pro.png" alt="Tray Icon in Pro version" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Браузер / проксі
+      </div>
+      <div class="hf_body">
+        <p>
+          З Netsetman Pro ви можете керувати налаштуваннями Internet Explorer і Firefox.<br> Тому що Firefox підтримує безліч профілів, то для кожного пункту у дужках зазначено ім'я профілю<br> Інші назви говорять самі за себе, тому що збігаються з назвами браузерів.
+        </p>
+        <p>
+          Якщо ви не ввели ніяких налаштувань браузерів, ви побачите в головному вікні &quot;(...)&quot;, інакше відобразиться обраний браузер (IE = Internet Explorer, FF = Firefox) і його Http-Проксі.
+        </p>
+        <p>
+          Якщо вам потрібно вказати адреси &quot;Немає проксі для&quot;, то введіть їх в обох форматах (наприклад &quot;10.*.*.*, 10.0.0.0/8&quot;). Netsetman автоматично відкине невірні значення.
+        </p>
+        <p>
+          Перед застосуванням нових налаштувань Firefox <strong>повинен</strong> бути закритий.
+        </p>
+        <p>
+          Якщо розташування каталогу вашого профілю Firefox змінилося (через перевстановлення системи, наприклад), то ви повинні вибрати профіль зі списку заново, тоді він буде оновлений і у файлі налаштувань.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Browser / Proxy" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Домен
+      </div>
+      <div class="hf_body">
+        <p>
+          Для підключення вкажіть ім'я домену, ім'я користувача і пароль. Для введення паролю натисніть кнопку &quot;P&quot;. Введіть пароль. Пароль буде зашифрований і збережений в ini-файлі. Ніхто не зможе прочитати його, навіть ви.
+        </p>
+        <p>
+          Звичайно досить ввести дійсне ім'я користувача<br> Якщо відбулася помилка, то спробуйте ввести одне із цих значень у якості імені користувача:<br> 1. NETBIOS: DOMAIN\user<br> 2. UPN: user@domain.com<br> Якщо ви не впевнені у налаштуваннях, то зверніться до свого системного адміністратора.
+        </p>
+        <p>
+          Читайте про цю функцію в розділі <a href="http://www.netsetman.com/faq"  target="_blank">ЧаПи (FAQ)</a>.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Domain overview" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Поширення в корпоративних мережах
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro пропонує кілька додадткових функції, які допоможуть вам більш легко розповсюджувати програмне забезпечення, з попередніми налаштованннями і ваша ліцензія дасть вам можливість використовувати програму в корпоративній мережі. Ви знайдете все, що вам потрібно знати в детальному описі в <a href="http://www.netsetman.com/faqcompany"> Довідка </a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

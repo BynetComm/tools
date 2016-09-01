@@ -1,0 +1,977 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>קובץ העזרה    NetSetMan 4.x help</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+    <style>.hf_block{text-align:right}</style>
+  </head>
+  <body dir="rtl">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>קובץ עזרה</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-he.png" alt=""></div>
+          <div id="hf_language">עברית</div>
+          <div id="hf_translator">תורגם על ידי דוד אלמן</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        מידע כללי
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">גרסת קובץ עזרה</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">נתמך <br> מערכות הפעלה</td>
+            <td class="hf_tblinfo_right">Windows <br> XP, Vista, 7, 8, 10 <br> 32 ביט, 64 ביט</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">רישיון</td>
+            <td class="hf_tblinfo_right">לא מסחרי - גרסה חינמית <br><em>או </em><br> גרסת Pro מסחרית<br> הצג כ <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> או <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">צור קשר עם</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">פורום תמיכה</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        תוכן
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          תיאור בסיסי
+        </p>
+        <ul>
+          <li><a href="#hf_description">תיאור</a></li>
+          <li><a href="#hf_howtouse">מידע בסיסי</a></li>
+          <li><a href="#hf_profiles">פרופילים</a></li>
+          <li><a href="#hf_nics">מתאמי רשת (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">תפעול הגדרות</a></li>
+          <li><a href="#hf_activation">הפעלת פרופיל</a></li>
+          <li><a href="#hf_compactmode">מצב קומפקטי ומצב מלא</a></li>
+          <li><a href="#hf_tray">מגש תפריט ומגש מידע</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          מאפיינים
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">סקירה</a></li>
+          <li><a href="#hf_adapterstatus">סטטוס מתאם</a></li>
+          <li><a href="#hf_advanced">מתקדם הגדרות TCP / IP </a></li>
+          <li><a href="#hf_connections">חיבורים</a></li>
+          <li><a href="#hf_hosts">מארחים</a></li>
+          <li><a href="#hf_netdrives">כונני רשת</a></li>
+          <li><a href="#hf_scripts">תסריטים ותוכניות</a></li>
+          <li><a href="#hf_smtp">SMTP / אימייל</a></li>
+          <li><a href="#hf_system">הגדרות מערכת</a></li>
+          <li><a href="#hf_wifi">אלחוטי</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          מתקדם
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">הערות</a></li>
+          <li><a href="#hf_nsmservice">שירות NSM / חשבון משתמש מוגבל</a></li>
+          <li><a href="#hf_prelogon">טרום כניסה מיתוג פרופיל</a></li>
+          <li><a href="#hf_nsmadministration">מנהל NSM</a></li>
+          <li><a href="#hf_commandline">הפעלת שורת הפקודה</a></li>
+          <li><a href="#hf_ncfreeware">מסר Freeware לא מסחרי</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          תכונות Pro נוספות
+        </p>
+        <ul>
+          <li><a href="#hf_groups">קבוצות בפרופיל</a></li>
+          <li><a href="#hf_proxy">דפדפן / פרוקסי</a></li>
+          <li><a href="#hf_domain">תחום</a></li>
+          <li><a href="#hf_distribution">הפצה בחברת רשתות</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      תיאור בסיסי
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        תיאור
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> הוא מנהל הגדרות רשת שיכול לעבור בקלות בין 6 פרופילים שונים, מובנים באופן חזותי ביניהם:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> כתובות IP (IPv4 &amp; IPv6!) </li>
+              <li> שערים (כולל  מטרים) </li>
+              <li> שרתי DNS </li>
+              <li> שרתי WINS </li>
+              <li> ניהול WiFi </li>
+              <li> שם מחשב </li>
+              <li> קבוצת עבודה </li>
+              <li> מדפסת ברירת מחדל </li>
+              <li> כונני רשת </li>
+              <li> מצב NIC </li>
+              <li> חיבורים (RAS / DUN / PPP / VPN) </li>
+              <li> DNS Suffix </li>
+              <li> טבלאות ניתוב </li>
+              <li> שרת SMTP </li>
+              <li> מארחי קובץ ערכים </li>
+              <li> הגדרות מערכת </li>
+              <li> כתובת MAC </li>
+              <li> סקריפטים (BAT, VS, JS, ...) </li>
+              <li> הפעלת תוכניות </li>
+            </ul></td>
+            <td width="51%"><strong>בנוסף רק בגרסת <u>Pro:</u></strong>
+            <ul>
+              <li> ניתן להשתמש בם בעבודה </li>
+              <li> כמות בלתי מוגבלת של פרופילים </li>
+              <li> דומיין רשת </li>
+              <li> השלם הגדרות פרוקסי ו... <br> עמוד הבית בדפדפן <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> מציע לך את מה שהיה חסר לך ב Windows עד עכשיו: <br> ממשק רב עוצמה, קל לשימוש, כדי לנהל את כל הגדרות הרשת שלך במבט חטוף. <br> .נסה את התוכנה ולעולם לא תרצה להפרד ממנה
+        </p>
+        <p>
+          כל ההגדרות והשינויים נשמרות באופן אוטומטי בקובץ נפרד <em>(settings.ini)</em> כך שגיבוי, העברה או שדרוג לגרסה אחרת אינה מהווה בעיה כלל.
+        </p>
+        <p>
+          <strong>הפעל פרופיל מאוחסן בלחיצה אחת או אפילו באופן אוטומטי לחלוטין!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan לעומת Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="חלון NetSetMan Man">
+          <br><strong>NetSetMan:</strong> לא מסחרי  גרסת Freeware
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="חלון הראשי NetSetMan Pro">
+          <br>גרסת Pro <strong>מסחרית: NetSetMan Pro</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        מידע בסיסי
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              פרופילים
+            </div> כל <a href="#">פרופיל</a> מייצג קבוצה של הגדרות הנדרשות עבור מיקום או תרחיש מסוים. על ידי שימוש בתתי פרופילים ניתן להגדיר מספר מתאמי רשת בפרופיל אחד. שינוי שם של פרופיל על ידי לחיצה כפולה על כיתוב הכרטיסייה שלה.</li>
+          <li>
+            <div>
+              הגדרת תצורה ידנית
+            </div> תצטרך להגדיר את הפרופילים הנדרשים באופן ידני בעצמך. לא ניתן לנחש את ההגדרות הנכונות למיקום לא ידוע. המטרה העיקרית של היישום היא להפוך לאוטומטי שינויי הגדרות שהיית מבצע בדרך כלל באופן ידני.</li>
+          <li>
+            <div>
+              בחירה של הגדרות
+            </div><a href="#hf_basicoperations">הקראת כל ההגדרות הנוכחיות</a> לפרופיל יכול לתת לך נקודת התחלה, אבל אתה עדיין צריך להחליט איזה הגדרות ידרשו בעת הפעלת הפרופיל. מומלץ מאוד להגביל את ההגדרות לאלה שעשויים היו להשתנות בנתיים. לדוגמא אין זה הכרחי להפעיל את שם המחשב אם הגדרה זו אינה משתנה.</li>
+          <li>
+            <div>
+              תצורה של הגדרות
+            </div> כדי לקבוע את תצורת הגדרה הראשונה לבדוק את תיבת הסימון שלה, ולאחר מכן להזין את התצורה הרצויה ישירות בממשק הראשי או לפתוח את חלון ההגדרות להגדרה מסוימת.</li>
+          <li>
+            <div>
+              הפעלת פרופיל
+            </div> כברירת מחדל אין פרופיל מופעל באופן אוטומטי, כלומר אין הגדרה במערכת שלך משתנה ללא הכוונה שלך. יחד עם זאת, תוכל להשתמש בתכונת <a href="#hf_autoswitch">הAutoSwitch</a> כדי להפעיל פרופילים מסוימים המבוססים על התאמת תנאים באופן חופשי.</li>
+          <li>
+            <div>
+              גישה לסמל המגש
+            </div> מומלץ <a href="#hf_tray">לשמור את NetSetMan ממוזער במגש</a> ולהעביר את סמל המגש לאזור נראה לעין תמיד. כך תוכל להפעיל במהירות את פרופיל על ידי לחיצה על הסמל ובחירת הפרופיל. בנוסף יהיה לכם סקירה שימושית על כתובות IP של החיבור הנוכחי על ידי ריחוף מעל הסמל עם סמן העכבר.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        פרופילים
+      </div>
+      <div class="hf_body">
+        <p>
+          הכרטיסיות מייצגות את הפרופילים הזמינים. ניתן לשמור 6 סטים שונים של הגדרות בכרטיסיות אלה.
+        </p>
+        <p>
+          אם ברצונך לשנות את ההגדרות של שני מתאמי רשת שונים בעת הפעלת פרופיל יחיד, אתה יכול להשתמש בתכונת <strong>Subprofile.</strong> לחץ על "+" - הכפתור לצד הרשימה הנפתחת ושורת תפריטים חדשה תופיע המכילה שתי תתי פרופילים (אחד הנוכחי ואחד חדש, ריק). הכיתוב יהיה באופן אוטומטי שמו של מתאם הרשת שנבחר ב subprofile ולא ניתן לשנותו. באפשרותך ליצור תתי פרופילים רבים ככל שתרצה. כולם יופעלו בזה אחר זה כאשר הפרופיל יופעל. אתה יכול לשנות את הסדר על ידי גרירה ושחרור.
+        </p>
+        <p>
+          כל השינויים נשמרים באופן אוטומטי כך ששום דבר אינו הולך לאיבוד בטעות.
+        </p>
+        <p>
+          אתה יכול לשנות את שם פרופיל על ידי לחיצה-ימנית עליו ובחירה "שמור בשם" או פשוט לחיצה כפולה על כותרת הכרטיסייה.
+        </p>
+        <p>
+          כדי לנהל את כל הפרופילים בקלות רבה יותר ניתן להשתמש <strong>בניהול הפרופיל</strong> הנמצא בשורת התפריטים. היא מאפשרת עריכת פרופילים, subprofile וקבוצות (בNetSetMan Pro בלבד) בעזרת העכבר או קיצורי מקלדת נפוצים (מקשי חיצים לניווט, F2 לשינוי שם, וכו '). בעת שימוש בגרירה ושחרור לצורך ארגון מחדש של הפריטים ניתן להבחין בכמה מגבלות בלתי נמנעות בהתאם לפריט, בשל נסיבות טכניות נתונות: לא ניתן למחוק פרופילים, לא ניתן לשנות את שם MultiProfiles, פרופילים יכולים להיות מוחלפים אך לא מועברים. תיבות הסימון מייצגות באם הפרופיל פי יהיה גלוי במגש ובמצב קומפקטי.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="כרטיסיות Subprofile" class="screen">
+          <img src="data/rename.png" alt="שינוי שם פרופיל" class="screen">
+          <img src="data/profilemanagement.png" alt="ניהול פרופיל" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        מתאמי רשת (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          כל מתאמי הרשת הזמינים מוצגים בשמם וסוגם. בחר את כרטיס הרשת שברצונך לנהל בפרופיל (המשנה) הנוכחי.
+        </p>
+        <p>
+          אם כרטיס רשת מסוים אינו זמין ברשימה (לדוגמא, בגלל שזה מבוטל או וירטואלי) תוכל לנהל את הרשימה על ידי לחיצה על לחצן <strong>רענן</strong> וגם לעדכן את הרשימה במהירות או לבחור <strong>בניהול מתאמי רשת.</strong> שם תמצא רשימה מלאה של כל כרטיסי הרשת הזמינים. סמן את כל כרטיסי הרשת שתרצה שיהיו ברשימה.
+        </p>
+        <p>
+          <strong>הערה:</strong> כל כרטיסי הרשת, הנכללים ברשימה יופיעו גם במידע המגש. כרטיסי רשת לא רצויים יש לבטל סימון כדי להסיר אותם מהרשימה ומידע המגש.
+        </p>
+        <p>
+          בהעתקת קובץ ההגדרות (settings.ini) למערכת אחרת, NetSetMan ינסה להקצות מחדש כרטיסי רשת בפרופילים באופן אוטומטי. עם זאת הדבר יעבוד רק אם במערכת החדשה יש כרטיס רשת עם אותו השם בדיוק (בצילום המסך הראשון זה "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="בחירת מתאם רשת" class="screen">
+        <img src="data/adapters-management.png" alt="בחירת מתאם רשת" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        תפעול הגדרות
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          קבלת הגדרות נוכחיות
+        </p>
+        <p>
+          כדי לטעון הגדרה נוכחית לפרופיל, לחץ על <img src="data/icon-get.png" alt="קבל סמל הגדרות"> הסמל ליד שדה ההזנה. <br> כדי לקבל את כל ההגדרות הנוכחיות, הפעל כפתור עכבר-ימני ובחר "קבל הגדרות נוכחיות".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="קבל הגדרה אחת" class="screen">
+        <img src="data/get-settings2.png" alt="קבל את כל ההגדרות" class="screen">
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          הגדרות ניקוי
+        </p>
+        <p>
+          כדי לנקות את ההגדרות של תצורה מסוימת, לחץ עליו בכפתור-ימני ובחר באפשרות "נקה".
+        </p>
+        <p>
+          כדי לנקות את הערכים של שדה IP פשוט לחץ לחיצה כפולה על הכיתוב המתאים.
+        </p>
+        <p>
+          כדי לנקות את כל ההגדרות של תת-הפרופיל הנוכחי, לחץ לחיצה ימנית על כרטיסיית הפרופיל ובחר באפשרות "ניקוי הגדרות".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="נקה הגדרה אחת" class="screen">
+        <img src="data/clear-settings2.png" alt="נקה את כל ההגדרות" class="screen">
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          הגדרות העתקה והדבקה
+        </p>
+        <p>
+          כדי להעביר הגדרות בין פרופילים שונים תוכל להעתיק ולהדביק כל פרופיל על ידי לחיצה ימנית על הפרופיל המקורי, בחירה באפשרות "הגדרות העתקה", ולאחר מכן לחיצה ימנית על הפרופיל החדש ובחירה "הדבק הגדרות".
+        </p>
+        <p>
+          כדי להעתיק ולהדביק הגדרה ספציפית בלבד, לחץ עליו בלחיצה ימנית ובחר "העתק" או "הדבק".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="העתק-הדבק הגדרה אחת" class="screen">
+        <img src="data/copypaste2.png" alt="העתק-הדבק את כל ההגדרות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        הפעלת פרופיל
+      </div>
+      <div class="hf_body">
+        <p>
+          כדי לאתחל את כל ההגדרות של הפרופיל הנוכחי לחץ על <strong>"הפעל"</strong> או, אם התכנית פעילה וממוזערת, יש לבחור בפרופיל <a href="#hf_tray">מתפריט המגש.</a> <br> שים לב שרק הגדרות עם תיבת סימון יאותחלו.
+        </p>
+        <p>
+          דו שיח <strong>ההפעלה</strong> מכיל מידע על התקדמות ההפעלה הנוכחית. <br> שם תוכל לראות איזה הגדרות ייושמו ואם התהליך מוצלח או לא. ניתן בכל עת לבטל את תהליך ההפעלה על ידי לחיצה על כפתור "ביטול".
+        </p>
+        <p>
+          כל השינויים יחולו באופן מיידי. עם זאת, במקרים מסוימים הגדרות מסוימות יקחו זמן עד כניסתם לתוקף או ידרשו אתחול מחדש (במיוחד "שם מחשב" ו "קבוצת עבודה / תחום").
+        </p>
+        <p>
+          סעיף <strong>פרטים</strong> מספק סקירה על כל ההגדרות של פרופיל זה. כדי להציג מידע נוסף והודעות שגיאה באורך מלא, יש לפתוח את סעיף <strong>יומן</strong>
+        </p>
+        <p>
+          למציאת פתרונות לשגיאות ולבעיות הנפוצות ביותר יש להתבונן ב <a href="http://www.netsetman.com/faq" target="_blank">שאלות נפוצות.</a>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="בדיקת ההגדרות לשינוי" class="screen">
+        <img src="data/activation.png" alt="חלון הפעלת פרופיל" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>תוצאות שכיחות ומשמעויותיהם</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">אושר</td>
+            <td class="hf_errortable_right">הכל פעל כמצופה.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">הגדרות מיושמות כעת.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">הגדרות זכו להתעלמות בלי לנסות, כי הם לא היו שלמים או שגויים.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">שגיאה</td>
+            <td class="hf_errortable_right">ברוב המקרים טעויות מוצגות כטקסט אדום קצר כמו "קובץ לא נמצא". במקרה שמתקבל קוד שגיאה, חפש ביומן כדי למצוא אם הודעת שגיאה קיימת עבור קוד זה. אם אין לך מושג מה הסיבה, אנא לפרסם את קוד השגיאה ותיאור שגיאה מפורט <a href="https://www.netsetman.com/support/" target="_blank">בפורומי התמיכה.</a></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">לא חוקי</td>
+            <td class="hf_errortable_right">ערך לא חוקי, לא צויין או אסור (תווים מיוחדים, אותה קבוצת עבודה כמו שם מחשב, וכו ')</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF פעיל</td>
+            <td class="hf_errortable_right">פיירפוקס פועל כעת. כדי להחיל הגדרות אלה הינך נדרש לסגור תחילה את הדפדפן.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        מצב קומפקטי ומצב מלא
+      </div>
+      <div class="hf_body">
+        <p>
+          פרט לממשק הקלאסי "מצב מלא", שבו תוכל לשנות את כל ההגדרות של פרופיל, זמין גם ממשק  "קומפקט מצב". תוכל לעבור בין שני מצבים אלה בכל עת על ידי לחיצה על הכפתור המתאים בתפריט הראשי מימין.
+        </p>
+        <p>
+          ברגע שכל הפרופילים מוגדרים המצב הקומפקטי הוא הממשק האידיאלי. כאן יש לך סקירה קומפקטית של כל ההגדרות של פרופיל מבלי לדאוג שההגדרות שונו בטעות.
+        </p>
+        <p>
+          במידה והינך משתמש ב <a href="#hf_nsmadministration">NSM המינהל</a> (עם "שינוי הגדרות פרופיל" לא מסומן) יופעל המצב הקומפקטי באופן אוטומטי כדי למנוע מהמשתמש לשנות ההגדרות.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="מצב קומפקטי" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        תפריט מגש ומידע מגש
+      </div>
+      <div class="hf_body">
+        <p>
+          כאשר NetSetMan פועל תמצא את האייקון שלו בסרגל המגש (ליד השעון). <br> שם תוכל להפעיל פרופיל במהירות. לחיצה ימנית על הסמל יפתח את <strong>תפריט מגש</strong> משם בחר את הפרופיל הרצוי.
+        </p>
+        <p>
+          אם ברצונך שפרופילים מסוימים לא יופיעו במגש, תוכל להסתיר אותם בנפרד. לשם כך בחר את הפרופיל בחלון הראשי, לחץ לחיצה ימנית על הלשונית ולחץ על "פעיל במגש ומצב קומפקטי". הסמל הקטן ליד הטקסט מראה אם ​​פרופיל זה יהיה זמין במגש. אפשרות זו תשפיע גם על הפרופילים המוצגים במצב קומפקטי.  ב<a href="#hf_profiles">ניהול פרופיל.</a> תוכל גם להגדיר אם פרופיל יראה או לא
+        </p>
+        <p>
+          העברת הסמן מעל סמל NetSetMan במגש יעלה את <strong>מידע מגש</strong>. המידע מכיל את ה- IP הנוכחי המשמש את המערכת. מאחר שהנתונים נאספים בזמן אמת, ייתכן שתחוש בעיכוב קצר. כדי להפחית את העיכוב תוכל לשקול כיבוי מידע נוסף כמו IP ציבורי וכתובות MAC בהעדפות.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="מגש אייקון" class="screen">
+        <img src="data/showintray.png" alt="הצג במגש" class="screen">
+        <img src="data/trayinfo.png" alt="מידע מגש" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      מאפיינים
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        סקירה
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan מעוצב באופן המאפשר לך לקבל סקירה כללית ישירה של כל ההגדרות בפרופיל. חלק מהתכונות החשובות ביותר כמו הגדרות IP הבסיסיות, WiFi ומדפסת ברירת המחדל יכולות להיות מוגדרות באופן ישיר בממשק הראשי. הגדרות אחרות מורכבות יותר ניתן רק להפעיל כאן ולקבל סקירה קצרה על התצורה הנוכחית. כדי לשנות אותם יש להפעיל אותם תחילה, ולאחר מכן לפתוח את תיבת השיח בלחיצה על הכפתור [...] 
+        </p>
+        <p>
+          הסעיפים הבאים ייתנו הוראות בסיסיות וטיפים שימושיים כיצד להשתמש בכל התכונות.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="קבוצת הגדרות נוספות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        סטטוס מתאם
+      </div>
+      <div class="hf_body">
+        <p>
+          כדי להפעיל, לבטל או להפעיל מחדש את מתאם הרשת שנבחר יש להשתמש בלחצן סטטוס  המתאם. צבע ברירת המחדל ישתנה לצבע מתאים לסטטוס המתאם. בנוסף תוכל לראות את הגדרת הסטטוס בבלונית התאור.
+        </p>
+        <p>
+          אם ברצונך להפעיל מתאם אחד ולהשבית את אחד או כל המתאמים האחרים, תדרש ליצור <a href="#hf_profiles">תתי פרופילים</a> לכל אחד מהמתאמים. תוכל לעשות זאת באופן ידני או על ידי שימוש בתפריט בחלקו התחתון של תפריט מצב מתאם. ייוצר אוטומטית תת-פרופיל עבור כל מתאם רשת שנכלל ברשימת המתאם וכן יעודכנו ההגדרות בהתאם. זכור כי תוכל לבחור איזה מתאמים יופיעו באותה רשימה ע"י שימוש ב <a href="#hf_nics">בניהול מתאם הרשת.</a>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="סטטוס מתאם: הפעל" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="סטטוס מתאם: בטל" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="סטטוס מתאם: הפעל מחדש" class="screen">
+        <img src="data/adapterstatus.png" alt="קבוצת הגדרות נוספות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        הגדרות TCP / IP מתקדמות
+      </div>
+      <div class="hf_body">
+        <p>
+          באפשרותך לציין מספר IP, Gateway, DNS וWINS כתובות לכרטיס רשת אם אתה צריך להיות במספר רשתות באותו הזמן. כדי לעשות זאת לחץ על כפתור ה <strong>"IP +"</strong> או לבחור "פרופיל&gt; הגדרות מתקדמות TCP / IP" מהתפריט הראשי.
+        </p>
+        <p>
+          גם כאן יש אפשרות לנהל הגדרות מתקדמות יותר כמו <strong>טבלאות הניתוב, DNS Suffix, IPConfig וNetBIOS.</strong>
+        </p>
+        <ul>
+          <li> הפעל קבוצה על ידי  תיבת הסימון </li>
+          <li>
+            <img src="data/icon-add.png" alt="הוסף ערך חדש"> הוסף ערך חדש </li>
+          <li>
+            <img src="data/icon-delete.png" alt="מחק ערך נבחר"> מחק הערך הנבחר </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="נקה רשימה"> נקה את הרשימה כולה </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="קבל רשימה"> קבל את כל הערכים הנוכחיים להגדרה זו מהמערכת (בעוד שלחיצה על <img src="data/icon-get.png" alt="קבל הגדרות"> הסמל בחלון הראשי קורא את הערך הראשון בלבד) </li>
+          <li> שנה את הסדר על ידי גרירה ושחרור </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="פתח חלון הגדרות  TCP / IP  מתקדמות" class="screen">
+        <img src="data/additionaladdresses1.png" alt="חלון הגדרות TCP / IP מתקדמות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        חיבורים
+      </div>
+      <div class="hf_body">
+        <p>
+          השתמש בתכונה זו לחבר או לניתק כל סוג של קשרי Windows כמו רשתות בחיוג, פס רחב נייד או VPN. חיבורים תואמים מפורטים ב-Windows יחד עם מתאמי הרשת הרגילים בשיח חיבורי רשת. מנקודת המבט טכנית כל החיבורים התואמים "RasDial" נתמכים.
+        </p>
+        <p>
+          תוכל לבחור או לנתק את כל החיבורים המותקנים כעת על ידי סימון התיבה, או לתחבר / לנתק כמה חיבורים בנפרד לפי סדר הרישום.
+        </p>
+        <p>
+          במידה והחיבור שלך אינו רשום מסיבה כלשהי, תוכל להוסיפו ידנית ע"י בחירת "הוסף" ברשימת הבחירה והכנסת שם החיבור כפי שהוא מוצג ב"חלונות"
+        </p>
+        <p>
+          תוכנת "נט-סט-מן" תומכת במספר קליינטי "וי-פי-אן" של חברות חיצוניות כגון
+          OpenVPN, Shrew and Cisco.
+          במידה וקליינט ה"וי-פי-אן" שלך מתאים, תציג התוכנה "נט-סט-מן" את פרופילי ה"וי-פי-אן" שלו ברשימת הבחירה
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="חלון התחברויות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        מארחים
+      </div>
+      <div class="hf_body">
+        <p>
+          במקרים מאוד ספציפיים יהיה נחוץ או מועיל להקצות באופן ידני כתובות IP לשמות או תחומים. שימו לב שNetSetMan ישנה ערכי מארחים משלו בלבד וישאיר ערכים קיימים ללא מגע.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="חלון מארחים" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        כונני רשת
+      </div>
+      <div class="hf_body">
+        <p>
+          עם NetSetMan ניתן למפות ולבטל מפות של כמות בלתי מוגבלת של כונני רשת. <br> אנא קרא את הערות ההוראות בחלק התחתון של החלון על ידי לחיצה על "[עזרה הצג]".
+        </p>
+        <p>
+          כאשר מופעל פרופיל ותכונת הכונן תבחר NetSetMan ישווה את רשימת הכוננים הממופים עם רשימת הכוננים למיפוי. כל הכוננים הממופים והנמצאים בשתי הרשימות (אותו אות כונן ואותו נתיב מיקום) יישארו ללא שינוי. כל כונני הרשת האחרים יבוטל המיפוי שלהם לפני מיפוי החדשים.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="חלון כונני רשת" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        סקריפטים
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan מציע דרך נוחה לניהול קבצי הסקריפט. עם זאת, אין לה שפת סקריפט משלה. כלומר שתוכל להשתמש אך ורק בסקריפטים שמערכת ההפעלה תוכל להפעיל. שפות סקריפט נפוצות VBS, JS ואפילו קבצי אצווה בשורת הפקודה. השתמש במנוע החיפוש המועדף עליך כדי למצוא מידע נוסף על שמוש בסקריפטים ומה שתוכל לבצע אתם.
+        </p>
+        <p>
+          פתח קובץ סקריפט קיים או צור אחד חדש כדי שתוכל לערוך את הסקריפט. <br> תוכל לקיים שני סקריפטים שיבוצעו לפני ואחרי שכל ההגדרות האחרות ישתנו. <br> אם תזדקק לעיכוב בין הרצת הסקריפט ושינוי הגדרות הרשת, תוכל לציין זאת בתחתית.
+        </p>
+        <div id="hf_programs">
+          <p class="hf_section_caption">
+            הפעלת תוכניות
+          </p>
+          <p>
+            התכנה "נט-סט-מן" מציעה דרך יעילה להפעלת תוכניות חיצוניות בכל פרופיל <br>
+            ניתן להפעיל תוכניות בהקשר משתמש מצומצם (ברירת מחד "יו-איי-סי" מופעל) או מורחב עם הרשאות מנהל (ללא הפעלת "יו-איי-סי"). ניתן להוסיף פרמטרים במידת הצורך <br>
+            תוכניות יכולות להיות מופעלות בצורה נורמלית, מקסימאלית או מינימאלית
+          </p>
+          <p>
+            תוכניות שכבר רצות ניתנות לעצירה בהסתמך על שם הקובץ שלהן (ללא תלות למקום המצאם) או על פי השם המלא והמדויק כולל מיקום
+          </p>
+          <p>
+            כל פעולה יכולה להיות בעלת השהייה (ערך שלילי) או לאחר (ערך חיובי) ההפעלה
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="חלון תסריטים" class="screen">
+        <img src="data/scripts.png" alt="חלון תסריטים" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / אימייל  
+      </div>
+      <div class="hf_body">
+        <p>
+          בחלק מהמקרים כתובת ה IP של שרת SMTP עבור שליחת הודעות דוא"ל משתנה בהתאם לרשת. בהיותך באותה הרשת יהיה לך כתובת IP מקומי כמו 10.0.0.1, ואילו בהיותך מחוץ לרשת  ייתכן ותצטרך לגשת אליו דרך כתובת IP גלובלית.
+        </p>
+        <p>
+          במקום לנסות להיות תואם ללקוחות דוא"ל רבים ושונים ולהתדמודד עם פרופילי משתמש שונים NetSetMan פותר את הבעיה בדרך עוקפת פשוטה. הגדר "nsm.smtp" ככתובת SMTP בלקוח הדואר האלקטרוני שלך והגדר את כתובות IP בפרופילים בהתאם. בהפעלת הפרופיל שני הערכים יהיו צמודים באמצעות הקובץ hosts כך שלא נדרש שום שינוי נוסף בלקוח הדוא"ל המקומי.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="חלון דוא&quot;ל יוצא / SMTP" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        הגדרות מערכת
+      </div>
+      <div class="hf_body">
+        <p>
+          בנוסף להגדרות הרשת הרגילות ייתכן שתרצה לשנות חלק מהגדרות המערכת בהתאם למיקום או המצב שלך. לדוגמא בהיותך באוניברסיטה אולי תרצה להשתיק את עוצמת הקול, לשנות את הטפט ולהפעיל  תכנית אנרגיה מאוזנת.
+        </p>
+        <p>
+          אתה יכול גם להשתמש בחלון הגדרות המערכת כדי לשנות במהירות כמה הגדרות שייקח זמן  למצוא את מיקומם ב-Windows. פשוט לחץ על <img src="data/set-icon.png" alt="סמל קיבוע הגדרות"> לחצן להפעלה ישירה של הגדרה מסוימת.
+        </p>
+        <p>
+          הגדרות נתמכות כוללות: מצב תצוגה, טפט, צבע שולחן עבודה, שומר מסך, ערכת עיצוב, עצמת רמקולים ומיקרופון, ערכת צלילים, חומת אש (כולל חריגים והודעות.), תכנית צריכת חשמל, אזור הזמן וכתובת MAC.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="חלון הגדרות מערכת" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        אלחוטי
+      </div>
+      <div class="hf_body">
+        <p>
+          פרופיל NetSetMan יכול לשמש לחיבור לפרופיל WiFi קיים. לבצוע, בחר במתאם אלחוטי ברשימה הנפתחת של כרטיסי רשת, ולאחר מכן בחר פרופיל WiFi מהרשימה הנפתחתi. לניתוק חיבור WiFi, בחר את הכניסה הריקה.
+        </p>
+        <p>
+          פרט למתג WiFi הבסיסי, NetSetMan מציע ניהול WiFi נרחב. לחץ על סמל WiFi או השתמש בתפריט הראשי (כלים&gt; ניהול WiFi NSM) כדי לגשת אליו. כאן תמצא רשימה של כל רשתות ה- WiFi הזמינות כרגע. רקע צהוב מציין כי פרופיל עם אותו SSID כבר קיים. רשת עם רקע ירוק - מחוברת כעת. תוכל להתחבר לרשת על ידי הקלקה כפולה או באמצעות כפתור "התחבר". אם אין פרופיל קיים עבור חיבור זה תוכל ליצור אותו תחילה. ההגדרות (אימות, הצפנה, ...) תהיינה מוגדרת מראש באופן אוטומטי בהתאם לרשת המוכרת. עם זאת, ייתכן שתצטרך להתאים אותם במקרה של אי זיהוי כראוי מסיבה כלשהי.
+        </p>
+        <p>
+          NetSetMan עובד עם פרופילי Windows WiFi מקומיים. משמעות הדבר היא כי יש לך גישה תמיד, לאותם פרופילים הנמצאים כבר בשימוש במערכת Windows או בתוכנות WiFi אחרות. באפשרותך ליצור, לשנות או למחוק פרופילי WiFi.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+            חיבור על ידי כתובת פיסית
+          </p>
+          <p>
+            חלונות בדרך כלל  מתחבר לרשת אלחוטית על פי שם הרשת. במקרה של מספר נקודות כניסה החולקות אותו שם רשת, חלונות מקבץ אותם ומחבר אותך לרשת עם הסיגנל הטוב ביותר. אבל, לפעמים תרצה להתחבר לנקודת כניסה ספציפית. בעזרת "נט-סט-מן" תוכל לבצע זאת
+          </p>
+          <p>
+            מערכת ניהול הרשתות של "נט-סט-מן" מציג את כל הרשתות ונקודות הכניסה מבלי לקבץ אותם, כך שתוכל להגיע בדיוק לחיבור שאתה מעוניין בו
+            בעזרת העכבר ניתן לראות נתונים נוספים כמו למשל הכתובת הפיסית של כל רשת. קליק-ימני נותן תפריט המאפשר להעתיק בקלות כתובת פיזית או שם רשת
+          </p>
+          <p>
+            אם ברצונך להתחבר לרשת ספציפית עם הפעלת פרופיל מסוים, תוכל לעשות זאת ע"י הוספת הכתובת הפיזית לבחירת הרשת. בחר ב"הוסף" והכנס את הכתובת הפיזית הרצויה.  עם הפעלת הפרופיל "נט-סט-מן" יתחבר לנקודת הכניסה המתאימה
+            שים לב שעדיין תזדקק לפרופיל אלחוטי מתאים שיוכנס  למערכת שלך
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          דרישות
+        </p>
+        <p>
+          NetSetMan משתמשב- API WiFi שהינו חלק מ- Windows. היתרון הגדול בכך הוא שאין צורך בהתקנת דרייברים חדשים  (דבר שעלול לגרום לקונפליקטים). החיסרון בתכונות WiFi של NetSetMan הוא שהם יעבדו רק במערכות Windows שכבר תומכים ב-WiFi. למרבה המזל רוב הגרסאות בימינו יודעות לעשות זאת. אם אתה משתמש בויסטה או גרסה מאוחרת יותר אתה מסודר. בXP חייב  להיות מותקן SP2 או SP3.
+        </p>
+        <p>
+          ודא ששרות ( WLAN AutoConfig ( Wlansvc (בויסטה ואילך)  או    Wireless Zero Configuration (WZCSVC) (XP   פועל
+        </p>
+        <p>
+          אם המתאם האלחוטי מגיע עם תוכנת יצרן מותאם אישית לניהול הגדרות WiFi, ברוב המקרים תחסום התוכנה את הגישה של Windows,  תצטרך, ברוב המקרים, למצוא את האפשרות לעבור לניהול של Windows בתוכנה המדוברת (אם קיים). <br> מאחר וקיימים יצרנים רבים ושונים עם תוכנה משלהם, אין שום דרך אוניברסלית כדי להשיג זאת. הנה דוגמא אחת: אם אתה משתמש ב FRITZ AVM!התקן USB WLAN, לחץ על סמל המגש של התוכנה ובחרב-  "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="סקירת WiFi" class="screen">
+        <img src="data/wifi.png" alt="חלון ניהול WiFi NSM" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      מתקדם
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        תכונת AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          זה די קל להפעיל פרופיל בלחיצה אחת <a href="#hf_tray">מתפריט המגש.</a> אבל במקרים מסוימים יהיה אפילו קל יותר להפעיל את הפרופילים באופן אוטומטי לחלוטין בהתאם לתנאים המותאמים אישית. תכונת AutoSwitch המשולבת עושה בדיוק דבר זה.
+        </p>
+        <p>
+          לאחר הפעלת AutoSwitch התנאים הבאים יכולים להיות מוגדרים עבור כל הפרופילים בנפרד:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="סמל פרופיל מוגבל"> רשתות אלחוטיות הקפיות
+          </div>
+          <ul>
+            <li>רשת אלחוטית (SSID או MAC) בתוך/מחוץ לטווח</li>
+            <li>עוצמת אות של רשת אלחוטית נמוכה / גבוהה מערך מסוים</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="סמל פרופיל מוגבל"> מיקומי רשת
+          </div>
+          <ul>
+            <li>Windows NLM: פרופילי רשת שנוצרו באופן אוטומטי ע"י גרסת חלונות ויסטה ואילך</li>
+            <li>Gateway MAC: טביעות אצבע של שער DHCP שהוקצה באופן אוטומטי</li>
+            <li>פינג: זמינות של שרת או מערכת מסוימת ברשת</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="סמל פרופיל מוגבל"> סטטוס מתאם
+          </div>
+          <ul>
+            <li>מצב חיבור של מתאם רשת מקומי (מחובר / מנותק)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="סמל פרופיל מוגבל"> מסגרת זמן
+          </div>
+          <ul>
+            <li>ימים מסוימים במסגרת השבוע והזמן (למשל יום שבת+ראשון  8:00-18:00)</li>
+          </ul>
+        </div>
+        <p>
+          למרות שאין מגבלה טכנית למספר התנאים לכל פרופיל נסה לשמור זאת פשוט ככל האפשר. ברוב המקרים יספיקו בהחלט תנאי אחד או שניים כדי להשיג את התוצאה הרצויה.
+        </p>
+        <p>
+          ניתן לציין שלפחות אחד מהתנאים חייב להתקיים כדי להפעיל את הפרופיל.
+        </p>
+        <p>
+          <strong>שים לב:</strong> פרופילים עם מזהים נמוכים יקבלו עדיפות גבוהה במקרה של תנאים לפרופילים מרובים המתקיימים בו זמנית.
+        </p>
+        <p>
+          כברירת מחדל תהליך ההפעלה יזום עם הודעה בפינה הימנית התחתונה עם ספירה לאחור עבור עיכוב להתאמה אישית, המאפשר לך לבטל את תהליך ההפעלה. לחלופין ניתן להפעיל את הפרופיל עם הודעה מקורית של Windows או ללא הודעה ברקע כלל. במקרה האחרון יראה סמל המגש את מצב תהליך ההפעלה וישנה את צבעו באופן זמני על פי תוצאת ההפעלה כהודעה ויזואלית על התהליך האוטומטי.
+        </p>
+        <p>
+          לחסוך במשאבי מערכת NetSetMan לא ישווה את ההגדרות הנוכחיות להגדרות של הפרופיל שיופעל. משמעות הדבר היא שאם תשנה את כל ההגדרות שלך באופן ידני, NetSetMan לא יבחין בשינוי.
+        </p>
+        <p>
+          יש ל AutoSwitch כמה מגבלות ב XP: Windows NLM הוא אינו זמין, שינויים ברשתות WiFi הקפיות עשויות להזדהות בעיכוב ניכר.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="מתג אוטומטי" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="הערת מתג אוטומטי" class="screen">
+        <img src="data/autoswitch-notification.png" alt="הודעת מתג אוטומטי" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        הערות
+      </div>
+      <div class="hf_body">
+        <p>
+          תוכל ליצור רשימות קצרות לכל פרופיל אם תצטרך לזכור או לציין את מטרו של הפרופיל. אם נוצר פתק עבור פרופיל הסמל שלו יופיע בצבע בשורת התפריטים. הפתק יראה במצב מלא כרמז לסמל ובמצב קומפקטי בחלק העליון של הגדרות הפרופיל.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="הערה" class="screen">
+        <img src="data/note-hint.png" alt="רמז הערה" class="screen">
+        <img src="data/note-compact.png" alt="הערה במצב קומפקטי" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        שירות NSM / חשבון משתמש מוגבל  
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan דורש הרשאות מנהל כדי לשנות את הגדרות מערכת vרשת. בדרך כלל בעל חשבון משתמש מוגבל, לא יוכל להפעיל שרות זה. גרסאות חדשות יותר של Windows מגבילות גם  חשבון מנהל  עם UAC (בקרת חשבון משתמש) תוך הצגת הודעה בכל תחילת תכנית.
+        </p>
+        <p>
+          כדי לפתור בעיה זו NetSetMan כולל רכיב מיוחד הנקרא <strong>שירות NSM</strong> המספק את היישום העיקרי עם ההרשאות הנדרשות. השירות מותקן באופן אוטומטי, אך ניתן גם להתקנה/הסרה ידנית / בהעדפות (הרשאות מערכת&gt; הפעלה / ביטול).
+        </p>
+        <p>
+          השירות המותקן גלוי בWindows שירותי שיח (services.msc) וניתן לשלוט גם שם. בנוסף ניתן להתקין / להסיר או להתחיל / להפסיק -  בשורת הפקודה:<br><span class="code">nsmservice.exe / התקנה / שקטה<br> nsmservice.exe / הסרה / שקטה<br> nsmService התחלת רשת<br> nsmService הפסקת רשת</span>
+        </p>
+        <p>
+          אם אתה מקבל את השגיאה <em>"חתימה לא חוקית",</em> יש לוודא ש- exe התכנית לא השתנה ומדיניות הקבוצה של Windows <em>"בטל אוטומטי עדכון לאישורי בסיס"</em> מבוטל.
+        </p>
+        <p>
+          אם תנסה Kהפעיל NetSetMan עם חשבון משתמש מוגבל שבו שירות NSM אינו זמין תקבל הודעה המסבירה את הבעיה. כחלופה תוכל לקלוט <strong>אישורי מנהל מערכת</strong> מחשבון מקומי ש NetSetMan שיישמר מוצפן בקובץ ההגדרות, ולהשתמש בהם כדי להפעיל עצמאית עם ההרשאות הנדרשות. שים לב כי במקרה זה היישום יפעל בהקשר של אישורי אותו המשתמש.
+        </p>
+        <p>
+          בדוק את <a href="http://www.netsetman.com/faqnsmservice" target="_blank">שאלות נפוצות</a> לקריאת הערות נוספות על תכונה זו.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="הרשאות מערכת" class="screen">
+        <img src="data/limitedaccount.png" alt="חשבון משתמש מוגבל" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        מיתוג פרופיל טרום כניסה
+      </div>
+      <div class="hf_body">
+        <p>
+          תכונה ייחודית ובעלת עוצמה היא האפשרות להפעיל את הפרופילים כבר במסך הכניסה. זה מאפשר הכנת הגדרות רשת נכונות שתזדקק לחשבון שלך על ידי הפעלת פרופיל NetSetMan עוד לפני הכניסה.
+        </p>
+        <p>
+          כדי להשתמש בתכונה זו <a href="#hf_nsmservice">שירות NSM</a> חייב להיות מותקן " <em>ומיתוג פרופיל ממסך הכניסה של Windows</em>" (העדפות&gt; הרשאות מערכת) חייב להיות מופעל.
+        </p>
+        <p>
+          שים לב כי תכונה זו מאפשרת לשנות ההגדרות המשותפות לכל המשתמשים, בלבד. לא ניתן לשנות הגדרות ספציפיות למשתמש מחוץ ל session.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="מיתוג פרופיל טרום כניסה " class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        מנהל NSM       
+      </div>
+      <div class="hf_body">
+        <p>
+          בהגדרת NetSetMan עבור משתמש, ייתכן שתרצה להגדיר אילו פעולות יורשה המשתמש לבצע. בעזרת ניהול NSM  (העדפות&gt; מנהל) תוכל לבצע בדיוק את זה.
+        </p>
+        <p>
+          בעת הפעלת מצב זה תצטרך להזין סיסמא בת 6 תווים לפחות. רק בעזרת סיסמא זו תוכל לשנות את הגדרות ניהול NSM או לבצע פעולות שקבעת כמאובטחות (הפעלת NSM הפעלת פרופילים, שינוי הגדרות פרופילים או הגדרות התכנית)
+        </p>
+        <p>
+          תוכל לנעול פרופילים מסוימים <img src="data/administration-profilelock.png" alt="סמל פרופיל מוגבל"> כך שהמשתמש לא יוכל לשנותם, אך עדיין יוכל להפעילם. או שתוכל להגביל את הגישה להגדרות מסוימות <img src="data/administration-settinglock.png" alt="סמל הגדרה מוגבל"> כגון "קבוצת עבודה ותחום", ובמקביל לאפשר למשתמש להגדיר ולהשתמש בכל ההגדרות האחרות.
+        </p>
+        <p>
+          בדיקת CHECKSUM  של הסיסמה תהיה כתובה ברג'סטרי. יש לוודא שלמשתמש רגיל אין הרשאות כתיבה <span class="code">לHKLM \ Software \ NetSetMan</span> (על x64: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan).</span> אם שכחת את הסיסמה שלך, יהיה עליך למחוק את המפתח באופן ידני. אם קובץ ההגדרות שלך מוצפן לא יוכל איש להציג או לערוך אותו ללא סיסמה.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="ניהול NSM" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="ניהול NSM  - הגבלות בפרופיל" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="ניהול NSM - מגבלות הגדרות" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        הפעלת שורת הפקודה
+      </div>
+      <div class="hf_body">
+        <p>
+          במקרים מיוחדים כדאי לך אולי לשנות את הפרופיל מבלי להשתמש בממשק הגרפי של NetSetMan: שינוי פרופיל בעזרת קיצורי דרך, להפעלת פרופיל עם הפעלת חלונות, לכלול אותו בתסריט מורכב, וכו '
+        </p>
+        <p>
+          הפרמטרים הבאים זמינים:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>מפעיל את הפרופיל עם המספר # </td>
+          </tr>
+          <tr>
+            <td><strong> # as-</strong></td>
+            <td>מפעיל את הפרופיל במצב שקט (חלון ההפעלה ייסגר אוטומטית אם לא אירעו שגיאות)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>מפעיל את  NetSetMan  ממוזער</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>מפעיל את NetSetMan במצב מלא (ברירת מחדל)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>מפעיל את NetSetMan במצב קומפקטי</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>מפעיל מופע שני של NetSetMan. <strong>היזהר:</strong> כל המקרים הפעילים יכתבו לאותו קובץ הגדרות!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          קיצור להפעלת פרופיל # 0 במצב שקט יכול להיראות כך: <br><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="קיצור דרך" class="screen">
+        </p>
+        <p>
+          בשורת הפקודה: <br>
+          <img src="data/commandline.png" alt="שורת פקודה" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        מסר Freeware לא מסחרי
+      </div>
+      <div class="hf_body">
+        <p>
+          הודעה זו בחלון הראשי תופיע בכל הפעלה שביעית עבור משתמשים בקבוצת עבודה ובכל הפעלה שניה למשתמשים בדומיין, <em>בממוצע.</em>
+        </p>
+        <p>
+          למרבה הצער זה יש צורך להזכיר למשתמשים ש NetSetMan הינו Freeware ונועד אך ורק למטרות שאינן מסחריות (= פרטי או מרצון). לסיכום: אתה יכול להשתמש במוצר בחינם, כל עוד אתה לא תשמור עבודה בתשלום זמן. לדוגמה: אם ברצונך להשתמש במוצר בעבודה או במחשב נייד באופן מסחרי, הינך נדרש לרכוש רשיון<a href="http://www.netsetman.com/pro">NetSetMan Pro</a> .  אין תקנה מיוחדת למוסדות חינוך או עמותות ללא מטרת רווח. פרופסורים, מורים ועובדים אחרים יכולים להשתמש בגרסת Freeware לא מסחרית רק אם הם עובדים בקיבולת כבוד (= שלא שולם).
+        </p>
+        <p>
+          אנא קרא את <a href="http://www.netsetman.com/en/txt/license" target="_blank">הסכם הרישיון</a> לקבלת מידע נוסף.
+        </p>
+        <p>
+          <strong>הודעה זו אינה כלולה בגרסת Pro, כמובן.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="הודעת Freeware לא מסחרית" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      תכונות Pro נוספות 
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        קבוצות בפרופיל
+      </div>
+      <div class="hf_body">
+        <p>
+          עם Pro NetSetMan תוכל ליצור כמות בלתי מוגבלת של קבוצות פרופיל. כל קבוצה מכילה 6 פרופילים.
+        </p>
+        <p>
+          כדי להוסיף, למחוק, לארגן מחדש או לשנות את שם קבוצת פרופיל יש להשתמש ב <a href="#hf_profiles">ניהול הפרופיל</a> בשורת התפריטים.
+        </p>
+        <p>
+          כדי לנווט בין כל קבוצות הפרופיל הזמינות בחר קבוצה כלשהי מהתפריט בשורת התפריטים.
+        </p>
+        <p>
+          אם ישנה יותר מקבוצה אחת, הפרופילים יוצגו מקובצים בתפריט המגש.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="ניהול פרופיל  PRO" class="screen">
+        <img src="data/tray-pro.png" alt="סמל מגש בגרסת Pro" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        דפדפן / פרוקסי    
+
+      </div>
+      <div class="hf_body">
+        <p>
+          עם NetSetMan Pro תוכל לנהל את הגדרות Proxy של Windows / Internet Explorer, Firefox ואופרה (&lt;= V12). Chrome וגרסאות מאוחרות יותר של אופרה אינן תומכות בהגדרות פרוקסי, יש להשתמש אוטומטית  בהגדרות המערכת.
+        </p>
+        <p>
+          כל ההגדרות נועדו לחקות את הממשקים המקוריים כדי לאפשר את אותה התצורה המאפשרת שימוש ישיר בדפדפן בנוסף ניתן לשנות את דף הבית ואם הנך משתמש בפרופילים בפיירפוקס או אופרה תוכל גם לבחור את שם הפרופיל.
+        </p>
+        <p>
+          שים לב שפיירפוקס <em>חייב</em> להסגר לפני שינוי ההגדרות. <br> אם יש לך מספר פרופילים בפיירפוקס וותיקיית הפרופילים משתנה (לדוגמא: בגלל מערכת חדשה) תצטרך לבחור מחדש את הפרופיל ברשימה, כך שהוא יתתעדכן בקובץ ההגדרות.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="דפדפן / פרוקסי" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        דומיין
+      </div>
+      <div class="hf_body">
+        <p>
+          כדי להצטרף לדומיין הזן את שם הדומיין, שם המשתמש וסיסמה. שם המשתמש והסיסמה שלך יישמרו מוצפנים בקובץ ה-INI.
+        </p>
+        <p>
+          בדרך כלל מספיק להזין את שם המשתמש בלבד. יחד עם זאת, אם קבלת הודעת שגיאה, תוכל ללהכניס את שמך באחת מהסטנדרטים הבאים:<br> a) NETBIOS: DOMAIN\user<br> ב) UPN: user@domain.local<br>
+        </p>
+        <p>
+          בתחומי NT משתמש יכול להיות חבר של תחום <em>אחד בלבד</em> בו זמנית. משמעות הדבר היא כי על ידי הצטרפות לתחום אחר או לקבוצת עבודה אחרת, החברות שלך בתחום הקודם יאבד עד שהמערכת שלך תצטרף בשנית.
+        </p>
+        <p>
+          NetSetMan יכול לצטרף אותך לתחום כלשהו בתנאי שחשבון המשתמש של התחום שלך מאפשר זאת.<br> הרשאת חשבון משתמש זה נקראת "הוסף תחנת עבודה לדומיין" וחייב להיות מופעל בחשבונך. אם אין בחשבונך הרשאה כזו, בקש ממנהל הרשת שלך שיהעניק לך אותה.
+        </p>
+        <p>
+          בדוק את <a href="http://www.netsetman.com/faqdomain" target="_blank">שאלות נפוצות</a> לצורך קריאת הערות נוספות של תכונה זו.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="סקירת דומיין" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        הפצה ברשתות חברה
+      </div>
+      <div class="hf_body">
+        <p>
+          Pro NetSetMan מציע תוכנות עזר שיסייעו לך להפיץ את התוכנה, הגדרות מוגדרות מראש ואת הרישיון שלך, בקלות רבה יותר ברשת החברה. תוכל למצוא כל מה שתצטרך לדעת בתיאור מפורט <a href="http://www.netsetman.com/faqcompany">בשאלות הנפוצות.</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
