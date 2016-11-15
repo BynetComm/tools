@@ -1,12 +1,14 @@
+system("@echo fix path 1.2 adding tools,net,cli,nircmd,devkit,gpsbabel");
 p= ENV["path"];
 #p=p.gsub("C:\\Bynet\Tools\\GNU;","");
-p+= ";C:\\Bynet\\Tools\\Net;" unless p.include?("C:\\bynet\\Tools\\Net;");
-p+= "C:\\Bynet\\Tools;" unless p.include?("C:\\Bynet\\Tools;");
+p += ";C:\\Bynet\\Tools\\Net;" unless p.include?("C:\\bynet\\Tools\\Net;");
+p += "C:\\Bynet\\Tools;" unless p.include?("C:\\Bynet\\Tools;");
 p += "C:\\Bynet\\Tools\\GNU\\bin;" unless p.include?("C:\\Bynet\\Tools\\GNU\\bin;") ;
 p += "C:\\Bynet\\Tools\\CLI;" unless p.include?("C:\\Bynet\\Tools\\CLI;") ;
 p += "C:\\Bynet\\Tools\\CURL\\bin;" unless p.include?("C:\\Bynet\\Tools\\CURL\\bin;") ;
 p += "C:\\Bynet\\Tools\\nircmd;" unless p.include?("C:\\Bynet\\Tools\\nircmd;") ;
 p += "C:\\RailsInstaller\\DevKit\\bin;" unless p.include?("C:\\RailsInstaller\\DevKit\\bin;");
+p += ";C:\\Program Files (x86)\\GPSBabel;" unless p.include?(";C:\\Program Files (x86)\\GPSBabel;");
 size=p.size;
 #p=p.gsub("C:\\Program Files",37.chr+"PF"+37.chr);
 #p=p.gsub("C:\\Program files",37.chr+"PF"+37.chr);
