@@ -251,14 +251,21 @@ while (index < executions ) do
 				 puts("line a count = #{line_a.count}  line_a is")
 				 puts(line_a)
 			 end	
-             gps1 = {:week_day => line_a[0]||"",
+             if line_a.count > 6 then
+			 gps1 = {:week_day => line_a[0]||"",
                     :month => line_a[1||""],
                     :day => line_a[2]||"",
                     :time => line_a[3]||"",
                     :year => line_a[4][0..3]||"" }
        			gps2 = {:lat => line_a[5]||"",
-                    :lng => line_a[6]||"",
-				}		
+                    :lng => line_a[6]||"" }
+             else
+			     gps1 = {}
+            	 gps2 = {:lat => line_a[0]||"",
+                    :lng => line_a[1]||""}
+
+             end
+			 
             end
             if (line_id==2) && (gps2[:lat]=="") then
              line_a = line.split(/\s/,3)
@@ -286,8 +293,11 @@ while (index < executions ) do
               :day => x.day||"",
               :time => x.strftime("%H:%M:%S")||"",
               :year => x.year||"" }
-     gps2 = {:lat => "", :lng => "" }                
-    end  
+                     
+    end 
+    if gps2=={} then
+       gps2 = {:lat => "", :lng => "" }
+	end	 
   end #rescue gps  
   if (debug && debuglevel>6) then     
     puts ("#{index}: display gps")
