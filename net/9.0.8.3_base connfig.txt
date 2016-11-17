@@ -1,0 +1,638 @@
+
+# Configuration nvgen'd at 2016-4-21 16:28:08
+# Image 9.0.8.3.0
+# Model WLC-V
+# Last change occurred at 2016-4-21 16:27:04
+set command-audit level default size 500
+set trace sm level 8
+set trace dot1x level 8
+set trace apm_fmx level 10
+set trace apm_mgr level 10
+set ip route default 172.17.32.4 2
+set ip dns disable
+set log console enable severity error
+set log session disable severity info
+set log buffer enable severity error
+set log trace enable severity debug
+set log mark disable severity notice interval 300
+set web-portal enable
+set web-portal ssl-mode partial
+set web-portal force-html-login mode enable
+set dot1x timeout supplicant 30
+set dot1x timeout auth-server 30
+set dot1x timeout handshake 2000
+set dot1x quiet-period 60
+set dot1x reauth-max 2
+set dot1x tx-period 5
+set dot1x reauth-period 3600
+set dot1x max-req 2
+set dot1x key-tx enable
+set dot1x reauth enable
+set dot1x authcontrol enable
+set dot1x wep-rekey-period 1800
+set dot1x wep-rekey enable
+set dot1x bonded-period 0
+set dot1x unicast-rekey-period 300
+set dot1x unicast-rekey disable
+set dot1x multicast-rekey-period 300
+set dot1x multicast-rekey disable
+set system name VWLC-01
+set prompt ""
+set system ip-address 172.17.32.120
+set system idle-timeout 3600
+set system console-timeout 0
+set domain security none
+set domain data-security none
+set auto-config disable
+set tunnel reservation mode enable
+set tunnel reservation count 0
+set system countrycode MX
+set system mx-secret encrypted
+set timezone ISREAL 2 0
+save c
+set authorization preference device-profile
+set service-profile MESH-TEST ssid-name MESH
+set service-profile MESH-TEST ssid-type crypto
+set service-profile MESH-TEST beacon enable
+set service-profile MESH-TEST proxy-arp disable
+set service-profile MESH-TEST dhcp-restrict disable
+set service-profile MESH-TEST no-broadcast disable
+set service-profile MESH-TEST short-retry-count 5
+set service-profile MESH-TEST long-retry-count 5
+set service-profile MESH-TEST auth-fallthru last-resort
+set service-profile MESH-TEST soda mode disable
+set service-profile MESH-TEST soda enforce-checks enable
+set service-profile MESH-TEST max-bw 0
+set service-profile MESH-TEST cac-mode none
+set service-profile MESH-TEST cac-session 14
+set service-profile MESH-TEST cac-voip-call 12
+set service-profile MESH-TEST user-idle-timeout 180
+set service-profile MESH-TEST idle-client-probing enable
+set service-profile MESH-TEST keep-initial-vlan disable
+set service-profile MESH-TEST web-portal-session-timeout 5
+set service-profile MESH-TEST wep active-unicast-index 1
+set service-profile MESH-TEST wep active-multicast-index 1
+set service-profile MESH-TEST psk-encrypted 06500b734918081f5443145b55012b7d707d6066204a51425154070e0e0256085649145d010104040101080c515e0d0f00165305035a5309244e485d4053444453
+set service-profile MESH-TEST shared-key-auth disable
+set service-profile MESH-TEST tkip-mc-time 60000
+set service-profile MESH-TEST mesh mode enable
+set service-profile MESH-TEST device-detect mode detect-only
+set service-profile MESH-TEST device-detect-timeout 5
+set service-profile MESH-TEST load-balancing-exempt disable
+set service-profile MESH-TEST web-portal-logout mode disable
+set service-profile MESH-TEST 11n mode-na enable
+set service-profile MESH-TEST 11n mode-ng enable
+set service-profile MESH-TEST 11n short-guard-interval enable
+set service-profile MESH-TEST 11n frame-aggregation all
+set service-profile MESH-TEST 11n a-msdu-max-length 4k
+set service-profile MESH-TEST 11n a-mpdu-max-length 64k
+set service-profile MESH-TEST 11n txbf disable
+set service-profile MESH-TEST dot1x-handshake-timeout 0
+set service-profile MESH-TEST multicast-conversion disable
+set service-profile MESH-TEST active-call-idle-timeout 120
+set service-profile MESH-TEST backup-ssid mode disable
+set service-profile MESH-TEST backup-ssid timeout 0
+set service-profile MESH-TEST backup-ssid keep-existing-clients enable
+set service-profile MESH-TEST wpa-ie cipher-ccmp disable
+set service-profile MESH-TEST wpa-ie cipher-tkip disable
+set service-profile MESH-TEST wpa-ie auth-psk disable
+set service-profile MESH-TEST wpa-ie auth-dot1x disable
+set service-profile MESH-TEST rsn-ie cipher-ccmp enable
+set service-profile MESH-TEST rsn-ie cipher-tkip disable
+set service-profile MESH-TEST rsn-ie auth-psk enable
+set service-profile MESH-TEST rsn-ie auth-dot1x disable
+set service-profile MESH-TEST cipher-ccmp disable
+set service-profile MESH-TEST cipher-tkip disable
+set service-profile MESH-TEST auth-psk disable
+set service-profile MESH-TEST auth-dot1x enable
+set service-profile MESH-TEST wpa-ie disable
+set service-profile MESH-TEST rsn-ie enable
+set service-profile MESH-TEST transmit-rate 11a mandatory 6.0,12.0,24.0 beacon-rate 6.0 multicast-rate AUTO
+set service-profile MESH-TEST transmit-rate 11b mandatory 1.0,2.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile MESH-TEST transmit-rate 11g mandatory 1.0,2.0,5.5,11.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile MESH-TEST transmit-rate 11na mandatory 6.0,12.0,24.0 beacon-rate 6.0 multicast-rate AUTO
+set service-profile MESH-TEST transmit-rate 11ng mandatory 1.0,2.0,5.5,11.0 beacon-rate 2.0 multicast-rate AUTO
+save c
+set service-profile SP-Line-17 ssid-name Line-17-Users
+set service-profile SP-Line-17 ssid-type crypto
+set service-profile SP-Line-17 beacon enable
+set service-profile SP-Line-17 proxy-arp disable
+set service-profile SP-Line-17 dhcp-restrict disable
+set service-profile SP-Line-17 no-broadcast disable
+set service-profile SP-Line-17 short-retry-count 5
+set service-profile SP-Line-17 long-retry-count 5
+set service-profile SP-Line-17 auth-fallthru last-resort
+set service-profile SP-Line-17 soda mode disable
+set service-profile SP-Line-17 soda enforce-checks enable
+set service-profile SP-Line-17 max-bw 0
+set service-profile SP-Line-17 cac-mode none
+set service-profile SP-Line-17 cac-session 14
+set service-profile SP-Line-17 cac-voip-call 12
+set service-profile SP-Line-17 user-idle-timeout 180
+set service-profile SP-Line-17 idle-client-probing enable
+set service-profile SP-Line-17 keep-initial-vlan disable
+set service-profile SP-Line-17 web-portal-session-timeout 5
+set service-profile SP-Line-17 wep active-unicast-index 1
+set service-profile SP-Line-17 wep active-multicast-index 1
+set service-profile SP-Line-17 psk-encrypted 0870144c0b4d564f4a5d0f022c7a702d6165214b5247545852080a01565f004c460b5a00050307060d0900525a51551051530b08505e73154c5f4a5211420f5b55
+set service-profile SP-Line-17 shared-key-auth disable
+set service-profile SP-Line-17 tkip-mc-time 60000
+set service-profile SP-Line-17 mesh mode disable
+set service-profile SP-Line-17 device-detect mode detect-only
+set service-profile SP-Line-17 device-detect-timeout 5
+set service-profile SP-Line-17 load-balancing-exempt disable
+set service-profile SP-Line-17 web-portal-logout mode disable
+set service-profile SP-Line-17 11n mode-na enable
+set service-profile SP-Line-17 11n mode-ng enable
+set service-profile SP-Line-17 11n short-guard-interval enable
+set service-profile SP-Line-17 11n frame-aggregation all
+set service-profile SP-Line-17 11n a-msdu-max-length 4k
+set service-profile SP-Line-17 11n a-mpdu-max-length 64k
+set service-profile SP-Line-17 11n txbf disable
+set service-profile SP-Line-17 dot1x-handshake-timeout 0
+set service-profile SP-Line-17 multicast-conversion disable
+set service-profile SP-Line-17 active-call-idle-timeout 120
+set service-profile SP-Line-17 backup-ssid mode disable
+set service-profile SP-Line-17 backup-ssid timeout 0
+set service-profile SP-Line-17 backup-ssid keep-existing-clients enable
+set service-profile SP-Line-17 wpa-ie cipher-ccmp disable
+set service-profile SP-Line-17 wpa-ie cipher-tkip disable
+set service-profile SP-Line-17 wpa-ie auth-psk disable
+set service-profile SP-Line-17 wpa-ie auth-dot1x enable
+set service-profile SP-Line-17 rsn-ie cipher-ccmp enable
+set service-profile SP-Line-17 rsn-ie cipher-tkip disable
+set service-profile SP-Line-17 rsn-ie auth-psk enable
+set service-profile SP-Line-17 rsn-ie auth-dot1x disable
+set service-profile SP-Line-17 cipher-ccmp disable
+set service-profile SP-Line-17 cipher-tkip disable
+set service-profile SP-Line-17 auth-psk disable
+set service-profile SP-Line-17 auth-dot1x enable
+set service-profile SP-Line-17 wpa-ie disable
+set service-profile SP-Line-17 rsn-ie enable
+set service-profile SP-Line-17 transmit-rate 11a mandatory 9.0 beacon-rate 9.0 multicast-rate AUTO
+set service-profile SP-Line-17 transmit-rate 11b mandatory 1.0,2.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile SP-Line-17 transmit-rate 11g mandatory 1.0,2.0,5.5,11.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile SP-Line-17 transmit-rate 11na mandatory 6.0,12.0,24.0 beacon-rate 6.0 multicast-rate AUTO
+set service-profile SP-Line-17 transmit-rate 11ng mandatory 9.0 beacon-rate 9.0 multicast-rate AUTO
+set service-profile clear-Line-17 ssid-name Line-17
+set service-profile clear-Line-17 ssid-type clear
+set service-profile clear-Line-17 beacon enable
+set service-profile clear-Line-17 proxy-arp disable
+set service-profile clear-Line-17 dhcp-restrict disable
+set service-profile clear-Line-17 no-broadcast disable
+set service-profile clear-Line-17 short-retry-count 5
+set service-profile clear-Line-17 long-retry-count 5
+set service-profile clear-Line-17 auth-fallthru last-resort
+set service-profile clear-Line-17 soda mode disable
+set service-profile clear-Line-17 soda enforce-checks enable
+set service-profile clear-Line-17 max-bw 0
+set service-profile clear-Line-17 cac-mode none
+set service-profile clear-Line-17 cac-session 14
+set service-profile clear-Line-17 cac-voip-call 12
+set service-profile clear-Line-17 user-idle-timeout 180
+set service-profile clear-Line-17 idle-client-probing enable
+set service-profile clear-Line-17 keep-initial-vlan disable
+set service-profile clear-Line-17 web-portal-session-timeout 5
+set service-profile clear-Line-17 wep active-unicast-index 1
+set service-profile clear-Line-17 wep active-multicast-index 1
+set service-profile clear-Line-17 shared-key-auth disable
+set service-profile clear-Line-17 tkip-mc-time 60000
+set service-profile clear-Line-17 mesh mode disable
+set service-profile clear-Line-17 device-detect mode detect-only
+set service-profile clear-Line-17 device-detect-timeout 5
+set service-profile clear-Line-17 load-balancing-exempt disable
+set service-profile clear-Line-17 web-portal-logout mode disable
+set service-profile clear-Line-17 11n mode-na enable
+set service-profile clear-Line-17 11n mode-ng enable
+set service-profile clear-Line-17 11n short-guard-interval enable
+set service-profile clear-Line-17 11n frame-aggregation all
+set service-profile clear-Line-17 11n a-msdu-max-length 4k
+set service-profile clear-Line-17 11n a-mpdu-max-length 64k
+set service-profile clear-Line-17 11n txbf disable
+set service-profile clear-Line-17 dot1x-handshake-timeout 0
+set service-profile clear-Line-17 multicast-conversion disable
+set service-profile clear-Line-17 active-call-idle-timeout 120
+set service-profile clear-Line-17 backup-ssid mode disable
+set service-profile clear-Line-17 backup-ssid timeout 0
+set service-profile clear-Line-17 backup-ssid keep-existing-clients enable
+set service-profile clear-Line-17 wpa-ie cipher-ccmp disable
+set service-profile clear-Line-17 wpa-ie cipher-tkip disable
+set service-profile clear-Line-17 wpa-ie auth-psk disable
+set service-profile clear-Line-17 wpa-ie auth-dot1x enable
+set service-profile clear-Line-17 rsn-ie cipher-ccmp disable
+set service-profile clear-Line-17 rsn-ie cipher-tkip disable
+set service-profile clear-Line-17 rsn-ie auth-psk disable
+set service-profile clear-Line-17 rsn-ie auth-dot1x enable
+set service-profile clear-Line-17 cipher-ccmp disable
+set service-profile clear-Line-17 cipher-tkip disable
+set service-profile clear-Line-17 auth-psk disable
+set service-profile clear-Line-17 auth-dot1x enable
+set service-profile clear-Line-17 wpa-ie disable
+set service-profile clear-Line-17 rsn-ie disable
+set service-profile clear-Line-17 transmit-rate 11a mandatory 6.0,12.0,24.0 beacon-rate 6.0 multicast-rate AUTO
+set service-profile clear-Line-17 transmit-rate 11b mandatory 1.0,2.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile clear-Line-17 transmit-rate 11g mandatory 1.0,2.0,5.5,11.0 beacon-rate 2.0 multicast-rate AUTO
+set service-profile clear-Line-17 transmit-rate 11na mandatory 6.0,12.0,24.0 beacon-rate 6.0 multicast-rate AUTO
+set service-profile clear-Line-17 transmit-rate 11ng mandatory 24.0 disabled 18.0 beacon-rate 24.0 multicast-rate AUTO
+set service-profile clear-Line-17 attr vlan-name WIFI_DATA
+set vlan-profile deafult vlan WIFI_DATA mode overlay
+set vlan-profile default vlan default mode local-switching
+set vlan-profile default vlan WIFI_DATA tag 40 mode local-switching
+set vlan-profile profile-vlan36 vlan WIFI_AP mode overlay
+set vlan-profile profile-vlan40 vlan WIFI_DATA tag 40 mode overlay
+set vlan-profile vlan-profile-32 vlan control mode local-switching
+set vlan-profile vlan-profile-32 vlan control_1 mode overlay
+set radius deadtime 5
+set radius timeout 5
+set radius retransmit 3
+set radius auth-protocol pap
+set radius das-port 3799
+set ldap auth-port 389
+set ldap timeout 5
+set ldap deadtime 5
+set ldap bind-mode sasl-md5
+set ldap mac-addr-format hyphens
+set ldap base-dn ""
+set ldap prefix-dn "cn"
+set enablepass password 13de167eed0ed8060c98ee4d3b6b0ebe536e
+set user admin password encrypted 075e301e595a1c5125
+set device-fingerprint ios-generic device-group ios
+set device-fingerprint ios-generic rule 1 type dhcp option-list NOT-CONTAINS 12
+set device-fingerprint ios-generic rule 2 type dhcp option 12 NOT-CONTAINS iPhone
+set device-fingerprint ios-generic rule 3 type dhcp option 12 NOT-CONTAINS iPad
+set device-fingerprint ios-generic rule 4 type dhcp option 12 NOT-CONTAINS iPod
+set device-fingerprint ios-generic rule 5 type dhcp option-list CONTAINS 53,55,57,61,51
+set device-fingerprint ios-generic rule 6 type dhcp option-list CONTAINS 53,55,57,61,50,51
+set device-fingerprint ios-generic rule 7 type dhcp option-list CONTAINS 53,55,57,61,50,54
+set device-fingerprint ios-generic rule 8 type dhcp option 55 NOT-CONTAINS 1,3,6,15,119,95,252,44,46
+set device-fingerprint ios-generic rule 9 type dhcp option 55 NOT-CONTAINS 1,3,6,15,119,95,252,44,46,47
+set device-fingerprint ios-generic rule-expression "((1 or 2) and (1 or 3) and (1 or 4) and (5 or 6 or 7) and 8 and 9)"
+set device-fingerprint ipad device-group ios
+set device-fingerprint ipad rule 1 type dhcp option 12 CONTAINS iPad
+set device-fingerprint ipad rule 2 type dhcp option-list EQ 53,55,57,61,50,51,12
+set device-fingerprint ipad rule 3 type dhcp option-list EQ 53,55,57,61,51,12
+set device-fingerprint ipad rule 4 type dhcp option-list EQ 53,55,57,61,50,54,12
+set device-fingerprint ipad rule-expression "(1 and (2 or 3 or 4))"
+set device-fingerprint iphone device-group ios
+set device-fingerprint iphone rule 1 type dhcp option 12 CONTAINS iPhone
+set device-fingerprint iphone rule 2 type dhcp option-list EQ 53,55,57,61,51,12
+set device-fingerprint iphone rule 3 type dhcp option-list EQ 53,55,57,61,50,51,12
+set device-fingerprint iphone rule 4 type dhcp option-list EQ 53,55,57,61,50,54,12
+set device-fingerprint iphone rule-expression "(1 and (2 or 3 or 4))"
+set device-fingerprint ipod device-group ios
+set device-fingerprint ipod rule 1 type dhcp option 12 CONTAINS iPod
+set device-fingerprint ipod rule 2 type dhcp option-list EQ 53,55,57,61,51,12
+set device-fingerprint ipod rule 3 type dhcp option-list EQ 53,55,57,61,50,51,12
+set device-fingerprint ipod rule 4 type dhcp option-list EQ 53,55,57,61,50,54,12
+set device-fingerprint ipod rule-expression "(1 and (2 or 3 or 4))"
+set device-fingerprint android-generic device-group android
+save c
+set radio-profile Mesh-RP
+set radio-profile Mesh-RP beacon-interval 100
+set radio-profile Mesh-RP dtim-interval 1
+set radio-profile Mesh-RP max-tx-lifetime 2000
+set radio-profile Mesh-RP max-rx-lifetime 2000
+set radio-profile Mesh-RP rts-threshold 65535
+set radio-profile Mesh-RP frag-threshold 2346
+set radio-profile Mesh-RP preamble-length short
+set radio-profile Mesh-RP countermeasures none
+set radio-profile Mesh-RP rf-scanning mode active
+set radio-profile Mesh-RP rf-scanning channel-scope regulatory
+set radio-profile Mesh-RP rf-scanning cts-to-self disable
+set radio-profile Mesh-RP rfid-mode disable
+set radio-profile Mesh-RP wmm-powersave disable
+set radio-profile Mesh-RP qos-mode wmm
+set radio-profile Mesh-RP weighted-fair-queuing disable
+set radio-profile Mesh-RP rate-enforcement disable
+set radio-profile Mesh-RP dfs-channels disable
+set radio-profile Mesh-RP 11n channel-width-na 40MHz
+set radio-profile Mesh-RP client-tx-constraint none
+set radio-profile Mesh-RP rf-scanning spectral disable
+set radio-profile Mesh-RP rf-scanning spectral priority data-first
+set radio-profile Mesh-RP power-policy max-coverage
+set radio-profile Mesh-RP power-policy cell-parity 11bg-power 0
+set radio-profile Mesh-RP power-policy cell-parity 11a-power 0
+set radio-profile Mesh-RP power-policy max-channel-capacity interval 600
+set radio-profile Mesh-RP power-policy max-channel-capacity min-power 8
+set radio-profile Mesh-RP power-policy max-channel-capacity max-power 24
+set radio-profile Mesh-RP power-policy max-channel-capacity density medium
+set radio-profile Mesh-RP capture-effect disable
+set radio-profile Mesh-RP cac background mode disable
+set radio-profile Mesh-RP cac best-effort mode disable
+set radio-profile Mesh-RP cac video mode disable
+set radio-profile Mesh-RP cac voice mode disable
+set radio-profile Mesh-RP cac background max-utilization 0
+set radio-profile Mesh-RP cac best-effort max-utilization 0
+set radio-profile Mesh-RP cac video max-utilization 0
+set radio-profile Mesh-RP cac voice max-utilization 0
+set radio-profile Mesh-RP cac background policing enable
+set radio-profile Mesh-RP cac best-effort policing enable
+set radio-profile Mesh-RP cac video policing enable
+set radio-profile Mesh-RP cac voice policing enable
+set radio-profile Mesh-RP service-profile MESH-TEST
+set radio-profile Mesh-RP auto-tune channel-set band 11a channel 36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165
+set radio-profile Mesh-RP auto-tune channel-set band 11bg channel 1,6,11
+set radio-profile RP-Users
+set radio-profile RP-Users beacon-interval 100
+set radio-profile RP-Users dtim-interval 1
+set radio-profile RP-Users max-tx-lifetime 2000
+set radio-profile RP-Users max-rx-lifetime 2000
+set radio-profile RP-Users rts-threshold 65535
+set radio-profile RP-Users frag-threshold 2346
+set radio-profile RP-Users preamble-length short
+set radio-profile RP-Users countermeasures none
+set radio-profile RP-Users rf-scanning mode passive
+set radio-profile RP-Users rf-scanning channel-scope operating
+set radio-profile RP-Users rf-scanning cts-to-self disable
+set radio-profile RP-Users rfid-mode disable
+set radio-profile RP-Users wmm-powersave disable
+set radio-profile RP-Users qos-mode wmm
+set radio-profile RP-Users weighted-fair-queuing disable
+set radio-profile RP-Users rate-enforcement enable
+set radio-profile RP-Users dfs-channels disable
+set radio-profile RP-Users 11n channel-width-na 40MHz
+set radio-profile RP-Users client-tx-constraint none
+set radio-profile RP-Users rf-scanning spectral disable
+set radio-profile RP-Users rf-scanning spectral priority data-first
+set radio-profile RP-Users power-policy max-channel-capacity
+set radio-profile RP-Users power-policy cell-parity 11bg-power 0
+set radio-profile RP-Users power-policy cell-parity 11a-power 0
+set radio-profile RP-Users power-policy max-channel-capacity interval 600
+set radio-profile RP-Users power-policy max-channel-capacity min-power 8
+set radio-profile RP-Users power-policy max-channel-capacity max-power 24
+set radio-profile RP-Users power-policy max-channel-capacity density medium
+set radio-profile RP-Users capture-effect disable
+set radio-profile RP-Users cac background mode disable
+set radio-profile RP-Users cac best-effort mode disable
+set radio-profile RP-Users cac video mode disable
+set radio-profile RP-Users cac voice mode disable
+set radio-profile RP-Users cac background max-utilization 0
+set radio-profile RP-Users cac best-effort max-utilization 0
+set radio-profile RP-Users cac video max-utilization 0
+set radio-profile RP-Users cac voice max-utilization 0
+set radio-profile RP-Users cac background policing enable
+set radio-profile RP-Users cac best-effort policing enable
+set radio-profile RP-Users cac video policing enable
+set radio-profile RP-Users cac voice policing enable
+set radio-profile RP-Users service-profile SP-Line-17
+set radio-profile RP-Users service-profile clear-Line-17
+set radio-profile RP-Users auto-tune channel-set band 11a channel 36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165
+set radio-profile RP-Users auto-tune channel-set band 11bg channel 1,6,11
+set radio-profile default beacon-interval 100
+set radio-profile default dtim-interval 1
+set radio-profile default max-tx-lifetime 2000
+set radio-profile default max-rx-lifetime 2000
+set radio-profile default rts-threshold 65535
+set radio-profile default frag-threshold 2346
+set radio-profile default preamble-length short
+set radio-profile default countermeasures none
+set radio-profile default rf-scanning mode passive
+set radio-profile default rf-scanning channel-scope operating
+set radio-profile default rf-scanning cts-to-self disable
+set radio-profile default rfid-mode disable
+set radio-profile default wmm-powersave disable
+set radio-profile default qos-mode wmm
+set radio-profile default weighted-fair-queuing disable
+set radio-profile default rate-enforcement disable
+set radio-profile default dfs-channels disable
+set radio-profile default 11n channel-width-na 40MHz
+set radio-profile default client-tx-constraint none
+set radio-profile default rf-scanning spectral disable
+set radio-profile default rf-scanning spectral priority data-first
+set radio-profile default power-policy max-channel-capacity
+set radio-profile default power-policy cell-parity 11bg-power 0
+set radio-profile default power-policy cell-parity 11a-power 0
+set radio-profile default power-policy max-channel-capacity interval 600
+set radio-profile default power-policy max-channel-capacity min-power 8
+set radio-profile default power-policy max-channel-capacity max-power 24
+set radio-profile default power-policy max-channel-capacity density medium
+set radio-profile default capture-effect disable
+set radio-profile default cac background mode disable
+set radio-profile default cac best-effort mode disable
+set radio-profile default cac video mode disable
+set radio-profile default cac voice mode disable
+set radio-profile default cac background max-utilization 0
+set radio-profile default cac best-effort max-utilization 0
+set radio-profile default cac video max-utilization 0
+set radio-profile default cac voice max-utilization 0
+set radio-profile default cac background policing enable
+set radio-profile default cac best-effort policing enable
+set radio-profile default cac video policing enable
+set radio-profile default cac voice policing enable
+set radio-profile default service-profile SP-Line-17
+set radio-profile default auto-tune channel-set band 11a channel 36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,149,153,157,161,165
+set radio-profile default auto-tune channel-set band 11bg channel 1,6,11
+save c
+set ap security optional
+set ap auto mode enable
+set ap auto radiotype 11g
+set ap auto bias high
+set ap auto antenna-mode dual-band-3ss
+set ap auto blink disable
+set ap auto led-mode auto
+set ap auto upgrade-firmware enable
+set ap auto force-image-download enable
+set ap auto linux-upgrade app enable
+set ap auto linux-upgrade boot enable
+set ap auto time-out 600
+set ap auto power-mode auto
+set ap auto tunnel-affinity 4
+set ap auto lldp mode tx
+set ap auto lldp med enable
+set ap auto lldp med-tlv-select power-via-mdi mode disable
+set ap auto lldp med-tlv-select inventory mode disable
+set ap auto path-mtu 0
+set ap auto remote-ap data-security mode disable
+set ap auto remote-ap wan-outage mode disable
+set ap auto remote-ap wan-outage extended-timeout 0h
+set ap auto remote-ap wan-outage eval-period 300
+set ap auto ap-tunnel mode disable
+set ap auto high-latency-mode disable
+set ap auto radio 1 radio-profile RP-Users antenna-location indoors antennatype INTERNAL mode enable
+set ap auto radio 1 load-balancing enable
+set ap auto radio 2 radio-profile default antenna-location indoors antennatype INTERNAL mode disable
+set ap auto radio 2 load-balancing enable
+set ap auto local-switching mode disable vlan-profile default
+set ap 1 serial-id pb3514081561 model WLA322-WW radiotype 11ng
+set ap 1 name 8080_mesh
+set ap 1 bias high
+set ap 1 blink disable
+set ap 1 led-mode auto
+set ap 1 upgrade-firmware enable
+set ap 1 force-image-download disable
+set ap 1 linux-upgrade app enable
+set ap 1 linux-upgrade boot enable
+set ap 1 time-out 100
+set ap 1 tunnel-affinity 4
+set ap 1 lldp mode tx
+set ap 1 lldp med enable
+set ap 1 lldp med-tlv-select power-via-mdi mode disable
+set ap 1 lldp med-tlv-select inventory mode disable
+set ap 1 path-mtu 0
+set ap 1 remote-ap data-security mode disable
+set ap 1 remote-ap wan-outage mode disable
+set ap 1 remote-ap wan-outage extended-timeout 0h
+set ap 1 remote-ap wan-outage eval-period 300
+set ap 1 ap-tunnel mode disable
+set ap 1 high-latency-mode disable
+set ap 1 cached-config off
+set ap 1 radio 1 radio-profile RP-Users radiotype 11ng channel 11 antenna-location indoors antennatype INTERNAL tx-power 8 mode enable
+set ap 1 radio 1 load-balancing enable
+set ap 1 radio 2 radio-profile Mesh-RP radiotype 11na channel 48 antenna-location indoors antennatype INTERNAL tx-power 10 mode enable
+set ap 1 radio 2 load-balancing enable
+set ap 1 local-switching mode enable vlan-profile default
+set ap 2 serial-id rb0214295299 model WLA532E-WW radiotype 11ng
+set ap 2 name Mesh_532E
+set ap 2 bias high
+set ap 2 antenna-mode dual-band-3ss
+set ap 2 blink disable
+set ap 2 led-mode auto
+set ap 2 upgrade-firmware enable
+set ap 2 force-image-download disable
+set ap 2 linux-upgrade app enable
+set ap 2 linux-upgrade boot enable
+set ap 2 time-out 100
+set ap 2 tunnel-affinity 4
+set ap 2 lldp mode tx
+set ap 2 lldp med enable
+set ap 2 lldp med-tlv-select power-via-mdi mode disable
+set ap 2 lldp med-tlv-select inventory mode disable
+set ap 2 path-mtu 0
+set ap 2 remote-ap data-security mode disable
+set ap 2 remote-ap wan-outage mode disable
+set ap 2 remote-ap wan-outage extended-timeout 0h
+set ap 2 remote-ap wan-outage eval-period 300
+set ap 2 ap-tunnel mode disable
+set ap 2 high-latency-mode disable
+set ap 2 cached-config off
+set ap 2 radio 1 radio-profile RP-Users radiotype 11ng channel 6 antenna-location indoors antennatype ANT77555-OUT tx-power 2 mode enable
+set ap 2 radio 1 load-balancing enable
+set ap 2 radio 2 radio-profile Mesh-RP radiotype 11na channel 44 antenna-location indoors antennatype ANT77555-OUT tx-power 12 mode enable
+set ap 2 radio 2 load-balancing enable
+set ap 2 local-switching mode disable vlan-profile default
+set ap 3 serial-id pb3514110282 model WLA322-WW radiotype 11ng
+set ap 3 name Mesh-322-a4co
+set ap 3 bias high
+set ap 3 blink disable
+set ap 3 led-mode auto
+set ap 3 upgrade-firmware enable
+set ap 3 force-image-download disable
+set ap 3 linux-upgrade app enable
+set ap 3 linux-upgrade boot enable
+set ap 3 time-out 60
+set ap 3 tunnel-affinity 4
+set ap 3 lldp mode tx
+set ap 3 lldp med enable
+set ap 3 lldp med-tlv-select power-via-mdi mode disable
+set ap 3 lldp med-tlv-select inventory mode disable
+set ap 3 path-mtu 0
+set ap 3 remote-ap data-security mode disable
+set ap 3 remote-ap wan-outage mode disable
+set ap 3 remote-ap wan-outage extended-timeout 0h
+set ap 3 remote-ap wan-outage eval-period 300
+set ap 3 ap-tunnel mode disable
+set ap 3 high-latency-mode disable
+set ap 3 cached-config off
+set ap 3 radio 1 radio-profile RP-Users radiotype 11ng channel 1 antenna-location indoors antennatype INTERNAL tx-power 1 mode enable
+set ap 3 radio 1 load-balancing enable
+set ap 3 radio 2 radio-profile Mesh-RP radiotype 11na channel 40 antenna-location indoors antennatype INTERNAL tx-power 3 mode enable
+set ap 3 radio 2 load-balancing enable
+set ap 3 local-switching mode disable vlan-profile default
+set ap 4 serial-id pb3514082254 model WLA322-WW radiotype 11ng
+set ap 4 name AP_Test
+set ap 4 bias high
+set ap 4 blink disable
+set ap 4 led-mode auto
+set ap 4 upgrade-firmware enable
+set ap 4 force-image-download disable
+set ap 4 linux-upgrade app enable
+set ap 4 linux-upgrade boot enable
+set ap 4 time-out 100
+set ap 4 tunnel-affinity 4
+set ap 4 lldp mode tx
+set ap 4 lldp med enable
+set ap 4 lldp med-tlv-select power-via-mdi mode disable
+set ap 4 lldp med-tlv-select inventory mode disable
+set ap 4 path-mtu 0
+set ap 4 remote-ap data-security mode disable
+set ap 4 remote-ap wan-outage mode disable
+set ap 4 remote-ap wan-outage extended-timeout 0h
+set ap 4 remote-ap wan-outage eval-period 300
+set ap 4 ap-tunnel mode disable
+set ap 4 high-latency-mode disable
+set ap 4 cached-config off
+set ap 4 radio 1 radio-profile RP-Users radiotype 11ng channel 11 antenna-location indoors antennatype INTERNAL tx-power 5 mode enable
+set ap 4 radio 1 load-balancing enable
+set ap 4 radio 2 radio-profile Mesh-RP radiotype 11na channel 48 antenna-location indoors antennatype INTERNAL tx-power 12 mode enable
+set ap 4 radio 2 load-balancing enable
+set ap 4 local-switching mode disable vlan-profile default
+set ap 5 serial-id mg0214271170 model WLA532-WW radiotype 11ng
+set ap 5 name AP_Mesh
+set ap 5 bias high
+set ap 5 blink disable
+set ap 5 led-mode auto
+set ap 5 upgrade-firmware enable
+set ap 5 force-image-download disable
+set ap 5 linux-upgrade app enable
+set ap 5 linux-upgrade boot enable
+set ap 5 time-out 100
+set ap 5 tunnel-affinity 4
+set ap 5 lldp mode tx
+set ap 5 lldp med enable
+set ap 5 lldp med-tlv-select power-via-mdi mode disable
+set ap 5 lldp med-tlv-select inventory mode disable
+set ap 5 path-mtu 0
+set ap 5 remote-ap data-security mode disable
+set ap 5 remote-ap wan-outage mode disable
+set ap 5 remote-ap wan-outage extended-timeout 0h
+set ap 5 remote-ap wan-outage eval-period 300
+set ap 5 ap-tunnel mode disable
+set ap 5 high-latency-mode disable
+set ap 5 cached-config off
+set ap 5 radio 1 radio-profile RP-Users radiotype 11ng channel 6 antenna-location indoors antennatype INTERNAL tx-power 10 mode enable
+set ap 5 radio 1 load-balancing enable
+set ap 5 radio 2 radio-profile Mesh-RP radiotype 11na channel 44 antenna-location indoors antennatype INTERNAL tx-power 8 mode enable
+set ap 5 radio 2 load-balancing enable
+set ap 5 local-switching mode enable vlan-profile default
+set arp agingtime 1200
+set ip https management port 8889
+set ip https clear port 80
+set ip https secure port 443
+set ip https server enable
+set ip https authentication legacy
+set ip ssh server enable
+set ip ssh 22
+set ip snmp server disable
+set ip tftp server disable
+set ip tftp 69
+set ip telnet server disable
+set ip telnet 23
+set service-profile MESH-TEST bridging disable
+set service-profile SP-Line-17 bridging disable
+set service-profile clear-Line-17 bridging disable
+set interface 32 ip 172.17.32.120 255.255.252.0
+set interface 32 ip dhcp-server disable
+set snmp traplog mode disable
+set snmp traplog filter ignore all
+set snmp notify profile default drop all
+set rfdetect classification ssid-masquerade rogue
+set rfdetect classification seen-in-network rogue
+set rfdetect classification ad-hoc skip-test
+set rfdetect classification default-classification suspect
+set rfdetect log enable
+set rfdetect black-list dynamic enable
+set rfdetect black-list dynamic duration 300
+set rfdetect signature enable
+set rfdetect voice-ext snr-threshold 12
+set security acl hit-sample-rate 0
+set auto-tune channel band 11a mode enable
+set auto-tune channel band 11a schedule any0000
+set auto-tune channel band 11a indo-threshold 85
+set auto-tune channel band 11a convergence-delay 60
+set auto-tune channel band 11bg mode enable
+set auto-tune channel band 11bg schedule any0000
+set auto-tune channel band 11bg indo-threshold 85
+set auto-tune channel band 11bg convergence-delay 60
+set ntp disable
+set ntp update-interval 64
+save c

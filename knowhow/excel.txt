@@ -1,0 +1,2 @@
+ms = Round(temp - Int(temp), 3) * 1000
+[h]:mm:ss.000
