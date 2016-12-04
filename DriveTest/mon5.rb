@@ -10,15 +10,16 @@ puts "<host> <executions> <out_file> "
   VERSION = "2.01"
   pingHosts = Hash.new
   pingHosts = {:WiFi => '65.15.0.14' , :BH => '65.15.0.12' , :HBS => '65.15.0.12', :remote => '65.15.1.10'};
-  hbs_IP = { :HBS_1 => '65.15.0.185', :HBS_2 => '65.15.0.67',  :HBS_3 => '65.15.0.157', :HBS_4 => '65.15.0.47', :HBS_5 => '65.15.0.40',  :HBS_6 => '65.15.0.101' , :HBS_7 => '65.15.0.21' , :HBS_9 => '65.15.1.10' };
-
+  hbs_IP = { :HBS_1 => '65.15.0.185', :HBS_2 => '65.15.0.67',  :HBS_3 => '65.15.0.157', :HBS_4 => '65.15.0.47', 
+          :HBS_5 => '65.15.0.40', :HBS_6 => '65.15.0.101', :HBS_7 => '65.15.0.21'};
+		  # '  };
   hmus_IP = { :HMU_1 => '65.15.0.12'};        
   hbs_oids_r = ""
   hmus_oids_r = ""
   mySNMPDATA="";
   hbs_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
   hmus_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
-  myhost = ARGV[1] ||pingHosts[:BH]||'65.15.0.12';
+  myhost = ARGV[1] ||pingHosts[:BH];
   myfile = ARGV[2] ||'c:/temp/output1.csv';
   executions =  Integer(ARGV[0] || 100000000);
   pingResults = Hash.new;
@@ -30,14 +31,12 @@ puts "<host> <executions> <out_file> "
   pingjResults_min = {:WiFi => "N/A" , :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   pingjResults_max = {:WiFi => "N/A" , :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   debug=true;
-  debuglevel = 2 ; #||1;
+  debuglevel = 3; #||1;
   pings=true;
   snmp=true;
-  telnet=true;
-  check_bh_lan = false;
-  last_base=1;
   jpings=false;
-  PINGTIMEOUT = 250;
+  telnet=false;
+  PINGTIMEOUT = 50;
   Existingfileopenmode = 'a+';
   targetIP = pingHosts[:BH];
   manager=nil;
@@ -155,8 +154,7 @@ puts ("HW version for #{pingHosts[:HBS]} is #{hwVersion(pingHosts[:HBS])}")
 
 def ping (host) 
   line_id=0;
-
-  IO.popen("#{'C:/bynet/tools/net/n.exe'} #{host} -t 2ms -o -w #{PINGTIMEOUT} -n 2") {
+  IO.popen("#{'C:/bynet/tools/net/Fping.exe'} #{host} -t 2ms -o -n 2 -w #{PINGTIMEOUT}") {
          |io| while (line = io.gets) do 
            # puts line
             line_id+=1;
@@ -165,12 +163,10 @@ def ping (host)
             if line_a[1]=="Minimum" then
               line_a = line.split(/\s+/)
              #  puts ("#{line_id} : #{line_a} ")
-			 out=line_a[11]||"-1"
-              return(out)
+              return(line_a[11]||"-1")
             end
           end
         } #io
-		return("-1")
 end
 
 def pingj (host) 
@@ -181,7 +177,7 @@ def pingj (host)
   jitter_total=0.0
   jitter_avg = 0
   avg_delay = 0
-  IO.popen("'C:/bynet/tools/net/Fping.exe'} #{host} -t 2ms -j -w #{PINGTIMEOUT}") {
+  IO.popen("'C:/bynet/tools/net/Fping.exe'} #{host} -t 2ms -j -n 2 -w #{PINGTIMEOUT}") {
          |io| while (line = io.gets) do 
            # puts line
             line_id+=1;
@@ -211,12 +207,13 @@ end
 
 puts pingHosts
 puts ("connect to device #{myhost}"+"  output file #{myfile}");
-#puts ("delay to HBS("+pingHosts[:HBS]+"): "+ping(pingHosts[:HBS])+" ms");
-#puts ("delay to monitored device(#{myhost}):"+ping(myhost)+" ms");
-#puts ("using jitter: #{jpings}")
+puts ("delay to HBS("+pingHosts[:HBS]+"): "+ping(pingHosts[:HBS])+" ms");
+puts ("delay to monitored device(#{myhost}):"+ping(myhost)+" ms");
+puts ("using jitter: #{jpings}")
+# alon + oz fixme telnet set false from true
 begin
   if (debug && debuglevel>4) then puts ("login to device") end
-  tn = Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+  tn = Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
   if (debug && debuglevel>6) then 
     puts tn 
     tn.login('admin', 'netman') { |c| print c } ;
@@ -240,38 +237,30 @@ while (index < executions ) do
   begin
 	line_a = Array.new
     line_id=0
-  if (debug && debuglevel>4) then puts ("#{index}: gpslabel") end
+  if (debug && debuglevel>2) then puts ("#{index}: gpslabel") end
   begin
   #tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")	
-  IO.popen("#{'gpsbabel'} -i garmin,get_posn -f usb:") {
+  IO.popen("#{'gpsbabel'} -c utf-8 -i garmin,get_posn -f usb:") {
          |io| while (line = io.gets) do 
-			if (debug && debuglevel>6) then
-               puts("[#{line_id}],#{line}") 
-			end
-            line_id+=1;
-            if line_id==1 then
-             line_a = line.split(/\s+/,8)
-			 if (debug && debuglevel>4) then
-				
+			line_id+=1
+            if line_id == 1 then      
+			   line_a = line.split(/\s+/,3)
+			  puts ("1-[#{line_id}]") if (debug && debuglevel>1)
+			  if (debug && debuglevel>2) then
 				 puts("line a count = #{line_a.count}  line_a is")
-				 puts(line_a)
+				 puts("[#{line_id}],#{line_a}")  
 			 end	
-             if line_a.count > 6 then
-			 gps1 = {:week_day => line_a[0]||"",
-                    :month => line_a[1||""],
-                    :day => line_a[2]||"",
-                    :time => line_a[3]||"",
-                    :year => line_a[4][0..3]||"" }
-       			gps2 = {:lat => line_a[5]||"",
-                    :lng => line_a[6]||"" }
-             else
-			     gps1 = {}
-            	 gps2 = {:lat => line_a[0]||"",
-                    :lng => line_a[1]||""}
-
-             end
-			 
-            end
+    
+	# gps1 = {:week_day => line_a[0]||"",
+    #                :month => line_a[1||""],
+    #                :day => line_a[2]||"",
+    #                :time => line_a[3]||"",
+    #                :year => line_a[4][0..3]||"" }
+       			gps2 = {:lat => line_a[1]||"",
+                    :lng => line_a[2]||"",
+				}
+               puts gps2 if (debug && debuglevel>2)				
+            end #line_id==1
             if (line_id==2) && (gps2[:lat]=="") then
              line_a = line.split(/\s/,3)
              gps2 = {:lat => line_a[1]||"",
@@ -279,7 +268,9 @@ while (index < executions ) do
                     }
             end
           end
+		  puts gps2 if (debuglevel > 2)
         } #io
+		#puts gps2 if (debuglevel > 2)
   rescue
     if (debug && debuglevel>4) then
       puts "rescue me on GPSbabel"
@@ -298,11 +289,8 @@ while (index < executions ) do
               :day => x.day||"",
               :time => x.strftime("%H:%M:%S")||"",
               :year => x.year||"" }
-                     
-    end 
-    if gps2=={} then
-       gps2 = {:lat => "", :lng => "" }
-	end	 
+     gps2 = {:lat => "", :lng => "" }                
+    end  
   end #rescue gps  
   if (debug && debuglevel>6) then     
     puts ("#{index}: display gps")
@@ -318,7 +306,7 @@ if telnet then
 	if (debug && debuglevel>2) then puts ("#{index}: display link ; bh => #{pingHosts[:BH]}") end
 	begin
 	if tn==nil then	
-	  tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
+	  tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
 	  #tn = Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
 	  if (debug && debuglevel>6) then 
 		puts tn 
@@ -362,7 +350,6 @@ end #if telnet
    hashkey=0;
    
    keys=bh_air.keys;
-
  if telnet then 
    if (debug && debuglevel>2) then puts ("#{index}: display PM AIR current") end   
     tn=tn||Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
@@ -399,7 +386,7 @@ end #if telnet
     myparamid =0;
     hashkey =0;
     li =0;
-   if (telnet && check_bh_lan ) then 
+   if telnet then 
     if (debug && debuglevel>2) then puts ("#{index}: display PM LAN1 current") end
       tn=tn||Net::Telnet::new("Host"=>pingHosts[:HBS], "Timeout"=>1, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")
       tn.cmd('display PM LAN1 current') do |output|
@@ -447,37 +434,6 @@ end #if telnet
   end # begin telnets   
 ################33
 
-
- if snmp then 
-     begin
-       if (debug && debuglevel>5) then puts ("#{index}: SNMP") end
-           myHBS="";
-		   mySNMPDATA="";
-		   hmus_oids_r = "";
-           hmus_IP.each_value do |hmu|
-             snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)||[nil,nil]
-             myHBS = snmp_out.split(',')[1].gsub(/@value="/,'');
-			 last_base = myHBS[8..8]||"9";
-			 mySNMPDATA = snmp_out.split(',')[2]||""+snmp_out.split(',')[3]||""
-             # puts (myHBS) 
-            end
-              if (debug && debuglevel>9) then puts ("#{index}: SNMP out #{snmp_out} ") end
-             hmus_oids_r =  myHBS 
-                #      hbs_IP.each_value do |hbs|
-     #        snmp_out=getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11.1", 'public',10)||[nil,nil]
-     #        hbs_oids_r +=  snmp_out[1]||""
-     #     end
-       if (debug && debuglevel>6) then puts (hbs_oids_r); puts (hmus_oids_r) end
-     rescue
-      @error_message="#{$!}";
-      puts ("#{index}:"+Time.now.to_s+ " SNMP Caught error:"+@error_message)
-     ensure
-     end #begin_rescure
-   end #snmp  
-
-  if pings then
-       Lastbase_key = "HBS_"+last_base ;
-       pingHosts[:HBS] = hbs_IP[Lastbase_key];
   if pings then
        pingHosts.each_key do |key|
          if jpings then  
@@ -508,21 +464,37 @@ end #if telnet
            end    
        
     end
-
-	if snmp then 
+   if snmp then 
      begin
        if (debug && debuglevel>5) then puts ("#{index}: SNMP") end
            myHBS="";
 		   mySNMPDATA="";
 		   hmus_oids_r = "";
+		   hbsRSS="NA";
+		   hsuRSS="NA";
+		   hbsEstTput="NA";
+		   hsuEstTput="NA";
            hmus_IP.each_value do |hmu|
              snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)||[nil,nil]
-             myHBS = snmp_out.split(',')[1].gsub(/@value="/,'');
-			 mySNMPDATA = snmp_out.split(',')[2]||""+snmp_out.split(',')[3]||""
-             # puts (myHBS) 
-            end
-              if (debug && debuglevel>9) then puts ("#{index}: SNMP out #{snmp_out} ") end
-             hmus_oids_r =  myHBS 
+             myHBS = snmp_out.split(',')[1].gsub(/@value="/,'')||"";
+			 mySNMPDATA = snmp_out.split(',')[2]||""+snmp_out.split(',')[3]||"N/A"
+             #freq=getattrib(hmu, "1.3.6.1.4.1.4458.1000.1.5.16.0", 'public',10)||"N/A"
+			 hbsRSS=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.9", 'public',10)||"N/A"
+		     hsuRSS=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11", 'public',10)||"N/A"
+			 hbsEstTput=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.6", 'public',10)||"N/A"
+			 hsuEstTput=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7", 'public',10)||"N/A"
+			
+           end
+           if (debug && debuglevel>1) then puts ("#{index}: SNMP out #{snmp_out} ") 
+			 puts ("my hbs=:#{myHBS}")
+			 # puts ("freq=#{freq}")
+			 puts  ("hbsRSSI=#{hbsRSS}")
+			 puts  ("hsuRSSI=#{hsuRSS}")
+			 puts  ("hsuEstTput=#{hsuEstTput}")
+			 puts  ("HbsEstTput=#{hbsEstTput}")
+           end
+			 hmus_oids_r =  myHBS 
+			 
                 #      hbs_IP.each_value do |hbs|
      #        snmp_out=getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11.1", 'public',10)||[nil,nil]
      #        hbs_oids_r +=  snmp_out[1]||""
@@ -531,14 +503,17 @@ end #if telnet
      rescue
       @error_message="#{$!}";
       puts ("#{index}:"+Time.now.to_s+ " SNMP Caught error:"+@error_message)
+	  puts snmp_out
      ensure
      end #begin_rescure
    end #snmp  
 
     if (debug && debuglevel>5) then puts ("#{index}: CSV") end
     if index == 0 then
-      CSV.open(myfile,  (File.exist?(myfile)? Existingfileopenmode : 'w') ) do |csv|
-       csv_line="name, "; 
+      CSV.open(myfile,  (File.exist?(myfile)? Existingfileopenmode : 'a+') ) do |csv|
+ # fix me open file type CSV.open(myfile,  (File.exist?(myfile)? Existingfileopenmode : 'w') ) do |csv|
+          
+	 csv_line="name, "; 
        gps1.each_key do |key|
          csv_line+="#{key}, "
        end  
@@ -671,9 +646,9 @@ end #if telnet
      puts ("#{index}:"+Time.now.to_s+ " Caught error:"+@error_message)
     
   ensure
-    base= "#{ hmus_oids_r}"
-    puts( "end of #{index+1}/#{executions}: time now is ["+Time.now.to_s+"] host: " + pingHosts[:HBS] + " delay is:"+ 
-	ping( pingHosts[:HBS] ) + "lat:" + gps2[:lat] + " lon:" +gps2[:lng] + " base:" + hbs_IP[Lastbase_key]  ) if (debug && debuglevel>0) 
+    if (debug && debuglevel>0) then puts( "end of #{index+1}/#{executions}: time now is ["+Time.now.to_s+
+	"] host: "+pingHosts[:HBS]+" delay is:"+ping(pingHosts[:HBS]) + " gps " ); end
+	puts gps2;
     index +=1;
    end
   end #while
