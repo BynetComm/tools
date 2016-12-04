@@ -23,5 +23,9 @@ rem echo day=%day%
 set datetimef=%year%%month%%day%_%hour%%min%%secs%
 @set fp_date=D%day%-%month%-%year%_T%hour%-%min%-%secs%
 @echo on
+<<<<<<< HEAD
 Fping %fp_host% -t 100 -w 500 -c -T -L c:\users\Alonl\desktop\fping\fp_%fp_date%.txt 
+=======
+Fping %fp_host% -t 1 -w 50 -c -T -L c:\Alonl\fp_%fp_date%.txt 
+>>>>>>> 8d128d001a0f8a165fd2384bd601799ea4f028f6
 

@@ -1,0 +1,935 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x Hjælp-fil</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Hjælp-fil</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-dk.png" alt=""></div>
+          <div id="hf_language">Engelsk</div>
+          <div id="hf_translator">Claus Andersen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        General info
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Hjælp-fil Version</td>
+            <td class="hf_tblinfo_right">4,0</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Understøttet <br> Operativsystemer</td>
+            <td class="hf_tblinfo_right">Vinduer <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Licens</td>
+            <td class="hf_tblinfo_right">Ikke-kommerciel Freeware <br><em>eller</em><br> Kommerciel Pro Version<br> Vis som <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> eller <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Kontakt</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Support Forum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Indhold
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Grundlæggende
+        </p>
+        <ul>
+          <li><a href="#hf_description">Beskrivelse</a></li>
+          <li><a href="#hf_howtouse">Grundlæggende oplysninger</a></li>
+          <li><a href="#hf_profiles">Profiler</a></li>
+          <li><a href="#hf_nics">Netværksadaptere (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Indstillinger Operationer</a></li>
+          <li><a href="#hf_activation">Profil Aktivering</a></li>
+          <li><a href="#hf_compactmode">Kompakt tilstand &amp; fuld tilstand</a></li>
+          <li><a href="#hf_tray">Bakke Menu &amp; Bakke Info</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Funktioner
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Overblik</a></li>
+          <li><a href="#hf_adapterstatus">Adapter status</a></li>
+          <li><a href="#hf_advanced">Avanceret TCP / IP-indstillinger </a></li>
+          <li><a href="#hf_connections">Tilslutninger</a></li>
+          <li><a href="#hf_hosts">Værter</a></li>
+          <li><a href="#hf_netdrives">Netværk Drev</a></li>
+          <li><a href="#hf_scripts">Scripts</a></li>
+          <li><a href="#hf_smtp">SMTP / E-mail</a></li>
+          <li><a href="#hf_system">Systemindstillinger</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Avanceret
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AUTOSKIFT</a></li>
+          <li><a href="#hf_notes">Noter</a></li>
+          <li><a href="#hf_nsmservice">NSM service / begrænset brugerkonto</a></li>
+          <li><a href="#hf_prelogon">Før logon-profil Switching</a></li>
+          <li><a href="#hf_nsmadministration">NSM Administration</a></li>
+          <li><a href="#hf_commandline">Command Line Aktivering</a></li>
+          <li><a href="#hf_ncfreeware">Ikke-Kommerciel Freeware besked</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Yderligere Pro Funktioner
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Profil Grupper</a></li>
+          <li><a href="#hf_proxy">Browser / Proxy</a></li>
+          <li><a href="#hf_domain">Domæne</a></li>
+          <li><a href="#hf_distribution">Distribution i Company Networks</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Grundlæggende
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Beskrivelse
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> er en netværksindstillinger leder, der nemt kan skifte mellem 6 forskellige, visuelt strukturerede profiler herunder:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP-adresser (IPv4 &amp; IPv6!) </li>
+              <li> Gateways (inkl. Metrisk) </li>
+              <li> DNS-servere </li>
+              <li> WINS-servere </li>
+              <li> WiFi Management </li>
+              <li> Computernavn </li>
+              <li> Arbejdsgruppe </li>
+              <li> Standardprinter </li>
+              <li> Netværk Drev </li>
+              <li> NIC status </li>
+              <li> Tilslutninger (RAS / DUN / KKP / VPN) </li>
+              <li> DNS-suffiks </li>
+              <li> Rute Table </li>
+              <li> SMTP-server </li>
+              <li> Værter filposter </li>
+              <li> Systemindstillinger </li>
+              <li> MAC-adresse </li>
+              <li> Scripts (BAT, VS, JS, ...) </li>
+            </ul></td>
+            <td width="51%"><strong>Derudover kun i <u>Pro</u> version:</strong>
+            <ul>
+              <li> Kan bruges på arbejde </li>
+              <li> Ubegrænset mængde af profiler </li>
+              <li> Netværk-Domain </li>
+              <li> Komplet Proxy Indstillinger &amp; <br> Bowser Forside <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> tilbyder dig, hvad du har savnet i Windows indtil nu: <br> En kraftfuld, let at bruge interface til at administrere alle dine netværksindstillinger på et øjeblik. <br> Giv det en chance og du vil aldrig ønske at være uden det igen.
+        </p>
+        <p>
+          Alle indstillinger og ændringer gemmes automatisk i en separat fil <em>(settings.ini),</em> så en backup, overførsel eller opgradere til en anden version er absolut ikke noget problem.
+        </p>
+        <p>
+          <strong>Aktiver en gemt profil med et enkelt klik eller helt automatisk!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Vindue">
+          <br><strong>NetSetMan:</strong> Ikke-kommerciel freeware version
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro hovedvinduet">
+          <br><strong>NetSetMan Pro:</strong> Kommerciel Pro Version
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Grundlæggende oplysninger
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profiler
+            </div> Hver <a href="#">profil</a> repræsenterer en række indstillinger, der er nødvendige for et bestemt sted eller et scenarie. Ved at bruge underprofiler flere netværksadaptere kan konfigureres med én profil. Omdøbe en profil ved at dobbeltklikke på dets fane billedtekst.</li>
+          <li>
+            <div>
+              Manuel konfiguration
+            </div> Du skal manuelt konfigurere de ønskede profiler selv. Det er ikke muligt at gætte de korrekte indstillinger for et ukendt sted. Det vigtigste formål med programmet er at automatisere almindelige indstillinger ændringer, som du normalt ville gøre manuelt.</li>
+          <li>
+            <div>
+              Udvælgelse af indstillinger
+            </div><a href="#hf_basicoperations">Læser alle aktuelle indstillinger</a> ind i en profil kan give dig et udgangspunkt, men du stadig nødt til at beslutte, hvilke indstillinger for at anvende når du aktiverer profilen. Det er stærkt anbefalet at begrænse indstillingerne til dem, der måske har faktisk blevet ændret i mellemtiden. For eksempel er det ikke nødvendigt at anvende et computer navn, hvis denne indstilling ikke ændres.</li>
+          <li>
+            <div>
+              Konfiguration af indstillinger
+            </div> For at konfigurere en indstilling tjekke dens afkrydsningsfelt først, derefter enten indtaste den ønskede konfiguration direkte på de vigtigste interface eller åbne indstillingsdialogen for den pågældende indstilling.</li>
+          <li>
+            <div>
+              Profil aktivering
+            </div> Som standard nogen profil aktiveres automatisk, dvs ingen indstilling på dit system er ændret uden din hensigt. Når det er sagt, kan du bruge <a href="#hf_autoswitch">AUTOSWITCH</a> funktion til at aktivere bestemte profiler automatisk baseret på frit tilpasses vilkår.</li>
+          <li>
+            <div>
+              Bakke ikon adgang
+            </div> Det anbefales at <a href="#hf_tray">holde NetSetMan minimeret i skuffen</a> og flytte ikonet bakken ind i altid synlige område. På den måde kan du hurtigt aktivere en profil ved at klikke på ikonet og vælge en profil. Derudover har du et nyttigt overblik over dine aktuelle forbindelse IP'er ved at svæve over ikonet med musemarkøren.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profiler
+      </div>
+      <div class="hf_body">
+        <p>
+          Fanerne repræsenterer de tilgængelige profiler. Du kan gemme 6 forskellige sæt indstillinger i disse faner.
+        </p>
+        <p>
+          Hvis du vil ændre indstillingerne for to forskellige netværkskort ved aktivering af en enkelt profil, kan du bruge <strong>Subprofile</strong> funktion. Klik på "+" - knappen ved siden af ​​dropdown listen og en ny menu bar vises med to subprofiles (den nuværende, og en ny tom én). Billedteksten vil automatisk blive navnet på det netværkskort, der er valgt i denne subprofile og kan ikke ændres. Du kan oprette lige så mange subprofiles som du vil. Alle af dem vil blive aktiveret ene efter den anden, når profilen er aktiveret. Du kan ændre rækkefølgen med træk og slip.
+        </p>
+        <p>
+          Alle ændringer gemmes automatisk, så intet går tabt ved et uheld.
+        </p>
+        <p>
+          Du kan omdøbe en profil ved at højreklikke på den og vælge "Omdøb" eller blot dobbeltklikke på dets fane billedtekst.
+        </p>
+        <p>
+          Du kan administrere alle dine profiler lettere kan du bruge <strong>Profile Management,</strong> som du finder i menulinjen. Det giver mulighed for redigering profiler, subprofile og grupper (kun i NetSetMan Pro) med musen eller nogle almindelige tastaturgenveje (piletasterne til navigation, F2 for at omdøbe, etc.). Når du bruger træk-og-slip til at omarrangere emner, du vil opdage nogle uundgåelige begrænsninger afhængigt af det element, som følge af givne tekniske forhold: Profiler kan ikke slettes, MultiProfiles kan ikke omdøbes, Profiler kan byttes, men flyttes ikke. Afkrydsningsfelterne repræsenterer, om den ifølge profilen vil være synlig i bakken, og i kompakt tilstand.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Subprofile faner" class="screen">
+          <img src="data/rename.png" alt="Omdøbe en profil" class="screen">
+          <img src="data/profilemanagement.png" alt="Profile Management" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Netværksadaptere (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Alle tilgængelige netværksadaptere vises ved deres navn og deres type. Vælg den NIC du gerne vil styre i den aktuelle (sub) profil.
+        </p>
+        <p>
+          Hvis en bestemt NIC er ikke tilgængelig på listen (eksempelvis fordi den er deaktiveret eller virtuel) kan du styre listen ved at klikke på knappen <strong>Opdater</strong> og enten hurtigt at opdatere listen eller vælge <strong>Administrer netværksadaptere.</strong> Der vil du finde en komplet liste over alle tilgængelige netværkskort. Kontrollér alle NIC, som du vil have på din liste.
+        </p>
+        <p>
+          <strong>Bemærk:</strong> Alle NIC, der er optaget på denne liste, vises også i Magasin info. Fravælg uønskede netkort til at fjerne dem fra listen og bakke info.
+        </p>
+        <p>
+          Hvis du kopiere filen indstillinger (settings.ini) til et andet system, vil NetSetMan forsøge at omplacere NIC i profilerne automatisk. Men det vil kun fungere, hvis det nye system har en NIC med præcis det samme navn (i det første skærmbillede det er "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Netværksadapter udvælgelse" class="screen">
+        <img src="data/adapters-management.png" alt="Netværksadapter udvælgelse" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Indstillinger Operationer
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Kom Aktuelle indstillinger
+        </p>
+        <p>
+          For at indlæse en aktuel indstilling i profilen blot klikke på <img src="data/icon-get.png" alt="Få ikonet Indstillinger"> symbol ved siden af ​​indtastningsfeltet. <br> For at få alle de aktuelle indstillinger ved at højreklikke på profilen, og vælg "Get Aktuelle Indstillinger".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Få én indstilling" class="screen">
+        <img src="data/get-settings2.png" alt="Få alle indstillinger" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Nulstille Indstillinger</span>
+        </p>
+        <p>
+          For at slette konfigurationen af ​​en bestemt indstilling højreklikke på det og vælge "Nulstil".
+        </p>
+        <p>
+          Hvis du vil rydde værdierne af en IP-felt blot dobbeltklikke på dens tilsvarende billedtekst.
+        </p>
+        <p>
+          At rydde alle indstillinger i den aktuelle (under) profil højreklikke på fanen profil og vælg "Ryd Indstillinger".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Klart én indstilling" class="screen">
+        <img src="data/clear-settings2.png" alt="Slette alle indstillinger" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Kopiering og indsætning af indstillinger</span>
+        </p>
+        <p>
+          Sådan overfører du indstillinger mellem forskellige profiler, som du kan kopiere og indsætte en hel profil ved at højreklikke på den oprindelige profil, vælger "Kopier indstillinger" og derefter højreklikke på den nye profil og vælge "Indsæt Indstillinger".
+        </p>
+        <p>
+          Hvis du vil kopiere og indsætte kun en bestemt indstilling blot højreklikke på den og vælge "Kopier" eller "Indsæt".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Kopiere og indsætte én indstilling" class="screen">
+        <img src="data/copypaste2.png" alt="Kopier og indsæt alle indstillinger" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Profil Aktivering
+      </div>
+      <div class="hf_body">
+        <p>
+          For at anvende alle indstillingerne for den aktuelle profil, klik på <strong>"Aktiver",</strong> eller hvis programmet kører minimeret vælge profilen fra <a href="#hf_tray">menuen</a> . <br> Bemærk at det kun indstillinger med en kontrolleret afkrydsningsfelt vil blive aktiveret.
+        </p>
+        <p>
+          Dialogen <strong>Aktivering</strong> indeholder oplysninger om den aktuelle aktivering fremskridt. <br> Der kan du se, hvilke indstillinger der skal anvendes, og om processen er vellykket eller ej. Du kan annullere aktiveringen ved at klikke på "Cancel" -knappen til enhver tid.
+        </p>
+        <p>
+          Alle ændringer anvendes straks. Men i visse tilfælde nogle indstillinger tage et kort øjeblik for at få fuld virkning eller kræve en genstart (især "PC Navn" og "arbejdsgruppe / domæne").
+        </p>
+        <p>
+          <strong>Detaljer</strong> afsnit giver en oversigt over alle de konfigurerede indstillinger for denne profil. For at se flere oplysninger og fejlmeddelelser i fuld længde åbne <strong>Log</strong> sektionen.
+        </p>
+        <p>
+          At finde løsninger på de mest almindelige fejl og problemer har et kig på <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Kontroller indstillinger, der skal ændres" class="screen">
+        <img src="data/activation.png" alt="Profil vinduet Aktivering" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Fælles resultater og deres betydning</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">Alt fungerede som forventet.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Indstillinger øjeblikket anvendes.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Indstillinger blev ignoreret uden at prøve, fordi de var ufuldstændige eller fejlagtige.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Fejl</td>
+            <td class="hf_errortable_right">I de fleste tilfælde er fejl vises som en kort rød tekst som "Filen blev ikke fundet". I tilfælde af at du får en fejlkode have et kig på loggen for at finde ud af, om der foreligger en fejlmeddelelse for denne kode. Hvis du ikke har nogen idé om, hvad årsagen er, kan du skrive fejlkoden og en detaljeret fejlbeskrivelse i <a href="https://www.netsetman.com/support/" target="_blank">supportfora</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Ugyldig</td>
+            <td class="hf_errortable_right">Enten en værdi ikke er gyldig, ikke specificeret eller ikke tilladt (specialtegn, samme arbejdsgruppe som computerens navn, etc.)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF er aktiv</td>
+            <td class="hf_errortable_right">Firefox kører i øjeblikket. At anvende disse indstillinger, skal du lukke browseren først.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Kompakt tilstand &amp; fuld tilstand
+      </div>
+      <div class="hf_body">
+        <p>
+          Udover den klassiske "Full Mode" interface, hvor du kan ændre alle indstillinger for en profil, en ekstra interface "Compact mode" er tilgængelig. Du kan skifte mellem disse tilstande på ethvert tidspunkt ved at klikke på efter knap i hovedmenuen til højre.
+        </p>
+        <p>
+          Når alle profiler er oprettet i kompakt tilstand er det ideelle interface. Her har du en kompakt overblik over alle indstillinger for en profil uden at bekymre sig om indstillinger blive ændret ved et uheld.
+        </p>
+        <p>
+          I tilfælde af at du bruger <a href="#hf_nsmadministration">NSM Administration</a> (med "Skift profil indstillinger" er fravalgt) i kompakt tilstand vil blive anvendt automatisk for at forhindre brugeren i at kunne ændre indstillingerne.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Kompakt tilstand" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Bakke Menu &amp; Bakke Info
+      </div>
+      <div class="hf_body">
+        <p>
+          Når NetSetMan kører du finder på dens ikon i bakken bar (ved siden af ​​uret). <br> Der kan du hurtigt aktivere en profil. Bare højreklik på ikonet for at åbne <strong>menuen Bakke</strong> og vælg profilen for at aktivere.
+        </p>
+        <p>
+          Hvis du gerne vil udelukke nogle profiler vises i bakken, kan du skjule dem individuelt. For at gøre dette skal du vælge profilen i hovedvinduet, skal du højreklikke på fanen og klik på "Aktiv i bakke og kompakt tilstand". Den lille symbol ved siden af ​​teksten viser, om denne profil vil være tilgængelig i bakken. Denne mulighed vil også have effekt på de profiler, der er vist i kompakt tilstand. Profil synlighed kan også konfigureres i <a href="#hf_profiles">Profile Management</a> .
+        </p>
+        <p>
+          Hvis du hvile dit markøren over ikonet NetSetMan i bakken <strong>Bakke Info</strong> vises. Den indeholder den aktuelle IP-oplysninger, der anvendes af systemet. Fordi, at data er indsamlet i realtid, kan du opleve en kort forsinkelse. For at reducere denne forsinkelse bør du overveje at slukke yderligere oplysninger såsom offentlige IP og MAC-adresser i præferencer.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Ikon" class="screen">
+        <img src="data/showintray.png" alt="Vis i skuffen" class="screen">
+        <img src="data/trayinfo.png" alt="TrayInfo" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Funktioner
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Overblik
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan er designet på en måde, der giver dig mulighed for at have en direkte overblik over alle konfigurerede indstillinger i en profil. Nogle af de vigtigste funktioner som grundlæggende IP-indstillinger, WiFi og standardprinteren kan konfigureres direkte på den primære grænseflade. Andre, mere komplekse indstillinger kan kun aktiveres her og vil vise et kort overblik over deres aktuelle konfiguration. For at ændre dem aktivere dem først, derefter åbne ifølge dialogen ved at klikke på [...] - knappen.
+        </p>
+        <p>
+          De følgende afsnit vil give dig grundlæggende instruktioner og nyttige tips om, hvordan du bruger alle funktionerne.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Yderligere indstillinger gruppe" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Adapter status
+      </div>
+      <div class="hf_body">
+        <p>
+          For at aktivere, deaktivere eller genstarte den valgte netværksadapter bruge knappen Adapter status. Standardfarven skifter til en status-relateret farve. Derudover kan du se den konfigurerede status i værktøjsvink.
+        </p>
+        <p>
+          Hvis du vil aktivere en adapter og deaktivere en eller alle andre adaptere, skal du oprette <a href="#hf_profiles">subprofiles</a> for hver af de adaptere. Du kan gøre dette manuelt eller ved hjælp menupunktet nederst adapteren menuen Status. Det vil automatisk skabe en subprofile for hvert netværkskort, der er inkluderet i adapteren og indstiller dets status indstilling i overensstemmelse hermed. Husk, at du kan tilpasse hvilke adaptere er inkluderet i denne liste ved at bruge <a href="#hf_nics">Network Adapter Management</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adapter Status: Aktiver" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adapter Status: Deaktiver" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adapter Status: Genstart" class="screen">
+        <img src="data/adapterstatus.png" alt="Yderligere indstillinger gruppe" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Avanceret TCP / IP-indstillinger
+      </div>
+      <div class="hf_body">
+        <p>
+          Du kan angive flere IP, Gateway, DNS og WINS adresser pr NIC hvis du har brug for at være i flere netværk på samme tid. At gøre så klik på knappen <strong>"IP +"</strong> eller vælg "Profil&gt; Avancerede TCP / IP-indstillinger" fra hovedmenuen.
+        </p>
+        <p>
+          Her har du også mulighed for at styre mere avancerede indstillinger som <strong>Route Table, DNS Suffix, IPConfig</strong> og <strong>NetBIOS.</strong>
+        </p>
+        <ul>
+          <li> Aktiver en gruppe ved at kontrollere det er billedtekst afkrydsningsfeltet </li>
+          <li>
+            <img src="data/icon-add.png" alt="Tilføj ny værdi"> Tilføj en ny værdi </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Slet valgte værdi"> Slet den valgte værdi </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Ryd liste"> Ryd hele listen </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Få listen"> Få alle aktuelle værdier for denne indstilling fra systemet (betragtninger klikke på <img src="data/icon-get.png" alt="Få indstillinger"> symbol i hovedvinduet læser den første værdi kun) </li>
+          <li> Ændre rækkefølgen med træk-og-slip </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Vindue Access Advanced TCP / IP-indstillinger" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Vinduet Avanceret TCP / IP-indstillinger" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Tilslutninger
+      </div>
+      <div class="hf_body">
+        <p>
+          Brug denne funktion til at forbinde eller frakoble nogen form for Windows-forbindelser såsom dial-up netværk, mobilt bredbånd eller VPN. Kompatible forbindelser er opført i Windows sammen med din normale netværkskort i dialogboksen Netværksforbindelser. Fra et teknisk synspunkt alle forbindelser, der er kompatible med "RasDial" er understøttet.
+        </p>
+        <p>
+          Du kan vælge enten at afbryde alle aktuelt etablerede forbindelser ved at markere afkrydsningsfeltet, eller at tilslutte / afbryde nogle forbindelser individuelt for af listen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Connections vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Værter
+      </div>
+      <div class="hf_body">
+        <p>
+          I ganske særlige tilfælde kan det være nødvendigt eller hensigtsmæssigt for manuelt at tildele IP-adresser til navne eller domæner. Bemærk at NetSetMan kun vil ændre sine egne værter poster forlader allerede eksisterende poster uberørt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Værter vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Netværk Drev
+      </div>
+      <div class="hf_body">
+        <p>
+          Med NetSetMan kan du kortlægge og fjern kortlægning en ubegrænset mængde af netværksdrev. <br> Læs instruktion noterne i bunden af ​​vinduet ved at klikke på "[Show Hjælp]".
+        </p>
+        <p>
+          Når en profil er aktiveret, og Net Drive-funktionen er valgt NetSetMan vil sammenligne liste med alle tilknyttede drev med en liste over de drev, der skal kortlægges. Alle tilknyttede drev, der er i begge lister (samme drevbogstav og samme sted sti) vil forblive urørt. Alle andre netværksdrev vil være unmapped før de nye er kortlagt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Netværk Drev vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Scripts
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan tilbyder dig en behagelig måde at håndtere dine script-filer. Men det har ikke eget script sprog. Det betyder, at du kan kun bruge script-sprog dit operativsystem er i stand til at udføre. Fælles script-sprog er VBS, JS og selv simple kommandolinje-batch-filer. Brug din foretrukne søgemaskine til at finde mere information om scripting og hvad du kan gøre med det.
+        </p>
+        <p>
+          Åbn et eksisterende script fil eller oprette en ny for at kunne redigere scriptet. <br> Du kan have to scripts, der vil blive udført før og efter alle andre indstillinger ændres. <br> Hvis du har brug for en forsinkelse mellem at køre scriptet og ændre netværksindstillinger, kan du angive det i bunden.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/scripts.png" alt="Scripts vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / E-mail
+      </div>
+      <div class="hf_body">
+        <p>
+          I nogle tilfælde IP-adressen på SMTP-serveren til at sende e-mails varierer afhængigt af dit netværk. At være i samme netværk, som du måske har brug for en lokal IP-adresse ligesom 10.0.0.1, og samtidig være uden for det pågældende netværk, du måske nødt til at få adgang til det ved en global IP-adresse.
+        </p>
+        <p>
+          I stedet for at forsøge at være kompatibel med en masse forskellige email-klienter og beskæftiger sig med forskellige brugerprofiler NetSetMan løser dette problem med en simpel løsning. Indstil "nsm.smtp" som SMTP-adresse i din mail-klient og konfigurere IP-adresserne i henhold profiler. Når du aktiverer profilen begge værdier vil blive forbundet ved hjælp af hosts fil, så du ikke behøver at gøre yderligere ændringer i din e-mail klient længere.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / E-mail vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Systemindstillinger
+      </div>
+      <div class="hf_body">
+        <p>
+          Udover de sædvanlige netværksindstillinger undertiden du måske ønsker at ændre nogle systemindstillinger afhængigt af din placering eller situation. For eksempel, mens på universitetet, du måske ønsker at slå lyden, ændre tapet og aktivere Balanceret strømstyringsmodel.
+        </p>
+        <p>
+          Du kan også bruge vinduet Systemindstillinger for hurtigt at ændre nogle indstillinger, der ellers ville tage mere tid på at finde placeringen af ​​denne indstilling i Windows. Du skal blot klikke på <img src="data/set-icon.png" alt="Ikon sæt indstillinger"> knappen til direkte at aktivere den pågældende indstilling.
+        </p>
+        <p>
+          Understøttede indstillinger omfatter: visningstilstand, tapet, desktop farve, screensaver, design ordning, højttalere og mikrofon volumen, lyd ordning, firewall (inkl undtagelser og meddelelser.), Strømplan, tidszone og MAC-adresse.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Systemindstillinger vindue" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          En NetSetMan profil kan bruges til at forbinde til et eksisterende WiFi-profil. For at gøre dette, skal du vælge en WiFi-adapteren i NIC rullelisten, og vælg derefter en WiFi profil fra WiFi dropdown listen. Hvis du kun ønsker at frakoble din WiFi-forbindelse, skal du vælge den tomme post.
+        </p>
+        <p>
+          Ud over dette grundlæggende WiFi kontakt NetSetMan tilbyder en omfattende WiFi-ledelse. Klik på ikonet WiFi eller brug hovedmenuen (Værktøjer&gt; NSM WiFi Management) for at få adgang til det. Du kan finde en liste over alle aktuelt tilgængelige WiFi-netværk. En gul baggrund viser, at en profil med det samme SSID allerede eksisterer. Et netværk med en grøn baggrund er tilsluttet i øjeblikket. Du kan oprette forbindelse til et netværk ved at dobbeltklikke på den eller ved hjælp af "Connect" -knappen. Hvis der ikke er nogen eksisterende profil til denne forbindelse kan du vælge at oprette den først. Indstillingerne (autentificering, kryptering, ...) vil blive præ-konfigureret automatisk afhængigt af den anerkendte netværk. Dog kan du nødt til at justere dem i tilfælde af, at anerkendelse ikke virkede korrekt eller anden grund.
+        </p>
+        <p>
+          NetSetMan fungerer med de oprindelige Windows WiFi profiler. Det betyder, at du altid har adgang til de samme profiler, som du allerede anvendes i Windows eller anden WiFi-software. Du kan oprette, ændre eller slette WiFi profiler.
+        </p>
+        <p> 
+          
+        </p>
+        <p>
+          <strong>Krav</strong>
+        </p>
+        <p>
+          NetSetMan bruger native WiFi API af Windows. Det bringer den store fordel, at ingen nye drivere skal installeres (som kan føre til flere konflikter). På negativsiden WiFi funktioner i NetSetMan fungerer kun på Windows-systemer, der allerede understøtter WiFi. Heldigvis de fleste af de versioner, der anvendes i dag gøre det. Hvis du bruger Vista eller nyere, du er god til at gå. I XP skal du have SP2 eller SP3 installeret.
+        </p>
+        <p>
+          Sørg for, at tjenesten <em>WLAN AutoConfig (Wlansvc)</em> (Vista og nyere) eller <em>Wireless Zero Configuration (wzcsvc)</em> (XP) kører.
+        </p>
+        <p>
+          Hvis din trådløse adapter leveres med en brugerdefineret producent software til at styre WiFi-indstillinger, så det vil blokere for Windows-adgang i de fleste tilfælde. Du bliver nødt til at finde mulighed for at skifte til Windows ledelse i at software (hvis tilgængelig). <br> Fordi der er mange forskellige producenter med deres egen software, er der ingen universel måde at opnå dette. Her er et eksempel: Hvis du bruger en AVM FRITZ!WLAN USB-enhed, skal du klikke på ikonen af ​​sin software, og vælg "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi oversigt" class="screen">
+        <img src="data/wifi.png" alt="NSM WiFi Management vindue" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Avanceret
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AUTOSWITCH
+      </div>
+      <div class="hf_body">
+        <p>
+          Det er temmelig let at aktivere en profil med et enkelt klik fra <a href="#hf_tray">menuen Bakke</a> . Men i nogle tilfælde kan det være endnu lettere at aktivere profiler helt automatisk afhængigt af brugerdefinerede betingelser. Den integrerede AUTOSWITCH funktion gør netop dette.
+        </p>
+        <p>
+          Efter aktivering AUTOSWITCH følgende betingelser kan konfigureres til alle profiler individuelt:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Begrænset profil-ikon"> Omkringliggende WiFi netværk
+          </div>
+          <ul>
+            <li>Trådløst netværk (SSID eller MAC) i / uden for rækkevidde</li>
+            <li>Signalstyrken for et trådløst netværk højere / lavere end en vis værdi</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Begrænset profil-ikon"> Netværk Steder
+          </div>
+          <ul>
+            <li>Windows NLM: genereres automatisk netværksprofiler af Windows (Vista og nyere)</li>
+            <li>Gateway MAC: Fingeraftryk af automatisk tildelt DHCP-gateway</li>
+            <li>Ping: Tilgængeligheden af ​​en bestemt server eller system i netværket</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Begrænset profil-ikon"> Adapter status
+          </div>
+          <ul>
+            <li>Tilslutning status for en lokal netværksadapter (tilsluttet / afbrudt)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Begrænset profil-ikon"> Tidsramme
+          </div>
+          <ul>
+            <li>Visse dage i ugen og tidsrammen (f.eks Sa + Su, fra 8:00 til 18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Selvom der ikke er nogen teknisk begrænsning for mængden af ​​betingelserne for hver profil forsøge at holde det så simpelt som muligt. I de fleste tilfælde er det helt tilstrækkeligt at inkludere én eller to betingelser for at opnå det ønskede resultat.
+        </p>
+        <p>
+          Du kan angive, at enten alle eller i det mindste en af ​​de betingelser skal være opfyldt for at aktivere denne profil.
+        </p>
+        <p>
+          <strong>Bemærk:</strong> Profiler med lavere id'er har en højere prioritet i tænkelige betingelser for flere profiler er opfyldt på samme tid.
+        </p>
+        <p>
+          Som standard aktiveringsprocessen indledes med en meddelelse i nederste højre hjørne med en tilpasselig nedtælling, så du kan eventuelt afbryde aktiveringsprocessen. Alternativt kan en indfødt Windows-meddelelse, kan anvendes eller profilen kan aktiveres uden nogen besked i baggrunden. I sidstnævnte tilfælde bakkeikonet animeres under aktiveringen og ændre dens farve midlertidigt forhold til resultatet aktivering til visuelt at informere dig om den automatiserede proces.
+        </p>
+        <p>
+          For at spare systemressourcer NetSetMan ikke sammenligne dine aktuelle indstillinger til indstillingerne for den profil, der skal aktiveres. Det betyder, at hvis du ændrer nogen af ​​indstillingerne manuelt, NetSetMan ikke mærke ændringen.
+        </p>
+        <p>
+          AUTOSWITCH har nogle begrænsninger i XP: Windows NLM ikke er tilgængelig, kan ændringer i de omkringliggende WiFi-netværk blive anerkendt med en mærkbar forsinkelse.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AUTOSWITCH" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AUTOSWITCH tooltip" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AUTOSWITCH meddelelse" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Noter
+      </div>
+      <div class="hf_body">
+        <p>
+          Du kan oprette korte noter for hver profil, hvis du har brug for at huske eller angive formålet med en profil. Hvis en note blev skabt til en profil dens ikon vil blive vist farvet i menulinjen. Notatet er så synlig i fuld tilstand som en antydning af ikonet, og i kompakt tilstand på toppen af ​​profilindstillinger.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Noter" class="screen">
+        <img src="data/note-hint.png" alt="Bemærk tip" class="screen">
+        <img src="data/note-compact.png" alt="Bemærk i kompakt tilstand" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM service / begrænset brugerkonto
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan kræver administratorrettigheder for at være i stand til at ændre netværksindstillinger og systemindstillinger for dig. Normalt kører en sådan anvendelse er ikke muligt for en begrænset brugerkonto. Nyere versioner af Windows endda begrænse Administrator-konti med UAC (User Account Control), der viser en besked ved hver programstart.
+        </p>
+        <p>
+          For at løse dette problem NetSetMan indeholder en særlig komponent kaldet <strong>NSM Tjeneste,</strong> der giver den vigtigste anvendelse med de nødvendige rettigheder. Servicen installeres automatisk, men kan også installeres manuelt / afinstalleret i præferencer (Systemindstillinger Privilegier&gt; Aktiver / Deaktiver).
+        </p>
+        <p>
+          Den installerede service er synlig i Windows Services dialogen (services.msc) og kan styres der. Derudover kan det blive installeret / afinstalleret eller startes / stoppes ved hjælp af kommando-linje:<br><span class="code">nsmservice.exe / install / tavse<br> nsmservice.exe / afinstallere / lydløs<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Hvis du får fejlen <em>"Ugyldig signatur",</em> så sørg for at programmet exe er ikke blevet ændret, og Windows-koncernens politik <em>"Slå Automatisk Opdatering af rodcertifikater"</em> er deaktiveret.
+        </p>
+        <p>
+          Hvis du kører NetSetMan med en begrænset brugerkonto, hvor NSM Service er ikke tilgængelig du vil modtage en meddelelse, der forklarer problemet. Som et alternativ kan du indtaste <strong>administratorlegitimationsoplysninger</strong> fra en lokal konto, NetSetMan gemmer krypteret i sin fil indstillingerne og bruge til at lancere sig selv med de nødvendige rettigheder. Bemærk, at ansøgningen i dette tilfælde vil køre i forbindelse med den bruger, hvis legitimationsoplysninger blev anvendt.
+        </p>
+        <p>
+          Kontroller <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> at læse nogle ekstra noter om denne funktion.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Systemrettigheder" class="screen">
+        <img src="data/limitedaccount.png" alt="Begrænset brugerkonto" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Før logon-profil Switching
+      </div>
+      <div class="hf_body">
+        <p>
+          En meget unik og kraftfuld funktion er muligheden for at aktivere dine profiler på logon-skærmen. Dette gør det muligt at udarbejde korrekte netværksindstillinger, du har brug for din konto ved at aktivere en NetSetMan profil før selv logge på.
+        </p>
+        <p>
+          For at bruge denne funktion <a href="#hf_nsmservice">NSM service</a> skal være installeret og indstillingen <em>"Profil skifte fra Windows logon-skærm"</em> (Indstillinger&gt; System udendørsfaciliteter) skal være aktiveret.
+        </p>
+        <p>
+          Bemærk, at denne funktion kun gør det muligt at ændre indstillinger, der er delt mellem alle brugere. Bruger specifikke indstillinger kan ikke ændres uden en brugers session.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Før logon-profil skift" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM Administration
+      </div>
+      <div class="hf_body">
+        <p>
+          Hvis du har oprettet NetSetMan til at blive brugt af en anden, kan du angive, hvilke handlinger den anden person får lov til at udføre. Med NSM Administration (Indstillinger&gt; Administration) kan du gøre netop det.
+        </p>
+        <p>
+          Når du aktiverer denne funktion, du bliver nødt til at indtaste en adgangskode med 6 eller flere tegn. Kun med denne adgangskode, du vil være i stand til at ændre NSM Administration af indstillinger eller udføre de handlinger, du vælger at være sikret (kør NetSetMan, aktivere profiler, ændre profilindstillinger, ændre programindstillinger).
+        </p>
+        <p>
+          Du kan endda låse visse profiler <img src="data/administration-profilelock.png" alt="Begrænset profil-ikon"> så brugeren kan ikke ændre, men er stadig i stand til at aktivere dem. Eller du kan normalt begrænse adgangen til bestemte indstillinger <img src="data/administration-settinglock.png" alt="Begrænset Indstilling Ikon"> ligesom "Arbejdsgruppe &amp; domæne", mens tillader brugeren at konfigurere og bruge alle andre indstillinger.
+        </p>
+        <p>
+          En checksum af din adgangskode vil blive skrevet til registreringsdatabasen. Sørg for, at en normal bruger har ingen skriverettigheder til <span class="code">HKLM \ Software \ NetSetMan</span> (på x64: <span class="code">HKLM \ Software \ Wow6432Node \ NetSetMan).</span> Hvis du glemmer din adgangskode, skal du slette denne nøgle manuelt. Hvis din fil indstillinger er krypteret ingen uden password vil være i stand til at se eller redigere den.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM Administration" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Administration - Profil Begrænsninger" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Administration - Indstillinger Begrænsninger" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Command Line Aktivering
+      </div>
+      <div class="hf_body">
+        <p>
+          I specielle tilfælde kan du ønsker at ændre din profil uden at bruge GUI af NetSetMan: ændre profiler med genveje, aktivere en profil ved start, omfatter det i et komplekst script etc.
+        </p>
+        <p>
+          Følgende parametre er tilgængelige:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Aktiverer profilen med det nummer #</td>
+          </tr>
+          <tr>
+            <td><strong>-Som #</strong></td>
+            <td>Aktiverer profilen i lydløs tilstand (Aktivering vinduet lukkes automatisk, hvis ingen fejl opstod)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Kører NetSetMan minimeret</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -Fuld</strong></td>
+            <td>Kører NetSetMan i fuld tilstand (standard)</td>
+          </tr>
+          <tr>
+            <td><strong>-C / -Kompakt</strong></td>
+            <td>Kører NetSetMan i kompakt tilstand</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Kører en anden forekomst af NetSetMan. <strong>Vær forsigtig:</strong> Alle aktive forekomster skrive til samme indstillinger fil!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          En genvej til at aktivere profilen # 0 i lydløs tilstand kunne se således ud: <br><strong>"C: \ Program Files (x86) \ NetSetMan \ netsetman.exe"-som 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Genvej" class="screen">
+        </p>
+        <p>
+          I kommando-linje: <br>
+          <img src="data/commandline.png" alt="Command Line" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Ikke-Kommerciel Freeware besked
+      </div>
+      <div class="hf_body">
+        <p>
+          Dette budskab i hovedvinduet vises på hver 7. start for brugerne i en arbejdsgruppe og på hver 2. start for brugere i et domæne, <em>i gennemsnit.</em>
+        </p>
+        <p>
+          Desværre er det nødvendigt at minde brugerne om, at NetSetMan kun er freeware til ikke-kommercielle formål (= privat eller frivilligt). I summen: Du kan bruge produktet til gratis, så længe du ikke gemmer betalt arbejdstid. Hvis du gerne vil bruge produktet for eksempel på arbejde eller på en kommercielt brugt bærbar, er du forpligtet til at købe en <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> licens.  Der er ingen særlig regulering til uddannelsesformål eller non-profit institutioner. Professorer, lærere og andre ansatte må kun bruge de ikke-kommercielle Freeware version, hvis de arbejder i en honorær kapacitet (= ulønnet).
+        </p>
+        <p>
+          Læs venligst <a href="http://www.netsetman.com/en/txt/license" target="_blank">licensaftalen</a> for yderligere information.
+        </p>
+        <p>
+          <strong>Denne meddelelse er ikke inkluderet i Pro-versionen, naturligvis.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Ikke-Kommerciel Freeware besked" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Yderligere Pro Funktioner
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Profil Grupper
+      </div>
+      <div class="hf_body">
+        <p>
+          Med NetSetMan Pro du er i stand til at skabe en ubegrænset mængde af profil grupper. Hver gruppe indeholder 6 profiler.
+        </p>
+        <p>
+          Hvis du vil tilføje, slette, omarrangere eller omdøbe en profil gruppe bruge <a href="#hf_profiles">profilen ledelse</a> i menulinjen.
+        </p>
+        <p>
+          For at navigere mellem alle tilgængelige profil grupper vælge enhver gruppe fra drop-down feltet i menulinjen.
+        </p>
+        <p>
+          Hvis du har mere end én gruppe, vil dine profiler blive vist grupperet i bakken menuen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profile Management Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Ikon i Pro-versionen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Browser / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          Med NetSetMan Pro kan du styre proxyindstillingerne af Windows / Internet Explorer, Firefox og Opera (&lt;= V12). Chrome og senere versioner af Opera understøtter ikke egne proxyindstillinger, men i stedet automatisk bruge systemets indstillinger.
+        </p>
+        <p>
+          Alle indstillinger er beregnet til at efterligne de originale grænseflader til at tillade den samme konfiguration, der også er muligt i de browsere direkte. Derudover kan du ændre startsiden og i tilfælde du bruger profiler i Firefox eller Opera, vil du også være i stand til at vælge den profil navn.
+        </p>
+        <p>
+          Bemærk venligst, at Firefox <em>skal</em> være lukket, før du ændrer indstillingerne. <br> Hvis du har flere Firefox-profiler og deres profil mappeændringer (f.eks på grund af et nyt system), du bliver nødt til at re-vælge den profil på listen, så den bliver opdateret i din indstillingsfil.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Browser / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Domæne
+      </div>
+      <div class="hf_body">
+        <p>
+          Forbindelse til et domæne indtaste sit navn, dit brugernavn og din adgangskode. Dit brugernavn og kodeord vil blive gemt krypteret i ini-filen.
+        </p>
+        <p>
+          Normalt er det nok at indtaste den rene brugernavn. Men hvis du får en fejl, kan du prøve at indtaste en af ​​følgende to standarder som din brugernavn:<br> a) NETBIOS: domain \ user<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          I NT domæner en bruger kan kun være medlem af præcis <em>et</em> domæne på samme tid. Det betyder, at ved at deltage et andet domæne eller en arbejdsgruppe dit medlemskab i forrige domæne er tabt indtil dit system er genforenet.
+        </p>
+        <p>
+          NetSetMan kan kun slutte dig til et domæne, hvis dit domæne brugerkonto har tilladelse til at gøre det.<br> Denne bruger konto privilegium kaldes "Tilføj arbejdsstation til domænet" og skal være aktiveret på din konto. Hvis du ikke har dette privilegium, spørg din netværksadministrator for at give dig det.
+        </p>
+        <p>
+          Kontroller <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> at læse nogle ekstra noter om denne funktion.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Domæne oversigt" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Distribution i Company Networks
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro tilbyder flere hjælpe funktioner, der hjælper dig med at distribuere softwaren, prækonfigurerede indstillinger, og din licens lettere i virksomhedens netværk. Du kan finde alt hvad du behøver at vide i en detaljeret beskrivelse i <a href="http://www.netsetman.com/faqcompany">FAQ</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

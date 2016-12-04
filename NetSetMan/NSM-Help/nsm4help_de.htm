@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x Hilfedatei</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Hilfedatei</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-de.png" alt=""></div>
+          <div id="hf_language">Deutsch</div>
+          <div id="hf_translator"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Allgemeine Informationen
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Hilfedatei Version</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left"> <br> Unterstützte Betriebssysteme</td>
+            <td class="hf_tblinfo_right">Windows  <br> XP, Vista, 7, 8, 10 <br> 32 Bit, 64 Bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Lizenz</td>
+            <td class="hf_tblinfo_right">Nicht-Kommerzielle Freeware <br><em>oder</em><br> Kommerzielle Pro-Version<br> Anzeigen als <a href="http://www.netsetman.com/de/txt/license" target="_blank">HTML</a> oder <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-de.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Kontakt</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Support Forum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Inhalt
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Grundlagen
+        </p>
+        <ul>
+          <li><a href="#hf_description">Beschreibung</a></li>
+          <li><a href="#hf_howtouse">Grundlagen</a></li>
+          <li><a href="#hf_profiles">Profile</a></li>
+          <li><a href="#hf_nics">Netzwerkadapter (NICs)</a> </li>
+          <li><a href="#hf_basicoperations">Konfigurationsmöglichkeiten</a></li>
+          <li><a href="#hf_activation">Profil-Aktivierung</a></li>
+          <li><a href="#hf_compactmode">Kompakt-Modus &amp; Voll-Modus</a></li>
+          <li><a href="#hf_tray">Tray-Menü &amp; Tray-Info</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Funktionen
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Übersicht</a></li>
+          <li><a href="#hf_adapterstatus">Adapter-Status</a></li>
+          <li><a href="#hf_advanced">Erweiterte TCP/IP-Einstellungen </a></li>
+          <li><a href="#hf_connections">Verbindungen</a></li>
+          <li><a href="#hf_hosts">Hosts-Datei</a></li>
+          <li><a href="#hf_netdrives">Netzlaufwerke</a></li>
+          <li><a href="#hf_scripts">Skripte &amp; Programme</a></li>
+          <li><a href="#hf_smtp">SMTP / Email</a></li>
+          <li><a href="#hf_system">System-Einstellungen</a></li>
+          <li><a href="#hf_wifi">WLAN</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Erweitert
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoAktivierung</a></li>
+          <li><a href="#hf_notes">Notizen</a></li>
+          <li><a href="#hf_nsmservice">NSM Service / Eingeschränktes Benutzerkonto</a></li>
+          <li><a href="#hf_prelogon">Profilaktivierung auf dem Anmeldebildschirm</a></li>
+          <li><a href="#hf_nsmadministration">NSM Administration</a></li>
+          <li><a href="#hf_commandline">Kommandozeilen-Aktivierung</a></li>
+          <li><a href="#hf_ncfreeware">Nicht-Kommerzielle Freeware Meldung</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Zusätzliche Pro Funktionen
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Profil-Gruppen</a></li>
+          <li><a href="#hf_proxy">Browser / Proxy</a></li>
+          <li><a href="#hf_domain">Domäne</a></li>
+          <li><a href="#hf_distribution">Verteilung in Unternehmensnetzwerken</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Grundlagen
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Beschreibung
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> ist ein Manager von Netzwerkeinstellungen und verwaltet in 6 verschiedenen, optisch gegliederten Profilen:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP-Adressen (IPv4 &amp; IPv6!) </li>
+              <li> Gateways (inkl. Metrik) </li>
+              <li> DNS Server </li>
+              <li> WINS Server </li>
+              <li> WLAN Verwaltung </li>
+              <li> Computername </li>
+              <li> Arbeitsgruppe </li>
+              <li> Standarddrucker </li>
+              <li> Netzlaufwerke </li>
+              <li> Netzwerkadapter-Status </li>
+              <li> Verbindungen (RAS/DFÜ/PPP/VPN) </li>
+              <li> DNS Suffix </li>
+              <li> Routentabelle </li>
+              <li> SMTP Server </li>
+              <li> Hosts-Datei Einträge </li>
+              <li> System-Einstellungen </li>
+              <li> MAC-Adressen </li>
+              <li> Skripte (BAT, VS, JS, ...) </li>
+              <li> Programmausführung </li>
+            </ul></td>
+            <td width="51%"><strong>Zusätzlich nur in der <u>Pro-Version:</u></strong>
+            <ul>
+              <li> Darf am Arbeitsplatz eingesetzt werden </li>
+              <li> Unbegrenzte Anzahl von Profilen </li>
+              <li> Netzwerk-Domäne </li>
+              <li> Vollständige Proxy-Einstellungen &amp; <br> Browser-Startseite <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> bietet Ihnen, was Sie bislang in Windows vermisst haben: <br> Eine mächtige und doch einfach zu bedienende Oberfläche, um all Ihre  Netzwerkeinstellungen auf einen Blick verwalten zu können. <br> Probieren Sie es aus und Sie werden es nicht mehr missen wollen.
+        </p>
+        <p>
+          Alle Änderungen werden automatisch in einer gesonderten Datei gespeichert    (<em>settings.ini</em>), sodass eine Sicherung, Weitergabe oder ein Update  kein    Problem darstellen. 
+        </p>
+        <p>
+          <strong>Aktivieren Sie ein gespeichertes Profil mit einem Klick oder sogar komplett automatisch!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs. Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Haupt-Benutzeroberfläche">
+          <br><strong>NetSetMan:</strong> Nicht-Kommerzielle Freeware-Version
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro Haupt-Benutzeroberfläche">
+          <br><strong>NetSetMan Pro:</strong> Kommerzielle Pro-Version
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Grundlagen
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profile
+            </div> Jedes <a href="#">Profil</a> repräsentiert eine Gruppe von Einstellungen, die für einen bestimmten Ort oder Einsatzzweck erforderlich sind. Durch die Verwendung von Unterprofilen können mehrere Netzwerkadapter innerhalb eines Profils konfiguriert werden. Benennen Sie ein Profil per Doppelklick auf die entsprechende Profil-Tab-Beschriftung um.</li>
+          <li>
+            <div>
+              Manuelle Konfiguration
+            </div> Benötigte Profile müssen manuell selbst konfiguriert werden. Es ist leider nicht möglich, die richtigen Einstellungen für einen unbekannten Ort zu erraten. Der Hauptzweck der Anwendung ist es, regelmäßige Einstellungs-Änderungen, die Sie normalerweise manuell durchführen, zu automatisieren.</li>
+          <li>
+            <div>
+              Auswahl von Einstellungen
+            </div>Das <a href="#hf_basicoperations">Einlesen aller aktuellen Einstellungen</a> in ein Profil kann einen guten Ausgangspunkt geben, aber Sie müssen dennoch selbständig entscheiden, welche der Einstellungen bei einer Profilaktivierung geändert werden sollen. Dabei ist es empfehlenswert die Auswahl auf die Einstellungen zu begrenzen, die sich in der Zwischenzeit überhaupt verändert haben könnten. Zum Beispiel ist es nicht notwendig, den Computernamen zu konfigurieren, wenn dieser ohnehin immer gleich bleibt.</li>
+          <li>
+            <div>
+              Konfiguration der Einstellungen
+            </div> Um eine Einstellung im Profil zu konfigurieren, setzen Sie zunächst das zugehörige Häkchen. Geben Sie die gewünschte Konfiguration dann entweder direkt im Hauptfenster ein oder öffnen Sie den zugehörigen Konfigurationsdialog für diese Einstellung.</li>
+          <li>
+            <div>
+              Profilaktivierung
+            </div> Standardmäßig wird kein Profil automatisch aktiviert, d.h. keine Einstellung auf Ihrem System wird ohne Ihr Zutun geändert. Darüber hinaus haben Sie jedoch auch die Möglichkeit die <a href="#hf_autoswitch">AutoAktivierung</a> zu verwenden, um bestimmte Profile basierend auf frei anpassbaren Bedingungen automatisch aktivieren zu lassen.</li>
+          <li>
+            <div>
+              Zugriff per Tray-Icon
+            </div> Es ist empfehlenswert, <a href="#hf_tray">NetSetMan minimiert in der Taskleiste</a> aktiv zu lassen und zusätzlich das zugehörige Tray-Icon in den immer sichtbaren Bereich zu verschieben. So können Sie jederzeit schnell ein Profil aktivieren, indem Sie auf das Tray-Icon klicken und das gewünschte Profil wählen. Zusätzlich erhalten Sie dadurch immer einen guten Überblick über den Status und die aktuellen IP-Adressen Ihrer Netzwerkverbindungen, indem Sie den Mauszeiger über das Tray-Icon bewegen.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profile
+      </div>
+      <div class="hf_body">
+        <p>
+          Die Tabs (Karteikartenreiter) repräsentieren die vorhandenen Profile. Sie können 6 verschiedene Sets (Zusammenstellungen) von Einstellungen in den Tabs konfigurieren.
+        </p>
+        <p>
+          Wenn Sie die Einstellungen von zwei unterschiedlichen Netzwerkadaptern beim Aktivieren eines Profils ändern möchten, können Sie hierzu <strong>Unterprofile</strong> verwenden. Klicken Sie dazu auf die "+"-Schaltfläche neben der Adapter-Auswahlliste, sodass eine neue Menüleiste erscheint, die zwei Unterprofile (das aktuelle und ein neues leeres) enthält. Die Beschriftung eines Unterprofils zeigt automatisch den Namen des darin gewählten Netzwerkadapters und kann nicht geändert werden. Es können beliebig viele Unterprofile erstellt werden. Diese werden alle automatisch nacheinander aktiviert, wenn das übergeordnete Profil aktiviert wird. Die Reihenfolge kann dabei per Drag &amp; Drop neu angeordnet werden.
+        </p>
+        <p>
+          Alle Änderungen werden automatisch gespeichert, sodass nichts aus Versehen verloren geht.
+        </p>
+        <p>
+          Sie können ein Profil umbenennen, indem Sie mit der rechten Maustaste darauf klicken und die Option "Umbenennen" wählen oder einfach den entsprechenden Profil-Tab doppelklicken.
+        </p>
+        <p>
+          Um alle Profile einfacher verwalten zu können bietet sich die integrierte <strong>Profilverwaltung</strong> in der Menüleiste an. Diese ermöglicht das Bearbeiten von Profilen, Unterprofilen und Gruppen (nur in NetSetMan Pro) per Maus oder einiger bekannter Tastenkombinationen (Pfeiltasten für die Navigation, F2 zum Umbenennen, etc.). Bei der Verwendung von Drag &amp; Drop zum Neuanordnen von Elementen, werden Sie feststellen, dass es aufgrund von gegebenen technischen Umständen je nach Element einige unvermeidbare Einschränkungen gibt: Profile können nicht gelöscht werden, Multiprofile können nicht umbenannt werden, Profile können untereinander getauscht jedoch nicht einfach verschoben werden. Die Auswahlboxen repräsentieren die Sichtbarkeit des Profils im Tray und Kompakt-Modus.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Unterprofil-Tabs" class="screen">
+          <img src="data/rename.png" alt="Profil umbenennen" class="screen">
+          <img src="data/profilemanagement.png" alt="Profilverwaltung" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Netzwerkadapter (NICs)
+      </div>
+      <div class="hf_body">
+        <p>
+          Alle verfügbaren Netzwerkadapter werden mit ihrem Namen und ihrem Typ angezeigt. Wählen Sie den Adapter, den Sie im aktuellen (Unter-)Profil verwalten möchten.
+        </p>
+        <p>
+          Wenn ein bestimmter Adapter in der Liste nicht vorhanden ist (z.B. weil er zuvor deaktiviert wurde oder eine spezielle virtuelle Variante ist), können Sie die Liste bearbeiten, indem Sie die <strong>Netzwerkadapter-Schaltfläche</strong> anklicken und die Liste aktualisieren oder <strong>Netzwerkadapter verwalten</strong> wählen. Dort finden Sie eine vollständige Liste aller verfügbaren Netzwerkadapter auf dem System. Wählen Sie per Häkchen alle Netzwerkadapter aus, die Sie in Ihrer Liste haben möchten.
+        </p>
+        <p>
+          <strong>Hinweis:</strong> Alle Netzwerkadapter, die in dieser Liste enthalten sind, werden auch in der Tray-Info angezeigt. Deaktivieren Sie unerwünschte Adapter, um sie aus der Liste und der Tray-Info zu entfernen.
+        </p>
+        <p>
+          Wenn Sie die Einstellungsdatei (settings.ini) auf ein anderes System kopieren, wird NetSetMan versuchen, die Adapter in den Profilen automatisch zuzuordnen. Dies ist jedoch nur möglich, wenn die verwendeten Adapter auf dem neuen System gleich benannt sind (im ersten Screenshot ist es "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Netzwerkadapter-Auswahl" class="screen">
+        <img src="data/adapters-management.png" alt="Netzwerkadapter-Verwaltung" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Konfigurationsmöglichkeiten
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Aktuelle Einstellungen auslesen
+        </p>
+        <p>
+          Um einen aktuellen Konfigurationswert in das Profil zu laden, klicken Sie einfach auf das <img src="data/icon-get.png" alt="Einstellungen auslesen Symbol">-Symbol neben dem entsprechenden Eingabefeld. <br> Um die aktuelle Konfiguration für alle Einstellungen zu laden, klicken Sie mit der rechten Maustaste auf das Profil und wählen Sie "Aktuelle Einstellungen auslesen".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Eine Einstellung auslesen" class="screen">
+        <img src="data/get-settings2.png" alt="Alle Einstellungen auslesen" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Einstellungen löschen</span>
+        </p>
+        <p>
+          Um die Konfiguration einer bestimmten Einstellung zu löschen, rechtsklicken Sie diese und wählen Sie "Löschen".
+        </p>
+        <p>
+          Um die Werte eines IP-Feldes zu löschen, doppelklicken Sie einfach auf dessen Beschriftung.
+        </p>
+        <p>
+          Um alle Einstellungen des aktuellen (Unter-)Profils zu löschen, rechtsklicken Sie den Profil-Tab und wählen Sie "Einstellungen löschen".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Eine Einstellung löschen" class="screen">
+        <img src="data/clear-settings2.png" alt="Alle Einstellungen löschen" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Kopieren &amp; Einfügen von Einstellungen</span>
+        </p>
+        <p>
+          Um die Einstellungen zwischen verschiedenen Profilen zu übertragen, können Sie ein komplettes Profil kopieren (Rechtsklick, "Einstellungen kopieren") und im gewünschten Profil wieder einfügen (Rechtsklick, "Einstellungen einfügen").
+        </p>
+        <p>
+          Um nur bestimmte Einstellungen zu übertragen, rechtsklicken Sie diese und wählen entsprechend "Kopieren" bzw. "Einfügen".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Kopieren und Einfügen einer Einstellung" class="screen">
+        <img src="data/copypaste2.png" alt="Kopieren und Einfügen aller Einstellungen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Profil-Aktivierung
+      </div>
+      <div class="hf_body">
+        <p>
+          Um alle Einstellungen des aktuellen Profils anzuwenden, klicken Sie auf <strong>"Aktivieren"</strong> oder wenn das Programm minimiert ausgeführt wird, wählen Sie einfach das gewünschte Profil aus dem <a href="#hf_tray">Tray-Menü</a> aus. <br> Beachten Sie, dass nur die Einstellungen aktiviert werden, die mit einem Häkchen ausgewählt wurden.
+        </p>
+        <p>
+          Der <strong>Aktivierungsdialog</strong> enthält Informationen über den aktuellen Fortschritt der Aktivierung. <br> Dort können Sie sehen, welche Einstellungen aktiviert werden sollen und ob der entsprechende Vorgang erfolgreich war oder nicht. Der Aktivierungsprozess kann jederzeit per "Abbrechen"-Schaltfläche gestoppt werden.
+        </p>
+        <p>
+          Alle Änderungen werden sofort übernommen. In einigen Ausnahmefällen benötigen bestimmte Einstellungen etwas Zeit, um vollständig wirksam zu werden oder erfordern einen Neustart (insbesondere "Computername" und "Arbeitsgruppe / Domäne").
+        </p>
+        <p>
+          Der <strong>Details</strong>-Bereich bietet einen Überblick über alle konfigurierten Einstellungen für dieses Profil. Um mehr Informationen und Fehlermeldungen in voller Länge angezeigt zu bekommen, können Sie zusätzlich den <strong>Log</strong>-Bereich öffnen.
+        </p>
+        <p>
+          Lösungen zu den häufigsten Fehlern und Problemen befinden sich zusammengefasst in den <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a>.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Einstellungen auswählen, die geändert werden sollen" class="screen">
+        <img src="data/activation.png" alt="Profil-Aktivierungsfenster" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Ergebnisse und ihre Bedeutung</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">Alles funktionierte wie erwartet.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Einstellungen werden derzeit angewendet.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Einstellungen wurden ignoriert, weil sie unvollständig oder fehlerhaft waren.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Fehler</td>
+            <td class="hf_errortable_right">In den meisten Fällen werden Fehler mit einem kurzen roten Text wie "Datei nicht gefunden" angezeigt. Falls Sie einen Fehlercode erhalten, schauen Sie bitte in das Log-Protokoll, um herauszufinden, ob für diesen Code ein Fehlertext vorliegt. Wenn Sie den Grund für den Fehler nicht herausfinden können, schreiben Sie bitte den Fehlercode und eine detaillierte Fehlerbeschreibung in das <a href="https://www.netsetman.com/support/" target="_blank">Support-Forum</a>.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Ungültig</td>
+            <td class="hf_errortable_right">Der Wert ist entweder nicht gültig, nicht vorhanden oder nicht erlaubt (Sonderzeichen, gleiche Arbeitsgruppe wie Computername, etc.)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF ist aktiv</td>
+            <td class="hf_errortable_right">Firefox läuft derzeit. Um diese Einstellungen anzuwenden, müssen Sie den Browser zuerst beenden.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Kompakt-Modus &amp; Voll-Modus
+      </div>
+      <div class="hf_body">
+        <p>
+          Neben der klassischen "Voll-Modus" Ansicht, wo alle Einstellungen bearbeitet werden können, ist eine zusätzliche "Kompakt-Modus" Ansicht verfügbar. Zwischen diesen beiden Ansichten kann jederzeit über den entsprechenden Menüpunkt im Hauptmenü ganz rechts gewechselt werden.
+        </p>
+        <p>
+          Sobald alle Profile nach Ihren Vorstellungen konfiguriert sind, stellt es die ideale Benutzeroberfläche dar. In einer kompakten Ansicht haben Sie den Überblick über die Profile und deren Einstellungen ohne die Gefahr, etwas versehentlich zu verändern.
+        </p>
+        <p>
+          Bei Verwendung der <a href="#hf_nsmadministration">NSM Administration</a> (mit "Profileinstellungen verändern" ohne Häkchen) wird der Kompakt-Modus automatisch verwendet werden, damit der Benutzer keine Einstellungen verändern kann.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Kompakt-Modus" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Tray-Menü &amp; Tray-Info
+      </div>
+      <div class="hf_body">
+        <p>
+          Wenn NetSetMan gestartet wurde, befindet sich ein Icon in der Tray-Leiste (neben der Uhr). <br> Darüber können Sie schnell Profile wechseln. Einfach mit der rechten Maustaste auf das Icon klicken, um das <strong>Tray-Menü</strong> zu öffnen, und das gewünschte Profil anklicken, um es zu aktivieren.
+        </p>
+        <p>
+          Wenn Sie bestimmte Profile aus dem Tray-Menü entfernen möchten, können Sie diese einzeln ausblenden. Wählen Sie hierzu das Profil im Hauptfenster, rechtsklicken Sie den zugehörigen Profil-Tab, und wählen Sie "Im Tray und Kompakt-Modus anzeigen". Das Symbol neben dem Text zeigt an, ob dieses Profil im Tray-Menü sichtbar sein wird. Diese Auswahl hat ebenfalls Auswirkungen auf die im Kompakt-Modus angezeigten Profile. Die Sichtbarkeit von Profilen kann auch in der <a href="#hf_profiles">Profilverwaltung</a> konfiguriert werden.
+        </p>
+        <p>
+          Wenn Sie mir dem Mauszeiger über das Tray-Icon fahren, erscheint die <strong>Tray-Info</strong>. Diese enthält die aktuellen, vom System verwendeten IP-Informationen. Da die Daten in Echtzeit ausgelesen werden, kommt es ggf. zu einer kurzen Verzögerung beim Öffnen. Um diese Verzögerung zu verringern, hilft es u.U. einige der Zusatzinformationen wie öffentliche IP-und MAC-Adressen in den Einstellungen zu deaktivieren.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tray-Icon" class="screen">
+        <img src="data/showintray.png" alt="Im Tray anzeigen" class="screen">
+        <img src="data/trayinfo.png" alt="Tray-Info" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Funktionen
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Übersicht
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan wurde so entwickelt, dass die Konfiguration eines Profils möglichst direkt auf einen Blick ersichtlich ist. Einige der wichtigsten Funktionen wie die grundlegenden IP-Einstellungen, WLAN und Standarddrucker können direkt auf der Hauptoberfläche konfiguriert werden. Andere, komplexere Einstellungen können hier nur ausgewählt werden und geben einen kurzen Überblick über deren aktuelle Konfiguration. Um diese zu bearbeiten, öffnen Sie den zugehörigen Dialog per Klick auf die [...]-Schaltfläche.
+        </p>
+        <p>
+          Die folgenden Abschnitte geben Ihnen einige grundlegende Anleitungen und nützliche Tipps, wie Sie alle Features nutzen können.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Weitere Einstellungen Gruppe" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Adapter-Status
+      </div>
+      <div class="hf_body">
+        <p>
+          Aktivieren, Deaktivieren oder Neustarten des ausgewählten Netzwerkadapters ist über die Adapter-Status-Schaltfläche möglich. Die Standardfarbe ändert sich je nach Auswahl in eine Status-bezogene Farbe. Zusätzlich ist der gewählte Status im Tooltip zu sehen.
+        </p>
+        <p>
+          Wenn Sie einen Adapter aktivieren und einen oder alle anderen Adapter deaktivieren wollen, empfiehlt es sich hierzu innerhalb des gewünschten Profils <a href="#hf_profiles">Unterprofile</a> für jeden der Adapter anzulegen. Dies kann entweder komplett manuell oder mithilfe des untersten Menüpunktes geschehen. Dieser legt automatisch ein Unterprofil für jeden Netzwerkadapter, der in der Adapterliste enthalten ist, an und konfiguriert die Status-Einstellungen entsprechend. Denken Sie daran, dass Sie die Adapterliste über die <a href="#hf_nics">Netzwerkadapter-Verwaltung</a> beliebig anpassen können.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adapter-Status: Aktivieren" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adapter-Status: Deaktivieren" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adapter-Status: Neustarten" class="screen">
+        <img src="data/adapterstatus.png" alt="Adapter-Status Menü" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Erweiterte TCP/IP-Einstellungen
+      </div>
+      <div class="hf_body">
+        <p>
+          Bei Bedarf können Sie mehrere IP-, Gateway-, DNS- und WINS-Adressen pro Netzwerkadapter konfigurieren, um in mehreren Netzwerken gleichzeitig aktiv zu sein. Klicken Sie dazu auf die Schaltfläche <strong>"IP+"</strong> oder wählen Sie "Profil › Erweiterte TCP/IP-Einstellungen" aus dem Hauptmenü.
+        </p>
+        <p>
+          Hier haben Sie auch die Möglichkeit, weitere Einstellungen wie die <strong>Routentabelle, DNS-Suffix, IPConfig</strong> und <strong>NetBIOS</strong> zu verwalten.
+        </p>
+        <ul>
+          <li> Aktivieren Sie zunächst die gewünschte Einstellungs-Gruppe durch das zugehörige Kontrollkästchen </li>
+          <li>
+            <img src="data/icon-add.png" alt="Neuen Eintrag hinzufügen"> Neuen Eintrag hinzufügen </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Selektierten Eintrag löschen"> Ausgewählten Eintrag entfernen </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Liste löschen"> Gesamte Liste leeren </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Liste auslesen"> Alle aktuellen Werte für diese Einstellung aus dem System auslesen (während das <img src="data/icon-get.png" alt="Einstellungen auslesen"> Symbol im Hauptfenster nur den ersten Wert bezieht) </li>
+          <li> Reihenfolge per Drag &amp; Drop nach Bedarf anpassen </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Zugang zu den Erweiterten TCP/IP-Einstellungen" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Erweiterte TCP/IP-Einstellungen Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Verbindungen
+      </div>
+      <div class="hf_body">
+        <p>
+          Verwenden Sie diese Funktion zum Verbinden oder Trennen von beliebigen Windows-Verbindungen wie DFÜ-Netzwerk, UMTS-Stick oder VPN. Kompatible Verbindungen werden in Windows zusammen mit den normalen Netzwerkadaptern im Dialog "Netzwerkverbindungen" angezeigt. Technisch gesehen werden alle Verbindungen unterstützt, die mit "RasDial" kompatibel sind.
+        </p>
+        <p>
+          Sie können durch das Kontrollkästchen entweder alle aktiven Verbindungen trennen oder durch Hinzufügen einzelner Verbindungseinträge diese in der Reihenfolge der Liste verbinden bzw. trennen.
+        </p>
+        <p>
+          Wenn die gewünschte Verbindung nicht aufgeführt ist, können Sie diese manuell über den Punkt "Hinzufügen..." mit dem Namen, exakt so wie er in Windows angezeigt wird, eintragen.
+        </p>
+        <p>
+          NetSetMan unterstützt zudem einige VPN-Clients von Drittanbietern, wie OpenVPN, Shrew und Cisco. Wenn der installierte VPN-Client kompatibel ist, listet NetSetMan dessen Profile in der Auswahlliste auf.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Verbindungen Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hosts-Datei
+      </div>
+      <div class="hf_body">
+        <p>
+          In sehr speziellen Fällen kann es notwendig oder sinnvoll sein, IPs manuell bestimmten Namen oder Domänen zuzuweisen. Beachten Sie, dass NetSetMan nur seine eigenen Einträge verwaltet, sodass eventuell bereits vorhandene Einträge unberührt bleiben.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Hosts Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Netzlaufwerke
+      </div>
+      <div class="hf_body">
+        <p>
+          Mit NetSetMan können Sie eine beliebige Anzahl an Netzlaufwerken verbinden und trennen. <br> Bitte beachten Sie jedoch die Hinweise am unteren Fensterrand, die durch Klicken auf "[Hilfe einblenden]" einsehbar sind.
+        </p>
+        <p>
+          Wenn ein Profil bei Verwendung der Netzlaufwerk-Funktion aktiviert wird, vergleicht NetSetMan zunächst die Liste der aktuell verbundenen Netzlaufwerke mit der Liste der zu verbindenden. Alle verbundenen Netzlaufwerke, die in beiden Listen vorkommen (gleicher Laufwerksbuchstabe und gleicher Pfad) werden unverändert belassen. Alle anderen Netzlaufwerke werden zunächst getrennt und anschließend alle neuen verbunden.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Netzlaufwerke Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Skripte &amp; Programme
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan bietet Ihnen eine komfortable Möglichkeit, Ihre Skripte zu verwalten. Jedoch besitzt das Programm keine eigene Skriptsprache. Das bedeutet, dass Sie nur Skriptsprachen verwenden können, die Ihr Betriebssystem ausführen kann. Die gängigsten Skriptsprachen sind VBS, JS und sogar einfache DOS Batch Dateien. Verwenden Sie Ihre bevorzugte Suchmaschine, um mehr Informationen zu Skripten und was mit ihnen gemacht werden kann zu finden.
+        </p>
+        <p>
+          Öffnen Sie eine bestehende Skript-Datei oder erstellen Sie eine neue, um das Skript editieren zu können. <br> Sie können zwei Skripte verwenden, wovon eines vor und eines nach dem Ändern der anderen Einstellungen ausgeführt wird. <br> Sollten Sie eine Verzögerungszeit zwischen der Ausführung des Skripts und dem Ändern der Einstellungen benötigen, so können Sie dies unten angeben.
+        </p>
+        <div id="hf_programs">
+          <p class="hf_section_caption">
+            Programmausführung
+          </p>
+          <p>
+            NetSetMan bietet eine bequeme Möglichkeit, externe Programme in Profilen auszuführen.<br>
+            Programme können im eingeschränkten Benutzerkontext (Standard bei aktiver Benutzerkontensteuerung/UAC) oder mit erhöhten Administrator-Rechten (ohne UAC-Abfrage) gestartet werden. Falls benötigt, können auch Parameter übergeben werden.<br>
+            Programm können normal, maximiert oder minimiert gestartet werden (sofern vom jeweiligen Programm unterstützt).
+          </p>
+          <p>
+            Zudem ist es möglich, laufende Prozesse zu beenden. Diese können anhand ihres Dateinamens (unabhängig vom Speicherort) oder des genauen Dateipfades bestimmt werden.
+          </p>
+          <p>
+            Jede Aktion kann eine individuelle Verzögerung erhalten, entweder vor (negativer Wert) oder nach (positiver Wert) der Ausführung.
+          </p>
+        </div>
+        </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="Programmoptionen" class="screen">
+        <img src="data/scripts.png" alt="Skripte Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / Email
+      </div>
+      <div class="hf_body">
+        <p>
+          In einigen Fällen variiert die IP-Adresse des SMTP-Servers zum Senden von E-Mails abhängig vom aktuellen Netzwerk. Befindet man sich im selben Netzwerk wie der SMTP-Server, ist dieser bspw. nur über die lokale IP-Adresse 10.0.0.1 erreichbar, während er außerhalb dieses des lokalen Netzwerks nur über eine globale IP-Adresse erreichbar ist.
+        </p>
+        <p>
+          Anstatt zu versuchen, kompatibel zu allen unterschiedlichen Email-Clients und deren Benutzerprofilen zu sein, löst NetSetMan dieses Problem mit einem simplen Workaround. Stellen Sie "nsm.smtp" als SMTP-Adresse in Ihrem Email-Client ein und konfigurieren Sie die benötigten SMTP-Server-IP-Adressen in den NetSetMan Profilen dementsprechend. Beim Aktivieren eines Profils werden beide Werte mit Hilfe der Hosts-Datei verknüpft, sodass Sie keine zusätzlichen Veränderungen in Ihrem E-Mail-Client mehr vornehmen müssen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / Email Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        System-Einstellungen
+      </div>
+      <div class="hf_body">
+        <p>
+          Zusätzlich zu den üblichen Netzwerkeinstellungen ist es manchmal auch hilfreich, einige Systemeinstellungen abhängig vom Standort oder der Situation anzupassen. Zum Beispiel könnte an der Universität die Audio-Lautstärke stumm geschaltet, das Hintergrundbild geändert und der Energiesparplan "Ausbalanciert" aktiviert werden.
+        </p>
+        <p>
+          Sie können den Dialog auch dazu nutzen, bestimmte Einstellungen schnell konfigurieren zu können, die ansonsten nur umständlich erreichbar wären. Klicken Sie einfach auf die zugehörige <img src="data/set-icon.png" alt="Einstellungen aktivieren Symbol">-Schaltfläche, um die entsprechende Einstellung direkt anzuwenden.
+        </p>
+        <p>
+          Zu den unterstützten Einstellungen gehören: Bildschirmanzeige, Hintergrundbild, Desktop-Farbe, Bildschirmschoner, Design-Schema, Lautsprecher- &amp; Mikrofon-Lautstärke, Soundschemas, Firewall (inkl. Ausnahmen &amp; Benachrichtigungen), Stromsparplan, Zeitzone und MAC-Adresse.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Systemeinstellungen Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WLAN
+      </div>
+      <div class="hf_body">
+        <p>
+          Ein NetSetMan Profil kann dazu verwendet werden, sich zu einem vorhandenen WLAN-Profil zu verbinden. Wählen Sie dazu im Profil einen WLAN-Adapter und in der WLAN-Auswahlliste ein entsprechendes WLAN-Profil aus. Wenn Sie lediglich die aktuelle WLAN-Verbindung trennen möchten, wählen Sie den leeren Eintrag.
+        </p>
+        <p>
+          Neben dem grundlegenden Wechsel der WLAN-Verbindung bietet NetSetMan eine umfangreiche WLAN-Verwaltung. Klicken Sie das WLAN-Icon an oder verwenden Sie das Hauptmenü (Tools › NSM WLAN Verwaltung) um diese aufzurufen. Sie finden dort eine Liste aller momentan verfügbaren WLAN-Netze. Ein gelber Hintergrund zeigt an, dass ein Profil mit dieser SSID gespeichert ist. Ein Netzwerk mit grünem Hintergrund ist das aktuell verbundene. Sie können sich zu einem Netzwerk verbinden, indem Sie darauf doppelklicken oder es anwählen und auf "Verbinden" klicken. Wenn zu dem Netzwerk noch kein Profil vorhanden ist, können Sie dann eines erstellen. Die Einstellungen (Sicherheitstyp, Verschlüsselung, ...) werden entsprechend der erkannten Eigenschaften des Netzwerks vorkonfiguriert. Jedoch besteht die Möglichkeit, dass Sie diese nachkonfigurieren müssen, sofern eine Erkennung nicht korrekt verlaufen ist.
+        </p>
+        <p>
+          NetSetMan arbeitet mit den nativen WLAN-Profilen von Windows zusammen. Das bedeutet, dass Sie stets Zugriff auf die selben Profile haben, die bereits in Windows oder anderen WLAN-Programmen verwendet werden. Sie können diese Profile neu erstellen, verändern oder auch komplett löschen.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+            Verbinden mit MAC-Adresse
+          </p>
+          <p>
+            Windows verbindet sich zu WLAN-Netzwerken normalerweise basierend auf der SSID. Wenn mehrere Zugangspunkte (Access Points) die gleiche SSID haben, gruppiert Windows diese und entscheidet sich beim Verbinden für den Zugangspunkt mit der größten Signalstärke. In bestimmten Fällen ist es jedoch hilfreich, sich zu einem ganz bestimmten Zugangspunkt zu verbinden. Mit NetSetMan ist das möglich!
+          </p>
+          <p>
+            Die NSM WLAN-Verwaltung zeigt alle verfügbaren Netzwerke und Zugangspunkte an, ohne diese zu gruppieren, sodass man sich zu genau dem Zugangspunkt verbinden kann, den man möchte. Per Tooltip sind zusätzliche Informationen wie die MAC-Adressen einsehbar. Das Rechtsklick-Kontextmenü erlaubt es, die jeweilige MAC-Adresse oder SSID in die Zwischenablage zu kopieren.
+          </p>
+          <p>
+            Wenn Sie sich beim Aktivieren eines NetSetMan-Profils mit einem ganz bestimmten WLAN-Zugangspunkt verbinden lassen möchten, können Sie das durch Eingabe dessen MAC-Adresse in der WLAN-Auswahl tun. Wählen Sie "Verbinden mit MAC-Adresse..." und geben Sie die gewünschte MAC-Adresse ein. Beim Aktivieren des Profils wird NetSetMan die Verbindung zum zugehörigen Zugangspunkt herstellen. Beachten Sie, dass hierfür natürlich bereits ein passendes WLAN-Profil im System vorhanden sein muss.
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          Voraussetzungen
+        </p>
+        <p>
+          NetSetMan verwendet die native WLAN-API von Windows. Dies bringt den großen Vorteil mit sich, dass keine neuen Treiber installiert werden müssen (was zu Komplikationen führen könnte). Der Nachteil ist jedoch, dass die WLAN-Funktionalität nur auf Windows-Systemen gegeben ist, wo WLAN bereits integriert ist. Die gute Nachricht ist, dass die meisten eingesetzten Versionen dies tun. Wenn Sie Vista oder ein neueres System verwenden, ist bereits alles Notwendige vorhanden. In XP müssen Sie sicherstellen, dass das SP2 oder besser SP3 installiert ist.
+        </p>
+        <p>
+          Stellen Sie sicher, dass der Service <em>WLAN AutoConfig</em> bzw. <em>Automatische WLAN-Konfiguration (Wlansvc)</em> (Vista und neuer) oder <em>Wireless Zero Configuration (WZCSVC)</em> (XP) vorhanden und gestartet ist.
+        </p>
+        <p>
+          Wenn Ihr WLAN-Adapter mit einer herstellerspezifischen Software ausgeliefert wird, kann diese u.U. den Zugriff von Windows blockieren. In diesem Fall müssen Sie die Option zum Umschalten auf die Verwaltung durch Windows finden und einstellen. <br> Da es zu viele unterschiedliche Hersteller mit eigener Software gibt, kann an dieser Stelle keine universelle Anleitung angegeben werden. Hier jedoch ein Beispiel: Wenn Sie den AVM FRITZ!WLAN USB Adapter verwenden, klicken Sie das Tray-Icon an und wählen Sie "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WLAN Übersicht" class="screen">
+        <img src="data/wifi.png" alt="NSM WLAN Verwaltung Fenster" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Erweitert
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoAktivierung
+      </div>
+      <div class="hf_body">
+        <p>
+          Es ist sehr einfach, ein Profil mit einem Klick aus dem <a href="#hf_tray">Tray-Menü</a> heraus zu aktivieren. Aber in manchen Fällen wäre es sogar noch einfacher, Profile völlig automatisiert in Abhängigkeit von vordefinierten Bedingungen aktivieren zu lassen. Die integrierte AutoAktivierungs-Funktion ermöglicht genau das.
+        </p>
+        <p>
+          Nach dem einmaligen Einschalten der AutoAktivierung können folgende Bedingungen für beliebige Profile individuell konfiguriert werden:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Umgebende WLAN-Netzwerke"> Umgebende WLAN-Netzwerke
+          </div>
+          <ul>
+            <li>WLAN (SSID oder MAC) in/außer Reichweite</li>
+            <li>Signalstärke eines Funknetzes WLANs stärker/schwächer als ein bestimmter Wert</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Netzwerk-Standorte"> Netzwerk-Standorte
+          </div>
+          <ul>
+            <li>Windows NLM: Automatisch generierte Windows-Netzwerkprofile (ab Vista)</li>
+            <li>Gateway-MAC: Kennung des automatisch zugewiesenen DHCP-Gateways</li>
+            <li>Ping: Verfügbarkeit von einem bestimmten Server oder System im Netzwerk</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Adapter-Status"> Adapter-Status
+          </div>
+          <ul>
+            <li>Verbindungsstatus eines lokalen Netzwerkadapters (verbunden/getrennt)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Zeitrahmen"> Zeitrahmen
+          </div>
+          <ul>
+            <li>Bestimmte Wochentage und Uhrzeit (z.B. Sa+So, 8:00 bis 18:00 Uhr)</li>
+          </ul>
+        </div>
+        <p>
+          Zwar besteht keine technische Beschränkung für die Anzahl an Bedingungen pro Profil, jedoch ist es ratsam, alles so einfach wie möglich zu halten. In den meisten Fällen ist es völlig ausreichend, eine oder zwei Bedingungen festzulegen, um das gewünschte Ergebnis zu erzielen.
+        </p>
+        <p>
+          Sie können bestimmen, ob alle oder mindestens eine der Bedingungen erfüllt sein müssen, damit das Profil aktiviert wird.
+        </p>
+        <p>
+          <strong>Hinweis:</strong> Profile mit niedrigeren IDs haben eine höhere Priorität, falls Bedingungen mehrerer Profile gleichzeitig erfüllt sind.
+        </p>
+        <p>
+          Standardmäßig wird der Aktivierungsprozess mit einer Meldung in der rechten unteren Ecke eingeleitet, die einen frei einstellbaren Countdown enthält, sodass Sie den Aktivierungsprozess ggf. abbrechen können. Alternativ kann eine native Windows-Meldung angezeigt werden oder das Profil wird ganz ohne Meldung im Hintergrund aktiviert. Im letzteren Fall wird das Tray-Icon während des Aktivierungsprozesses animiert und ändert seine Farbe vorübergehend abhängig vom Erfolg der Aktivierung, um auf den automatisierten Prozess hinzuweisen.
+        </p>
+        <p>
+          Um Systemressourcen zu schonen, vergleicht NetSetMan nicht Ihre aktuellen Einstellungen mit den Einstellungen des zu aktivierenden Profils. Das bedeutet, dass, wenn Sie irgendwelche Einstellungen manuell ändern, NetSetMan diese Änderungen nicht bemerken wird.
+        </p>
+        <p>
+          Die AutoAktivierung hat einige Einschränkungen in XP: Windows NLM ist nicht verfügbar; Veränderungen bei den umgebenden WLAN-Netzwerken werden erst mit einer gewissen Verzögerung erkannt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoAktivierung" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoAktivierung Tooltip" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoAktivierung Benachrichtigung" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Notizen
+      </div>
+      <div class="hf_body">
+        <p>
+          Sie können kurze Notizen für jedes Profil erstellen, um diese als Gedächtnisstütze oder zur Erläuterung des Einsatzwecks eines Profils zu nutzen. Wenn eine Notiz für ein Profil erstellt wurde, leuchtet die entsprechende Grafik in der Menüleiste farbig auf. Im Voll-Modus ist diese Notiz dann als Hinweis einsehbar. Im Kompakt-Modus erscheint sie oberhalb der eigentlichen Profileinstellungen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Notiz" class="screen">
+        <img src="data/note-hint.png" alt="Notiz Tooltip" class="screen">
+        <img src="data/note-compact.png" alt="Notiz im Kompakt-Modus" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM Service / Eingeschränktes Benutzerkonto
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan benötigt Administrator-Rechte, um Netzwerk- und Systemeinstellungen für Sie ändern zu können. Normalerweise kann eine solche Anwendung nicht mit einem eingeschränkten Benutzerkonto verwendet werden. Seit Vista arbeiten selbst Administrator-Konten durch die Benutzerkontensteuerung (User Account Control) mit begrenzen Rechten, sodass eine Abfrage bei jedem Programmstart angezeigt wird.
+        </p>
+        <p>
+          Um dieses Problem zu lösen beinhaltet NetSetMan eine spezielle Komponente namens <strong>NSM Service</strong>, die die Hauptanwendung mit den erforderlichen Berechtigungen versorgen kann. Dieser Dienst wird automatisch installiert, kann aber auch manuell in den Einstellungen installiert/deinstalliert werden (Systemrechte › Aktivieren/Deaktivieren).
+        </p>
+        <p>
+          Der installierte Dienst ist im Windows Dienste-Dialog (services.msc) aufgeführt und kann dort ebenfalls gesteuert werden. Zusätzlich kann er per Kommandozeile installiert/deinstalliert oder gestartet/gestoppt werden:<br><span class="code">nsmservice.exe / install / silent<br> nsmservice.exe / uninstall / silent<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Wenn Sie die Fehlermeldung "<em>Ungültige Signatur</em>" erhalten, stellen Sie sicher, dass die Programm-Exe nicht modifiziert wurde und die Windows-Gruppenrichtlinie "<em>Automatisches Update von Stammzertifikaten deaktivieren</em>" nicht aktiv ist.
+        </p>
+        <p>
+          Wenn Sie NetSetMan mit einem eingeschränkten Benutzerkonto ohne NSM Service ausführen, erhalten Sie eine Meldung, die das Problem erläutert. Alternativ können Sie die <strong>Benutzerdaten eines lokalen Administratorkontos</strong> eingeben, die NetSetMan in seiner Einstellungsdatei verschlüsselt ablegt, um sich selbst mit den erforderlichen Rechten ausführen zu können. Beachten Sie, dass in diesem Fall die Anwendung im Kontext des Benutzers, dessen Anmeldeinformationen verwendet wurden, ausgeführt werden wird.
+        </p>
+        <p>
+          In den <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> finden Sie einige zusätzliche Hinweise zu dieser Funktion.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Systemrechte" class="screen">
+        <img src="data/limitedaccount.png" alt="Eingeschränktes Benutzerkonto" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Profilaktivierung auf dem Anmeldebildschirm
+      </div>
+      <div class="hf_body">
+        <p>
+          Eine besondere und leistungsstarke Funktionalität ist die Möglichkeit, Profile auf dem Anmeldebildschirm umzuschalten. Dies ermöglicht die Vorbereitung bestimmter Netzwerkeinstellungen, die Sie in Ihrem Benutzerkonto benötigen, durch Aktivierung eines NetSetMan Profil noch vor der Anmeldung.
+        </p>
+        <p>
+          Um diese Funktionalität nutzen zu können, muss der <a href="#hf_nsmservice">NSM Service</a> installiert und aktiviert sein und die Option <em>"Profilaktivierung auf dem Windows-Anmeldebildschirm"</em> (Einstellungen › Systemrechte) muss ausgewählt sein.
+        </p>
+        <p>
+          Beachten Sie, dass diese Funktionalität nur den Wechsel von Einstellungen ermöglicht, die benutzerunabhängig sind. Benutzerspezifische Einstellungen können leider nicht außerhalb einer Benutzersitzung geändert werden.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Pre-Logon Profilumschaltung" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM Administration
+      </div>
+      <div class="hf_body">
+        <p>
+          Wenn Sie NetSetMan für die Benutzung durch einen anderen Anwender einrichten, möchten Sie ggf. festlegen, welche Aktionen dieser durchführen darf. Mit der NSM Administration (Einstellungen › Administration) können Sie genau das tun.
+        </p>
+        <p>
+          Sobald Sie diesen Modus aktivieren, müssen Sie ein Passwort mit 6 oder mehr Zeichen festlegen. Nur mit diesem Passwort werden Sie in der Lage sein, NSM Administrations-Einstellungen zu ändern oder die festgelegten Aktionen durchzuführen (NetSetMan starten, Profile aktivieren, Profileinstellungen ändern, Programmeinstellungen ändern).
+        </p>
+        <p>
+          Sie können sogar bestimmte, vorkonfigurierte Profile sperren <img src="data/administration-profilelock.png" alt="Eingeschränktes Profil Symbol">, sodass der Benutzer diese zwar nicht bearbeiten, jedoch aktivieren kann. Oder Sie können grundsätzlich den Zugriff auf bestimmte Einstellungen wie "Arbeitsgruppe &amp; Domäne" sperren <img src="data/administration-settinglock.png" alt="Eingeschränkte Einstellung Symbol">, sodass der Benutzer nur die anderen Einstellungen verwenden kann.
+        </p>
+        <p>
+          Eine Prüfsumme Ihres Passworts wird in der Registry gespeichert. Stellen Sie sicher, dass ein normaler Benutzer keine Schreibrechte für <span class="code">HKLM\Software\NetSetMan</span> (unter x64: <span class="code">HKLM\Software\Wow6432Node\NetSetMan)</span> hat. Wenn Sie Ihr Passwort vergessen sollten, müssen Sie diesen Registry-Schlüssel manuell löschen. Wenn Ihre Einstellungs-Datei zudem verschlüsselt ist, wird niemand ohne Passwort in der Lage sein, sie zu lesen oder zu bearbeiten.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM Administration" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Administration - Profil-Beschränkungen" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Administration - Einstellungen-Beschränkungen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Kommandozeilen-Aktivierung
+      </div>
+      <div class="hf_body">
+        <p>
+          In besonderen Fällen besteht der Bedarf, ein Profil ohne Verwendung der Benutzeroberfläche von NetSetMan zu aktivieren: Aktivierung von Profilen per Verknüpfung, Aktivierung eines bestimmten Profils beim Windowsstart, als Teil eines komplexeren Skriptes, usw.
+        </p>
+        <p>
+          Die folgenden Parameter stehen zur Verfügung:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Aktiviert das Profil mit der Nummer #</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Aktiviert das Profil im stummen Modus (Aktivierungsfenster schließt  selbstständig, wenn keine Fehler aufgetreten sind)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Startet NetSetMan minimiert</td>
+          </tr>
+          <tr>
+            <td><strong>f / -full</strong></td>
+            <td>Startet NetSetMan im Voll-Modus (Standard)</td>
+          </tr>
+          <tr>
+            <td><strong>c / -compact</strong></td>
+            <td>Startet NetSetMan im Kompakt-Modus</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Startet eine zweite Instanz von NetSetMan. <strong>Achtung:</strong> Alle aktiven Instanzen schreiben in dieselbe Einstellungsdatei!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Eine Verknüpfung zum Aktivieren von Profil # 0 im stummen Modus könnte so aussehen: <br><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Verknüpfung" class="screen">
+        </p>
+        <p>
+          In der Befehlszeile (Eingabeaufforderung): <br>
+          <img src="data/commandline.png" alt="Befehlszeile" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Nicht-Kommerzielle Freeware Meldung
+      </div>
+      <div class="hf_body">
+        <p>
+          Diese Meldung im Hauptfenster wird <em>durchschnittlich</em> bei jedem siebten Start für Benutzer in einer Arbeitsgruppe und bei jedem zweiten Start für Benutzer in einer Domäne angezeigt.
+        </p>
+        <p>
+          Leider ist dies notwendig, um Benutzer daran zu erinnern, dass NetSetMan nur für nicht-kommerzielle Zwecke Freeware ist (= privat oder ehrenamtlich). Zusammengefasst: Sie dürfen NetSetMan kostenlos einsetzen, solange Sie dabei keine bezahlte Zeit einsparen. Jeglicher kommerzieller Einsatz (am Arbeitsplatz, Firmenlaptop, während einer bezahlten Tätigkeit, etc.) benötigt eine <a href="http://www.netsetman.com/pro">NetSetMan Pro</a> Lizenz.  Es gibt keine spezielle Regelung für Bildungs- oder Non-Profit-Einrichtungen. Professoren, Lehrer und andere Mitarbeiter dürfen die Nicht-Kommerzielle Freeware-Version nur einsetzen, wenn sie ehrenamtlich (= unbezahlt) tätig sind.
+        </p>
+        <p>
+          Detaillierte Informationen finden Sie im <a href="http://www.netsetman.com/de/txt/license" target="_blank">Softwarelizenzvertrag</a>.
+        </p>
+        <p>
+          <strong>Diese Meldung ist in der Pro Version selbstverständlich nicht enthalten.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Nicht-Kommerzielle Freeware Meldung" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Zusätzliche Pro Funktionen
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Profil-Gruppen
+      </div>
+      <div class="hf_body">
+        <p>
+          Mit NetSetMan Pro können Sie eine beliebige Anzahl an Profilgruppen erstellen, wobei jede dieser Gruppen 6 Profile beinhaltet. 
+        </p>
+        <p>
+          Verwenden Sie die <a href="#hf_profiles">Profilverwaltung</a> aus der Menüleiste, um Profilgruppen hinzuzufügen, zu löschen, anzuordnen oder umzubenennen.
+        </p>
+        <p>
+          Um zwischen den Profilgruppen zu navigieren, wählen Sie die gewünschte Profilgruppe aus der Auswahlliste in der Menüleiste.
+        </p>
+        <p>
+          Bei mehr als einer Gruppe werden die Profile im TrayMenü gruppiert dargestellt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profilverwaltung Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Tray-Icon in der Pro-Version" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Browser / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          Mit NetSetMan Pro können Sie die Proxy-Einstellungen von Windows / Internet Explorer, Firefox und Opera (&lt;= v12) verwalten. Chrome und neuere Versionen von Opera unterstützen leider keine eigenen Proxy-Einstellungen, sondern verwenden automatisch die Systemeinstellungen.
+        </p>
+        <p>
+          Alle Einstellungen imitieren die Darstellung ihrer Browser-Vorbilder, um die gleiche Konfiguration, die auch direkt in den Browsern vorhanden ist, zu ermöglichen. Sollen Proxy-Einstellungen bei der Profilaktivierung entfernt werden, aktivieren Sie das Proxy-Häkchen und entfernen Sie alle in dieser Proxy-Gruppe enthaltenen Einstellungen. Des Weiteren können Sie die Startseite ändern und falls Sie in Firefox oder Opera Profile verwenden, können Sie auch den gewünschten Profilnamen auswählen.
+        </p>
+        <p>
+          Bitte beachten Sie, dass Firefox beendet werden <em>muss</em>, bevor dessen Einstellungen aktiviert werden können. <br> Wenn Sie mehrere Firefox-Profile verwenden und sich der Pfad Ihres Firefox-Profilordners ändert (aufgrund eines neuen Systems etc.) müssen Sie das gewünschte Profil aus der Liste erneut auswählen, damit die Einstellungen aktualisiert werden.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Browser / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Domäne
+      </div>
+      <div class="hf_body">
+        <p>
+          Um einer Netzwerk-Domäne beizutreten, geben Sie deren Namen, den Benutzernamen und das Passwort ein. Der Benutzername und das Passwort werden dabei verschlüsselt in der ini-Datei gespeichert.
+        </p>
+        <p>
+          Normalerweise genügt die Eingabe des reinen Benutzernamens. Wenn Sie einen Fehler erhalten, versuchen Sie eine der beiden folgenden Möglichkeiten für den Benutzernamen:<br> a) NETBIOS: DOMAIN\user<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          Bei NT-Domänen kann ein Benutzer nur Mitglied bei exakt <em>einer</em> Domäne gleichzeitig sein. Das bedeutet, dass beim Verbinden zu einer anderen Domäne oder einer Arbeitsgruppe die vorherige Domänen-Mitgliedschaft beendet wird, bis das System wieder verbunden wird.
+        </p>
+        <p>
+          NetSetMan kann Ihr System nur dann mit einer Domäne verbinden, wenn Ihr Domänen-Benutzerkonto die Berechtigung dafür hat.<br> Diese Berechtigung nennt sich "Add Workstation to Domain" und muss bei Ihrem Konto aktiviert sein. Wenn Sie diese Berechtigung nicht haben, wenden Sie sich bitte an Ihren Netzwerkadministrator, damit er Ihnen diese Berechtigung erteilt.
+        </p>
+        <p>
+          In den <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> finden Sie einige zusätzliche Hinweise zu dieser Funktion.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Domain Fenster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Verteilung in Unternehmensnetzwerken
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro bietet verschiedene Funktionen, die Sie bei der Verteilung der Software, vorkonfigurierter Einstellungen und Ihrer Lizenz in Ihrem Firmennetzwerk unterstützen können. Alles, was Sie hierzu wissen müssen, finden Sie in einer detaillierten Beschreibung in den <a href="http://www.netsetman.com/faqcompany">FAQ</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

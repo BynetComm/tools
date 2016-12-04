@@ -1,0 +1,788 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x 幫助文件</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left" />
+      <div>
+        <h1>NetSetMan</h1><h2>幫助文件</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-ct.png" alt="" /></div>
+          <div id="hf_language">繁體中文</div>
+          <div id="hf_translator">林紹麒(Calvin Lin)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">一般資訊</div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">幫助文件版本</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">支援<br />作業系統</td>
+            <td class="hf_tblinfo_right">Windows <br /> XP, Vista, 7, 8, 10 <br />32位元, 64位元</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">授權</td>
+            <td class="hf_tblinfo_right">非商業用途免費版<br /><em>或
+</em><br />商業用途專業版<br />查看 <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> 或 <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a> 格式</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">聯絡我們</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br /><a href="https://www.netsetman.com/support/" target="_blank">支援論壇</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">內容</div>
+      <div class="hf_body">
+        <p class="hf_content_caption">基礎</p>
+        <ul>
+          <li><a href="#hf_description">簡介</a></li>
+          <li><a href="#hf_howtouse">基本資訊</a></li>
+          <li><a href="#hf_profiles">配置檔</a></li>
+          <li><a href="#hf_nics">網絡卡(NICs)</a> </li>
+          <li><a href="#hf_basicoperations">設定操作</a></li>
+          <li><a href="#hf_activation">配置檔套用</a></li>
+          <li><a href="#hf_compactmode">精簡模式和完整模式</a></li>
+          <li><a href="#hf_tray">系統列選單和資訊</a></li>
+        </ul>
+        <p class="hf_content_caption">功能</p>
+        <ul>
+          <li><a href="#hf_featuresoverview">總覽</a></li>
+          <li><a href="#hf_adapterstatus">介面卡狀態</a></li>
+          <li><a href="#hf_advanced">進階 TCP/IP 設置</a></li>
+          <li><a href="#hf_connections">連線</a></li>
+          <li><a href="#hf_hosts">主機檔</a></li>
+          <li><a href="#hf_netdrives">網絡磁碟</a></li>
+          <li><a href="#hf_scripts">腳本和程式</a></li>
+          <li><a href="#hf_smtp">SMTP / 電子郵件</a></li>
+          <li><a href="#hf_system">系統設定</a></li>
+          <li><a href="#hf_wifi">WiFi 無線網路</a></li>
+        </ul>
+        <p class="hf_content_caption">進階</p>
+        <ul>
+          <li><a href="#hf_autoswitch">自動切換</a></li>
+          <li><a href="#hf_notes">註解</a></li>
+          <li><a href="#hf_nsmservice">NSM 服務 / 受限使用者帳戶</a></li>
+          <li><a href="#hf_prelogon">登入前配置檔預切換</a></li>
+          <li><a href="#hf_nsmadministration">NSM 管理</a></li>
+          <li><a href="#hf_commandline">命令列套用</a></li>
+          <li><a href="#hf_ncfreeware">非商業用途免費版訊息</a></li>
+        </ul>
+        <p class="hf_content_caption">其他專業功能</p>
+        <ul>
+          <li><a href="#hf_groups">配置檔群組</a></li>
+          <li><a href="#hf_proxy">瀏覽器 / 代理伺服器</a></li>
+          <li><a href="#hf_domain">網域</a></li>
+          <li><a href="#hf_distribution">企業網絡佈局</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">基礎</div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">簡介</div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> 是一個網絡設置管理軟體，它可以輕鬆地切換6個不同的、直覺式的配置檔包括：</p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li>IP 位址 (IPv4 和 IPv6 !)</li>
+              <li>預設閘道 (包括 Metric)</li>
+              <li>DNS 伺服器</li>
+              <li>WINS 伺服器</li>
+              <li>WiFi 管理</li>
+              <li>電腦名稱</li>
+              <li>工作群組</li>
+              <li>預設印表機</li>
+              <li>網絡磁碟</li>
+              <li>網路卡狀態</li>
+              <li>連線 (RAS / DUN / PPP / VPN)</li>
+              <li>DNS 尾碼</li>
+              <li>路由表</li>
+              <li>SMTP 伺服器</li>
+              <li>Hosts 檔案內容</li>
+              <li>系統設置</li>
+              <li>MAC 位址</li>
+              <li>腳本 (BAT, VS, JS, ...)</li>
+              <li>執行程式</li>
+            </ul></td>
+            <td width="51%"><strong><u>專業版</u>額外功能：</strong>
+            <ul>
+              <li>允許應用在工作上</li>
+              <li>配置檔數量無上限</li>
+              <li>網路網域</li>
+              <li>完整的代理伺服器設定和<br />瀏覽器首頁<br /> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> 為您提供 Windows 至今仍不支援的功能：<br />一個功能強大、易於使用的界面來管理所有的網絡設定，一目瞭然。<br />一試上癮，再也不能沒有它。
+        </p>
+        <p>所有的設定和更改都自動保存在一個獨立的檔案 (<em>settings.ini</em>)。備份、轉移或升級到另一個版本都沒有相容性問題。
+        </p>
+        <p>
+          <strong>一個按鍵即可套用已儲存的配置檔甚至全自動套用！</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs. Windows" class="screen" />
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan 主視窗" />
+          <br /><strong>NetSetMan：</strong>非商業用途免費版</div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro 主視窗" />
+          <br /><strong>NetSetMan Pro</strong>：商業用途專業版</div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">基本資訊</div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>配置檔</div>每個<a href="#">配置檔</a>代表一組針對特定位置或場景所需要的設置。通過使用子配置檔，多個網絡介面卡可以使用同一個配置檔來配置。透過雙擊頁籤標題可以替配置檔重新命名。</li>
+          <li>
+            <div>手動配置</div>您需要自己手動建立所需的配置檔，對於一個陌生的地點要去猜測正確的設置為何是不可能達成的。此應用程式的主要目的是對於您通常需手動輸入去改變設置的部分，可以自動地來完成。</li>
+          <li>
+            <div>設定選擇</div><a href="#hf_basicoperations">讀取所有當前的設定</a>成一個配置檔可以給您一個起點，但您仍然需要決定當該配置檔被應用時所要套用的設定。強烈建議把要套用的部分限縮於那些實際上會同時改變的設定，例如，如果電腦名稱並不需要改變，就沒有必要套用它。</li>
+          <li>
+            <div>設定設置</div>要編輯一個設定前，首先要把選取框打勾，然後直接在主界面中輸入需要的設定或打開設定對話框輸入特定的設定。</li>
+          <li>
+            <div>配置檔套用</div>預設情況下，沒有配置檔會被自動套用，也就是說如果不是您想要的話，系統中沒有設定會改變。雖然如此，您可以使用<a href="#hf_autoswitch">自動切換</a>功能，自動的套用一定的配置檔根據自由設定的條件。</li>
+          <li>
+            <div>系統列圖示存取</div>建議開啟 <a href="#hf_tray">保持 NetSetMan 最小化於系統列</a> ，然後更改系統列圖示為總是顯示，這樣，您就可以透過點擊該圖示並選擇配置檔來快速套用。此外，您可以透過懸停您的滑鼠游標在圖示上來獲取您當前連線 IP 的有用資訊。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">配置檔</div>
+      <div class="hf_body">
+        <p>頁籤代表了可用的配置檔，您可以儲存6組不同的配置在這些分頁裡。
+        </p>
+        <p>如果您想在同一個配置檔內改變兩張不同網絡卡的設定，您可以使用<strong>子配置檔</strong>功能。點擊下拉式選單旁邊的 "+" 按鈕，一個數量為兩個的子配置檔（當前的和一個新的、空白的）的選單列將出現，標題將會自動填上在子配置檔內被選取的網絡卡名稱而且是不能更改的。您可以依您的喜好建立多個子配置檔，所有的子配置檔都將被依序套用當配置檔套用時，您可以透過滑鼠拖曳重新安排套用順序。
+        </p>
+        <p>所有的改變都會被自動儲存，不會意外遺失。
+        </p>
+        <p>透過點擊右鍵並選擇 "重新命名" 或直接雙擊可以重新命名配置檔。			
+        </p>
+        <p>您可以使用在選單列的<strong>配置檔管理</strong>來更方便管理您的所有配置檔。它允許透過滑鼠游標或一些常用的鍵盤快速鍵（方向鍵為瀏覽、F2 為重新命名...等）編輯配置檔、子配置檔和群組(僅在 NetSetMan Pro)。當使用拖放重新安排項目時，根據不同的項目，由於情況的不同會發現一些不可避免的限制：配置檔不能刪除、子配置檔不能重新命名、配置檔可以互換，但不能移動。選取框的勾選與否代表該配置檔會不會顯示在系統列選單和精簡模式中。
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="子配置檔分頁" class="screen" />
+          <img src="data/rename.png" alt="重新命名配置檔" class="screen" />
+          <img src="data/profilemanagement.png" alt="配置檔管理" class="screen" />
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">網絡卡(NICs)</div>
+      <div class="hf_body">
+        <p>所有可用的網絡卡依名稱和類型來顯示。在當前的(子)配置檔選擇您想管理的網路卡。
+        </p>
+        <p>如果需要的網路卡在列表中找不到（例如: 已停用、虛擬的），您可以通過點擊<strong>重新整理</strong>按鈕快速更新列表或者選擇<strong>管理網絡介面卡</strong>來管理列表。然後您可以看到一個完整的可用網路卡清單，您可以在其中找尋您要的網路卡。
+        </p>
+        <p>
+          <strong>註：</strong>所有在該清單內的網路卡都會出現在系統列訊息中。取消勾選不需要的網路卡可以讓它們在清單和系統列訊息中被刪除。</p>
+        <p>如果複製了設定檔（settings.ini）到另一個系統，NetSetMan 會嘗試自動重新分配配置檔中的網路卡，然而，不過只有當新系統有相同名稱的網路卡存在時才會有效(例如截圖中的 "LAN")。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="網絡介面卡的選擇" class="screen" />
+        <img src="data/adapters-management.png" alt="網絡介面卡的選擇" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">設定操作</div>
+      <div class="hf_body">
+        <p class="hf_section_caption">載入目前設定</p>
+        <p>要載入目前設定到選擇的配置檔中只需點擊輸入區域旁的 <img src="data/icon-get.png" alt="獲取設定圖示" /> 符號。<br />若要取得所有目前的設定，請在配置檔名稱點擊右鍵並選擇 "載入目前設定"。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="獲取一個設定" class="screen" />
+        <img src="data/get-settings2.png" alt="獲取所有的設定" class="screen" />
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">清除設定</span>
+        </p>
+        <p>要清除某個設定的配置，請右鍵點擊它並選擇"清除"。
+        </p>
+        <p>如果要清除某個 IP 輸入欄位，只要雙擊它的標題即可。
+        </p>
+        <p>要清除目前(子)配置檔的所有設定，請在配置檔名稱點擊右鍵並選擇 "清除設定"。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="清除一個設定" class="screen" />
+        <img src="data/clear-settings2.png" alt="清除所有設定" class="screen" />
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">複製與貼上設定</span>
+        </p>
+        <p>如果您要在不同的配置檔間移轉設定，您可以複製並貼上整個配置檔：透過右鍵點擊第一個來源配置檔，選擇 "複製設定"；然後右鍵點擊新配置檔，並選擇 "貼上設定"。
+
+        </p>
+        <p>要複製和貼上某一特定的設定，只需右鍵點擊並選擇"複製"或"貼上"。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="複製並貼上一個設定" class="screen" />
+        <img src="data/copypaste2.png" alt="複製和貼上的所有設定" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">套用配置檔</div>
+      <div class="hf_body">
+        <p>要套用當前配置檔的所有設定，請點擊"<strong>套用</strong>"；如果程式運行在最小化時，可以從<a href="#hf_tray">系統列選單</a>中選擇的配置文件 。<br />注意：只有選取框被打勾的設定才會被套用。
+
+        </p>
+        <p><strong>套用</strong>對話框包含了有關當前套用狀態的訊息。<br />您可以看到哪些設定將要被套用和過程是否成功。您可以點擊 "取消" 按鈕取消套用進程。
+                
+        </p>
+        <p>所有的更改都會即時生效。然而，在某些情況下，某些設定需要一段時間才能完全套用成功，或者需要重新啟動(尤其是"電腦名稱"和"工作群組/網域")。
+        </p>
+        <p><strong>詳細資訊</strong>部分提供了該配置檔的所有配置設定的概述，要查看更多的資訊和錯誤訊息，請打開<strong>日誌</strong>部分。
+        </p>
+        <p>對於常見的錯誤和問題，您可以參閱 <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> 找尋解決方法 。</p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="檢查被改變設定" class="screen" />
+        <img src="data/activation.png" alt="配置檔套用視窗" class="screen" />
+        <br />
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>常見的結果和意義</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">一切工作正常</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">......</td>
+            <td class="hf_errortable_right">正在套用設定</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">設定因為不完整或錯誤將不處理直接忽略</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">錯誤</td>
+            <td class="hf_errortable_right">大多數情況下，錯誤顯示為紅色簡短的文字，例如"無法找到檔案"。如果您收到錯誤代碼，請查看一下日誌，看看是否有包含該錯誤代碼的訊息。如果您不知道是什麼原因，請將該錯誤代碼和詳細的錯誤描述發表到<a href="https://www.netsetman.com/support/" target="_blank">支援論壇</a> 。</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">不合法</td>
+            <td class="hf_errortable_right">設定值無效、未指定或不允許的值(特殊字符、工作群組與電腦名稱相同...等)                        </td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF 執行中</td>
+            <td class="hf_errortable_right">Firefox 正在運行。您必須先關閉 Firefox 以套用設定。
+</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">精簡模式和完整模式</div>
+      <div class="hf_body">
+        <p>除了傳統的 "完整模式" 界面讓您可以改變所有配置檔的設定外，還有一個額外的 "精簡模式" 可供使用，您可以隨時透過點擊在工具列右方的按鈕來切換模式。
+
+        </p>
+        <p>一旦所有配置檔的設定都完成後，精簡模式是理想的操作方式，它提供一個配置檔所有設定的精簡概述，而且不必擔心設定被不小心修改到。
+
+        </p>
+        <p>如果您使用 <a href="#hf_nsmadministration">NSM 管理</a>（"更改配置檔設定" 未選取），精簡模式將自動被啟用來防止用戶改變設定。
+                
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="精簡模式" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">系統列選單和資訊
+</div>
+      <div class="hf_body">
+        <p>當 NetSetMan 運行中時，您會在系統列發現它的圖示（時鐘旁邊）。<br />透過圖示您可以快速套用一個配置檔，只需右鍵點擊圖示打開<strong>系統列選單</strong>然後選擇要套用的配置檔。
+        </p>
+        <p>如果您想排除某些配置檔在系統列出現，您可以個別地隱藏它們。要做到這一點請先在主視窗中選擇配置檔，右鍵點擊該分頁標籤並點擊 "在系統列選單和精簡模式中顯示"。文字旁邊的小符號表示此配置檔能不能在系統列被啟用，這個選項在精簡模式也會一體適用。配置檔的顯示隱藏也可以在<a href="#hf_profiles">配置檔管理</a>中設定 。
+        </p>
+        <p>如果您把游標懸停在 NetSetMan <strong>系統列圖示</strong>上，系統列訊息會被顯示，它包含了當前系統使用的 IP 訊息。由於這些數據是即時產生的，所以顯示時會有短暫的遲延，為了減少這種延遲，您可以考慮在選項裡關閉額外的訊息，例如公共 IP、MAC 位址等。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="工作列圖示" class="screen" />
+        <img src="data/showintray.png" alt="顯示在工作列" class="screen" />
+        <img src="data/trayinfo.png" alt="工作列資訊" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">功能</div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">總覽</div>
+      <div class="hf_body">
+        <p>NetSetMan 介面設計的方式，可以讓您對於配置檔內所有配置的設定有一個直接的總覽。像基本的 IP 設定、WiFi 和 預設印表機這些最重要的功能可以直接在主界面上進行配置，至於其他更複雜的設定，在這裡只能被套用，並會顯示在他們的當前配置的簡要概述。想要修改的話，首先要勾選它們，然後點擊[...]打開根據不同項目所呈現的不同對話框。
+        </p>
+        <p>以下各節會給您的基本的說明和有用的提示來使用所有功能。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="附加設定群組" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">介面卡狀態</div>
+      <div class="hf_body">
+        <p>使用介面卡狀態按鈕來啟用、停用或重新啟用所選擇的網絡介面卡，預設的顏色會變成一個和狀態相關的顏色；另外，您也可以在工具提示看到配置的狀態。
+        </p>
+        <p>如果您要啟用一個介面卡和停用一個或所有其他的介面卡，您需要為每個介面卡建立<a href="#hf_profiles">子配置檔</a>，您可以手動或使用的介面卡狀態選單底部的選單項目做到這一點，它會替包含在介面卡清單中的每一個網路介面卡自動建立一個子配置檔，並設定其相應的狀態。再次提醒，您可以透過<a href="#hf_nics">網絡介面卡管理</a>來決定哪些介面卡會被顯示在清單之中。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="網路卡狀態：啟用" class="screen" />
+        <img src="data/adapterstatus-deactivate.png" alt="網路卡狀態：停用" class="screen" />
+        <img src="data/adapterstatus-restart.png" alt="網路卡狀態：重新啟動" class="screen" />
+        <img src="data/adapterstatus.png" alt="附加設定群組" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">進階 TCP/IP 設定</div>
+      <div class="hf_body">
+        <p>如果您需要同時存取數個網絡，您可以針對每一個網路介面指定多組 IP、閘道、DNS 和 WINS 位址。如果想這樣做，請從主選單中點擊 <strong>"IP +"</strong> 按鈕或選擇"檔案 &gt; 進階 TCP/IP 設定"。
+        </p>
+        <p>在這裡，您還可以管理更進階的設定，例如：<strong>路由表</strong>、<strong>DNS 尾碼</strong>、<strong>IPConfig</strong> 和 <strong>NetBIOS </strong>。</p>
+        <ul>
+          <li>透過勾選標題複選框套用該群組</li>
+          <li>
+            <img src="data/icon-add.png" alt="增加新值" /> 增加一個新的值</li>
+          <li>
+            <img src="data/icon-delete.png" alt="刪除選定的值" /> 刪除選取的值</li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="清除清單" /> 清除整個清單</li>
+          <li>
+            <img src="data/icon-getlist.png" alt="獲取清單" /> 從系統獲取此設置所有值(在主視窗中點擊 <img src="data/icon-get.png" alt="獲取設定" /> 符號只有讀取的第一個值)</li>
+          <li>透過拖放重新排序</li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="存取進階 TCP / IP 設定視窗" class="screen" />
+        <img src="data/additionaladdresses1.png" alt="進階 TCP / IP 設定視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">連線</div>
+      <div class="hf_body">
+        <p>使用此功能可以連接或中斷任何Windows的連線，例如：撥號網絡，移動寬頻或 VPN。相容的連線會在視窗中和網絡連線對話框中正常的網絡介面卡一起被列出來。以技術上來講，所有和 "RASDIAL" 相容的連線都有支援。
+        </p>
+        <p>您可以選擇透過勾選複選框來斷開所有當前建立的連線，或者個別地 連接/中斷 某些連線。
+        </p>
+        <p>如果你的連線因為某些原因並不存在清單之中，你可以手動的增加它透過點選選項清單中的 "新增..." 並輸入它在 Windows 中顯示的名稱。
+        </p>
+        <p>NetSetMan 也支援許多第三方的 VPN 用戶端，例如：OpenVPN、Shrew 和 Cisco。如果你的 VPN 用戶端不相容的話，NetSetMan 將會在選項清單中列出它的 VPN 配置檔。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="連線視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">主機檔</div>
+      <div class="hf_body">
+        <p>在非常特殊的情況下，可能有必要或有益的需手動指定 IP 位址到主機名稱或網域名。請注意，NetSetMan 將只會修改自己管理的主機項目，其他已存在 hosts 檔裡的項目將保留不變。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="主機視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">網絡磁碟</div>
+      <div class="hf_body">
+        <p>透過 NetSetMan 您可以連線和中斷無限數量的網絡磁碟機。<br />請點擊在視窗底部的 "[顯示提示]" 並閱讀使用說明。
+
+        </p>
+        <p>當一個網絡磁碟機功能已選取的配置檔被套用時，NetSetMan 會將已連線的和將要連線的網路磁碟機列表進行比對，所有同時存在(相同的磁碟機代號和路徑位置)於兩份列表中的網路磁碟機將保持不變；不存在的磁碟將被中斷；最後再連線新增的磁碟。
+
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="網絡磁碟視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">腳本和程式</div>
+      <div class="hf_body">
+        <p>NetSetMan 為您提供一個舒適的方式來管理您的腳本檔案，然而，它沒有自訂的腳本語言，這意味著您只能用您的作業系統支援的腳本語言來執行。常見的腳本語言有 VBS、JS 甚至於單純的 DOS 批次檔，您可以使用您喜歡的搜索引擎找到更多有關腳本的訊息和它們可以支援的功能。
+        </p>
+        <p>打開一個現有的腳本檔案或新建一個以供編輯。<br />您可以在所有其他設定被更改前和更改後各執行一個腳本。<br />如果在執行腳本和更改網絡設定中間需要一些遲延，您可以在底部設定它。
+        </p>
+        <div id="hf_programs">
+          <p><strong>
+          執行程式
+          </strong></p>
+          <p>
+          NetSetMan 提供一個簡便的方法伴隨著配置檔來執行外部的程式。<br>
+          程式可以以一般使用者身分(預設 UAC 開啟)或者以系統管理員身分(不會觸發 UAC 提醒)啟動，需要的話還可以添加啟動參數。<br>
+          程式可以啟動為一般視窗大小、最大化或最小化。
+          </p>
+          <p>
+          正在執行中的程式可以根據程式名稱(不需輸入程式位置)或確切的檔案路徑來被找到和中止執行。
+          </p>
+          <p>
+          每一種動作都可以設定分別的配置檔套用前(負值)或套用後(正值)的延遲時間。
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="執行程式" class="screen">
+        <img src="data/scripts.png" alt="腳本視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">SMTP / 電子郵件</div>
+      <div class="hf_body">
+        <p>在某些情況下，SMTP 伺服器發送郵件的 IP 地址取決於您所處的網絡。在內部網絡時，您可能需要像 10.0.0.1 這樣的本地 IP 位址；而當在外部網路時，您可能需要一個全球性的 IP 位址來存取它。
+        </p>
+        <p>相對於試圖完全相容於許多不同的電子郵件客戶端，並處理不同的用戶配置檔，NetSetMan 透過一個簡單的方法解決這個問題。設定 "nsm.smtp" 作為您的電子郵件客戶端的 SMTP 位址，並根據配置檔設定 IP 位址，當套用該配置檔，這兩個值都將透過使用 hosts 文件連接，這樣您就不需要對於您的電子郵件客戶端在做任何其他的更改。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / 電子郵件視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">系統設定</div>
+      <div class="hf_body">
+        <p>除了通常的網絡設定之外，有時您可能也想改變一些系統設定取決於您的位置和情況。例如：在學校，您可能想要音量保持靜音、更換壁紙、套用平衡電源計劃。
+        </p>
+        <p>您也可以使用系統設定窗口來快速更改一些設定，否則將花費更多的時間在尋找該設定在 Windows 中的位置。只需點擊 <img src="data/set-icon.png" alt="設定設定圖示" /> 按鈕直接套用特定的設定。
+        </p>
+        <p>支援的設定包括：顯示模式、桌面背景、桌面顏色、螢幕保護程式、佈景主題，喇叭和麥克風的音量、音效配置，防火牆(包括異常和通知)、電源計劃、時區和 MAC 位址。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="系統設定視窗" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">WiFi</div>
+      <div class="hf_body">
+        <p>NetSetMan 配置檔可用於連接到一個已存在的 WiFi 配置檔。要做到這一點必須先在網路卡下拉式選單中的選擇一個 WiFi 介面，然後再從 WiFi 下拉式選單中選擇一個 WiFi 配置檔。如果您想要中斷您的 WiFi 連線，選擇一個空的配置檔即可。
+        </p>
+        <p>除了基本的 WiFi 切換， NetSetMan 提供了豐富的 WiFi 管理。點擊 WiFi 圖示或使用工具列(工具 &gt; NSM WiFi 管理)來存取它，您會發現一個現在可用的 WiFi 列表。黃色的背景表示一個具有相同 SSID 的配置檔已經存在；綠色的背景表示是目前的連線。您可以連線到一個網絡透過雙擊它或使用 "連線" 按鍵，如果這個連線的配置檔不存在，您可以選擇先建立它。設定(驗證、加密、...)將自動根據識別的網絡預先設置，然而您可能需要調整它當有些原因造成自動識別不能正常工作的情況下。
+
+        </p>
+        <p>NetSetMan 與 Windows 作業系統的管理無線網路連結，這意味著，您存取的配置檔和 Windows 或其他無線網絡軟體已建立的是相同的，您可以新建、修改或刪除無線配置檔。
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+          依 MAC 位址連線
+          </p>
+          <p>
+          Windows 通常依據 SSID 來連線到無線網路。如果多重的基地台擁有一樣的 SSID，Windows 會自動歸類並連線到訊號最強的那一個。然而，有時候你想要指定連線到某個特定的基地台，這可以透過 NetSetMan 來實現!
+          </p>
+          <p>
+          NSM 的 WiFi 管理不會自動歸類而是顯示所有可以連線的網路，因此你可以建立你真正想要的連線。滑鼠懸停透過提示來顯示每個連線的額外資訊，例如：MAC 位址，開啟右鍵選單就可以輕鬆地複製 MAC 位址或 SSID。
+          </p>
+          <p>
+          如果你想要在套用 NetSetMan 配置檔時連線到一個特定的無線網路，你可以透過加入它的 MAC 位址到 WiFi 選項中來完成。點選 "新增..." 然後輸入你選擇的 MAC 位址，當套用配置檔時，NetSetMan 將連線到相對應的基地台。注意：你仍然需要擁有一個適合的 WiFi 配置檔存在你的系統裡。
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          需求
+        </p>
+        <p>NetSetMan 使用 Windows 作業系統的 WiFi API，這帶來了很大的優勢，沒有新的驅動程式需要安裝(因為可能導致一些衝突)。雖然在底層的 NetSetMan WiFi 功能只能在已經支持 WiFi 的 Windows 使用，但好消息是現今大部分的版本都是如此，如果您使用的是 Vista 或更高版本，將不會有相容性問題；XP 則必須要是 SP2 或 SP3 版本。
+        </p>
+        <p>請確認 <em>WLAN AutoConfig(Wlansvc)</em>(Vista和更高版本)服務或 <em>Wireless Zero Configuration(WZCSVC)</em>(XP)服務是啟動的。
+        </p>
+        <p>如果您的無線網卡附有一個製造商客製化的 WiFi 管理軟體，通常大多數情況下它會阻止 Windows 內建的管理服務存取 WiFi，您需要找到客製化管理軟體內的選項(如果有的話)來切回到用 Windows 管理。<br />因為有很多不同的製造商擁有各自的客製化軟件，所以沒有通用的教學方法來達成上述目標，下面是一個範例：如果您使用的是 AVM FRITZ!WLAN USB 網卡，點擊系統列軟體圖示然後選擇 "Windows WLAN"。
+
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi 總覽" class="screen" />
+        <img src="data/wifi.png" alt="NSM WiFi 管理視窗" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">進階</div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">自動切換</div>
+      <div class="hf_body">
+        <p>點擊<a href="#hf_tray">系統列選單</a>可以很容易的套用一個配置檔，但在某些情況下，根據自定義的條件完全自動啟動配置檔的話可能會讓事情更容易些，整合的自動切換功能正是應此而生的。
+        </p>
+        <p>開啟自動切換之後，下列的條件可以於個別的配置檔中被設定：</p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="限制配置檔圖示" /> 周圍的 WiFi 網絡</div>
+          <ul>
+            <li>無線網絡(SSID 或 MAC 位址) 進入/超出 範圍</li>
+            <li>無線網絡信號強度 低於/超過 一定值</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="限制配置檔圖示" /> 網絡位置</div>
+          <ul>
+            <li>Windows NLM：自動由 Windows(Vista 或更高版本)產生的網絡配置檔</li>
+            <li>閘道器 MAC：DHCP (自動分配IP)閘道器的指紋</li>
+            <li>Ping：存在網絡中的某個伺服器或系統</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="限制配置檔圖示" /> 網路卡狀態</div>
+          <ul>
+            <li>本機網絡網路卡(連線/中斷) 的連線狀態</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="限制配置檔圖示" /> 區間</div>
+          <ul>
+            <li>星期幾和時間區間(例如：星期六和星期天 8:00 - 18:00)</li>
+          </ul>
+        </div>
+        <p>雖然對於每一個配置檔可以設定的條件數量沒有技術上的限制，不過請儘可能保持簡單。在大多數情況下，以一個或兩個條件來實現期望的結果是絕對足夠的。
+        </p>
+        <p>您可以指定無論是全部或至少有一個條件必須符合，就可以套用該配置檔。
+        </p>
+        <p>
+          <strong>註：</strong>當多個配置檔的條件在同一時間都符合時，將由低 ID 的配置檔有優先權。
+        </p>
+        <p>在預設情況下，切換進程初始化完成後，在畫面右下角會有一個可以自訂的延遲倒數計時，讓您可以選擇性地中止切換進程。另一個選擇是，本機的 Windows 通知可以用來顯示訊息或者配置檔可以在背景運作切換且不會顯示任何訊息。在第二種狀況下，工作列圖式會在切換過程中以動畫顯示，並且根據切換的結果即時的改變它的顏色來提示您自動切換的進程。
+        </p>
+        <p>為了節省系統資源， NetSetMan 不會比較您當前的設定和將要套用的配置檔，這意味著，如果您手動更改任何設定，NetSetMan 不會注意到此變化。
+        </p>
+        <p>自動切換在 XP 中的一些限制：Windows NLM 無法使用、周遭的 WiF i網絡變化可能會有明顯的延遲。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="自動切換" class="screen" />
+        <img src="data/autoswitch-tooltip.png" alt="自動切換提示" class="screen" />
+        <img src="data/autoswitch-notification.png" alt="自動切換的通知" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">註解</div>
+      <div class="hf_body">
+        <p>您可以為每個配置檔建立簡短的說明來幫助您記住或註明該配置檔的用途。如果一個配置檔含有註解，它在選單列的圖示會以彩色的方式出現，該註解在完整模式將以圖示提示的方式顯示；在精簡模式中則顯示在配置檔設定的頂部。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="備註" class="screen" />
+        <img src="data/note-hint.png" alt="備註提示" class="screen" />
+        <img src="data/note-compact.png" alt="精簡模式備註" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">NSM 服務 / 受限制用戶帳戶</div>
+      <div class="hf_body">
+        <p>NetSetMan 需要管理員權限才能更改網絡和系統設定為您服務，通常執行這樣的行為在受限制用戶帳戶是不可能的。較新的 Windows 版本，甚至使用 UAC (用戶帳戶控制) 限制管理員賬戶，在每個程式啟動前顯示訊息。
+        </p>
+        <p>為了解決這個問題， NetSetMan 內含一個叫做 <strong>NSM 服務</strong>的特殊應用，它能提供主程式所需的權限。該服務會被自動安裝，但也可以手動在選項(系統權限 &gt; 啟用/停用）中做 安裝/移除 的動作。
+        </p>
+        <p>已經安裝的服務可以在 Windows 服務對話框(Services.msc)找到和調整它。此外，它也可以使用命令列 安裝/移除 或 啟動/停止：<br /><span class="code">nsmservice.exe /install /silent<br /> nsmservice.exe /uninstall /silent<br /> net start nsmService<br /> net stop nsmService</span>
+        </p>
+        <p>如果遇到<em>"無效的簽名"</em>錯誤，請確認該執行檔並沒有被修改，還有系統群組原則 <em>"Turn off Automatic Root Certificates Update"</em> 並未啟用。
+        </p>
+        <p>如果您在一個受限制用戶帳戶裡執行 NetSetMan 且 NSM 服務沒有啟用的話，您將會收到一條訊息說明這個問題。作為替代，您可以在本地帳戶輸入<strong>管理員憑據</strong> ，NetSetMan 將會將它加密儲存在設定檔中，並用它來啟動自己的所需的權限 。請注意，在這種情況下，應用程式將在其憑證使用用戶的背景中執行。
+        </p>
+        <p>查看 <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> 以瞭解有關該功能的一些其他注意事項。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="系統權限" class="screen" />
+        <img src="data/limitedaccount.png" alt="受限制用戶帳戶" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">登入前配置檔預切換</div>
+      <div class="hf_body">
+        <p>一個非常獨特而強大的功能是可以在登入畫面上套用您的配置檔。這使得系統得以準備您的帳戶所需要的正確的網絡設置透過在登入之前套用 NetSetMan 的配置檔。
+        </p>
+        <p>要使用此功能， <a href="#hf_nsmservice">NSM服務</a> 必須安裝並勾選"<em>在 Windows 登入畫面啟用配置檔切換</em>"(選項 &gt; 系統權限)。
+        </p>
+        <p>請注意，此功能只允許改變用戶之間共享的設定，個別用戶特定的設定，並不在此列。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="登入前配置檔預切換" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">NSM 管理</div>
+      <div class="hf_body">
+        <p>如果您設定的 NetSetMan 正在被別的使用者使用時，您可能想要指定哪些功能是允許其他使用者執行的。這可以使用 NSM 管理員(參數設定 &gt; 管理員)來完成。
+        </p>
+        <p>當您要啟用這個模式，必須先輸入一個大於或等於6個字元的密碼，只有當密碼通過驗證後，您才可以改變 NSM 管理設定，或執行那些被保護的功能(啟動 NetSetMan、套用配置檔、更改配置檔設定、更改程式設定)。
+        </p>
+        <p>您甚至可以鎖定某些配置 <img src="data/administration-profilelock.png" alt="限制配置檔圖標" /> ，讓用戶不能修改、但是仍然能夠套用它們。或者您也可以直接限制訪問某些設置 <img src="data/administration-settinglock.png" alt="限制設定圖示" /> 例如"工作群組和網域"，但同時允許配置和使用所有其他設置。
+        </p>
+        <p>密碼的校驗值會被寫入在登錄檔，請確保一般使用者沒有 <span class="code">HKLM\SOFTWARE\NetSetMan</span> (x64：<span class="code">HKLM\SOFTWARE\Wow6432Node\NetSetMan</span>) 的寫入權限。如果您忘記了密碼，您將需要手動刪除該註冊碼，如果您的設定檔是加密的，沒有密碼的人就無法查看或編輯它。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM 管理" class="screen" />
+        <img src="data/administration-restrictedprofiles.png" alt="NSM 管理 - 配置檔限制" class="screen" />
+        <img src="data/administration-restrictedsettings.png" alt="NSM 管理 - 設定限制" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">命令列套用</div>
+      <div class="hf_body">
+        <p>在某些特殊情況，您可能需要在不使用 NetSetMan 圖形介面下更改您的配置檔：使用快捷方式更改配置檔、在啟動時套用配置檔、將它包含在一個複雜的腳本內......等等。</p>
+        <p>以下為可用的參數：</p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>套用編號為 # 的配置檔</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>在安靜模式下套用配置檔(如果沒有錯誤發生，套用視窗將自動關閉)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>最小化執行 NetSetMan</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>在完整模式下執行 NetSetMan(預設值)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>在精簡模式下執行 NetSetMan</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>執行第二個 NetSetMan 程式。
+<strong>小心</strong>：所有同時執行的 NetsetMan 都寫入相同的設定檔！</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>一個快捷方式啟動配置檔 #0 在安靜模式下的指令為：<br /><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br /> </strong>
+          <img src="data/shortcut.png" alt="快捷鍵" class="screen" />
+        </p>
+        <p>在命令提式字元：<br />
+          <img src="data/commandline.png" alt="命令列" class="screen" />
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">非商業用途免費版訊息</div>
+      <div class="hf_body">
+        <p>此訊息<em>平均</em>在同一工作群組中每啟動七次會在主視窗出現一次，在同一網域的使用者，每第二次開啟都會看到。
+
+                
+        </p>
+        <p>可惜這是必須的，要提醒用戶 NetSetMan 只可免費用於非商業目的(=私人或公益)。總之：您可以免費使用本產品，只要是在不獲取報酬的工作時間。如果您想在例如工作中或在商業使用的筆記型電腦上使用，您需要購買 <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> 的授權。用於教育或非營利機構沒有特別的規定，教授、教師和其他員工只可以使用非商業免費版本在義務(=無償)的工作上。
+        </p>
+        <p>請閱讀<a href="http://www.netsetman.com/en/txt/license" target="_blank">許可協議</a>瞭解進一步的訊息。
+        </p>
+        <p>
+          <strong>當然，此訊息在專業版是看不到的。</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="非商業軟體訊息" class="screen" />
+      </div>
+    </div>
+    <div class="hf_contentdivider">專業版額外功能</div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">配置檔群組</div>
+      <div class="hf_body">
+        <p>透過 NetSetMan Pro，您可以建立一個無限數量的配置檔群組，每個群組包含6個配置檔。
+        </p>
+        <p>要新增、刪除、重新編排或重新命名配置檔群組，請使用工具列中的<a href="#hf_profiles">配置檔管理</a>。
+        </p>
+        <p>要瀏覽所有可用的配置檔群組，請從工具列的下拉式選單選擇任何一個群組。
+        </p>
+        <p>如果您有多個群組，您的配置檔會以群組方式顯示在系統列選單中。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="專業配置檔管理" class="screen" />
+        <img src="data/tray-pro.png" alt="專業版本的工作列圖示" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">瀏覽器 / 代理伺服器</div>
+      <div class="hf_body">
+        <p>透過 NetSetMan Pro，您可以管理 Windows/Internet Explorer、Firefox 和 Opera(&lt;= v12) 的代理伺服器。Chrome 和更高版本的 Opera 不支援自訂的代理伺服器設定，而是自動使用系統設定。
+        </p>
+        <p>所有的設定是為了模仿原介面，來允許做到原本瀏覽器直接也可以完成的相同設定；另外，您也可以更改首頁，如果您在Firefox或Opera有使用不同的使用者設定檔，您也可以選擇使用者設定檔名稱。
+        </p>
+        <p>請注意 Firefox 在套用新的設定之前，<em>必須</em>先關閉。
+<br />如果您的 Firefox 有多個使用者設定檔而且資料夾位置有改變(例如：因為安裝新系統...等)，您將需要在列表中重新選擇使用者設定來更新您的設定檔。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="瀏覽器 / 代理伺服器" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">網域</div>
+      <div class="hf_body">
+        <p>要加入網域，請輸入名稱、您的用戶名稱和密碼。您的用戶名稱和密碼將被加密保存在 ini 檔案中。
+        </p>
+        <p>通常單純輸入用戶名稱就已經夠了，但是，如果您遇到錯誤，您可以嘗試輸入下列兩個常見標準的其中一種作為您的用戶名稱：<br /> a) NETBIOS: DOMAIN\user<br /> b) UPN: user@domain.local<br />
+        </p>
+        <p>在 NT 網域，用戶在同一時間只能是其中<em>一個</em>網域的成員。這意味著，加入另一個網域或工作群組中時，前一個網域成員的身份就會被丟失，直到您的系統再重新加入。
+        </p>
+        <p>NetSetMan 只能幫您加入那些您的網域用戶帳戶已經擁有權限的網域。<br />該用戶帳戶的權限被稱為"添加工作站到網域"，且必須在您的帳戶中被啟用，如果您沒有這個權限，請諮詢您的網絡管理員申請。
+        </p>
+        <p>查看 <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> 以瞭解有關該功能的一些其他注意事項。
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="網域總覽" class="screen" />
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">企業網絡佈局</div>
+      <div class="hf_body">
+        <p>NetSetMan Pro 提供了多種輔助功能，幫助您更輕鬆地在您的公司網絡內發佈軟體、預配置設定和許可。您可以在 <a href="http://www.netsetman.com/faqcompany">FAQ</a> 發現您需要知道的一切詳細說明。</p>
+      </div>
+    </div>
+  </body>
+</html>

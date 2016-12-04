@@ -27,7 +27,17 @@ move c:\temp\AddTrustExternalCARoot-2048.pem c:\RailsInstaller\Ruby2.0.0\lib\rub
 set path=%old_path%
 :install_OzPing
 rem setting requirements for op.rb
+<<<<<<< HEAD
 @echo Setting requirements for op.rb
 mkdir c:\temp\logs >>nul
 mkdir c:\temp\log >>nul
 gem install net-ping win32-security logger snmp rego
+=======
+mkdir c:\temp\logs
+gem install net-ping win32-security logger rgeo snmp
+rem setting requirements for op.rb
+@echo Setting requirements for op.rb
+mkdir c:\temp\logs >>nul
+mkdir c:\temp\log >>nul
+
+>>>>>>> 8d128d001a0f8a165fd2384bd601799ea4f028f6

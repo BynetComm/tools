@@ -240,27 +240,24 @@ while (index < executions ) do
   if (debug && debuglevel>2) then puts ("#{index}: gpslabel") end
   begin
   #tn=Net::Telnet::new("Host"=>pingHosts[:BH], "Timeout"=>5, "Output_log"=>"c:/temp/output_log.log", "Dump_log"=> "c:/temp/log/dump_log.log")	
-  IO.popen("#{'gpsbabel'} -i garmin,get_posn -f usb:") {
+  IO.popen("#{'gpsbabel'} -c utf-8 -i garmin,get_posn -f usb:") {
          |io| while (line = io.gets) do 
-			if (debug && debuglevel>2) then
-               puts("0-[#{line_id}],#{line}") 
-			end
-           
-            if line_id==0 then
-             line_a = line.split(/\s+/,8)
-			 puts ("1-[#{line_id}],#{line_a}")  if (debug && debuglevel>1)
-			 if (debug && debuglevel>2) then
-				
+			line_id+=1
+            if line_id == 1 then      
+			   line_a = line.split(/\s+/,3)
+			  puts ("1-[#{line_id}]") if (debug && debuglevel>1)
+			  if (debug && debuglevel>2) then
 				 puts("line a count = #{line_a.count}  line_a is")
 				 puts("[#{line_id}],#{line_a}")  
 			 end	
-             gps1 = {:week_day => line_a[0]||"",
-                    :month => line_a[1||""],
-                    :day => line_a[2]||"",
-                    :time => line_a[3]||"",
-                    :year => line_a[4][0..3]||"" }
-       			gps2 = {:lat => line_a[5]||"",
-                    :lng => line_a[6]||"",
+    
+	# gps1 = {:week_day => line_a[0]||"",
+    #                :month => line_a[1||""],
+    #                :day => line_a[2]||"",
+    #                :time => line_a[3]||"",
+    #                :year => line_a[4][0..3]||"" }
+       			gps2 = {:lat => line_a[1]||"",
+                    :lng => line_a[2]||"",
 				}
                puts gps2 if (debug && debuglevel>2)				
             end #line_id==1

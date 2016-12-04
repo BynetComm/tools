@@ -1,0 +1,970 @@
+﻿<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x súgófájl</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Súgófájl</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-hu.png" alt=""></div>
+          <div id="hf_language">Magyar</div>
+          <div id="hf_translator">fordította: Török Zoltán</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Általános információk
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Súgófájl verziószám</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Támogatott <br> operációs rendszerek</td>
+            <td class="hf_tblinfo_right">Windows <br> XP, Vista, 7, 8, 10 <br> 32 bit, 64 bit</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Licenc</td>
+            <td class="hf_tblinfo_right">nem üzleti célú ingyenes <br><em>vagy</em><br> üzleti célra is használható Pro változat<br> Megtekintés <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> vagy <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a> formátumban</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Kapcsolat</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Támogatás fórum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Tartalom
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Alapok
+        </p>
+        <ul>
+          <li><a href="#hf_description">Leírás</a></li>
+          <li><a href="#hf_howtouse">Alapvető információk</a></li>
+          <li><a href="#hf_profiles">Profilok</a></li>
+          <li><a href="#hf_nics">Hálózati csatolók (hálózati kártyák, NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Beállításokkal kapcsolatos műveletek</a></li>
+          <li><a href="#hf_activation">Profil aktiválása</a></li>
+          <li><a href="#hf_compactmode">Kompakt és teljes üzemmód</a></li>
+          <li><a href="#hf_tray">Tálca menü és Tálca infó</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Funkciók
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Áttekintés</a></li>
+          <li><a href="#hf_adapterstatus">Csatoló státusz</a></li>
+          <li><a href="#hf_advanced">További TCP/IP beállítások </a></li>
+          <li><a href="#hf_connections">Kapcsolatok</a></li>
+          <li><a href="#hf_hosts">Hosts fájl</a></li>
+          <li><a href="#hf_netdrives">Hálózati meghajtók</a></li>
+          <li><a href="#hf_scripts">Szkriptek és Programok</a></li>
+          <li><a href="#hf_smtp">SMTP / e-mail</a></li>
+          <li><a href="#hf_system">Rendszerbeállítások</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Haladó
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Megjegyzések</a></li>
+          <li><a href="#hf_nsmservice">NSM Szolgáltatás / korlátozott felhasználói fiók</a></li>
+          <li><a href="#hf_prelogon">Profilváltás bejelentkezés előtt</a></li>
+          <li><a href="#hf_nsmadministration">NSM Adminisztráció</a></li>
+          <li><a href="#hf_commandline">Aktiválás parancssorból</a></li>
+          <li><a href="#hf_ncfreeware">"Nem kereskedelmi célú, ingyenes változat" értesítés</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          További funkciók a Pro változatban
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Profilcsoportok</a></li>
+          <li><a href="#hf_proxy">Böngésző / Proxy</a></li>
+          <li><a href="#hf_domain">Tartomány</a></li>
+          <li><a href="#hf_distribution">Terjesztés vállalati hálózatokban</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Alapok
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Leírás
+      </div>
+      <div class="hf_body">
+        <p>
+          A <strong>NetSetMan</strong> egy hálózati beállítás-kezelő alkalmazás, mely 6 különböző, rendezetten megjelenített profil közti egyszerű váltást tesz lehetővé. A profilokban megadható beállítások:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP-címek (IPv4 és IPv6!) </li>
+              <li> Átjárók (metrikával)  </li>
+              <li> DNS kiszolgálók </li>
+              <li> WINS kiszolgálók </li>
+              <li> WiFi kezelés </li>
+              <li> Számítógépnév </li>
+              <li> Munkacsoport </li>
+              <li> Alapértelmezett nyomtató </li>
+              <li> Hálózati meghajtók </li>
+              <li> Hálózati kártya státusz </li>
+              <li> Kapcsolatok (RAS / DUN / PPP / VPN) </li>
+              <li> DNS-utótag </li>
+              <li> Útválasztó tábla </li>
+              <li> SMTP kiszolgáló </li>
+              <li> Hosts fájl-bejegyzések </li>
+              <li> Rendszerbeállítások </li>
+              <li> MAC-cím </li>
+              <li> Szkriptek (BAT, VS, JS, ...) </li>
+              <li> Programok futtatása </li>
+            </ul></td>
+            <td width="51%"><strong>Továbbá csak a <u>Pro</u> változatban:</strong>
+            <ul>
+              <li> Munkahelyen is használható </li>
+              <li> Korlátlan számú profil </li>
+              <li> Hálózati tartomány </li>
+              <li> Teljeskörű proxy beállítások és <br> böngésző kezdőoldal <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          A <strong>NetSetMan</strong> pótolja azt, ami a Windows-ból mind a mai napig hiányzik: <br> Egy hatékony, könnyen használható felület, mellyel egy helyen kezelheted az összes hálózati beállítást. <br> Próbáld ki, és többet nem leszel meg nélküle!
+        </p>
+        <p>
+          A beállításokat és változtatásokat egy külön fájlba <em>(settings.ini)</em> menti le a program, ezért a biztonsági mentés, a beállítások átmásolása vagy akár egy verziófrissítés is zökkenőmentesen végezhető.
+        </p>
+        <p>
+          <strong>Egyetlen kattintással, vagy akár teljesen automatikusan is aktiválhatsz egy előre beállított profilt.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs. Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan főablak">
+          <br><strong>NetSetMan:</strong> nem üzleti célú ingyenes változat
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro főablak">
+          <br><strong>NetSetMan Pro:</strong> üzleti célra is használható Pro változat
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Alapvető információk
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profilok
+            </div> Minden egyes <a href="#">profil</a> egy adott helyszínre vagy alkalomra érvényes beállításokat jelképez. Egy profil alá felvett alprofilokkal egyszerre több hálózati csatoló is konfigurálható. A profilokat át lehet nevezni a profilfülek feliratán duplán kattintással.</li>
+          <li>
+            <div>
+              Kézi beállítás
+            </div> A szükséges profilokat kézzel kell konfigurálni, mivel egy új, ismeretlen helyhez kapcsolódó beállításokat a program nem tudja önállóan kitalálni. Az alkalmazás fő célja, hogy automatizálja a beállítások rendszeres megváltoztatását, amiket egyébként kézzel kellene csinálni.</li>
+          <li>
+            <div>
+              Beállítások kiválasztása
+            </div><a href="#hf_basicoperations">Az összes aktuális beállítás beolvasása</a> egy profilba jó kiindulási pont lehet, de ezután még el kell dönteni, hogy az összes beállítás közül melyiket kell alkalmazni a profil aktiválásakor. Erősen ajánlott a beállítások közül csak azokat meghagyni, melyek időközben valóban megváltozhattak. Így például nem kell alkalmazni a számítógép nevét, ha ez a beállítás soha nem változik.</li>
+          <li>
+            <div>
+              Beállítások konfigurálása
+            </div> Egy beállítás konfigurálásához először pipáld be a jelölőnégyzetét. Ezután közvetlenül megadhatod a kívánt beállítást a főképernyőn, vagy megnyithatod az adott beállításhoz tartozó konfigurációs ablakot.</li>
+          <li>
+            <div>
+              Profil aktiválása
+            </div> Alapértelmezésben egyik profil sem aktiválódik automatikusan, azaz egyetlen rendszerbeállítás sem változik meg a felhasználó szándéka ellenére. Azonban az <a href="#hf_autoswitch">AutoSwitch</a> funkcióval megoldható, hogy egyes profilok - tetszőlegesen megadható feltételek alapján - automatikusan aktiválódjanak.</li>
+          <li>
+            <div>
+              Elérhetőség a tálcán
+            </div> Érdemes a NetSetMan-t <a href="#hf_tray">kis méretben a tálcán tartani</a>, és a tálca ikont mindig láthatóvá tenni. Így ha az ikonra kattint, majd kiválaszt egy profilt, gyorsan aktiválhatja azt. Továbbá az egérkurzort az ikon fölött tartva egy áttekintő felület jelenik meg a kapcsolat aktuális IP beállításairól.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profilok
+      </div>
+      <div class="hf_body">
+        <p>
+          Minden egyes fül egy külön profilt jelent, azaz a füleken összesen 6 különböző profil beállításai tárolhatók.
+        </p>
+        <p>
+          Ha egy profil aktiválásakor egyszerre két hálózati csatoló beállításait szeretnéd megváltoztatni, erre az <strong>Alprofilok</strong> biztosítanak lehetőséget. Kattints a "+"-gombra a lenyíló lista mellett, és egy új menüsor jelenik meg, benne két alprofillal (a jelenlegivel és egy új, üres alprofillal). A feliratok az alprofilok által kezelt hálózati csatolók nevei lesznek, és nem lehet őket megváltoztatni. Egy profilhoz tetszőleges számú alprofilt lehet felvenni, melyek mindegyike aktiválva lesz a profil aktiválásakor. Az alprofilok sorrendjén egyszerűen, "fogd és vidd"-módszerrel lehet változtatni.
+        </p>
+        <p>
+          Az összes változtatás automatikusan mentődik, így biztosan nem vesznek el az újonnan megadott beállítások.
+        </p>
+        <p>
+          A profilokat át lehet nevezni a profilfülek jobbgombos helyi menüjében található "Átnevezés" opcióval vagy a fülön duplán kattintással.
+        </p>
+        <p>
+          A profilok kezelését teszi egyszerűbbé a <strong>Profilkezelés</strong>, ami a menüsorban található. Ezen a felületen profilok, alprofilok és csoportok (csak a NetSetMan Pro-ban) kezelhetők az egérrel vagy néhány általános billentyűparanccsal (nyíl billentyűk a navigáció, F2 az átnevezés, stb.). Egérrel történő átrendezéskor néhány technikai korlátozás jelenhet meg az átrendezni kívánt elem típusától függően: Profilok nem törölhetők, Alprofilok nem átnevezhetők, Profilok megcserélhetők de nem mozgathatók. A jelölőnégyzetek azt mutatják, hogy az adott profil látható-e tálcán és kompakt üzemmódban.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Alprofil fülek" class="screen">
+          <img src="data/rename.png" alt="Profil átnevezése" class="screen">
+          <img src="data/profilemanagement.png" alt="Profilkezelés" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Hálózati csatolók (hálózati kártyák, NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Az elérhető hálózati csatolók nevei a típusukkal együtt vannak feltüntetve. Válaszd ki az aktuális (al)profilban kezelni kívánt hálózati kártyát.
+        </p>
+        <p>
+          Ha egy bizonyos hálózati kártya nem található meg listában (például azért, mert inaktív vagy virtuális), a lista kezeléséhez kattints a <strong>Frissítés</strong> gombra, ami gyorsan frissíti a listát, vagy válaszd a <strong>Hálózati csatolók kezelése</strong> opciót, ahol megtalálod az elérhető hálózati kártyák teljes listáját. Válaszd ki az összes hálózati kártyát, amit szeretnél látni a listában.
+        </p>
+        <p>
+          <strong>Megjegyzés:</strong> Az összes hálózati kártya, amelyek a listában megtalálhatók, megjelennek a Tálca infón is. Ha egy hálózati kártyát nem szeretnél látni a listában illetve a Tálca infón, vedd ki a jelölést mellőle.
+        </p>
+        <p>
+          Ha átmásolod a beállításfájlt (settings.ini) egy másik rendszerbe, a NetSetMan megpróbálja automatikusan hozzárendeni a beállításokhoz a hálózati kártyákat. Ez azonban csak akkor működik, ha az új rendszerben a hálózati kártya pontosan ugyanazzal a névvel szerepel (az első képernyőképen ez a "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Hálózati csatoló kiválasztása" class="screen">
+        <img src="data/adapters-management.png" alt="Hálózati csatoló kiválasztása" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Beállítás műveletek
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Aktuális beállítások lekérése
+        </p>
+        <p>
+          Kattints a <img alt="Beállítások lekérése ikon" src="data/icon-get.png"> szimbólumra a beviteli mező mellett, ha egy aktuális beállítást szeretnél betölteni a profilba. <br> Az összes aktuális beállítás lekéréséhez kattints jobb gombbal a profilra, majd a megjelenő helyi menüből válaszd az "Aktuális beállítások lekérése" opciót.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Egy beállítás lekérése" class="screen">
+        <img src="data/get-settings2.png" alt="Összes beállítás lekérése" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Beállítások törlése</span>
+        </p>
+        <p>
+          Egyetlen beállítás értékének törléséhez kattints rá jobb gombbal, majd a megjelenő helyi menüből válaszd a "Törlés" opciót.
+        </p>
+        <p>
+          Egy IP mező értékei egyszerűen törölhetők a megfelelő feliratra duplán kattintva.
+        </p>
+        <p>
+          Az aktuális (al)profil összes beállításának törléséhez kattints jobb gombbal a profilra, majd a megjelenő helyi menüből válaszd az "Beállítások törlése" opciót.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Egy beállítás törlése" class="screen">
+        <img src="data/clear-settings2.png" alt="Összes beállítás törlése" class="screen">
+      </div>
+      <div class="hf_body">
+        <p>
+          <span class="hf_section_caption">Beállítások másolása, beillesztése</span>
+        </p>
+        <p>
+          Az összes beállítás profilok közti másolása a következőképpen lehetséges: először az eredeti profil jobbgombos helyi menüjében kattints a "Beállítások másolása" menüpontra, majd az új profil helyi menüjében a "Beállítások beillesztése" menüpontra.
+        </p>
+        <p>
+          Egyetlen beállítás értékének másolásához és beillesztéséhez kattints rá jobb gombbal, majd a megjelenő helyi menüből válaszd a "Másolás" illetve "Beillesztés" opciót.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Egy beállítás másolása és beillesztése" class="screen">
+        <img src="data/copypaste2.png" alt="Összes beállítás másolása és beillesztése" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Profil aktiválása
+      </div>
+      <div class="hf_body">
+        <p>
+          Az aktuális profil összes beállításának alkalmazásához kattints az <strong>"Aktiválás"</strong> gombra, vagy ha a program kis méretben fut, válaszd ki az aktiválni kívánt profilt a <a href="#hf_tray">tálca menüből</a>. <br> Fontos, hogy csak a jelölőnégyzettel megjelölt beállítások lesznek alkalmazva.
+        </p>
+        <p>
+          Az <strong>Aktiválás</strong> párbeszédablak mutatja a jelenlegi aktiválási folyamattal kapcsolatos információkat. <br> Itt látható, hogy mely beállítások lesznek alkalmazva, és hogy a folyamat sikerrel járt-e vagy sem. Az aktiválási folyamat bármikor megszakítható a "Mégse" gombra kattintva.
+        </p>
+        <p>
+          Minden változás azonnal életbe lép. Ugyanakkor bizonyos esetekben néhány beállítás érvényre jutásához el kell telnie egy kis időnek vagy újra kell indítani a gépet. (Ez különösen igaz a "Számítógépnév" és a "Munkacsoport/Tartomány" beállítások megváltozása esetén.)
+        </p>
+        <p>
+          A <strong>Részletek</strong> rész áttekintést nyújt a profilhoz megadott összes beállításról. További információk és a hibaüzenetek teljes hosszában történő megtekintéséhez nyisd meg a <strong>Napló</strong> részt.
+        </p>
+        <p>
+          A legáltalánosabb hibákról és megoldásaikról a <a href="http://www.netsetman.com/faq" target="_blank">GYIK</a>-ben olvashatsz bővebben.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Megváltoztatni kívánt beállítások kijelölése" class="screen">
+        <img src="data/activation.png" alt="Profil aktiválási ablak" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>A legáltalánosabb hibák és értelmezéseik</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">Minden az elvártnak megfelelően működött.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">A beállítások alkalmazása folyamatban van.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">A beállítások alkalmazása kihagyva, mert az adatok hibásan vagy hiányosan lettek megadva.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Hiba</td>
+            <td class="hf_errortable_right">A legtöbb esetben a hibákat egy rövid, pirossal szedett szöveg jelzi, pl.: "Fájl nem található". Amennyiben egy hibakód jelenik meg, vess egy pillantást a naplóra, mert lehet, hogy ott megtalálható a kódhoz tartozó hibaüzenet is. Ha nincs ötleted, mi lehet a gond, írd meg a hiba kódját az eset részletes leírásával együtt a <a href="https://www.netsetman.com/support/" target="_blank">támogatás fórumba</a>.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Érvénytelen</td>
+            <td class="hf_errortable_right">Az érték hibás, nincs megadva vagy nem megengedett (speciális karakterek, munkacsoport nevével megegyező számítógépnév stb.)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF aktív</td>
+            <td class="hf_errortable_right">A Firefox éppen fut. Az ilyen beállítások alkalmazásához be kell zárni a böngészőt.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Kompakt és teljes üzemmód
+      </div>
+      <div class="hf_body">
+        <p>
+          A klasszikus "Teljes üzemmód" felületen kívül, ahol a profilok minden beállítását meg tudod változtatni, egy másik, "Kompakt üzemmód" nevű felület is rendelkezésre áll. A módok között a főmenü jobb szélén lévő gombbal lehet váltani.
+        </p>
+        <p>
+          Ha az összes profil be lett állítva, onnantól a kompakt üzemmód az ideális felület: egy tömör áttekintést nyújt a profilok beállításairól anélkül, hogy azokat véletlenül megváltoztathatnád.
+        </p>
+        <p>
+          Ha bekapcsoltad az <a href="#hf_nsmadministration">NSM Adminisztrációt</a> (és a "Profilbeállítások változtatása" nincs bejelölve), automatikusan a kompakt üzemmód fog elindulni, hogy megakadályozza a beállítások megváltoztatását.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Kompakt üzemmód" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Tálca menü és Tálca infó
+      </div>
+      <div class="hf_body">
+        <p>
+          Amikor a NetSetMan fut, az ikonja az értesítési területre kerül (a tálcán az óra melletti részre). <br> Innen egyszerűen lehet profilt váltani: az ikonon jobb kattintásra megjelenő <strong>Tálca menüből</strong> csak ki kell választani a kívánt profilt.
+        </p>
+        <p>
+          Hogy ne legyenek felesleges profilok a listában, beállítható, hogy a profilt lehessen-e tálcáról aktiválni vagy sem. Ehhez válaszd ki a fület, majd a jobbgombos helyi menüjében kattints a "Tálcáról vagy kompakt üzemmódban aktiválható" pontra. A szöveg előtti pipa jelzi, hogy az adott profilt tálcáról is lehet majd aktiválni. Ez a beállítás a profilok Kompakt üzemmódban való láthatóságát is szabályozza. A profilok láthatóságát a <a href="#hf_profiles">Profilkezelés</a> alatt is be lehet állítani.
+        </p>
+        <p>
+          Ha az egérkurzort az értesítési területen lévő NetSetMan ikon fölött tartod, megjelenik a <strong>Tálca infó</strong>. Itt leolvashatók a rendszer jelenlegi IP beállításai. Mivel az itteni adatok valós idejű lekérdezések eredményeként állnak össze, a megjelenést egy rövid késleltetés előzheti meg. A késleltetés csökkenthető a további információk, pl. publikus IP-k, MAC-címek, stb. kikapcsolásával a Beállítások ablakban.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Tálca ikon" class="screen">
+        <img src="data/showintray.png" alt="Tálcáról aktiválható" class="screen">
+        <img src="data/trayinfo.png" alt="Tálca infó" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Funkciók
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Áttekintés
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan felülete úgy lett kialakítva, hogy közvetlenül áttekinthető az összes beállítás, ami egy profilban megadható. Néhány kiemelten fontos beállítás, mint pl. az alapszintű IP beállítások, a WiFi és az alapértelmezett nyomtató közvetlenül a fő felületen konfigurálható. Egyéb, bonyolultabb beállításokat csak bekapcsolni lehet itt, továbbá egy rövid áttekintés jelenik meg az aktuális konfigurációról. Ezek módosításához először be kell kapcsolni őket, majd megnyitni a kapcsolódó párbeszédablakot a [...] gombra kattintva.
+        </p>
+        <p>
+          A következő fejezetek alapvető útmutatást és hasznos tippeket tartalmaznak mindegyik funkcióhoz.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Egyebek beállításcsoport" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Csatoló státusz
+      </div>
+      <div class="hf_body">
+        <p>
+          A Csatoló státusz gomb a kiválasztott hálózati csatoló aktiválására, deaktiválására vagy újraindítására használható. Alapértelmezett színe mindig a státuszt jelölő színre változik, továbbá buboréksúgóban is látható a beállított státusz.
+        </p>
+        <p>
+          Ha azt szeretnéd, hogy az egyik csatoló engedélyezve, miközben egy másik vagy az összes többi csatoló tiltva legyen, <a href="#hf_profiles">alprofilokat</a> kell létrehozni az egyes csatolókhoz. Ezt kézzel vagy Csatoló státusz menü alján található opcióval is meg lehet tenni. Ez utóbbi automatikusan létrehoz egy alprofilt minden hálózati csatolóhoz, amelyik szerepel a csatolók listájában, és a beállítja azok státuszát a kívánt módon. Ne feledd, hogy <a href="#hf_nics">Hálózati csatolók kezelése</a> funkcióval beállítható, hogy mely csatolók szerepeljenek a listában.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Csatoló státusz: Aktiválás" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Csatoló státusz: Deaktiválás" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Csatoló státusz: Újraindítás" class="screen">
+        <img src="data/adapterstatus.png" alt="Csatoló státusz" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        További TCP/IP beállítások
+      </div>
+      <div class="hf_body">
+        <p>
+          Egy hálózati kártyához több IP, Átjáró, DNS valamint WINS cím is megadható arra az esetre, ha egyszerre több hálózathoz szeretnél csatlakozni. Ehhez kattints az <strong>"IP+"</strong> gombra, vagy válaszd a "Profil &gt; További TCP/IP beállítások" opciót a főmenüből.
+        </p>
+        <p>
+          Itt speciális beállításokat is meg lehet adni, mint pl. <strong>Útválasztó tábla, DNS-utótag, IPConfig</strong> és <strong>NetBIOS</strong>.
+        </p>
+        <ul>
+          <li> Egy csoport aktiválása a szöveg melletti jelölőnégyzetet bejelöléséve lehetséges </li>
+          <li>
+            <img alt="Új érték hozzáadása" src="data/icon-add.png"> Egy új érték hozzáadása </li>
+          <li>
+            <img alt="Kiválasztott érték törlése" src="data/icon-delete.png"> A kiválasztott érték törlése </li>
+          <li>
+            <img alt="Lista törlése" src="data/icon-deletelist.png"> A teljes lista törlése </li>
+          <li>
+            <img alt="Lista lekérése" src="data/icon-getlist.png"> Ehhez a beállításhoz kapcsolódó összes érték lekérése (ugyanis a fő ablakban a <img alt="Beállítások lekérése" src="data/icon-get.png"> szimbólumra kattintva csak az első értéket kéri le) </li>
+          <li> Sorrend megváltoztatása 'fogd és vidd'-módszerrel lehetséges </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="További TCP/IP beállítások ablak elérése" class="screen">
+        <img src="data/additionaladdresses1.png" alt="További TCP/IP beállítások ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Kapcsolatok
+      </div>
+      <div class="hf_body">
+        <p>
+          Ezzel a funkcióval bármilyen Windows kapcsolat - mint pl. telefonos hálózat, mobil szélessáv vagy VPN - csatlakoztatható vagy szétkapcsolható. A kompatibilis kapcsolatok a Windows Hálózati kapcsolatok ablakában, a rendes hálózati csatolók mellett megtalálhatók. Technikai szemszögből nézve minden olyan kapcsolat támogatott, ami kompatibilis a "RasDial"-lal.
+        </p>
+        <p>
+          A jelölőnégyzet bejelölésével kiválaszthatod, hogy mindegyik létrehozott kapcsolatot megszakítsa, vagy pedig a lista alapján csatlakoztasson/kapcsoljon szét bizonyos kapcsolatokat.
+        </p>
+        <p>
+          Ha az elérni kívánt kapcsolat valami oknál fogva nincs a listában, válaszd a "Hozzáadás..." opciót, majd add meg a Windows-ban megjelenített nevét.
+        </p>
+        <p>
+          A NetSetMan támogat néhány kívülálló VPN klienst, mint például: OpenVPN, Shrew és Cisco. Ha a VPN kliensed kompatibilis, a NetSetMan megjeleníti annak VPN profiljait a választólistában.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Kapcsolatok ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hosts
+      </div>
+      <div class="hf_body">
+        <p>
+          Különleges esetekben szükséges/hasznos lehet, ha egy névhez vagy tartományhoz kézzel van hozzárendelve az IP-cím. Jó tudni, hogy a NetSetMan csak a saját hosts bejegyzéseit módosítja, a meglévő bejegyzéseket érintetlenül hagyja.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Hosts ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Hálózati meghajtók
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan tetszőleges számú hálózati meghajtó csatlakoztatására és leválasztására ad lehetőséget. <br> Olvasd el az útmutatót az ablak alján, ami a "[Súgó mutatása]" linkre kattintva jelenik meg.
+        </p>
+        <p>
+          Amikor egy olyan profilt aktiválsz, melyhez meg vannak adva hálózati meghajtók, a NetSetMan először összehasonlítja a jelenleg csatlakoztatott hálózati meghajtók listáját a csatlakoztatandókkal. Azok a hálózati meghajtók, melyek mindkét listán pontosan ugyanúgy szerepelnek (azonos meghajtó betűjel és elérési út), változatlanul maradnak. Az összes további csatlakoztatott meghajtó le lesz választva az újak csatlakoztatása előtt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Hálózati meghajtók ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Szkriptek és Programok
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan kényelmes felületet nyújt a szkriptfájlok kezeléséhez, azonban nem rendelkezik saját szkriptnyelvvel. Ez azt jelenti, hogy csak olyan szkriptnyelveket használhatsz itt, melyeket az operációs rendszer támogat. Általános szkriptnyelvek például: VBS, JS, vagy egy egyszerű parancssori kötegfájl. A szkripteléssel kapcsolatos ismeretek szinte korlátlan mennyiségben állnak rendelkezésre az interneten.
+        </p>
+        <p>
+          A szkriptek módosítására - létrehozás vagy megnyitás után - az alkalmazás egy szövegszerkesztő felületet biztosít. <br> Két szkriptet lehet megadni, melyek az összes többi beállítás módosítása előtt ill. után futnak majd le. <br> Ha a szkript futtatása és a hálózati beállítások módosítása között pár másodperc késleltetés szükséges, azt az ablak alsó részén lehet megadni.
+        </p>
+        <div id="hf_programs">
+          <p class="hf_section_caption">
+          Programok futtatása
+          </p>
+          <p>
+          A NetSetMan-ben egyszerűen meg lehet adni, hogy egy profil aktiválása során milyen külső programokat futtasson.<br>
+          A programokat korlátozott (bekapcsolt UAC esetén alapértelmezett) vagy rendszergazdai jogosultságokkal (UAC megerősítés kérése nélkül) lehet futtatni. Szükség esetén futtatási paramétereket is meg lehet adni.<br>
+          A programok indíthatók normál méretben, teljes méretben vagy kis méretben a tálcán.
+          </p>
+          <p>
+          Aktuálisan futó folyamatokat le lehet állítani fájlnév alapján (elérési úttól függetlenül) vagy teljes elérési út alapján.
+          </p>
+          <p>
+          Minden egyes művelethez egyedileg meg lehet adni egy késleltetést a végrehajtás előtt (negatív érték) vagy után (pozitív érték).
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="Programok" class="screen">
+        <img src="data/scripts.png" alt="Szkriptek ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / e-mail
+      </div>
+      <div class="hf_body">
+        <p>
+          Néhány esetben az e-mailek küldéséért felelős SMTP kiszolgáló IP-címe a hálózattól függően változhat. Előfordulhat, hogy hálózaton belül lokális IP-címmel lehet elérni, mint pl. 10.0.0.1, míg hálózaton kívül globális IP-címre lehet szükség.
+        </p>
+        <p>
+          Ahelyett, hogy megpróbáljon minél több e-mail klienst támogatni és különböző felhasználói profilokat kezelni, a NetSetMan egy egyszerű kerülő megoldást nyújt. Állítsd be az e-mail kliensedben az SMTP-címet az alábbira: "nsm.smtp", és a kapcsolódó profilokban állítsd be a megfelelő IP-címeket. Profil aktiválásakor mindkét IP-cím a hosts fájlból lesz feloldva, így az e-mail kliensben nem lesz többé szükség semmilyen változtatásra.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / e-mail ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Rendszerbeállítások
+      </div>
+      <div class="hf_body">
+        <p>
+          A szokásos hálózati beállítások mellett néha szükség lehet néhány rendszerbeállítás módosítására is a tartózkodási helytől vagy a helyzettől függően. Például egy egyetemen érdemes lehet némítani a hangerőt, lecserélni a háttérképet és aktiválni a Kiegyensúlyozott energiagazdálkodási sémát.
+        </p>
+        <p>
+          A Rendszerbeállítások ablak arra is használható, hogy gyorsan módosíthatók legyenek olyan beállítások, melyeket egyébként hosszabb ideig tartana megtalálni a Windows-ban. A <img alt="Beállítások megváltoztatása ikon" src="data/set-icon.png"> gombra kattintva közvetlenül aktiválható egy bizonyos beállítás.
+        </p>
+        <p>
+          A támogatott beállítások: megjelenítési mód, háttérkép, asztal színe, képernyőkímélő, megjelenítési séma, hangszórók és mikrofon hangereje, hangséma, tűzfal (beleértve: kivételek és értesítések), energiaséma, időzóna és MAC-cím.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Rendszerbeállítások ablak" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan profilok a WiFi csatlakozást is támogatják. Ehhez válaszd ki a WiFi adaptert a hálózati kártyák listájából, majd válaszd ki a WiFi profilt a WiFi lenyíló listából. A meglévő kapcsolat megszakításához az itt felkínált üres értéket válaszd.
+        </p>
+        <p>
+          Az alapszintű WiFi beállításokon felül a NetSetMan részletes WiFi kezelésre is lehetőséget biztosít. Kattints a WiFi ikonra vagy a főmenü opciójára (Eszközök &gt; NSM WiFi kezelés), hogy megjelenjen az összes elérhető WiFi hálózat. A sárga háttér azt jelzi, hogy a hálózat SSID-jével már lett felvéve profil. A zöld háttér a jelenleg használatban lévő hálózatot jelöli. Egy hálózathoz a nevén duplán kattintva vagy a "Csatlakozás" menüponttal lehet csatlakozni. Ha még nincs profil felvéve a kapcsolathoz, lehetőséged van a csatlakoztatás előtt létrehozni. A hálózat beállításai (hitelesítés, titkosítás, stb.) automatikusan el lesznek mentve a profil létrehozásakor, azonban néhány beállítás kézi módosítására is szükség lehet abban az esetben, ha a felismerés nem sikerült volna tökéletesen.
+        </p>
+        <p>
+          A NetSetMan a natív Windowsos WiFi profilokkal működik. Ez azt jelenti, hogy itt is ugyanazokat a profilokat látod, amik a Windowsban vagy egy egyéb WiFi kezelő alkalmazásban megjelennek. Ennek megfelelően lehet profilokat létrehozni, módosítani és törölni is.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+          Csatlakozás MAC-cím alapján
+          </p>
+          <p>
+          A Windows általában SSID alapján csatlakozik a vezeték nélküli hálózatokhoz. Ha több access point-nak ugyanaz az SSID-je, a Windows egy csoportban kezeli őket, és mindig a legjobb jelerősségűhöz csatlakoztat. Azonban néha szükség lehet arra, hogy csak egy bizonyos access point-hoz csatlakozz. A NetSetMan lehetőséget ad erre is!
+          </p>
+          <p>
+          A NSM WiFi kezelés csoportosítás nélkül mutatja az összes lehetséges hálózatot és access point-ot, így mindig pontosan ki lehet választani a megfelelőt. Az egérmutatót egy adott hálózat fölé tartva a buboréksúgóban megjelennek a hálózathoz tartozó további információk, pl. a MAC-cím. A jobbgombos helyi menüből könnyen ki lehet másolni a hálózathoz tartozó MAC-címet vagy SSID-t.
+          </p>
+          <p>
+          Ha egy bizonyos vezeték nélküli hálózathoz szeretnél csatlakozni egy NetSetMan profil aktiválásakor, akkor a WiFi listából válaszd ki a "Csatlakozás MAC-cím alapján..." opciót, majd add meg a kívánt MAC-címet. Profil aktiválásakor a NetSetMan ennek megfelelően fogja kiválasztani a megfelelő access point-ot.
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          Követelmények
+        </p>
+        <p>
+          A NetSetMan a natív Windowsos WiFi API-t használja, melynek nagy előnye, hogy nincs szükség új meghajtóprogramok telepítésére (ami konfliktusokat okozhat). Ennek fejében a NetSetMan WiFi lehetőségeit csak olyan Windows verziókkal lehet használni, melyek alapból támogatják a WiFi-t. Szerencsére a mostanában használt verziók legtöbbje ilyen: Vista vagy újabb operációs rendszernél ez megoldott, XP esetén SP2 vagy SP3 szükséges.
+        </p>
+        <p>
+          A vezeték nélküli lehetőségek használatához a következő szolgáltatásoknak kell futniuk: <em>WLAN automatikus beállítása (Wlansvc)</em> Vista vagy újabb esetén, <em>Konfigurációmentes vezeték nélküli hálózat (WZCSVC)</em> XP esetén.
+        </p>
+        <p>
+          Ha a WiFi kártyádat gyártói szoftverrel kezeled, az a legtöbb esetben blokkolja a Windows hozzáférését. Ilyenkor meg kell találnod a módját, hogy az adott programban átválts natív Windowsos WiFi kezelésre (ha létezik ilyen opció). <br> Mivel sok gyártónak saját szoftvere van a WiFi beállítások kezelésére, ezért nem létezik erre általános módszer. Egy példa: az AVM FRITZ!WLAN USB eszköz szofverének használatakor kattints a tálcán elhelyezett ikonjára, majd a válaszd ki a "Windows WLAN" opciót.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi áttekintés" class="screen">
+        <img src="data/wifi.png" alt="NSM WiFi kezelés ablak" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Haladó
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Egy profil aktiválásához elegendő egyetlen kattintás a <a href="#hf_tray">Tálca menüben</a> . Azonban bizonyos esetekben ezt még egyszerűbbé lehet tenni, ugyanis a profilok teljesen automatikusan is aktiválódhatnak előre beállított feltételek alapján. Az integrált AutoSwitch funkció pontosan ezt teszi.
+        </p>
+        <p>
+          Az AutoSwitch engedélyezését követően minden egyes profilra egyéni feltételeket lehet beállítani, az alábbiak közül:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img alt="WiFi hálózatok a közelben ikon" src="data/icon-wifi4.png"> WiFi hálózatok a közelben
+          </div>
+          <ul>
+            <li>Vezeték nélküli hálózat (SSID vagy MAC) elérhető/nem elérhető</li>
+            <li>A vezeték nélküli hálózat jelerőssége erősebb/gyengébb egy bizonyos értéknél</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Hálózati helyek ikon"> Hálózati helyek
+          </div>
+          <ul>
+            <li>Windows NLM: Windows által automatikusan generált hálózati profilok (Vista vagy újabb esetén)</li>
+            <li>Átjáró MAC: az automatikusan hozzárendelt DHCP átjáró "ujjlenyomata"</li>
+            <li>Ping: egy bizonyos szerver vagy rendszer elérhetősége a hálózaton</li>
+          </ul>
+          <div>
+            <img alt="Csatoló státusz ikon" src="data/icon-nic.png"> Csatoló státusz
+          </div>
+          <ul>
+            <li>A helyi hálózati csatoló kapcsolódási státusza (csatlakoztatva/szétkapcsolva)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Időkeret ikon"> Időkeret
+          </div>
+          <ul>
+            <li>A hét bizonyos napjai és az időkeret (pl. Szo+Vas, 8:00 - 18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Habár nincs technikai korlátozás arra vonatkozóan, hogy egy profilhoz hány feltételt lehet megadni, célszerű a lehető legegyszerűbb megoldást választani. A legtöbb esetben elegendő egy vagy két feltétel megadása a kívánt eredmény eléréséhez.
+        </p>
+        <p>
+          Megadható, hogy egyszerre az összes, vagy csak legalább egy feltételnek kelljen teljesülnie ahhoz, hogy a profil aktiválva legyen.
+        </p>
+        <p>
+          <strong>Megjegyzés:</strong> ha egyszerre több profil aktiválási feltételei is teljesülnek, akkor a kisebb azonosítóval rendelkező profil élvez prioritást.
+        </p>
+        <p>
+          Alapértelmezésben az aktiválási folyamat egy jobb alsó sarokban megjelenő üzenettel kezdődik, melyen egy állítható időtartamú visszaszámláló jelzi a hátralévő időt, ameddig még meg lehet szakítani a folyamatot az aktiválás megkezdése előtt. Alternatívaként egy natív Windows értesítést is lehet még használni, vagy pedig a háttérben, üzenet nélkül is lehet aktiválni a profilt. Utóbbi esetben a tálca ikon ad visszajelzést az automatizált folyamatról: az aktiválás alatt animálttá változik, majd ideiglenesen megváltoztatja a színét az aktiválás eredményének megfelelően.
+        </p>
+        <p>
+          A rendszer erőforrásainak kímélése érdekében a NetSetMan nem hasonlítja össze az aktuális beállításokat az aktiválandó profilban megadott beállításokkal. Ez azt jelenti, hogy a NetSetMan nem fogja észrevenni, ha esetleg időközben kézzel módosítva lett egy beállítás.
+        </p>
+        <p>
+          Az AutoSwitch-nek néhány korlátja van XP alatt: a Windows NLM nem áll rendelkezésre, valamint a közelben található WiFi hálózatok változásait csak bizonyos idő elteltével ismeri fel.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch buboréksúgó" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch értesítés" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Megjegyzések
+      </div>
+      <div class="hf_body">
+        <p>
+          Minden profilhoz rövid megjegyzést vehetsz fel, ami emlékeztethet a profil céljára. Ha egy profilhoz fel lett véve megjegyzés, akkor a menüsorban a megjegyzés ikonja színesre vált. A megjegyzés teljes üzemmódban az ikon buboréksúgójában fog megjelenni, kompakt üzemmódban pedig a profilbeállítások fölött látható.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Megjegyzés" class="screen">
+        <img src="data/note-hint.png" alt="Megjegyzés súgó" class="screen">
+        <img src="data/note-compact.png" alt="Megjegyzés kompakt módban" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM Szolgáltatás / korlátozott felhasználói fiók
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan-nek rendszergazdai jogosultságra van szüksége ahhoz, hogy megváltoztathassa a hálózati- és rendszerbeállításokat. Egy ilyen alkalmazást nem lehet megfelelően használni korlátozott felhasználói fiókkal. Újabb Windows verziókban még a Rendszergazda fiókokat is korlátozza az UAC (User Account Control - Felhasználói fiókok felügyelete) oly módon, hogy minden programindításkor egy üzenetet jelenít meg.
+        </p>
+        <p>
+          A problémát a NetSetMan egy speciális komponenssel, a <strong>NSM Service</strong>-szel oldja meg, ami biztosítja a főalkalmazás számára a szükséges jogosultságokat. A szolgáltatás automatikusan települ, de kézzel is telepíthető/eltávolítható a Beállítások között (Rendszer jogosultságok &gt; aktiválva/deaktiválva).
+        </p>
+        <p>
+          A telepített szolgáltatás megtalálható a Windows Szolgáltatások panelben (services.msc), és ott is állítható a működése. Ezen felül parancssorból is telepíthető/eltávolítható illetve illetve elindítható/leállítható az alábbi parancsokkal:<br><span class="code">nsmservice.exe / install / silent<br> nsmservice.exe / uninstall / silent<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Ha az <em>"Érvénytelen aláírás"</em> hibát kapod, ellenőrizd, hogy a program indítófájl (exe) nem lett módosítva, illetve a <em>"Főtanúsítványok automatikus frissítésének kikapcsolása"</em> nevű Windows csoportházirend ki van kapcsolva.
+        </p>
+        <p>
+          Ha NetSetMan korlátozott felhasználói fiókkal fut, továbbá az NSM szolgáltatás sem elérhető, akkor egy üzenet jelenik meg, ami elmagyarázza a problémát. Alternatívaként megadhatók egy helyi <strong>rendszergazda fiók hitelesítő adatai</strong>, melyeket a NetSetMan titkosítva tárol a beállításfájlban, hogy induláskor meglegyenek a szükséges jogosultságai. Ilyenkor az alkalmazás annak a felhasználónak a nevében fog futni, akinek a hitelesítő adatai meg lettek adva.
+        </p>
+        <p>
+          Erről a funkcióról további tudnivalók találhatók a <a href="http://www.netsetman.com/faqnsmservice" target="_blank">GYIK</a>-ben.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="Rendszer jogosultságok" class="screen">
+        <img src="data/limitedaccount.png" alt="Korlátozott felhasználói fiók" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Profilváltás bejelentkezés előtt
+      </div>
+      <div class="hf_body">
+        <p>
+          Egyedi és hasznos funkciója a programnak, hogy a bejelentkezési képernyőn is lehet profilt aktiválni. Ez lehetővé teszi, hogy még bejelentkezés előtt előkészítse a NetSetMan a megfelelő hálózati beállításokat a kiválasztott profil aktiválásával.
+        </p>
+        <p>
+          A funkció használatához az <a href="#hf_nsmservice">NSM Szolgáltatásnak</a> telepítve kell lennie, és a <em>"Profilváltoztatás a Windows bejelentkező képernyőjéről"</em> (Beállítások &gt; Rendszer jogosultságok) opciót engedélyezni kell.
+        </p>
+        <p>
+          Érdemes megjegyezni, hogy ezzel a funkcióval csak olyan beállításokat lehet megváltoztatni, melyek az összes felhasználóra egyaránt érvényesek. Másképp fogalmazva, felhasználóspecifikus beállítások nem módosíthatók a felhasználói munkameneten kívül.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Profilváltás bejelentkezés előtt" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM Adminisztráció
+      </div>
+      <div class="hf_body">
+        <p>
+          Ha úgy állítottad be a NetSetMan-t, hogy azt valaki más is használni tudja, szükséges lehet szabályozni, hogy a másik személy milyen tevékenységeket végezhet benne. Erre szolgál az NSM Adminisztráció (Beállítások &gt; Adminisztráció).
+        </p>
+        <p>
+          Amikor aktiválod ezt a módot, meg kell adnod egy legalább 6 karakter hosszú jelszót. A továbbiakban csak ennek a jelszónak a birtokában lehet megváltoztatni a NSM Adminisztráció beállításait, illetve a jelszóhoz kötött tevékenyégeket végezni, melyek a következők lehetnek: NetSetMan indítása, profilok aktiválása, profilbeállítások megváltoztatása, programbeállítások megváltoztatása.
+        </p>
+        <p>
+          Bizonyos profilokat zárolni is lehet <img alt="Korlátozott profil ikon" src="data/administration-profilelock.png">, így a felhasználó nem tudja majd őket módosítani, csak aktiválni. Továbbá teljesen le is lehet korlátozni bizonyos beállításokat <img alt="Korlátozott beállítás ikon" src="data/administration-settinglock.png">, mint a "Munkacsoport és Tartomány" - meghagyva a lehetőséget, hogy a felhasználó a többi beállítást szabadon módosíthassa és használhassa.
+        </p>
+        <p>
+          A jelszó ellenőrzőösszege bekerül a rendszerleíró adatbázisba. Bizonyosodj meg róla, hogy a korlátozott jogosultságú felhasználóknak nincs írási joguk a <span class="code">HKLM\Software\NetSetMan</span> (x64: <span class="code">HKLM\Software\Wow6432Node\NetSetMan</span>) regisztrációs kulcshoz.  Ha elfelejtetted a jelszót, ezt a kulcsot kézzel kell törölnöd. Ha a beállításfájl titkosítva lett, azt senki nem tudja megtekinteni vagy módosítani, aki nincs a jelszó birtokában.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM Adminisztráció" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Adminisztráció - profil korlátozások" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Adminisztráció - beállítás korlátozások" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Aktiválás parancssorból
+      </div>
+      <div class="hf_body">
+        <p>
+          Bizonyos esetekben szükség lehet arra, hogy egy profil a NetSetMan felületének használata nélkül is aktiválható legyen. Ilyen esetek lehetnek: aktiválás parancsikonokkal, aktiválás a rendszer indulásakor, aktiválás egy nagyobb szkript egy lépéseként stb.
+        </p>
+        <p>
+          A parancssoros üzemmódban az alábbi paramétereket lehet használni:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Aktiválja a #-s számú profilt</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Aktiválja a profilt csendes üzemmódban (az aktiválás menetét mutató ablak automatikusan bezáródik, ha nem történt hiba)</td>
+          </tr>
+          <tr>
+            <td><strong>h / -hide</strong></td>
+            <td>Elindítja a NetSetMan-t kis méretben a tálcán</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>Elindítja a NetSetMan-t teljes üzemmódban (alapértelmezett)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compact</strong></td>
+            <td>Elindítja a NetSetMan-t kompakt üzemmódban</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Elindít egy második NetSetMan példányt. <strong>Vigyázat:</strong> Az összes aktív példány ugyanabba a beállításfájlba ír!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Így néz ki egy parancsikon, ami a #0-s számú profilt aktiválja csendes üzemmódban: <br><strong>"C:\Program Files (x86)\NetSetMan\netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Parancsikon" class="screen">
+        </p>
+        <p>
+          Ugyanez parancssorban: <br>
+          <img src="data/commandline.png" alt="Parancssor" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        "Nem kereskedelmi célú, ingyenes változat" értesítés
+      </div>
+      <div class="hf_body">
+        <p>
+          Ez az üzenet munkacsoporton belüli felhasználóknál minden 7. indításkor, tartományon belüli felhasználóknál minden 2. indításkor jelenik meg a főablakban, <em>átlagosan</em>.
+        </p>
+        <p>
+          Sajnos kénytelen voltam beletenni a programba, hogy emlékeztessem a felhasználókat, hogy a NetSetMan csak nem üzleti célra (azaz magán- vagy önkéntes célra) ingyenes. Összegezve: a termék szabadon használható mindaddig, amíg ez nem jár fizetett munkaidő megtakarításával. Például ha munkahelyen vagy vállalati gépen szeretnéd használni, ahhoz egy <a href="http://www.netsetman.com/nsmpro">NetSetMan Pro</a> licenc megvásárlása szükséges.  Nincs külön szabályozás az oktatási vagy non-profit intézmények számára. Professzorok, tanárok és egyéb oktatásban dolgozók csak akkor használhatják a nem kereskedelmi célú, ingyenes változatot, ha azzal önkéntes munkát végeznek (= nem fizetett).
+        </p>
+        <p>
+          További információk a <a href="http://www.netsetman.com/en/txt/license" target="_blank">licencszerződésben</a> találhatók.
+        </p>
+        <p>
+          <strong>Ez az üzenet természetesen nem jelenik meg a Pro változatban.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="&quot;Nem kereskedelmi célú, ingyenes változat&quot; értesítés" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      További Pro funkciók
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Profilcsoportok
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan Pro-val korlátlan mennyiségű profilcsoportot lehet létrehozni. Minden csoport 6 profilt tartalmazhat.
+        </p>
+        <p>
+          Profilcsoportot hozzáadni, törölni, átrendezni vagy átnevezni a menüsorban található <a href="#hf_profiles">profilkezelés</a> felületen lehet.
+        </p>
+        <p>
+          A menüsorban található lenyíló listában lehet a profilcsoportok között váltogatni.
+        </p>
+        <p>
+          Ha több mint egy csoport van felvéve, a profilok csoportosítva fognak megjelenni a tálca menüben.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profilkezelés a Pro verzióban" class="screen">
+        <img src="data/tray-pro.png" alt="Tálca ikon a Pro verzióban" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Böngésző / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          A NetSetMan Pro képes az Internet Explorer, a Firefox és az Opera (&lt;= v12) böngészők proxy-beállításait kezelni. A Chrome és az Opera újabb verziói nem kezelnek saját proxy beállításokat, hanem automatikusan a rendszer beállításait használják.
+        </p>
+        <p>
+          Mindegyik beállításfelület úgy lett kialakítva, hogy utánozza a kapcsolódó böngésző eredeti felületeit, így ugyanazt és ugyanúgy lehet itt is megadni, mint közvetlenül a böngészőben. Ezen felül meg lehet változtatni kezdőoldalt is, továbbá abban az esetben, ha a Firefoxban vagy az Operában profilokat használsz, akkor a böngészőprofil nevét is kiválaszthatod.
+        </p>
+        <p>
+          Fontos, hogy a Firefoxot <em>be kell zárni</em> a beállításainak módosítása előtt. <br> Ha több Firefox böngészőprofil van felvéve, és a profilmappák megváltoztak (pl. új rendszer miatt), akkor újra ki kell választani a böngészőprofilt a listából, hogy az adat frissüljön a beállításfájlban.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Böngésző / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Tartomány
+      </div>
+      <div class="hf_body">
+        <p>
+          Tartományhoz való csatlakozáshoz add meg a tartomány nevét, a felhasználóneved és a jelszavad. A felhasználói név és a jelszó titkosítva lesz elmentve a beállításfájlban.
+        </p>
+        <p>
+          Általában elegendő csupán a felhasználónevet megadni. Ha a program hibát jelezne, a következő felhasználónév-formátumok valamelyikével érdemes próbálkozni:<br> a) NETBIOS: DOMAIN\user<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          NT tartományokban a felhasználó egyszerre csak <em>egy</em> tartomány tagja lehet. Ez azt jelenti, hogy egy másik tartományhoz vagy munkacsoporthoz csatlakozva a korábbi tartománybeli tagság elvész mindaddig, amíg a rendszert nem léptetik bele vissza.
+        </p>
+        <p>
+          A NetSetMan csak akkor képes egy tartományhoz csatlakozni, ha a tartományi felhasználói fióknak jogosultsága van erre.<br> Ez a felhasználói fiók jogosultság az úgynevezett "Munkaállomás felvétele a tartományba", amit engedélyezni kell a felhasználói fiók számára. Ha nincs meg ez a jogosultságod, akkor a hálózati rendszergazdától tudsz ilyet kérni.
+        </p>
+        <p>
+          A <a href="http://www.netsetman.com/faqdomain" target="_blank">GYIK</a>-ben további információk találhatók erről a funkcióról.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Tartomány áttekintés" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Terjesztés vállalati hálózatokban
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro számos segítő funkciót kínál, amelyek megkönnyítik a szoftver terjesztését, a beállítások előre megadását és a licencelést a vállalati hálózaton belül. A <a href="http://www.netsetman.com/faqcompany">GYIK</a>-ben egy részletes leírás található erről, ami minden tudnivalót tartalmaz erről.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

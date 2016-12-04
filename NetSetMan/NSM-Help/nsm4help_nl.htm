@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>NetSetMan 4.x Help-bestand</title>
+    <link rel="stylesheet" type="text/css" href="data/nsmhelp.css" />
+  </head>
+  <body dir="ltr">
+
+    <div class="hf_block" id="hf_title">
+      <img src="data/nsm3hf.png" alt="" align="left">
+      <div>
+        <h1>NetSetMan</h1><h2>Help-bestand</h2>
+        <div id="hf_lang">
+          <div id="hf_flag"><img src="data/flag-nl.png" alt=""></div>
+          <div id="hf_language">Nederlands</div>
+          <div id="hf_translator">vertaald door Joop Weenk</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_info">
+      <div class="hf_head">
+        Algemene Informatie
+      </div>
+      <div class="hf_body">
+        <table class="hf_tblinfo" cellspacing="5" summary="General Info">
+          <tr>
+            <td class="hf_tblinfo_left">Help File Versie</td>
+            <td class="hf_tblinfo_right">4.1</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Ondersteunde <br> Besturingssystemen</td>
+            <td class="hf_tblinfo_right">                                                Windows <br> XP, Vista, 7, 8, 10 <br> 32 bits, 64 bits</td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Licentie</td>
+            <td class="hf_tblinfo_right">Niet-Commerciële Freeware <br><em>Of</em><br> Commerciële Pro-versie<br> Tonen als <a href="http://www.netsetman.com/en/txt/license" target="_blank">HTML</a> of <a href="http://www.netsetman.com/txt/netsetman-licenseagreement-en.pdf" target="_blank">PDF</a></td>
+          </tr>
+          <tr>
+            <td class="hf_tblinfo_left">Contact</td>
+            <td class="hf_tblinfo_right"><a href="http://www.netsetman.com/index.php?ref=nsmhelp" target="_blank">www.netsetman.com</a><br><a href="https://www.netsetman.com/support/" target="_blank">Support forum</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_content">
+      <div class="hf_head">
+        Inhoud
+      </div>
+      <div class="hf_body">
+        <p class="hf_content_caption">
+          Basis
+        </p>
+        <ul>
+          <li><a href="#hf_description">Beschrijving</a></li>
+          <li><a href="#hf_howtouse">Basis Informatie</a></li>
+          <li><a href="#hf_profiles">Profielen</a></li>
+          <li><a href="#hf_nics">Network Adapters (NIC)</a> </li>
+          <li><a href="#hf_basicoperations">Instellingen Operations</a></li>
+          <li><a href="#hf_activation">Profiel Activering</a></li>
+          <li><a href="#hf_compactmode">Compact Mode &amp; Volledige modus</a></li>
+          <li><a href="#hf_tray">Tray Menu &amp; Tray Info</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Kenmerken
+        </p>
+        <ul>
+          <li><a href="#hf_featuresoverview">Overzicht</a></li>
+          <li><a href="#hf_adapterstatus">Adapter Status</a></li>
+          <li><a href="#hf_advanced">Geavanceerde TCP / IP-instellingen </a></li>
+          <li><a href="#hf_connections">Verbindingen</a></li>
+          <li><a href="#hf_hosts">Hosts</a></li>
+          <li><a href="#hf_netdrives">Network Drives</a></li>
+          <li><a href="#hf_scripts">Scripts &amp; Programma's </a></li>
+          <li><a href="#hf_smtp">SMTP / Email</a></li>
+          <li><a href="#hf_system">Systeeminstellingen</a></li>
+          <li><a href="#hf_wifi">WiFi</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Gevorderd
+        </p>
+        <ul>
+          <li><a href="#hf_autoswitch">AutoSwitch</a></li>
+          <li><a href="#hf_notes">Notities</a></li>
+          <li><a href="#hf_nsmservice">NSM service / Limited User Account</a></li>
+          <li><a href="#hf_prelogon">Vóór aanmelding Profiel Switching</a></li>
+          <li><a href="#hf_nsmadministration">NSM Administratie</a></li>
+          <li><a href="#hf_commandline">Command Line Activatie</a></li>
+          <li><a href="#hf_ncfreeware">Non-Commercial Freeware Message</a></li>
+        </ul>
+        <p class="hf_content_caption">
+          Extra Pro Features
+        </p>
+        <ul>
+          <li><a href="#hf_groups">Profiel Groepen</a></li>
+          <li><a href="#hf_proxy">Browser / Proxy</a></li>
+          <li><a href="#hf_domain">Domein</a></li>
+          <li><a href="#hf_distribution">Distributie in netwerken van bedrijven</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Basics
+    </div>
+
+    <div class="hf_block" id="hf_description">
+      <div class="hf_head">
+        Beschrijving
+      </div>
+      <div class="hf_body">
+        <p>
+          <strong>NetSetMan</strong> is een netwerk manager waarmee u gemakkelijk kunt schakelen tussen 6 verschillende, visueel gestructureerde profielen, waaronder:
+        </p>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0" summary="Short Description">
+          <tr valign="top">
+            <td width="49%">
+            <ul>
+              <li> IP-adressen (IPv4 en IPv6!) </li>
+              <li> Gateways (incl. Metrisch) </li>
+              <li> DNS-servers </li>
+              <li> WINS-servers </li>
+              <li> WiFi-management </li>
+              <li> Computer Name </li>
+              <li> Werkgroep </li>
+              <li> Default Printer </li>
+              <li> Network Drives </li>
+              <li> NIC Status </li>
+              <li> Aansluitingen (RAS / DUN / PPP / VPN) </li>
+              <li> DNS-achtervoegsel </li>
+              <li> Route Tabel </li>
+              <li> SMTP-server </li>
+              <li> Hosts File Entries </li>
+              <li> Systeeminstellingen </li>
+              <li> MAC-adres </li>
+              <li> Scripts (BAT, VS, JS, ...) </li>
+              <li> Programma uitvoeren </li>
+            </ul></td>
+            <td width="51%"><strong>Bovendien alleen in de <u>Pro-versie:</u></strong>
+            <ul>
+              <li> Kan gebruikt worden op het werk </li>
+              <li> Onbeperkt aantal profielen </li>
+              <li> Netwerk-domein </li>
+              <li> Compleet Proxy-instellingen en <br> Bowser Startpagina <br> (Internet Explorer, Firefox, Opera) </li>
+            </ul></td>
+          </tr>
+        </table>
+        <p>
+          <strong>NetSetMan</strong> biedt je wat je hebt gemist in Windows tot nu toe: <br> Een krachtige, eenvoudig te gebruiken interface om al uw netwerkinstellingen in een oogopslag te beheren. <br> Probeer het eens en je wilt er nooit meer.
+        </p>
+        <p>
+          Alle instellingen en wijzigingen worden automatisch opgeslagen in een apart bestand <em>(settings.ini)</em> dus een back-up, overdracht of upgraden naar een andere versie is absoluut geen probleem.
+        </p>
+        <p>
+          <strong>Activeer een opgeslagen profiel met een klik of zelfs volledig automatisch!</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/win-nsm-compare.png" alt="NetSetMan vs Windows" class="screen">
+      </div>
+      <div class="hf_image">
+        <div style="margin:20px 0px">
+          <img src="data/netsetman-free.png" alt="NetSetMan Man Window">
+          <br><strong>NetSetMan:</strong> Non-Commercial Freeware Version
+        </div>
+        <div>
+          <img src="data/netsetman-pro.png" alt="NetSetMan Pro hoofdvenster">
+          <br><strong>NetSetMan Pro:</strong> Commerciële Pro Versie
+        </div>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_howtouse">
+      <div class="hf_head">
+        Basis Informatie
+      </div>
+      <div class="hf_body">
+        <ul>
+          <li>
+            <div>
+              Profielen
+            </div> Elk <a href="#">profiel</a> vertegenwoordigt een set instellingen die nodig zijn voor een bepaalde locatie of scenario. Door het gebruik van deelprofielen kunne meerdere netwerkadapters worden geconfigureerd met een profiel. Hernoemen van een profiel kan door te dubbelklikken op het tabblad bijschrift.</li>
+          <li>
+            <div>
+              Handmatige configuratie
+            </div> U moet de vereiste profielen handmatig zelf configureren. Het is niet mogelijk om de juiste instellingen te raden voor een onbekende locatie. Het belangrijkste doel van de applicatie is om regelmatige wijzigingen in de instellingen die je meestal handmatig zou doen te automatiseren.</li>
+          <li>
+            <div>
+              Selectie instellingen
+            </div><a href="#hf_basicoperations">Het lezen van alle huidige instellingen</a> in een profiel kan u een startpunt geven, maar je moet nog steeds beslissen welke instellingen je wilt toepassen bij het ​​activeren van dat profiel. Het is sterk aanbevolen om de instellingen te beperken die in de tussentijd verandert kunnen zijn. Zo is het niet nodig om een ​​computer naam toe te passen als deze nooit wijzigt.</li>
+          <li>
+            <div>
+              Configuratie instellingen
+            </div> Voor het configureren van een instelling te controleren zijn checkbox eerste, vervolgens voert u de gewenste configuratie direct in het hoofdmenu of het configuratievenster te openen voor die bepaalde setting.</li>
+          <li>
+            <div>
+              Profiel activering
+            </div> Standaard is er geen profiel dat automatisch wordt geactiveerd, dat wil zeggen geen instelling op uw systeem wordt gewijzigd zonder je intentie. Dat gezegd hebbende, je kunt de <a href="#hf_autoswitch">AutoSwitch</a> functie gebruiken om bepaalde profielen automatisch op basis van vrij aanpasbare voorwaarden te activeren.</li>
+          <li>
+            <div>
+              Werkbalk toegang icoon
+            </div> Het is aan te raden om <a href="#hf_tray">NetSetMan houden geminimaliseerd in de werkbalk</a> en verplaats het pictogram naar het altijd zichtbare gebied. Op die manier kunt u snel een profiel te activeren door te klikken op het icoontje en het selecteren van een profiel. Daarnaast heeft u een handig overzicht van je huidige verbinding IP's door met de muis over het pictogram heen te gaan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_profiles">
+      <div class="hf_head">
+        Profielen
+      </div>
+      <div class="hf_body">
+        <p>
+          De tabbladen geven de beschikbare profielen weer. U heeft 6 verschillende sets van instellingen beschikbaar in de tabbladen.
+        </p>
+        <p>
+          Indien u graag  de instellingen van twee verschillende netwerkadapters bij het ​​activeren van een enkel profiel wilt wijzigen, kunt u de <strong>subprofiel</strong> functie gebruiken. Klik op de "+" - knop naast de dropdown lijst en een nieuwe menubalk verschijnt met twee deelprofielen (de huidige en een nieuwe lege). Het bijschrift wordt automatisch de naam van de netwerkadapter die is geselecteerd in dat deelprofiel en kan niet worden gewijzigd zijn. U kunt zoveel deelprofielen maken als u wilt. Allen worden na elkaar geactiveerd wanneer het profiel is geactiveerd. U kunt de volgorde door middel van drag-and-drop herschikken.
+        </p>
+        <p>
+          Alle wijzigingen worden automatisch opgeslagen, zodat er niets per ongeluk verloren gaat.
+        </p>
+        <p>
+          U kunt een profiel hernoemen door er met de rechtermuisknop op te klikken en te kiezen voor "Naam wijzigen" of gewoon dubbelklikken op het tabblad bijschrift.
+        </p>
+        <p>
+          Het beheren van al uw profielen is het eenvoudigst door gebruik te maken van <strong>Profile Management</strong> dat u in de menubalk vindt. Het geeft de mogelijkheid tot bewerken van profielen, subprofielen en groepen (alleen in NetSetMan Pro) met uw muis of een aantal veel voorkomende sneltoetsen (pijltjestoetsen voor navigatie, F2 voor hernoemen, etc.). Bij het gebruik van drag-and-drop om items herschikken vindt u een aantal onvermijdelijke beperkingen afhankelijk van het item, als gevolg van bepaalde technische omstandigheden: Profielen kunnen niet worden verwijderd, MultiProfielen kunnen niet worden hernoemd, Profielen kunnen worden verwisseld, maar niet verplaatst. De vakjes bepalen of het profiel zichtbaar zal zijn in de werkbalk en in Compact Mode.
+        </p>
+      </div>
+      <div class="hf_image">
+        <p>
+          <img src="data/subprofiles.png" alt="Deelprofiel tabs" class="screen">
+          <img src="data/rename.png" alt="De naam van een profiel" class="screen">
+          <img src="data/profilemanagement.png" alt="Profile Management" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nics">
+      <div class="hf_head">
+        Network Adapters (NIC)
+      </div>
+      <div class="hf_body">
+        <p>
+          Alle beschikbare netwerkadapters worden weergegeven met hun naam en hun type. Selecteer de NIC u wilt beheren in de huidige (sub) profiel.
+        </p>
+        <p>
+          Als een bepaalde NIC is niet beschikbaar in de lijst (bijvoorbeeld omdat het is uitgeschakeld of virtueel) kunt u de lijst te beheren door te klikken op de knop <strong>Vernieuwen</strong> en ofwel snel bijwerken van de lijst of het kiezen van <strong>Beheer netwerkadapters.</strong> Daar vind je een lijst van alle beschikbare NIC's te vinden. Controleer alle NIC's die je wilt hebben in je lijst.
+        </p>
+        <p>
+          <strong>Opmerking:</strong> alle NIC's die zijn opgenomen in die lijst verschijnt ook in de werkbalk Info. Haal het vinkje weg bij ongewenste NIC's om ze van de lijst en de werkbalk Info te verwijderen.
+        </p>
+        <p>
+          Als u het instellingenbestand (settings.ini) wilt kopiëren naar een ander systeem, zal NetSetMan proberen de NIC's automatisch toewijzen in de profielen. Maar dit werkt alleen als het nieuwe systeem heeft een NIC met exact dezelfde naam (in de eerste screenshot is het "LAN").
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapters.png" alt="Netwerkadapter selectie" class="screen">
+        <img src="data/adapters-management.png" alt="Netwerkadapter selectie" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_basicoperations">
+      <div class="hf_head">
+        Instellingen bewerkingen
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Huidige instellingen ophalen
+        </p>
+        <p>
+          Om een ​​huidige instelling te laden in het profiel klikt u gewoon op de <img src="data/icon-get.png" alt="Krijg instellingenpictogram"> symbool naast het invoerveld. <br> Om alle huidige instellingen te laden klikt u met de rechtermuisknop op het profiel en kiest "Laad huidige instellingen".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/get-settings1.png" alt="Krijg een instelling" class="screen">
+        <img src="data/get-settings2.png" alt="Krijg alle instellingen" class="screen">
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Wissen van instellingen
+        </p>
+        <p>
+          Als u de configuratie van een bepaalde instelling wilt wissen klikt u met de rechtermuisknop op de instelling en kiest "wis".
+        </p>
+        <p>
+          Om de waarden van een IP-veld te wissen kunt u gewoon dubbelklikken op het bijbehorende bijschrift.
+        </p>
+        <p>
+          Om alle instellingen van de huidige (sub) profiel te wissen kliktu met de rechtermuisknop op de profiel tab en kies dan "Instellingen wissen".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/clear-settings1.png" alt="Wis een instelling" class="screen">
+        <img src="data/clear-settings2.png" alt="Alle instellingen wissen" class="screen">
+      </div>
+      <div class="hf_body">
+        <p class="hf_section_caption">
+          Kopiëren &amp; plakken Instellingen
+        </p>
+        <p>
+          Om instellingen tussen verschillende profielen uit te wisselen kunt u hele profiel kopieeren en plakken door met de rechtermuisknop te klikken op het oorspronkelijke profiel, te kiezen voor "kopiëren Instellingen", klik met de rechtermuisknop te klikken op het nieuwe profiel en te kiezen voor "Plakken Instellingen".
+        </p>
+        <p>
+          Het kopiëren en plakken van een specifieke instelling kan gewoon met de rechtermuisknop klikken op de instellingen en kies "Kopiëren" of "plakken".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/copypaste1.png" alt="Kopieer en plak een instelling" class="screen">
+        <img src="data/copypaste2.png" alt="Kopieer en plak alle instellingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_activation">
+      <div class="hf_head">
+        Profiel Activering
+      </div>
+      <div class="hf_body">
+        <p>
+          Om alle instellingen van het huidige profiel te activeren klikt u op <strong>"Activeren"</strong> of indien het programma geminimaliseerd wordt uitgevoerd selecteert u het profiel in het <a href="#hf_tray">werkbalk menu</a> . <br> Merk op dat alleen instellingen met een vinkje worden geactiveerd.
+        </p>
+        <p>
+          Het dialoogvenster <strong>Activering</strong> bevat informatie over de huidige activerings proces. <br> Daar kunt u zien welke instellingen zullen worden toegepast en of het proces succesvol is of niet. U kunt het proces op elk gewenst moment stoppen door op de knop "Annuleren" te klikken .
+        </p>
+        <p>
+          Alle wijzigingen worden onmiddellijk toegepast. Echter, in sommige gevallen duurt het een tijdje voordat de veranderingen zijn doorgevoerd of vereisen een reboot (in het bijzonder "PC Name" en "Werkgroep / Domein").
+        </p>
+        <p>
+          De sectie <strong>Details</strong> geeft een overzicht van alle geconfigureerde instellingen voor dat profiel. Meer informatie en uitgebreide foutmeldingen vindt u in het <strong>Logboek.</strong>
+        </p>
+        <p>
+          Om oplossingen te vinden voor de meest voorkomende fouten en problemen kunt u ook de <a href="http://www.netsetman.com/faq" target="_blank">FAQ</a> raadplegen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/check.png" alt="Controleer de te wijzigen instellingen " class="screen">
+        <img src="data/activation.png" alt="Profiel venster Activering" class="screen">
+        <br>
+        <table width="500" border="0" cellpadding="4" class="border2" align="center" summary="Activation Result Messages">
+          <tr>
+            <td colspan="2" align="center"><strong>Meest voorkomende resultaten en hun betekenis</strong></td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">OK</td>
+            <td class="hf_errortable_right">Alles werkt zoals verwacht.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">...</td>
+            <td class="hf_errortable_right">Instellingen worden op dit moment toegepast.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">-</td>
+            <td class="hf_errortable_right">Instellingen werden genegeerd, zonder te proberen, omdat ze onvolledig of onjuist waren.</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Foutmelding</td>
+            <td class="hf_errortable_right">In de meeste gevallen worden fouten weergegeven als een korte rode tekst als "File not found". In het geval ontvangt u een foutcode eens een kijkje op het log om te zien of een foutmelding bestaat voor die code. Als je geen idee hebt wat de reden is, laat dan de foutcode en een gedetailleerde beschrijving van de fout achter in het <a href="https://www.netsetman.com/support/" target="_blank">support forums</a> .</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">Ongeldig</td>
+            <td class="hf_errortable_right">Ofwel een waarde niet geldig is, niet genoemd of niet toegestaan ​​(speciale tekens, dezelfde werkgroep als computernaam, etc.)</td>
+          </tr>
+          <tr>
+            <td class="hf_errortable_left">FF is actief</td>
+            <td class="hf_errortable_right">Firefox is momenteel actief. Om deze instellingen te gebruiken moet je de browser eerst sluiten.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_compactmode">
+      <div class="hf_head">
+        Compacte Mode &amp; Volledige modus
+      </div>
+      <div class="hf_body">
+        <p>
+          Naast de klassieke "Volledigel Mode"-interface, waar u alle instellingen van een profiel kunt wijzigen, is een extra interface "Compacte Mode"  beschikbaar. U kunt op elk gewenst moment schakelen tussen deze modi door te klikken op de bijbehorende knop in het hoofdmenu aan de rechterkant.
+        </p>
+        <p>
+          Zodra alle profielen gereed zijn is de Compacte Mode de beste interface. Hier heb je een compact overzicht van alle instellingen van een profiel zonder dat deze per ongeluk gewijzigd kunnen worden.
+        </p>
+        <p>
+          In het geval dat het gebruik van je <a href="#hf_nsmadministration">NSM Administration</a> (met "Wijzig profiel instellingen" zijn aangevinkt) wordt automatisch de compacte modus gebruikt om te voorkomen dat een gebruiker instellingen kan wijzigen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/compactmode.png" alt="Compact Mode" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_tray">
+      <div class="hf_head">
+        Werkbalk Menu &amp; Werkbalk Info
+      </div>
+      <div class="hf_body">
+        <p>
+          Als NetSetMan actief is vindt u het pictogram in het systeemvak (naast de klok). <br> Daar kunt u snel een profiel te activeren. Gewoon met de rechtermuisknop op het pictogram om het <strong>werkbalk menu</strong> te openen en kies het profiel om te activeren.
+        </p>
+        <p>
+          Indien u graag een aantal profielen wilt uitsluiten van dit menu, kunt u ze afzonderlijk verbergen. Om dit te doen selecteert u het profiel in het hoofdvenster, klik met de rechtermuisknop op het tabblad en klik op 'Actief in de Werkbalk en Compact Mode ". Het kleine symbool naast de tekst geeft aan of dit profiel beschikbaar is in de werkbalk. Deze optie zal ook effect hebben op profielen die te zien zijn in de Compacte Mode. Profiel zichtbaarheid kan ook worden geconfigureerd in de <a href="#hf_profiles">Profiel Management</a> .
+        </p>
+        <p>
+          Als u de cursor over het pictogram NetSetMan in de werkbalk laat gaan zal <strong>Werkbalk Info</strong> verschijnen. Deze bevat de huidige IP-informatie die wordt gebruikt door het systeem. Omdat die gegevens worden verzameld in real time, kunt u een korte vertraging ondervinden. Om deze vertraging te verminderen moet u overwegen het uitschakelen van aanvullende informatie, zoals de openbare IP-en MAC-adressen in de Voorkeuren.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/tray.png" alt="Werkbalk Icon" class="screen">
+        <img src="data/showintray.png" alt="Toon in werkbalk" class="screen">
+        <img src="data/trayinfo.png" alt="Taakbalk info" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_features">
+      Kenmerken
+    </div>
+
+    <div class="hf_block" id="hf_featuresoverview">
+      <div class="hf_head">
+        Overzicht
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan is ontworpen op een manier die u toelaat om een ​​direct overzicht van alle geconfigureerde instellingen binnen een profiel te hebben. Enkele van de belangrijkste functies, zoals de basis-IP-instellingen, WiFi en de standaard printer kan rechtstreeks via de hoofd interface worden geconfigureerd. Andere, meer complexe instellingen kunnen alleen hier worden geactiveerd en er zal een kort overzicht over hun huidige configuratie worden getoond. Om ze aan te passen moeten ze eerst worden geactiveerd en dan kunnen kan het dialoogvenster worden geopend door te klikken op de [...] - knop.
+        </p>
+        <p>
+          In de volgende paragrafen vindt u algemene instructies en nuttige tips over hoe je alle functies kunt gebruiken.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionalgroup.png" alt="Extra instellingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_adapterstatus">
+      <div class="hf_head">
+        Adapter Status
+      </div>
+      <div class="hf_body">
+        <p>
+          Wilt u de geselecteerde netwerkadapter  activeren, uitschakelen of herstarten dan gebruikt u de knop Adapter Status. De standaard kleur verandert in een status gerelateerde kleur. Bovendien kunt u de geconfigureerde status in de tooltip zien.
+        </p>
+        <p>
+          Wilt u een 1 adapter inschakelen en 1 of alle andere adapters uitschakelen, moet u een <a href="#hf_profiles">Subprofielen</a> aanmaken voor elk van de adapters. U kunt dit handmatig doen of met behulp van het menu-item aan de onderkant van het menu-adapter Status . NetSetMan zal automatisch een subprofiel aanmaken van elke netwerkadapter die is opgenomen in de lijst en zal de instellingen automatisch doen. Vergeet niet dat u kunt aanpassen welke adapters zijn opgenomen in de lijst met behulp van  <a href="#hf_nics">Network Adapter management</a> .
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/adapterstatus-activate.png" alt="Adapter Status: Activeer" class="screen">
+        <img src="data/adapterstatus-deactivate.png" alt="Adapter Status: Uitschakelen" class="screen">
+        <img src="data/adapterstatus-restart.png" alt="Adapter Status: Herstart" class="screen">
+        <img src="data/adapterstatus.png" alt="Extra instellingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_advanced">
+      <div class="hf_head">
+        Geavanceerde TCP / IP-instellingen
+      </div>
+      <div class="hf_body">
+        <p>
+          U kunt meerdere IP, Gateway, DNS en WINS opgeven adressen per NIC als je in meerdere netwerken moet zijn op hetzelfde moment. Om dit te doen klikt u op de knop <strong>"IP +"</strong> of kies "Profiel&gt; Geavanceerde TCP / IP-instellingen" in het hoofdmenu.
+        </p>
+        <p>
+          Hier heeft u ook de mogelijkheid om meer geavanceerde instellingen, zoals de <strong>Route tabel, DNS Suffix, IPConfig</strong> en <strong>NetBIOS</strong> te beheren.
+        </p>
+        <ul>
+          <li> Activeer een groep op basis van het selectievakje </li>
+          <li>
+            <img src="data/icon-add.png" alt="Voeg een nieuwe waarde toe"> Voeg een nieuwe waarde toe </li>
+          <li>
+            <img src="data/icon-delete.png" alt="Verwijder geselecteerde waarde"> Verwijder de geselecteerde waarde </li>
+          <li>
+            <img src="data/icon-deletelist.png" alt="Lijst wissen"> Wis de hele lijst </li>
+          <li>
+            <img src="data/icon-getlist.png" alt="Krijg lijst"> Krijg alle huidige waarden voor deze instelling van het systeem (Overwegende dat het klikken op de <img src="data/icon-get.png" alt="Lees instellingen"> symbool in het hoofdvenster alleen de huidige waarde leest) </li>
+          <li> De volgorde veranderen door middel van drag-and-drop </li>
+        </ul>
+      </div>
+      <div class="hf_image">
+        <img src="data/additionaladdresses2.png" alt="Toegang tot Geavanceerde TCP / IP-instellingen" class="screen">
+        <img src="data/additionaladdresses1.png" alt="Geavanceerde TCP / IP-instellingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_connections">
+      <div class="hf_head">
+        Verbindingen
+      </div>
+      <div class="hf_body">
+        <p>
+          Gebruik deze functie om elke verbinding te maken of verbreken zoals dial-up-netwerken, mobiele breedband of VPN. Compatibele verbindingen zijn opgenomen in Windows samen met uw normale netwerk adapters in het dialoogvenster Netwerkverbindingen. Vanuit een technisch worden alle aansluitingen ondersteund die compatibel zijn met "RasDial".
+        </p>
+        <p>
+          U kunt ervoor kiezen om alle momenteel actieve verbindingen te verbreken door het selectievakje te selecteren, of het maken / verbreken van individuele verbindingen in de volgorde van de lijst.
+        </p>
+        <p>
+          Wanneer uw verbinding om een of andere reden niet wordt weergegeven kunt u deze handmatig toevoegen door "Toeoegen.." in de lijst te kiezen en de weergegeven naam in te voeren.
+        </p>
+        <p>
+          NetSetMan ondersteund ook diverse VPN clients zoals OpenVPN, Shrew en Cisco. Wanneer uw VPN wordt ondersteund zal NetSetMan de VPN profielen weergeven in de lijst.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/connections.png" alt="Connectie window" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_hosts">
+      <div class="hf_head">
+        Hosts
+      </div>
+      <div class="hf_body">
+        <p>
+          In zeer specifieke gevallen kan het nodig of nuttig zijn om handmatig IPs om namen of domeinen toe te wijzen. Merk op dat NetSetMan alleen zijn eigen Hosts zal wijzigen. De rest wordt niet verandert.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/hosts.png" alt="Hosts windows" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_netdrives">
+      <div class="hf_head">
+        Network Drives
+      </div>
+      <div class="hf_body">
+        <p>
+          Met NetSetMan kunt onbeperkt aantal netwerkstations maken en verbreken. <br> Lees de instructies aan aan de onderkant van het venster door te klikken op "[Show Help]".
+        </p>
+        <p>
+          Wanneer een profiel wordt geactiveerd en de functie Net Drive is geselecteerd zal NetSetMan de lijst van alle momenteel toegewezen stations met de lijst van de stations in kaart te brengen vergelijken. Alle toegewezen stations die in beide lijsten staan (dezelfde stationsletter en dezelfde locatie) blijven ongewijzigd. Alle andere netwerkschijven worden eerst verbroken voordat de nieuwe worden gemaakt.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/netdrive.png" alt="Network Drives windows" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_scripts">
+      <div class="hf_head">
+        Scripts
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan biedt u een comfortabele manier om uw script bestanden te beheren. Echter, het heeft geen eigen script taal. Dit betekent dat u alleen gebruik maken van scripttalen uw besturingssysteem is in staat om uit te voeren. Gemeenschappelijke scripttalen zijn VBS, JS en zelfs eenvoudige command-line batch-bestanden. Gebruik uw favoriete zoekmachine voor meer informatie over scripting en wat u hiermee kunt doen.
+        </p>
+        <p>
+          Open een bestaand script bestand of maak een nieuwe om dit script te bewerken. <br> U kunt twee scripts gebruiken die worden uitgevoerd voor en na alle andere instellingen veranderd te hebben. <br> Als u een vertraging, tussen het uitvoeren van het script en het wijzigen van de netwerkinstellingen, nodig hebt, kunt u dit opgeven aan het einde.
+        </p>
+        <div id="hf_programs">
+          <p class="hf_section_caption">
+            Programma uitvoeren
+          </p>
+          <p>
+            Netsetman biedt een makkelijke manier om externe programma's uit te voeren in elk profiel.<br>
+            Programma's kunnen worden gestart als een beperkte gebruiker (standaard met UAC actief) of met uitgrebreide rechten als administrator (zonder UAC melding). Wanneer nodig kunnen parameters worden toegevoegd.<br>
+            Programma's kunnen normaal worden gestart maar ook gemaximaliseerd of geminimaliseerd.
+          </p>
+          <p>
+            Gestarte processen kunnen op basis van hun naam worden gestopt (los van waar ze staan) of op basisor van het exacte pad.
+          </p>
+          <p>
+            Elke actie kan vertraagd gestart worden, zowel vooraf (negatieve waarde) als achteraf (positieve waarde).
+          </p>
+        </div>
+      </div>
+      <div class="hf_image">
+        <img src="data/programsoptions.png" alt="Scripts venster" class="screen">
+        <img src="data/scripts.png" alt="Scripts venster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_smtp">
+      <div class="hf_head">
+        SMTP / Email
+      </div>
+      <div class="hf_body">
+        <p>
+          In sommige gevallen is het IP-adres van de SMTP-server voor het verzenden van e-mails afhankelijk van uw netwerk. Als je in hetzelfde netwerk zit moet je misschien een lokaal IP-adres zoals 10.0.0.1 gebruiken, terwijl buiten dat netwerk je misschien globaal IP-adres nodig hebt.
+        </p>
+        <p>
+          In plaats van te proberen compatibel te zijn met een groot aantal verschillende e-mailclients te zijn en het omgaan met verschillende gebruikersprofielen lost NetSetMan dit probleem eenvoudig op. Stel "nsm.smtp" als de SMTP-adres in uw e-mailclient en configureer de IP-adressen  vervolgens in de verschillende profielen. Bij het activeren van het profiel worden beide waarden gekoppeld met behulp van het hosts-bestand, zodat extra wijzigingen in uw e-mailclient niet meer nodig zijn.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/smtp.png" alt="SMTP / Email venster" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_system">
+      <div class="hf_head">
+        Systeeminstellingen
+      </div>
+      <div class="hf_body">
+        <p>
+          Naast de gebruikelijke netwerkinstellingen wilt u misschien soms een aantal systeeminstellingen, afhankelijk van uw locatie of situatie te veranderen. Bijvoorbeeld, op de universiteit wil je het volume dempen, de achtergrond veranderen en het Balanced energiebeheerschema gebruiken
+        </p>
+        <p>
+          U kunt ook het venster Systeeminstellingen gebruiken om een ​​aantal instellingen te wijzigen maar dat zou veel meer tijd kosten. Klik gewoon op de <img src="data/set-icon.png" alt="Icon set instellingen"> knop om direct die bepaalde setting te activeren.
+        </p>
+        <p>
+          Ondersteunde instellingen zijn: weergavemodus, Desktop achtergrond, desktop kleur, screensaver, ontwerp-regeling, luidsprekers en microfoon volume, geluid regeling, firewall (incl uitzonderingen en meldingen.), Energie instellingen, tijdzone en het MAC-adres.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/systemsettings.png" alt="Venster Systeeminstellingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_wifi">
+      <div class="hf_head">
+        WiFi
+      </div>
+      <div class="hf_body">
+        <p>
+          Een NetSetMan profiel kan worden gebruikt om verbinding te maken met een bestaand WiFi-profiel. Om dit te doen, selecteert u een WiFi-adapter in de adapter keuzelijst, kies dan een WiFi-profiel van de WiFi-keuzelijst. Als je alleen wilt uw WiFi-verbinding te verbreken, kiest u de lege invoer.
+        </p>
+        <p>
+          Naast deze basis WiFi schakelaar biedt NetSetMan ook uitgebreid WIFI management. Klik op de WiFi-pictogram of gebruik het hoofdmenu (Extra&gt; NSM WiFi Management) om toegang te krijgen. Je krijgt een lijst van alle momenteel beschikbare WiFi-netwerken. Een gele achtergrond geeft aan dat een profiel met dezelfde SSID al bestaat. Een netwerk met een groene achtergrond is momenteel verbonden. U kunt verbinding maken met een netwerk door erop te dubbelklikken of met behulp van de "Connect" -Knop. Als er geen bestaand profiel voor deze aansluiting is kunt u kiezen om het eerst te maken. De instellingen (authenticatie, encryptie, ...) worden vooraf automatisch geconfigureerd , afhankelijk van het herkende netwerk. Het zou nodig kunnen zijn om ze aan te passen als het netwerk niet wordt herkent om wat voor reden dan ook.
+        </p>
+        <p>
+          NetSetMan werkt met de native Windows WiFi-profielen. Dit betekent dat u altijd toegang tot dezelfde profielen die je al gebruikt in Windows of een ander WiFi-software hebben. U kunt maken, wijzigen of WiFi-profielen te verwijderen.
+        </p>
+        <div id="hf_connectbymac">
+          <p class="hf_section_caption">
+            Verbind op basis van MAC addres
+          </p>
+          <p>
+            Windows verbind normaal met Wifi op basis van het SSID. Als meerdere toegangspunten hetzelfde SSID hebben groepeert Windows deze en maakt verbinding met diegene met het sterkste signaal. Maar in sommige gevallen wil je verbinden met een specifiek access point. Netsetman kan dat uitvoeren!
+          </p>
+          <p>
+            De NSM WIFI manager geeft alle beschikbare netwerken en toegannspunten weer zonder de te groeperen. Op deze manier kan de gewenste verbinding worden gekozen. Muis-over tooltips geven extra informatie weer zoals het MAc adres van elk netwerk. Het rechtermuisknop menu geeft de mogelijkheid om eenvoudig het MAC adres of het SSID te kopieeren.
+          </p>
+          <p>
+            ALs u een verbinding wil maken met een specifiek netwerk als het NetSetman profiel wordt geactiveerd kan dat door het betreffende MAC adres toe te voegen aan de WIFI selectie. Kies "Toevoegen.." en voer het betreffende MAC adres in. Als het profiel wordt uitgevoerd zal NetSetMan een verbinding maken met het betreffende Wifi punt. Let op: u dient wel de juiste Wifi gegevens op uw systeem te hebben geconfigureerd.
+          </p>
+        </div>
+        <p class="hf_section_caption">
+          Vereisten
+        </p>
+        <p>
+          NetSetMan maakt gebruik van de native WiFi-API van Windows. Dat heeft het grote voordeel dat er geen nieuwe drivers geïnstalleerd hoeven te worden (wat kan leiden tot een aantal conflicten). Aan de andere kant de WiFi-mogelijkheden van NetSetMan werken alleen op Windows-systemen die reeds WiFi ondersteunen. Gelukkig doen de meeste van de versies dat tegenwoordig. Als je Vista of hoger gebruikt dan zit je goed. In XP moet je hebt SP2 of SP3 hebben geïnstalleerd.
+        </p>
+        <p>
+          Zorg ervoor dat de service <em>WLAN AutoConfig (Wlansvc)</em> (Vista en hoger) of <em>Wireless Zero Configuration (WZCSVC)</em> (XP) wordt uitgevoerd.
+        </p>
+        <p>
+          Als uw WiFi-adapter wordt geleverd met een aangepaste fabrikant software om WiFi-instellingen te beheren, dan zal het Windows-toegang in de meeste gevallen te blokkeren. Je moet de optie om over te schakelen naar Windows beheer in die software (indien beschikbaar) zien te vinden. <br> Omdat er veel verschillende fabrikanten met hun eigen software, is er geen universele manier om dit te bereiken. Hier is een voorbeeld: Als u gebruik maakt van een AVM FRITZ!WLAN USB-apparaat, klikt u op het pictogram in het systeemvak van de software en kies "Windows WLAN".
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/wifi2.png" alt="WiFi-overzicht" class="screen">
+        <img src="data/wifi.png" alt="Venster NSM WiFi management" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider" id="hf_section_advanced">
+      Gevorderd
+    </div>
+
+    <div class="hf_block" id="hf_autoswitch">
+      <div class="hf_head">
+        AutoSwitch
+      </div>
+      <div class="hf_body">
+        <p>
+          Het is vrij gemakkelijk om een profiel te activeren met een klik van de <a href="#hf_tray">Werkbalk Menu</a> . Maar in sommige gevallen kan het zelfs makkelijker zijn profielen geheel automatisch te activeren afhankelijk van de omstandigheden. De geïntegreerde AutoSwitch functie doet precies dat.
+        </p>
+        <p>
+          Na het activeren van AutoSwitch functie kunnen de volgende voorwaarden voor elk van de profielen apart worden geconfigureerd:
+        </p>
+        <div id="hf_asconditions">
+          <div>
+            <img src="data/icon-wifi4.png" alt="Beperkt Profiel icoon"> Omringende WiFi-netwerken
+          </div>
+          <ul>
+            <li>Draadloos netwerk (SSID en MAC) in / buiten bereik</li>
+            <li>Signaalsterkte van een draadloos netwerk lager / hoger is dan een bepaalde waarde</li>
+          </ul>
+          <div>
+            <img src="data/icon-location.png" alt="Beperkt Profiel icoon"> Netwerk Locaties
+          </div>
+          <ul>
+            <li>Windows NLM: Automatisch gegenereerde netwerk profielen van Windows (Vista en hoger)</li>
+            <li>Gateway MAC: Vingerafdruk van de automatisch toegewezen DHCP gateway</li>
+            <li>Ping: Beschikbaarheid van een bepaalde server of systeem in het netwerk</li>
+          </ul>
+          <div>
+            <img src="data/icon-nic.png" alt="Beperkt Profiel icoon"> Adapter Status
+          </div>
+          <ul>
+            <li>Verbindingsstatus van een lokaal netwerk adapter (aangesloten / niet aangesloten)</li>
+          </ul>
+          <div>
+            <img src="data/icon-time.png" alt="Beperkt Profiel icoon"> Time Frame
+          </div>
+          <ul>
+            <li>Bepaalde dagen van de week en het tijdsbestek (bijvoorbeeld Za + Zo, 8:00-18:00)</li>
+          </ul>
+        </div>
+        <p>
+          Hoewel er geen technische beperking zijn voor de hoeveelheid voorwaarden per profiel is het verstandig het zo eenvoudig mogelijk te houden. In de meeste gevallen is het absoluut voldoende om met een ​​of twee voorwaarden het gewenste resultaat te bereiken.
+        </p>
+        <p>
+          U kunt aangeven dat aan alle of ten minste een van de voorwaarden moet worden voldaan om dat profiel te activeren.
+        </p>
+        <p>
+          <strong>Opmerking:</strong> profielen met een lagere ID hebben een hogere prioriteit bij omstandigheden waar voor meerdere profielen gelijktijdig aan de voorwaarden wordt voldaan.
+        </p>
+        <p>
+          Standaard wordt het activeringsproces gestart met een bericht in de rechter benedenhoek met een aanpasbare vertraging, zodat u eventueel het proces kunt stoppen. Als alternatief kan een standaard Windows aanmelding worden gebruikt of het profiel kan worden geactiveerd zonder bericht op de achtergrond. In het laatste geval zal het pictogram geanimeerd worden weergegeven tijdens het activeringsproces en de kleur zal wijzigen afhankelijk van het resultaat van proces.
+        </p>
+        <p>
+          Om Systeembronnen te besparen zal NetSetMan uw huidige instellingen niet vergelijken met de instellingen van het profiel wat wordt geactiveerd. Dit betekent dat als u een van de instellingen handmatig wijzigt, NetSetMan dit niet zal opmerken.
+        </p>
+        <p>
+          AutoSwitch heeft een aantal beperkingen in XP: Windows NLM is niet beschikbaar, wijzigingen in het omringende WiFi-netwerken worden mogelijk herkend met een merkbare vertraging.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/autoswitch.png" alt="AutoSwitch" class="screen">
+        <img src="data/autoswitch-tooltip.png" alt="AutoSwitch tooltip" class="screen">
+        <img src="data/autoswitch-notification.png" alt="AutoSwitch kennisgeving" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_notes">
+      <div class="hf_head">
+        Opmerkingen
+      </div>
+      <div class="hf_body">
+        <p>
+          U kunt korte notities voor elk profiel aanmaken om het doel van een profiel te beschrijven. Als een notitie is gemaakt voor een profiel zal het icoon gekleurd in de menubalk worden weergegeven. De notitie wordt dan zichtbaar in de volledige modus als een hint van het pictogram en in compacte modus aan de bovenkant van de profiel instellingen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/note-edit.png" alt="Opmerking" class="screen">
+        <img src="data/note-hint.png" alt="Opmerking hint" class="screen">
+        <img src="data/note-compact.png" alt="Opmerking in Compact Mode" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmservice">
+      <div class="hf_head">
+        NSM service / Limited User Account
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan heeft beheerdersrechten nodig om netwerk en systeeminstellingen voor u veranderen. Normaal is zo'n applicatie niet mogelijke voor een beperkte gebruikersaccount. Nieuwere Windows-versies beperken Administrator accounts met UAC (User Account Control) en er een bericht bij elk programma dat start.
+        </p>
+        <p>
+          Om dit probleem op te lossen NetSetMan bevat een speciale component genaamd <strong>NSM Service</strong> die de applicatie voorziet van de benodigde privileges. De service wordt automatisch geïnstalleerd, maar kan ook handmatig worden geïnstalleerd / verwijderd in de voorkeuren (System Bevoegdheden&gt; activeren / deactiveren).
+        </p>
+        <p>
+          De geïnstalleerde service is zichtbaar in de Windows Services dialoog (services.msc) en kan daar ook worden gecontroleerd. Daarnaast kan het worden geïnstalleerd / verwijderd of gestart / gestopt met behulp van command-line opdrachten:<br><span class="code">nsmservice.exe / install / silent<br> nsmservice.exe / uninstall / silent<br> net start nsmService<br> net stop nsmService</span>
+        </p>
+        <p>
+          Als u de foutmelding <em>"Invalid signature"</em> krijgt, zorg er dan voor dat het programma niet is gewijzigd en het groepsbeleid van Windows <em>"Turn off Automatic Root Certificaten Update"</em> is gedeactiveerd.
+        </p>
+        <p>
+          Als u NetSetMan gebruikt met een beperkte gebruikersaccount waar de NSM Service  niet beschikbaar is krijgt u een melding die het probleem beschrijft. Als alternatief kunt u <strong>administrator credentials</strong> ingeven van een lokale account die NetSetMan gecodeerd zal opslaan in haar bestand instellingen en gebruiken om zichzelf te starten met de benodigde privileges. Merk op dat in dit geval de toepassing wordt uitgevoerd met de rechten van de gebruiker wiens rechten zijn gebruikt.
+        </p>
+        <p>
+          Controleer de <a href="http://www.netsetman.com/faqnsmservice" target="_blank">FAQ</a> om wat aanvullende informatie over deze optie te lezen.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/privileges.png" alt="System voorrechten" class="screen">
+        <img src="data/limitedaccount.png" alt="Limited User Account" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_prelogon">
+      <div class="hf_head">
+        Profiel Switching voor aanmelding
+      </div>
+      <div class="hf_body">
+        <p>
+          Een zeer unieke en krachtige functie is de mogelijkheid om uw profielen te activeren op het aanmeldscherm. Dit maakt het gebruik van de juiste netwerk instellingen die u nodig hebt voor uw account door het activeren van een NetSetMan profiel nog voor aanmelden.
+        </p>
+        <p>
+          Om deze functie te gebruiken moet de <a href="#hf_nsmservice">NSM Service</a> worden geïnstalleerd en de optie <em>"Profiel overschakelen van Windows logon scherm"</em> (Voorkeuren&gt; System voorrechten) moet worden ingeschakeld.
+        </p>
+        <p>
+          Merk op dat deze functie alleen kan worden gebruikt voor instellingen die worden gedeeld tussen alle gebruikers. Gebruiker specifieke instellingen kunnen niet buiten een gebruikerssessie worden gewijzigd.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/prelogon.png" alt="Profile switching voor aanmelding" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_nsmadministration">
+      <div class="hf_head">
+        NSM Administratie
+      </div>
+      <div class="hf_body">
+        <p>
+          Als u NetSetMan wilt instellen voor iemand anders, wilt u misschien opgeven welke acties die andere persoon mag uitvoeren. Met de NSM Administration (Voorkeuren&gt; Administration) kunt u precies dat doen.
+        </p>
+        <p>
+          Wanneer u deze modus wilt activeren moet je een wachtwoord invoeren met 6 of meer tekens. Alleen met dit wachtwoord kun je NSM administratie instellingen wijzigen of de acties die u hebt afgeschermd uitvoeren (run NetSetMan, profielen activeren, verandering profiel instellingen wijzigen programma-instellingen).
+        </p>
+        <p>
+          U kunt zelfs bepaalde profielen vergrendelen <img src="data/administration-profilelock.png" alt="Beperkt Profiel icoon"> zodat de gebruiker niets kan wijzigen, maar nog steeds in staat is om ze te activeren. Of je kan in het algemeen de toegang tot bepaalde instellingen beperken <img src="data/administration-settinglock.png" alt="Beperkt pictogram Instelling"> zoals "Werkgroep &amp; Domein" terwijl de gebruiker alle andere instellingen wel mag gebruiken of veranderen.
+        </p>
+        <p>
+          Een checksum van uw wachtwoord wordt naar het register geschreven. Zorg ervoor dat een normale gebruiker geen schrijfrechten heeft op <span class="code">HKLM\Software\NetSetMan</span> (op x64: <span class="code">HKLM\Software\Wow6432Node\NetSetMan).</span> Als u uw wachtwoord vergeet, moet u die sleutel handmatig verwijderen. Als uw instellingen bestand is gecodeerd zal niemand zonder het wachtwoord in staat zal zijn om dit te bekijken of te bewerken.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/administration.png" alt="NSM Administratie" class="screen">
+        <img src="data/administration-restrictedprofiles.png" alt="NSM Administratie - Profiel Beperkingen" class="screen">
+        <img src="data/administration-restrictedsettings.png" alt="NSM Administratie - Instellingen Beperkingen" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_commandline">
+      <div class="hf_head">
+        Command Line Activatie
+      </div>
+      <div class="hf_body">
+        <p>
+          In sommige speciale gevallen wilt u misschien uw profiel te wijzigen zonder gebruik te maken van de GUI van NetSetMan: verander een profiel met short-cuts, een profiel activeren bij het opstarten, opnemen in een complexe script, etc.
+        </p>
+        <p>
+          De volgende parameters zijn beschikbaar:
+        </p>
+        <table width="100%" border="0" id="hf_tblcmd">
+          <tr>
+            <td width="80"><strong>-a #</strong></td>
+            <td>Activeert het profiel met nummer #</td>
+          </tr>
+          <tr>
+            <td><strong>-as #</strong></td>
+            <td>Activeert het profiel in de stille modus (Activeer scherm sluit automatisch als er geen fouten zijn opgetreden)</td>
+          </tr>
+          <tr>
+            <td><strong>-h / -hide</strong></td>
+            <td>Runt NetSetMan geminimaliseerd</td>
+          </tr>
+          <tr>
+            <td><strong>-f / -full</strong></td>
+            <td>Runt NetSetMan in Volledige modus (standaard)</td>
+          </tr>
+          <tr>
+            <td><strong>-c / -compacte</strong></td>
+            <td>Runt NetSetMan in Compact Mode</td>
+          </tr>
+          <tr>
+            <td><strong>-m / -multi</strong></td>
+            <td>Start een tweede versie van NetSetMan. <strong>Opgepast:</strong> Alle actieve instanties schrijven naar hetzelfde instellingen bestand!</td>
+          </tr>
+        </table>
+      </div>
+      <div class="hf_image">
+        <p>
+          Een sneltoets voor het activeren van het profiel # 0 in de stille modus kan er als volgt uitzien: <br><strong>"C: \ Program Files (x86) \ NetSetMan \ netsetman.exe" -as 0 <br> </strong>
+          <img src="data/shortcut.png" alt="Sneltoets" class="screen">
+        </p>
+        <p>
+          In de command-line: <br>
+          <img src="data/commandline.png" alt="Command-Line" class="screen">
+        </p>
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_ncfreeware">
+      <div class="hf_head">
+        Niet-Commercieele Freeware Message
+      </div>
+      <div class="hf_body">
+        <p>
+          Dit bericht in het hoofdvenster verschijnt op elke 7e start voor gebruikers in een werkgroep en bij elke 2e start voor gebruikers in een domein, <em>gemiddeld.</em>
+        </p>
+        <p>
+          Dit is helaas nodig om gebruikers  te herinneren dat NetSetMan alleen freeware is voor niet-commerciële doeleinden (= prive of vrijwillig). Kortom: U mag het product gratis gebruiken, zolang je geen betaald werk bespaart. Als je het product wilt gebruiken bijvoorbeeld op het werk of op een commercieel gebruikte laptop, bent u verplicht om een <a href="http://www.netsetman.com/pro">NetSetMan Pro</a> -licentie aan te schaffen.  Er is geen speciale regeling voor onderwijs-of non-profit instellingen. Hoogleraren, docenten en andere medewerkers mogen alleen gebruik maken van de Non-Commercial Freeware versie als ze werken in een onbetaalde baan.
+        </p>
+        <p>
+          Lees de <a href="http://www.netsetman.com/en/txt/license" target="_blank">licentie-overeenkomst</a> voor meer informatie.
+        </p>
+        <p>
+          <strong>Deze boodschap is niet opgenomen in de geregistreerde versie natuurlijk.</strong>
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/message.png" alt="Non-Commercial Freeware bericht" class="screen">
+      </div>
+    </div>
+    <div class="hf_contentdivider">
+      Extra Pro mogelijkheden
+    </div>
+
+    <div class="hf_block" id="hf_groups">
+      <div class="hf_head">
+        Profiel Groepen
+      </div>
+      <div class="hf_body">
+        <p>
+          Met NetSetMan Pro kunt u een onbeperkt aantal profiel groepen maken. Elke groep bestaat uit 6 profielen.
+        </p>
+        <p>
+          Voor het toevoegen, verwijderen, herschikken of hernoemen van een profiel groep gebruikt u <a href="#hf_profiles">profiel beheer</a> in de menubalk.
+        </p>
+        <p>
+          Om te navigeren tussen alle beschikbare profiel groepen kiest u een groep uit de keuzelijst in de menubalk.
+        </p>
+        <p>
+          Als u meer dan een groep heeft, zal uw profiel worden getoond gegroepeerd in de werkbalk menu.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/profilegroups.png" alt="Profile Management Pro" class="screen">
+        <img src="data/tray-pro.png" alt="Tray Icon in Pro-versie" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_proxy">
+      <div class="hf_head">
+        Browser / Proxy
+      </div>
+      <div class="hf_body">
+        <p>
+          Met NetSetMan Pro kunt u de proxy-instellingen van Windows / Internet Explorer, Firefox en Opera (&lt;= v12) beheren. Chrome en latere versies van Opera ondersteunen geen eigen proxy-instellingen, maar in plaats daarvan worden de systeem instellingen gebruikt
+        </p>
+        <p>
+          Alle instellingen zijn bedoeld om de oorspronkelijke interfaces na te bootsen met dezelfde configuratie dat ook in de browsers mogelijk is. Bovendien kunt u de startpagina te veranderen en in het geval u gebruik maakt profielen in Firefox of Opera zul je ook in staat zijn om de naam van het profiel te selecteren.
+        </p>
+        <p>
+          Let op dat Firefox moet worden afgesloten voordat de instellingen worden verandert. <br> Als u meerdere Firefox-profielen heeft en hun profiel map verandert (bijvoorbeeld als gevolg van een nieuw systeem) moet u dit profiel opnieuw1 selecteren zodat het wordt bijgewerkt in uw instellingen bestand.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/browser.png" alt="Browser / Proxy" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_domain">
+      <div class="hf_head">
+        Domein
+      </div>
+      <div class="hf_body">
+        <p>
+          Om lid te worden van een domeinnaam moet u: de domeinnaam, uw gebruikersnaam en uw wachtwoord invoeren. Uw gebruikersnaam en wachtwoord worden versleuteld opgeslagen in het ini-bestand.
+        </p>
+        <p>
+          Meestal is het voldoende om alleen de gebruikersnaam in te voeren. Echter, als je een foutmelding krijgt kun je proberen om een van de twee volgende standaarden te gebruiken als uw gebruikersnaam:<br> a) NETBIOS: DOMEIN \ gebruiker<br> b) UPN: user@domain.local<br>
+        </p>
+        <p>
+          In NT domeinen kan een gebruiker lid zijn van maar <em>een</em> domein, dus niet gelijktijdig ook nog een ander domein. Dit betekent dat door de toetreding tot een ander domein of een werkgroep uw lidmaatschap in de vorige domein is verloren, totdat het systeem weer wordt aangemeld.
+        </p>
+        <p>
+          NetSetMan kunt u alleen aanmelden bij een domein als uw domein gebruikersaccount de toestemming heeft om dat te doen.<br> Dit gebruikersaccount voorrecht heet "Add Workstation to Domein" en moet worden ingeschakeld op uw account. Als u dit recht niet hebt, vraag uw netwerkbeheerder om u dat toe kennen.
+        </p>
+        <p>
+          Controleer de <a href="http://www.netsetman.com/faqdomain" target="_blank">FAQ</a> voor aanvullende informatie over dit onderwerp.
+        </p>
+      </div>
+      <div class="hf_image">
+        <img src="data/domain.png" alt="Domein overzicht" class="screen">
+      </div>
+    </div>
+
+    <div class="hf_block" id="hf_distribution">
+      <div class="hf_head">
+        Distributie in netwerken van bedrijven
+      </div>
+      <div class="hf_body">
+        <p>
+          NetSetMan Pro biedt verschillende functies die u helpen bij de distributie van de software, pre-geconfigureerde instellingen en uw licentie in uw bedrijfsnetwerk. U vindt alles wat u moet weten in een gedetailleerde beschrijving in het gedeelte <a href="http://www.netsetman.com/faqcompany">FAQ</a> .
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
