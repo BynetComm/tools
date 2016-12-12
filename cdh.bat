@@ -1,0 +1,2 @@
+@cd %USERPROFILE%\%1
+
