@@ -50,7 +50,7 @@ puts "<host> <executions> <out_file> "
   pingjResults_max = { :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   snmp_array = { :Connected_to_HBS => "N/A" ,:hbsRSS=> "N/A", :hsuRSS=> "N/A" , :hbsEstTput=> "N/A" , :hsuEstTput => "N/A" } 
   mydebug=true;
-  debuglevel = 1; #||1;
+  debuglevel = 3; #||1;
   pings=true;
   pingremote=false;
   snmp=true;
@@ -122,6 +122,17 @@ puts "<host> <executions> <out_file> "
 # netsh wlan show interfaces | find "BSSID"
 
 ## ************* SNMP FUNCTIONS *****************
+
+def clean_str(mystring)
+ if mystring.nil? then
+	   return nil
+	 end
+ if mystring.include?  " " then
+     return fix_str(mystring)
+  else	 
+	 return mystring.gsub(/@value="/,'').gsub(/>/,'')
+  end		 
+end
 
 
 def fix_str(mystring)
@@ -541,7 +552,7 @@ end #if telnet
              #snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)
 	         myHBS = su_hbs(hmu)			
 			 hmus_OIDs.each do |key,value|
-				  snmp_array[key]=fix_str(getattrib(hmu, value, 'public',4))||"N/A"
+				  snmp_array[key]=clean_str(getattrib(hmu, value, 'public',4))||"N/A"
 				end
 				
 			 if !myHBS.nil? then
@@ -562,8 +573,10 @@ end #if telnet
 				snmp_array[:hbsEstTput]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.6.1", 'public',4))||"N/A"
 				snmp_array[:hsuEstTput]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7.1", 'public',4))||"N/A"
 				hbs_OIDs.each do |key,value|
-				  snmp_array[key]=fix_str(getattrib(hbs, value, 'public',4))||"N/A"
-				  if (mydebug && debuglevel>2) then puts ("#{index}: SNMP for hbs[#{hbs}] key #{key} is #{snmp_array[key]} without fixkey #{getattrib(hbs, value, 'public',4)}") 
+				  snmp_array[key]=clean_str(getattrib(hbs, value, 'public',4))||"N/A"
+				  if (mydebug && debuglevel>2) then 
+				    puts ("#{index}: SNMP for hbs[#{hbs}] key #{key} is #{snmp_array[key]} without fixkey #{getattrib(hbs, value, 'public',4)}") 
+				  end
 				end
 				
 				
@@ -574,13 +587,14 @@ end #if telnet
              #freq=getattrib(hmu, "1.3.6.1.4.1.4458.1000.1.5.16.0", 'public',10)||"N/A"
 			 # myhbsIP=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7", 'public',10)||"NA"; #fixme wrong mib
            end
-           if (mydebug && debuglevel>1) then puts ("#{index}: SNMP out #{snmp_out} ") 
+           if (mydebug && debuglevel>1) then puts ("#{index}: SNMP out ") 
 			 # puts ("freq=#{freq}")
-			 puts  ("hbs=#{snmp_array[:Connected_to_HBS]}")
-			 puts  ("hbsRSSI=#{snmp_array[:hbsRSS]}")
-			 puts  ("hsuRSSI=#{snmp_array[:hsuRSS]}")
-			 puts  ("hsuEstTput=#{snmp_array[:hsuEstTput]}")
-			 puts  ("HbsEstTput=#{snmp_array[:hbsEstTput]}")
+			 puts snmp_array
+			# puts  ("hbs=#{snmp_array[:Connected_to_HBS]}")
+			# puts  ("hbsRSSI=#{snmp_array[:hbsRSS]}")
+			# puts  ("hsuRSSI=#{snmp_array[:hsuRSS]}")
+			# puts  ("hsuEstTput=#{snmp_array[:hsuEstTput]}")
+			# puts  ("HbsEstTput=#{snmp_array[:hbsEstTput]}")
            end
 			 #hmus_oids_r =  myHBS 
 			 
