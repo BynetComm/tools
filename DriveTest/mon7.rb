@@ -21,18 +21,20 @@ puts "<host> <executions> <out_file> "
   mySNMPDATA="";
   varbind_seperator=" ";
   hbs_OIDs = { 
-			   :my_hbs1 => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.13.1',	
-			   :state => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.5.1',
-               :summary => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.23.1'  }
+			  # :my_hbs1 => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.13.1' ,	
+			  # :state => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.5.1',
+              # :summary => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.23.1'
+			  }
   hmus_OIDs = {
-                :winlink1000OduAirLinkDistance => '1.3.6.1.4.1.4458.1000.1.5.29.0',
-				:winlink1000OduAirHssCurrentOpState  => '1.3.6.1.4.1.4458.1000.1.5.40.2.0',
+               # :winlink1000OduAirLinkDistance => '1.3.6.1.4.1.4458.1000.1.5.29.0',
+			    # :winlink1000OduAirHssCurrentOpState  => '1.3.6.1.4.1.4458.1000.1.5.40.2.0',
 				:winlink1000OduAirTotalTxPower => '1.3.6.1.4.1.4458.1000.1.5.50.0',
 				:winlink1000HsuAirState => '1.3.6.1.4.1.4458.1000.4.1.1.0',
 				:winlink1000HsuAirLinkState => '1.3.6.1.4.1.4458.1000.4.1.2.0',
-				:winlink1000HsuAirRemoteCompressedMon => '1.3.6.1.4.1.4458.1000.4.1.6.0',
-				:winlink1000OduAirRxPower => '1.3.6.1.4.1.4458.1000.1.5.9.1.0',
-				:winlink1000OduAirSesState => '1.3.6.1.4.1.4458.1000.1.5.5.0'
+			#	:winlink1000HsuAirRemoteCompressedMon => '1.3.6.1.4.1.4458.1000.4.1.6.0',
+			#	
+			#	:winlink1000OduAirSesState => '1.3.6.1.4.1.4458.1000.1.5.5.0',
+			    :winlink1000OduAirRxPower => '1.3.6.1.4.1.4458.1000.1.5.9.1.0' 
 			  }
   
   myhost = ARGV[1] ||pingHosts[:BH];
@@ -50,7 +52,7 @@ puts "<host> <executions> <out_file> "
   pingjResults_max = { :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   snmp_array = { :Connected_to_HBS => "N/A" ,:hbsRSS=> "N/A", :hsuRSS=> "N/A" , :hbsEstTput=> "N/A" , :hsuEstTput => "N/A" } 
   mydebug=true;
-  debuglevel = 3; #||1;
+  debuglevel = 1 #||1;
   pings=true;
   pingremote=false;
   snmp=true;
