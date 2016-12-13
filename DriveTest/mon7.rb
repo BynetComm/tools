@@ -15,18 +15,31 @@ puts "<host> <executions> <out_file> "
 		  
   hmus_IP = { :HMU_1 => '10.0.0.130'};        
   hbs_oids_r = ""
-  hmus_oids_r = ""
+ # hmus_oids_r = ""
   delay = "Pings off";
   gps_last = "GPS off"
   mySNMPDATA="";
   varbind_seperator=" ";
-  hbs_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
-  hmus_OIDs = ['1.3.6.1.4.1.4458.1000.4.1.7','']
+  hbs_OIDs = { 
+			   :my_hbs1 => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.13.1',	
+			   :state => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.5.1',
+               :summary => '1.3.6.1.4.1.4458.1000.3.1.7.2.1.23.1'  }
+  hmus_OIDs = {
+                :winlink1000OduAirLinkDistance => '1.3.6.1.4.1.4458.1000.1.5.29.0',
+				:winlink1000OduAirHssCurrentOpState  => '1.3.6.1.4.1.4458.1000.1.5.40.2.0',
+				:winlink1000OduAirTotalTxPower => '1.3.6.1.4.1.4458.1000.1.5.50.0',
+				:winlink1000HsuAirState => '1.3.6.1.4.1.4458.1000.4.1.1.0',
+				:winlink1000HsuAirLinkState => '1.3.6.1.4.1.4458.1000.4.1.2.0',
+				:winlink1000HsuAirRemoteCompressedMon => '1.3.6.1.4.1.4458.1000.4.1.6.0',
+				:winlink1000OduAirRxPower => '1.3.6.1.4.1.4458.1000.1.5.9.1.0',
+				:winlink1000OduAirSesState => '1.3.6.1.4.1.4458.1000.1.5.5.0'
+			  }
+  
   myhost = ARGV[1] ||pingHosts[:BH];
   last_base = ""
   last_base_key = "HBS_0"
   myfile = ARGV[2] ||'c:/temp/output2.csv';
-  executions =  Integer(ARGV[0] || 10000000);
+  executions =  Integer(ARGV[0] || 10);
   pingResults = Hash.new;
   pingjResults = Hash.new;
   pingjResults_min = Hash.new;
@@ -35,13 +48,14 @@ puts "<host> <executions> <out_file> "
   pingjResults = { :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   pingjResults_min = { :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
   pingjResults_max = { :BH => "N/A" , :HBS => "N/A", :remote => "N/A"};
+  snmp_array = { :Connected_to_HBS => "N/A" ,:hbsRSS=> "N/A", :hsuRSS=> "N/A" , :hbsEstTput=> "N/A" , :hsuEstTput => "N/A" } 
   mydebug=true;
   debuglevel = 1; #||1;
   pings=true;
   pingremote=false;
   snmp=true;
   jpings=false;
-  telnet= true;
+  telnet= false;
   telnet_air = false;
   telnet_lan = false;
   telnet_link = false;
@@ -512,57 +526,63 @@ end #if telnet
       
      begin
        if (mydebug && debuglevel>5) then puts ("#{index}: SNMP") end
-           myHBS="";
-		   mySNMPDATA="";
-		   hmus_oids_r = "";
-		   hbsRSS="N/A";
-		   hsuRSS="N/A";
-		   hbsEstTput="N/A";
-		   hsuEstTput="N/A";
-		   myhbsIP="N/A";
-		   snmp_out="N/A";
+          #snmp_array = { :Connected_to_HBS => "N/A" ,:hbsRSS=> "N/A", :hsuRSS=> "N/A" , :hbsEstTput=> "N/A"
+          #       , :hsuEstTput => "N/A" } 
+		   myHBS="";
+		   #mySNMPDATA="";
+		   #hmus_oids_r = "";
+		   #hbsRSS="N/A";
+		   #hsuRSS="N/A";
+		   #hbsEstTput="N/A";
+		   #hsuEstTput="N/A";
+		   #myhbsIP="N/A";
+		   #snmp_out="N/A";
            hmus_IP.each_value do |hmu|
-             snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)
-			 if !snmp_out.nil? then
-				myHBS = su_hbs(hmu)
+             #snmp_out=getattrib(hmu, "1.3.6.1.4.1.4458.1000.4.1.7.0", 'public',10)
+	         myHBS = su_hbs(hmu)			
+			 hmus_OIDs.each do |key,value|
+				  snmp_array[key]=fix_str(getattrib(hmu, value, 'public',4))||"N/A"
+				end
+				
+			 if !myHBS.nil? then
 				if myHBS=="Bynet_Mobility_Demo" then
 				  last_base = "0"
 				  hbs=hbs_IP[:HBS_0]
 				  puts ("myHBS #{myHBS} hbs_ip #{hbs} ") if (mydebug && debuglevel>1)
-				else
+				else #segev bases
 				  hbs=hbs_IP["HBS_#{myHBS[8..8]}"]
 				  last_base = myHBS[8..8]||"0";
 				  puts ("myHBS #{myHBS} hbs_ip #{hbs} ") if (mydebug && debuglevel>1)
                 end
- 
-                pingHosts[:HBS]=hbs 
-				hbsRSS=getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.9.1", 'public',4)
-				hbsRSS=hbsRSS.split[1].gsub(/@value=/,'').gsub(/>/,'')||"N/A" unless hbsRSS.nil?
-				hsuRSS=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11.1", 'public',4))||"N/A"
-				hbsEstTput=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.6.1", 'public',4))||"N/A"
-				hsuEstTput=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7.1", 'public',4))||"N/A"
+                
+				snmp_array[:Connected_to_HBS]=myHBS
+				pingHosts[:HBS]=hbs 
+				snmp_array[:hbsRSS]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.9.1", 'public',4))||"N/A"
+				snmp_array[:hsuRSS]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11.1", 'public',4))||"N/A"
+				snmp_array[:hbsEstTput]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.6.1", 'public',4))||"N/A"
+				snmp_array[:hsuEstTput]=fix_str(getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7.1", 'public',4))||"N/A"
+				hbs_OIDs.each do |key,value|
+				  snmp_array[key]=fix_str(getattrib(hbs, value, 'public',4))||"N/A"
+				  if (mydebug && debuglevel>2) then puts ("#{index}: SNMP for hbs[#{hbs}] key #{key} is #{snmp_array[key]} without fixkey #{getattrib(hbs, value, 'public',4)}") 
+				end
 				
-			 else
-			    last_base = "9"
-                snmp_out="N/C" 
-				hbsRSS="N/C";
-				hsuRSS="N/C";
-				hbsEstTput="N/C";
-				hsuEstTput="N/C";
-				myhbsIP="N/C";
-				puts ("not connected to HBS")
+				
+			 else #not connected to base
+			  snmp_array = { :Connected_to_HBS => "N/C" ,:hbsRSS=> "N/C", :hsuRSS=> "N/C" , :hbsEstTput=> "N/C" , :hsuEstTput => "N/C" } 
+		      puts ("SNMP on and not connected to HBS")
 			 end			 
              #freq=getattrib(hmu, "1.3.6.1.4.1.4458.1000.1.5.16.0", 'public',10)||"N/A"
 			 # myhbsIP=getattrib(hmu, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.7", 'public',10)||"NA"; #fixme wrong mib
            end
            if (mydebug && debuglevel>1) then puts ("#{index}: SNMP out #{snmp_out} ") 
 			 # puts ("freq=#{freq}")
-			 puts  ("hbsRSSI=#{hbsRSS}")
-			 puts  ("hsuRSSI=#{hsuRSS}")
-			 puts  ("hsuEstTput=#{hsuEstTput}")
-			 puts  ("HbsEstTput=#{hbsEstTput}")
+			 puts  ("hbs=#{snmp_array[:Connected_to_HBS]}")
+			 puts  ("hbsRSSI=#{snmp_array[:hbsRSS]}")
+			 puts  ("hsuRSSI=#{snmp_array[:hsuRSS]}")
+			 puts  ("hsuEstTput=#{snmp_array[:hsuEstTput]}")
+			 puts  ("HbsEstTput=#{snmp_array[:hbsEstTput]}")
            end
-			 hmus_oids_r =  myHBS 
+			 #hmus_oids_r =  myHBS 
 			 
                 #      hbs_IP.each_value do |hbs|
      #        snmp_out=getattrib(hbs, "1.3.6.1.4.1.4458.1000.3.1.7.2.1.11.1", 'public',10)||[nil,nil]
@@ -573,7 +593,7 @@ end #if telnet
 		#puts "Error during processing: #{$!}"
 		
 		@error_message="#{$!}";
-		puts ("#{index}:"+Time.now.to_s+ " line 590 SNMP Caught error:"+@error_message)
+		puts ("#{index}:"+Time.now.to_s+ " line 575 SNMP Caught error:"+@error_message)
 		puts "Backtrace:\n\t#{e.backtrace.join("\n\t")}"
 	  #puts snmp_out
      ensure
@@ -607,7 +627,7 @@ end #if telnet
          end
 	  rescue => e
 		@error_message="#{$!}";
-		puts ("#{index}:"+Time.now.to_s+ " line 539 ping Caught error:"+@error_message)
+		puts ("#{index}:"+Time.now.to_s+ " line 609 ping Caught error:"+@error_message)
 		puts "Backtrace:\n\t#{e.backtrace.join("\n\t")}"
 		pingResults[key] = "timed out after #{PINGTIMEOUT} for key= #{key} ip is #{pingHosts[key]}"
 		puts pingResults[key]
@@ -638,15 +658,19 @@ end #if telnet
  # fix me open file type CSV.open(myfile,  (File.exist?(myfile)? Existingfileopenmode : 'w') ) do |csv|
           
 	 csv_line="name, "; 
-       gps1.each_key do |key|
+     if gps then
+	   gps1.each_key do |key|
          csv_line+="#{key}, "
        end  
        gps2.each_key do |key|
          csv_line+="#{key}, "
-       end  
+       end 
+    end
+    if telnet  && telnet_link then  
        bh.each_key do |key|
          csv_line+="#{key}, "
        end
+    end	   
        if pings then
          pingHosts.each_key do |key|
            csv_line+="ping to #{key}, "
@@ -660,48 +684,47 @@ end #if telnet
            csv_line+="Max Jitter to #{pingHosts[key]}, "
          end #Jitter ping results   
        end  
-      
+    if telnet  && telnet_air then   
        bh_air.each_key do |key|
          csv_line+="BH_AIR_#{key}, "
        end      
-       bh_lan.each_key do |key|
+    end
+	if telnet  && telnet_lan then
+    	bh_lan.each_key do |key|
          csv_line+="BH_LAN_#{key}, "
        end      
+    end   
        
-       csv_line+="timestamp, "
-	     csv_line+="PC_timestamp "
-       
-	   
-	   
-	   
+	   	   
 	   
        if snmp then
-          csv_line+=", Connected_to_HBS , rest_of_snmp, hbsRSS, hsuRSS , hbsEstTput, hsuEstTput  "
-  	   ii=0;
-       #   hbs_IP.each_value do |value|
-       #    csv_line+=",HBS_#{ii}[#{value}] # connected units"
-       #    ii+=1;
-       #  end
-       #  ii=0;
-       #   hmus_IP.each_value do |value|
-       #    csv_line+=",HMU_#{ii}[#{value}] connected to "
-       #    ii+=1;
-        # end
+        snmp_array.each_key do |key|
+           csv_line+="#{key}, "
+         end
        end   
-       csv << csv_line.split(/,\s/) 
+       csv_line+="timestamp, " 
+	   csv_line+="PC_timestamp "
+    
+
+     	csv << csv_line.split(/,\s/) 
       end #open CSV
     end #if index=1
-    CSV.open(myfile,"a+") do |csv|
+    
+	CSV.open(myfile,"a+") do |csv|
       csv_line="#{index}, "
+	if gps then  
       gps1.each_value do |value|
         csv_line+="#{value}, "
       end #gps1
       gps2.each_value do |value|
         csv_line+="#{value}, "
       end #gps2
+	end
+      if telnet  && telnet_link then
       bh.each_value do |value|
         csv_line+="#{value}, "
       end #bh
+	end  
       if pings then
         pingResults.each_value do |value|
           csv_line+="#{value}, "
@@ -718,14 +741,17 @@ end #if telnet
           csv_line+="#{value}, "
         end #Jitter ping results   
       end  
-
+    if telnet  && telnet_air then
       bh_air.each_value do |value|
         csv_line+="#{value}, "
       end #bh_air
+	end
+	if telnet  && telnet_lan then
       bh_lan.each_value do |value|
         csv_line+="#{value}, "
       end #bh_lan
       #reformat timestamp 2013-01-14T12:50:43Z
+	end  
     if gps then
      case gps1[:month]
       when 'Jan' 
@@ -756,24 +782,31 @@ end #if telnet
     end #if gps  
       timestamp="#{gps1[:year]}-#{gps1[:month]}-#{gps1[:day]}T#{gps1[:time]}Z";
      # puts timestamp;
-      csv_line += "#{timestamp}"
-	  csv_line += ", #{Time.now.to_s}"  #.strftime(%H:%M:%S.%3N)}"
-
+      
        if snmp then
-         # hmus_oids_r.each_value do |value|
-         #  csv_line+=",#{value}"
-         #  ii+=1;
-         #end
-         csv_line+= ",#{ last_base} , #{mySNMPDATA||''} , #{hbsRSS||''} , #{hsuRSS||''} , #{hbsEstTput||''} , #{hsuEstTput||''} "
+         snmp_array.each_value do |value|
+           csv_line+="#{value.gsub(/"/,'')}, "
+         end
+         #csv_line+= ",#{ last_base} , #{hbsRSS||''} , #{hsuRSS||''} , #{hbsEstTput||''} , #{hsuEstTput||''} "
 		end   
+      if gps then
+	     csv_line += "#{timestamp}"
+         csv_line += ", #{Time.now.to_s}"  #.strftime(%H:%M:%S.%3N)}
 
+	  else
+	     timestamp=""
+		#"#{gps1[:year]}-#{gps1[:month]}-#{gps1[:day]}T#{gps1[:time]}Z";
+	    csv_line += "#{Time.now.strftime('%Y-%m-%d')}T#{Time.now.strftime('%H:%M:%S')}Z"
+		csv_line += ", #{Time.now.to_s}"  #.strftime(%H:%M:%S.%3N)}
+      end 	  
+	  
 
 
       csv << csv_line.split(/,\s/) 
     end #csv a+
     rescue => e
 		@error_message="#{$!}";
-		puts ("#{index}:"+Time.now.to_s+ " line 700 Caught error:"+@error_message)
+		puts ("!!!! #{index}:"+Time.now.to_s+ " line 787 Caught error:"+@error_message)
 		puts "Backtrace:\n\t#{e.backtrace.join("\n\t")}"
     ensure
         host = last_base_key || "error N/C";
